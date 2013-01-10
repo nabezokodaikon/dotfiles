@@ -1,0 +1,16 @@
+# 全てのファイルを除外する
+/*
+/.*
+
+# 除外しないファイル
+!/.gitignore
+!.vimrc
+!/.vim/
+
+# 除外するファイル
+*~
+.*~
+*.swp
+.*.swp
+/.vim/.netwhist
+/.vim/bundle/
