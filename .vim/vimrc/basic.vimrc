@@ -43,8 +43,8 @@ set incsearch
 " 検索結果をハイライト
 set nohlsearch
 
-" 現在の行を強調する
-set cursorline
+" 現在の行を強調しない
+set nocursorline
 
 " 補完機能有
 set wildmenu wildmode=list:full
