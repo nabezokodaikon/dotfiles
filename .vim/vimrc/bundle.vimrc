@@ -9,7 +9,13 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 " start plugins
-" NeoBundle 'git://github.com/vim-scripts/project.vim.git'
+
+" プラグイン管理
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+
+" Scala のシンタックスハイライト
+NeoBundle 'git://github.com/derekwyatt/vim-scala.git'
+
 " end plugins
 
 filetype plugin indent on
