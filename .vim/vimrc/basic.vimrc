@@ -1,3 +1,6 @@
+"--------------------------------
+" 基本設定
+"--------------------------------
 " スワップファイルを作成しない
 :set noswapfile
 
@@ -15,21 +18,6 @@
 " [     [ キー      Insert,Replace
 " ]     ] キー      Insert,Replace
 set whichwrap=b,s,h,l,<,>,[,]
-
-" タブをスペースにする
-set expandtab
-
-" 既存のタブ文字の長さを指定する
-set tabstop=4
-
-" 自動挿入されるタブ文字の長さを指定する
-set shiftwidth=4
-
-" タブキーで挿入されるタブ文字の長さを指定する
-set softtabstop=4
-
-" 改行時のインデントを現在行と同じにする
-set autoindent
 
 " 行番号を表示する
 set number

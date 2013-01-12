@@ -1,3 +1,6 @@
+"--------------------------------
+" neobundle で管理しているプラグインを読み込む
+"--------------------------------
 set nocompatible
 
 filetype plugin indent off
