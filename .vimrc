@@ -9,3 +9,6 @@ source ~/.vim/vimrc/indent.vimrc
 
 " プラグイン設定
 source ~/.vim/vimrc/plugin_setting.vimrc
+
+" 補完設定
+source ~/.vim/vimrc/completion.vimrc
