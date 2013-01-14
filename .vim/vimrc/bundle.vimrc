@@ -3,7 +3,7 @@
 "--------------------------------
 set nocompatible
 
-filetype plugin indent off
+filetype off
 
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -15,6 +15,9 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 " プラグイン管理
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+
+" 自動補完
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 
 " Scala のシンタックスハイライト
 NeoBundle 'git://github.com/derekwyatt/vim-scala.git'
