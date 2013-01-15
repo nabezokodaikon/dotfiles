@@ -22,6 +22,9 @@ NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 " Scala のシンタックスハイライト
 NeoBundle 'git://github.com/derekwyatt/vim-scala.git'
 
+" ツリー型ファイラー
+NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
+
 " end plugins
 
 filetype plugin indent on
