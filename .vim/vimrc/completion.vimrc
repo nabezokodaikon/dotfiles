@@ -36,7 +36,7 @@ endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 " <C-h>や<BS>を押したときに確実にポップアップを削除する
-inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 
 " 現在選択している候補を確定する
 inoremap <expr><C-y> neocomplcache#close_popup()
