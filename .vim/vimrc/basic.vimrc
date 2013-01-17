@@ -17,7 +17,7 @@
 " ~     ^ キー      Normal
 " [     [ キー      Insert,Replace
 " ]     ] キー      Insert,Replace
-set whichwrap=b,s,h,l,<,>,[,]
+"set whichwrap=b,s,h,l,<,>,[,]
 
 " 行番号を表示する
 set number
