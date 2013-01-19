@@ -3,6 +3,7 @@
 /.*
 
 # 除外しないファイル
+!README
 !/.gitignore
 !.vimrc
 !/.vim/
