@@ -1,0 +1,8 @@
+PATH=$PATH:$HOME/bin
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/usr/local/sbin
+
+export PATH
+
+alias sudo='sudo env PATH=$PATH'

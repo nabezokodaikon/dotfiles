@@ -5,6 +5,9 @@
 # 除外しないファイル
 !README
 !/.gitignore
+!.zshrc
+!.zshrc_osx
+!.zshrc_linux
 !.vimrc
 !/.vim/
 
