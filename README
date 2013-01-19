@@ -1,4 +1,4 @@
-dotfiles
+導入手順
 
 １．ホームディレクトリにリポジトリをクローンする
 $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
