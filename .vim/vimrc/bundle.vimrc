@@ -25,6 +25,9 @@ NeoBundle 'git://github.com/derekwyatt/vim-scala.git'
 " ツリー型ファイラー
 NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
 
+" zencoding
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+
 " end plugins
 
 filetype plugin indent on
