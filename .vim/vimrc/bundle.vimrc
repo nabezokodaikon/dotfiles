@@ -28,6 +28,9 @@ NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
 " zencoding
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 
+" unite.vim
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+
 " end plugins
 
 filetype plugin indent on
