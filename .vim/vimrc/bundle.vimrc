@@ -14,22 +14,22 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " start plugins
 
 " プラグイン管理
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
 
 " 自動補完
-NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 
 " Scala のシンタックスハイライト
-NeoBundle 'git://github.com/derekwyatt/vim-scala.git'
+NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
 
 " ツリー型ファイラー
-NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
+NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
 
 " zencoding
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'https://github.com/mattn/zencoding-vim.git'
 
 " unite.vim
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
 " end plugins
 
