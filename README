@@ -7,9 +7,16 @@ $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
 $ ln -s ~/dotfiles/.zshrc ~/.zshrc
 $ ln -s ~/dotfiles/.vimrc ~/.vimrc
 $ ln -s ~/dotfiles/.vim ~/.vim
+$ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf 
 
-３．NeoBundle をクローンする
+３．Mac + tmux クリップボード
+$ git clone https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
+$ cd tmux-MacOSX-pasteboard
+$ make reattach-to-user-namespace
+$ cp reattach-to-user-namespace /usr/local/bin/
+
+４．NeoBundle をクローンする
 $ git clone git://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
 
-４．vim を起動後、NeoBundle からプラグインを導入する
+５．vim を起動後、NeoBundle からプラグインを導入する
 :NeoBundleInstall
