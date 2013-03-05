@@ -1,8 +1,9 @@
+export SCALA_HOME=/usr/local/scala-current
+
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:/usr/local/scala-current/bin
+export PATH=$PATH:$SCALA_HOME/bin
 export PATH=$PATH:/usr/local/play-current
 
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
-export SCALA_HOME=/usr/local/scala-current
