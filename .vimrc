@@ -12,3 +12,6 @@ source ~/.vim/vimrc/plugin_setting.vimrc
 
 " 補完設定
 source ~/.vim/vimrc/completion.vimrc
+
+" カラー設定
+source ~/.vim/vimrc/color.vimrc
