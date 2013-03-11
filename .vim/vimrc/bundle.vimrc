@@ -35,6 +35,9 @@ NeoBundle 'https://github.com/Shougo/unite.vim.git'
 " NeoBundle 'https://github.com/tomasr/molokai.git'
 NeoBundle "https://github.com/vim-scripts/desert256.vim.git"
 
+" クリップボード連携
+NeoBundle "https://github.com/kana/vim-fakeclip.git"
+
 " end plugins
 
 filetype plugin indent on
