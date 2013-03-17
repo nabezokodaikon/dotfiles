@@ -31,6 +31,9 @@ NeoBundle 'https://github.com/mattn/zencoding-vim.git'
 " unite.vim
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
+" vimproc
+NeoBundle 'https://github.com/Shougo/vimproc.git'
+
 " Color Scheme
 " NeoBundle 'https://github.com/tomasr/molokai.git'
 NeoBundle "https://github.com/vim-scripts/desert256.vim.git"
