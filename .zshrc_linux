@@ -1,12 +1,18 @@
-JAVA_HOME=/usr/java/default
-SCALA_HOME=/usr/scala/default
-
-PATH=$PATH:$JAVA_HOME/bin
-PATH=$PATH:$SCALA_HOME/bin
-PATH=$PATH:$HOME/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/usr/sbin
 PATH=$PATH:/usr/local/sbin
+PATH=$PATH:$HOME/bin
+
+# java
+JAVA_HOME=/usr/java/default
+PATH=$PATH:$JAVA_HOME/bin
+
+# scala
+SCALA_HOME=/usr/scala/default
+PATH=$PATH:$SCALA_HOME/bin
+
+# playframework
+PATH=$PATH:/usr/play/default
 
 export PATH
 
