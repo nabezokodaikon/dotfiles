@@ -9,7 +9,7 @@ setopt auto_cd
 setopt auto_pushd
 
 # コマンドのスペルチェックを有効化
-setopt correct
+#setopt correct
 
 # 日本語設定
 export LANG=ja_JP.UTF-8
