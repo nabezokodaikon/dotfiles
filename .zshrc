@@ -1,6 +1,15 @@
-# 補完設定
+# デフォルトの補完機能を有効化
 autoload -Uz compinit
 compinit
+
+# ディレクトリ名で cd
+setopt auto_cd
+
+# ディレクトリの移動履歴を利用
+setopt auto_pushd
+
+# コマンドのスペルチェックを有効化
+setopt correct
 
 # 日本語設定
 export LANG=ja_JP.UTF-8
