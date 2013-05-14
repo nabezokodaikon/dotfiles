@@ -35,8 +35,7 @@ NeoBundle 'https://github.com/Shougo/unite.vim.git'
 NeoBundle 'https://github.com/Shougo/vimproc.git'
 
 " Color Scheme
-" NeoBundle 'https://github.com/tomasr/molokai.git'
-NeoBundle "https://github.com/vim-scripts/desert256.vim.git"
+NeoBundle "https://github.com/altercation/vim-colors-solarized.git"
 
 " クリップボード連携
 NeoBundle "https://github.com/kana/vim-fakeclip.git"
