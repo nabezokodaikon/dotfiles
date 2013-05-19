@@ -35,10 +35,12 @@ NeoBundle 'https://github.com/Shougo/unite.vim.git'
 NeoBundle 'https://github.com/Shougo/vimproc.git'
 
 " Color Scheme
-NeoBundle "https://github.com/altercation/vim-colors-solarized.git"
+NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'https://github.com/w0ng/vim-hybrid.git'
+NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 
 " クリップボード連携
-NeoBundle "https://github.com/kana/vim-fakeclip.git"
+NeoBundle 'https://github.com/kana/vim-fakeclip.git'
 
 " end plugins
 
