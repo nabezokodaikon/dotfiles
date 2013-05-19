@@ -53,5 +53,3 @@ autocmd FileType text setlocal textwidth=0
 " 挿入モードへ戻るときの esc キーの反応を早くする
 set ttimeoutlen=0
 
-" カラースキーム solarized を正しく描画する
-let g:solarized_termtrans = 1
