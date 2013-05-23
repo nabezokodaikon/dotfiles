@@ -28,6 +28,9 @@ NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
 " zencoding
 NeoBundle 'https://github.com/mattn/zencoding-vim.git'
 
+" コメントアウト
+NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
+
 " unite.vim
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
