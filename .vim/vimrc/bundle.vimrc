@@ -37,6 +37,9 @@ NeoBundle 'https://github.com/Shougo/unite.vim.git'
 " vimproc
 NeoBundle 'https://github.com/Shougo/vimproc.git'
 
+" dwm.vim
+NeoBundle 'https://github.com/spolu/dwm.vim.git'
+
 " Color Scheme
 NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
 NeoBundle 'https://github.com/w0ng/vim-hybrid.git'
