@@ -18,6 +18,13 @@ export LESSCHARSET=utf-8
 # tmux
 alias tmux='tmux -2'
 
+# rbenv
+if [ -d "${HOME}/.rbenv" ]; then
+    echo "rbenv exists"
+else
+    echo "rbenv not exists"
+fi
+
 case "${OSTYPE}" in
     darwin*)
         # OSX
