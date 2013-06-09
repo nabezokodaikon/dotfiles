@@ -20,11 +20,11 @@ alias tmux='tmux -2'
 
 # rbenv
 if [ -d "${HOME}/.rbenv" ]; then
-    echo "rbenv exists"
+    echo "rbenv exists."
     export PATH=$HOME/.rbenv/bin:$PATH
     eval "$(rbenv init -)"
 else
-    echo "rbenv not exists"
+    echo "rbenv not exists."
 fi
 
 case "${OSTYPE}" in
