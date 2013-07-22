@@ -35,7 +35,14 @@ NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
 " vimproc
-NeoBundle 'https://github.com/Shougo/vimproc.git'
+NeoBundle 'https://github.com/Shougo/vimproc.git', {
+    \ 'build' : {
+    \     'windows' : 'make -f make_mingw32.mak',
+    \     'cygwin' : 'make -f make_cygwin.mak',
+    \     'mac' : 'make -f make_mac.mak',
+    \     'unix' : 'make -f make_unix.mak',
+    \    },
+    \ }
 
 " dwm.vim
 NeoBundle 'https://github.com/spolu/dwm.vim.git'
