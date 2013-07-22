@@ -18,6 +18,14 @@ export LESSCHARSET=utf-8
 # tmux
 alias tmux='tmux -2'
 
+# プロンプト
+# 色設定
+autoload colors
+colors
+# 通常プロンプトを2行で表示
+PROMPT="%{${fg[blue]}%}%~%{${reset_color}%}
+[%n]$ "
+
 # rbenv
 if [ -d "${HOME}/.rbenv" ]; then
     echo "rbenv exists."
