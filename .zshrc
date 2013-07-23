@@ -24,7 +24,7 @@ autoload colors
 colors
 # 通常プロンプトを2行で表示
 PROMPT="%{${fg[blue]}%}%~%{${reset_color}%}
-[%n]$ "
+[%n@%m]$ "
 
 # rbenv
 if [ -d "${HOME}/.rbenv" ]; then
