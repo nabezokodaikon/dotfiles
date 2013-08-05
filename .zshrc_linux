@@ -12,7 +12,7 @@ SCALA_HOME=/usr/scala/default
 PATH=$PATH:$SCALA_HOME/bin
 
 # playframework
-PATH=$PATH:/usr/play/default
+PATH=$PATH:/usr/local/github/playframework
 
 export PATH
 

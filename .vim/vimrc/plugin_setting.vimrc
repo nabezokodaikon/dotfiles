@@ -18,7 +18,8 @@ nnoremap [unite] <Nop>
 nmap     <Leader>f [unite]
 nnoremap [unite]u :<C-u>Unite -no-split<Space>
 nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
-nnoremap <silent> [unite]f :<C-u>Unite<Space>file_mru<CR>
+nnoremap <silent> [unite]f :<C-u>Unite<Space>file<CR>
+nnoremap <silent> [unite]l :<C-u>Unite<Space>file_mru<CR>
 
 " nerdcommenter
 "--------------------------------
