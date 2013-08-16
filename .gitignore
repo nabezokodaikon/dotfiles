@@ -11,6 +11,7 @@
 !.vimrc
 !/.vim/
 !.tmux.conf
+!.ctags
 
 # 除外するファイル
 *~
