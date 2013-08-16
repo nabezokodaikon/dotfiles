@@ -15,3 +15,6 @@ source ~/.vim/vimrc/completion.vimrc
 
 " カラー設定
 source ~/.vim/vimrc/color.vimrc
+
+" tags 設定
+source ~/.vim/vimrc/tags.vimrc
