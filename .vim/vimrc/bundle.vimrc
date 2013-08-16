@@ -55,6 +55,9 @@ NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 " クリップボード連携
 NeoBundle 'https://github.com/kana/vim-fakeclip.git'
 
+" unite-outline
+NeoBundle 'https://github.com/h1mesuke/unite-outline.git'
+
 " end plugins
 
 filetype plugin indent on
