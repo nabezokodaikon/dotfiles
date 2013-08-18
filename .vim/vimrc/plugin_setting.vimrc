@@ -21,7 +21,6 @@ nmap     <Leader>f [unite]
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR> :NERDTreeClose<CR>
 nnoremap <silent> [unite]f :<C-u>Unite file<CR> :NERDTreeClose<CR>
 nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]o :<C-u>Unite outline<CR> :NERDTreeClose<CR>
 
 " nerdcommenter
 "--------------------------------
@@ -29,3 +28,8 @@ nnoremap <silent> [unite]o :<C-u>Unite outline<CR> :NERDTreeClose<CR>
 let NERDSpaceDelims = 1
 nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
+
+" tagbar
+"--------------------------------
+" タグバーをトグル
+nnoremap <silent> <F8> :TagbarToggle<Cr>
