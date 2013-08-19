@@ -1,22 +1,15 @@
-# 全てのファイルを除外する
-/*
-/.*
-
-# 除外しないファイル
-!README
-!/.gitignore
-!.zshrc
-!.zshrc_osx
-!.zshrc_linux
-!.vimrc
-!/.vim/
-!.tmux.conf
-!.ctags
-
-# 除外するファイル
-*~
-.*~
+# 無効にするファイルの種類
+.svn
+.DS_Store
+.netwhist
 *.swp
 .*.swp
-/.vim/.netwhist
+*~
+.*~
+
+# vim プラグインディレクトリを対象外にする
 /.vim/bundle/
+
+# tags ファイル配置ディレクトリのみを対象とする
+/tags/*.tags
+!/tags/README
