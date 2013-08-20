@@ -55,8 +55,11 @@ NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 " クリップボード連携
 NeoBundle 'https://github.com/kana/vim-fakeclip.git'
 
-" tagbar
-NeoBundle 'https://github.com/majutsushi/tagbar.git'
+" unite-outline
+NeoBundle 'https://github.com/nabezokodaikon/unite-outline.git'
+
+" unite-tag
+NeoBundle 'https://github.com/tsukkee/unite-tag.git'
 
 " end plugins
 
