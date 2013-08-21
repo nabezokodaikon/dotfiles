@@ -35,15 +35,15 @@ nnoremap [unite] <Nop>
 nmap     <Leader>f [unite]
 
 " 表示時に The-NEAD-tree を閉じる
-nnoremap <silent> [unite]b :<C-u>Unite buffer -default-action=dwm_new<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]f :<C-u>Unite file -default-action=dwm_new<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]l :<C-u>Unite file_mru -default-action=dwm_new<CR> :NERDTreeClose<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR> :NERDTreeClose<CR>
+nnoremap <silent> [unite]f :<C-u>Unite file<CR> :NERDTreeClose<CR>
+nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR> :NERDTreeClose<CR>
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR> :NEADTreeClose<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
 \ -nargs=? PopupTags
-\ |Unite -default-action=dwm_new -immediately tag:<args>
+\ |Unite -immediately tag:<args>
 noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR> :NERDTreeClose<CR>
 
 
