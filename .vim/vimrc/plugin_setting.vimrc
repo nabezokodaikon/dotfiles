@@ -53,3 +53,9 @@ noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR> :NERD
 let NERDSpaceDelims = 1
 nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
+
+
+" tagbar
+"--------------------------------
+" タグバーをトグル
+nnoremap <silent> <F8> :TagbarToggle<Cr>
