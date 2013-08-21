@@ -61,6 +61,9 @@ NeoBundle 'https://github.com/nabezokodaikon/unite-outline.git'
 " unite-tag
 NeoBundle 'https://github.com/tsukkee/unite-tag.git'
 
+" tagbar
+NeoBundle 'https://github.com/majutsushi/tagbar.git'
+
 " end plugins
 
 filetype plugin indent on
