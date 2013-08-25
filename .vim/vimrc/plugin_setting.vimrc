@@ -38,6 +38,7 @@ nmap     <Leader>f [unite]
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR> :NERDTreeClose<CR>
 nnoremap <silent> [unite]f :<C-u>Unite file<CR> :NERDTreeClose<CR>
 nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR> :NERDTreeClose<CR>
+nnoremap <silent> [unite]r :<C-u>Unite file_rec<CR> :NERDTreeClose<CR>
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR> :NEADTreeClose<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
