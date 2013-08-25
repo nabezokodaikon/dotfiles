@@ -53,3 +53,5 @@ autocmd FileType text setlocal textwidth=0
 " 挿入モードへ戻るときの esc キーの反応を早くする
 set ttimeoutlen=0
 
+" <C-j> で挿入モードから抜ける(ESCと同じ動作)
+imap <C-j> <esc>
