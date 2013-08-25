@@ -41,7 +41,7 @@ nmap     <Leader>f [unite]
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f :<C-u>Unite file<CR>
 nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR>
-nnoremap <silent> [unite]r :<C-u>Unite file_rec<CR>
+nnoremap <silent> [unite]r :<C-u>Unite file_rec file/new -buffer-name=file<CR>
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
