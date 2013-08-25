@@ -15,6 +15,9 @@ let g:NERDTreeShowHidden = 1
 
 " unite.vim
 "--------------------------------
+" 挿入モードで開始する
+let g:unite_enable_start_insert = 1
+
 " unite.vim からファイルを開くときに dwm で新しいウィンドウで開くようにする
 let s:action = {
       \ 'description' : 'new dwm',
@@ -34,18 +37,18 @@ unlet s:action
 nnoremap [unite] <Nop>
 nmap     <Leader>f [unite]
 
-" 表示時に The-NEAD-tree を閉じる
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]f :<C-u>Unite file<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]r :<C-u>Unite file_rec<CR> :NERDTreeClose<CR>
-nnoremap <silent> [unite]o :<C-u>Unite outline<CR> :NEADTreeClose<CR>
+" 各種表示
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]f :<C-u>Unite file<CR>
+nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]r :<C-u>Unite file_rec<CR>
+nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
 \ -nargs=? PopupTags
 \ |Unite -immediately tag:<args>
-noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR> :NERDTreeClose<CR>
+noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR>
 
 
 " nerdcommenter
