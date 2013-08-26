@@ -38,11 +38,16 @@ nnoremap [unite] <Nop>
 nmap     <Leader>f [unite]
 
 " 各種表示
+" バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+" ファイル一覧
 nnoremap <silent> [unite]f :<C-u>Unite file<CR>
+" ファイル表示履歴
 nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR>
-nnoremap <silent> [unite]r :<C-u>Unite file_rec<CR>
-nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
+" ファイル一覧 再帰表示
+nnoremap <silent> [unite]r :<C-u>Unite file_rec file/new -buffer-name=file<CR>
+" アウトライン表示
+nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
