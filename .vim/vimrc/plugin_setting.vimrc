@@ -74,3 +74,5 @@ vmap <Leader>c <Plug>NERDCommenterToggle
 nnoremap <silent> <F8> :TagbarToggle<Cr>
 " タグバー表示時に、タグバーにフォーカスする
 let g:tagbar_autofocus = 1
+" タグバーで項目選択後、タグバーを自動で閉じる
+let g:tagbar_autoclose = 1
