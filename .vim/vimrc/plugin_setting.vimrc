@@ -72,3 +72,5 @@ vmap <Leader>c <Plug>NERDCommenterToggle
 "--------------------------------
 " タグバーをトグル
 nnoremap <silent> <F8> :TagbarToggle<Cr>
+" タグバー表示時に、タグバーにフォーカスする
+let g:tagbar_autofocus = 1
