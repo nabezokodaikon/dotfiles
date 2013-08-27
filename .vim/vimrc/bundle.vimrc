@@ -61,6 +61,12 @@ NeoBundle 'https://github.com/nabezokodaikon/unite-outline.git'
 " unite-tag
 NeoBundle 'https://github.com/tsukkee/unite-tag.git'
 
+" unite-vim_hacks
+NeoBundle 'https://github.com/mattn/webapi-vim.git'
+NeoBundle 'https://github.com/mattn/wwwrenderer-vim.git'
+NeoBundle 'https://github.com/thinca/vim-openbuf.git'
+NeoBundle 'https://github.com/choplin/unite-vim_hacks.git'
+
 " tagbar
 NeoBundle 'https://github.com/majutsushi/tagbar.git'
 
