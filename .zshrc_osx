@@ -10,3 +10,6 @@ export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+
+# python
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
