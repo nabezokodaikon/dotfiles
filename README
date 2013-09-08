@@ -13,6 +13,8 @@ $ ln -s ~/dotfiles/.vim ~/.vim
 $ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf 
 # ctags
 $ ln -s ~/dotfiles/.ctags ~/.ctags 
+# sbt
+$ ln -s ~/dotfiles/.sbtconfig ~/.sbtconfig
 
 3. KeyRemap4MacBook 設定ファイル配置
 # Vim で挿入モードから抜ける時に英数入力に切り替える

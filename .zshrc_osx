@@ -1,8 +1,8 @@
 export JAVA_HOME=/Library/Java/Home
-export SCALA_HOME=/usr/local/scala/default
 
+# homebrew
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:.
-export PATH=$PATH:$SCALA_HOME/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/play/default
 
