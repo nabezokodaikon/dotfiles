@@ -16,24 +16,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " プラグイン管理
 NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
 
-" 自動補完
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
-
-" Scala のシンタックスハイライト
-NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
-
-" ツリー型ファイラー
-NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
-
-" zencoding
-NeoBundle 'https://github.com/mattn/emmet-vim.git'
-
-" コメントアウト
-NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
-
-" unite.vim
-NeoBundle 'https://github.com/Shougo/unite.vim.git'
-
 " vimproc
 NeoBundle 'https://github.com/Shougo/vimproc.git', {
     \ 'build' : {
@@ -44,16 +26,11 @@ NeoBundle 'https://github.com/Shougo/vimproc.git', {
     \    },
     \ }
 
-" dwm.vim
-NeoBundle 'https://github.com/spolu/dwm.vim.git'
+" 自動補完
+NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 
-" Color Scheme
-NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'https://github.com/w0ng/vim-hybrid.git'
-NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
-
-" クリップボード連携
-NeoBundle 'https://github.com/kana/vim-fakeclip.git'
+" unite.vim
+NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
 " unite-outline
 NeoBundle 'https://github.com/nabezokodaikon/unite-outline.git'
@@ -67,8 +44,31 @@ NeoBundle 'https://github.com/mattn/wwwrenderer-vim.git'
 NeoBundle 'https://github.com/thinca/vim-openbuf.git'
 NeoBundle 'https://github.com/choplin/unite-vim_hacks.git'
 
+" クリップボード連携
+NeoBundle 'https://github.com/kana/vim-fakeclip.git'
+
+" ツリー型ファイラー
+NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
+
+" dwm.vim
+NeoBundle 'https://github.com/spolu/dwm.vim.git'
+
+" zencoding
+NeoBundle 'https://github.com/mattn/emmet-vim.git'
+
 " tagbar
 NeoBundle 'https://github.com/majutsushi/tagbar.git'
+
+" コメントアウト
+NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
+
+" Color Scheme
+NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'https://github.com/w0ng/vim-hybrid.git'
+NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
+
+" Scala のシンタックスハイライト
+NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
 
 " end plugins
 
