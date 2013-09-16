@@ -76,3 +76,4 @@ nnoremap <silent> <F8> :TagbarToggle<Cr>
 let g:tagbar_autofocus = 1
 " タグバーで項目選択後、タグバーを自動で閉じる
 let g:tagbar_autoclose = 1
+
