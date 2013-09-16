@@ -15,9 +15,6 @@ setopt auto_pushd
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
-# tmux
-alias tmux='tmux -2'
-
 # プロンプト
 # 色設定
 autoload colors
