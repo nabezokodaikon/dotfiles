@@ -56,9 +56,6 @@ NeoBundle 'https://github.com/spolu/dwm.vim.git'
 " zencoding
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
 
-" vim-tags
-NeoBundle 'https://github.com/szw/vim-tags.git'
-
 " tagbar
 NeoBundle 'https://github.com/majutsushi/tagbar.git'
 
