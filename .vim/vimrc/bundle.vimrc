@@ -53,7 +53,7 @@ NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
 " dwm.vim
 NeoBundle 'https://github.com/spolu/dwm.vim.git'
 
-" zencoding
+" emmet-vim
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
 
 " tagbar
