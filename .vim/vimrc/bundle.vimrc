@@ -70,6 +70,9 @@ NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 " Scala のシンタックスハイライト
 NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
 
+" スニペット
+NeoBundle 'https://github.com/drmingdrmer/xptemplate.git'
+
 " end plugins
 
 filetype plugin indent on
