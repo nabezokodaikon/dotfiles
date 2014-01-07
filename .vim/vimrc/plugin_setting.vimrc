@@ -45,7 +45,7 @@ nmap     <Leader>f [unite]
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " ファイル一覧
-nnoremap <silent> [unite]f :<C-u>Unite file<CR>
+nnoremap <silent> [unite]f :<C-u>Unite file file/new -buffer-name=file<CR>
 " ファイル表示履歴
 nnoremap <silent> [unite]l :<C-u>Unite file_mru<CR>
 " ファイル一覧 再帰表示

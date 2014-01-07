@@ -56,6 +56,9 @@ NeoBundle 'https://github.com/spolu/dwm.vim.git', { 'rev' : 'cba4bc620f' }
 " emmet-vim
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
 
+" surround.vim
+NeoBundle 'https://github.com/tpope/vim-surround.git'
+
 " tagbar
 NeoBundle 'https://github.com/majutsushi/tagbar.git'
 
