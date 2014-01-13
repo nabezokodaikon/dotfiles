@@ -28,11 +28,11 @@ syntax on
 " インクリメンタル検索有効
 set incsearch
 
-" 検索結果をハイライト
-set nohlsearch
+" 検索結果をハイライトする
+set hlsearch
 
-" 現在の行を強調しない
-set nocursorline
+" 現在の行を強調する
+set cursorline
 
 " 補完機能有
 set wildmenu wildmode=list:full
