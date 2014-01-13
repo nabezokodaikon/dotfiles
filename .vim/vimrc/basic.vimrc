@@ -2,10 +2,10 @@
 " 基本設定
 "--------------------------------
 " スワップファイルを作成しない
-:set noswapfile
+set noswapfile
 
 " バックアップファイルを作成しない
-:set nobackup
+set nobackup
 
 " 行頭、行末の回り込みを許可
 " b     delete キー Normal,Visual
