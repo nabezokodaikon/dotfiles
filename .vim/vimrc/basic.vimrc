@@ -34,6 +34,9 @@ set hlsearch
 " 現在の行を強調する
 set cursorline
 
+" 現在の列を強調する
+set cursorcolumn
+
 " 補完機能有
 set wildmenu wildmode=list:full
 
