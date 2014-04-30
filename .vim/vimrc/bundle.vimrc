@@ -76,6 +76,10 @@ NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
 " スニペット
 NeoBundle 'https://github.com/drmingdrmer/xptemplate.git'
 
+" Markdown
+NeoBundle 'https://github.com/tyru/open-browser.vim.git'
+NeoBundle 'https://github.com/kannokanno/previm.git'
+
 " end plugins
 
 filetype plugin indent on

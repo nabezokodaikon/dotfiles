@@ -75,3 +75,10 @@ let g:tagbar_autofocus = 1
 " タグバーで項目選択後、タグバーを自動で閉じる
 let g:tagbar_autoclose = 1
 
+" Previm.vim
+"--------------------------------
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
