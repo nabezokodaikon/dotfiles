@@ -14,6 +14,11 @@ PATH=$PATH:$SCALA_HOME/bin
 # playframework
 PATH=$PATH:/usr/local/github/playframework
 
+# docker
+# 一つ前のコンテナIDを取得するalias
+alias dl='sudo docker ps -l -q'
+
 export PATH
 
 alias sudo='sudo env PATH=$PATH'
+alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
