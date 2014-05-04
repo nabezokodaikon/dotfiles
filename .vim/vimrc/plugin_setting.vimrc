@@ -18,9 +18,9 @@ let g:NERDTreeShowHidden = 1
 " 挿入モードで開始する
 let g:unite_enable_start_insert = 1
 
-" ESC キーを2回押すと終了する
-au FileType unite nmap <buffer> <ESC><ESC> <Plug>(unite_exit)
-au FileType unite imap <buffer> <ESC><ESC> <Plug>(unite_insert_leave) <Plug>(unite_exit)
+" C-c で unite を終了する
+au FileType unite nmap <buffer> <C-c> <Plug>(unite_exit)
+au FileType unite imap <buffer> <C-c> <Plug>(unite_insert_leave) <Plug>(unite_exit)
 
 " unite.vim からファイルを開くときに dwm で新しいウィンドウで開くようにする
 let s:action = {
