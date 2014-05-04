@@ -48,6 +48,8 @@ nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]f :<C-u>Unite file_rec file/new -buffer-name=file<CR>
 " ディレクトリ一覧 再帰表示
 nnoremap <silent> [unite]d :<C-u>Unite directory_rec<CR>
+" 最近開いたファイルの一覧表示
+nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 " アウトライン表示
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
 
