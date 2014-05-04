@@ -32,6 +32,9 @@ NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 " unite.vim
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
+" neomru.vim
+NeoBundle 'https://github.com/Shougo/neomru.vim.git'
+
 " unite-outline
 NeoBundle 'https://github.com/nabezokodaikon/unite-outline.git'
 
