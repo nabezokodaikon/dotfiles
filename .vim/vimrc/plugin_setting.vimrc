@@ -44,10 +44,8 @@ nmap     <Leader>f [unite]
 " 各種表示
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-" ファイル一覧 再帰表示
-nnoremap <silent> [unite]f :<C-u>Unite file_rec file/new -buffer-name=file<CR>
-" ディレクトリ一覧 再帰表示
-nnoremap <silent> [unite]d :<C-u>Unite directory_rec<CR>
+" ファイル、ディレクトリの一覧を再帰表示
+nnoremap <silent> [unite]r :<C-u>Unite directory_rec file_rec file/new -buffer-name=file<CR>
 " 最近開いたファイルの一覧表示
 nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 " アウトライン表示
