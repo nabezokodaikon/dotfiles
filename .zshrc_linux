@@ -21,4 +21,12 @@ alias dl='sudo docker ps -l -q'
 export PATH
 
 alias sudo='sudo env PATH=$PATH'
-alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
+
+if [ -e "/usr/bin/vim" ]; then
+    alias vim='env LANG=ja_JP.UTF-8 /usr/bin/vim "$@"'
+elif [ -e "/usr/local/bin/vim" ]; then
+    alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
+else
+    echo "vim not exists."
+fi
+
