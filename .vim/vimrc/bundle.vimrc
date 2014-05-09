@@ -65,6 +65,9 @@ NeoBundle 'https://github.com/tpope/vim-surround.git'
 " tagbar
 NeoBundle 'https://github.com/majutsushi/tagbar.git'
 
+" auto-ctags.vim
+NeoBundle 'https://github.com/soramugi/auto-ctags.vim.git'
+
 " コメントアウト
 NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
 

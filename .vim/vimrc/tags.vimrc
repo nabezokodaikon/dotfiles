@@ -13,6 +13,9 @@ nnoremap tj :<C-u>tag<CR>
 nnoremap tk :<C-u>pop<CR>
 " 履歴一覧
 nnoremap tl :<C-u>tags<CR>
+" タグをプレビューウィンドウに表示する
+nnoremap tn <C-w>}
+
 
 " tags ファイル設定
 set tags=tags
