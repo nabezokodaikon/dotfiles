@@ -54,7 +54,7 @@ NeoBundle 'https://github.com/kana/vim-fakeclip.git'
 NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
 
 " dwm.vim
-NeoBundle 'https://github.com/nabezokodaikon/dwm.vim.git'
+NeoBundle 'https://github.com/spolu/dwm.vim.git'
 
 " emmet-vim
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
