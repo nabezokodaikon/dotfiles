@@ -50,6 +50,8 @@ nnoremap <silent> [unite]r :<C-u>Unite directory_rec file_rec file/new -buffer-n
 nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 " アウトライン表示
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
+" タブ一覧表示
+nnoremap <silent> [unite]g :<C-u>Unite tab<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
