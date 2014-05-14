@@ -18,3 +18,6 @@ source ~/.vim/vimrc/color.vimrc
 
 " tags 設定
 source ~/.vim/vimrc/tags.vimrc
+
+" tab 設定
+source ~/.vim/vimrc/tab.vimrc
