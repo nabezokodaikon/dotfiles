@@ -86,6 +86,9 @@ NeoBundle 'https://github.com/drmingdrmer/xptemplate.git'
 NeoBundle 'https://github.com/tyru/open-browser.vim.git'
 NeoBundle 'https://github.com/kannokanno/previm.git'
 
+" スクロール
+NeoBundle 'https://github.com/yonchu/accelerated-smooth-scroll.git'
+
 " end plugins
 
 filetype plugin indent on
