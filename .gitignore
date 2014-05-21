@@ -6,6 +6,7 @@
 .*.swp
 *~
 .*~
+tags.lock
 /.vim/.netrwhist
 
 # vim プラグインディレクトリを対象外にする
