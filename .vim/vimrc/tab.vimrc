@@ -3,9 +3,9 @@
 "--------------------------------
 " tmux のタブ(ウィンドウ操作に合わせる)
 " 新しいタブを開く
-noremap gn :tabnew<CR>
+noremap gc :tabnew<CR>
 " 現在のタブを閉じる
-noremap gc :tabclose<CR>
+noremap gd :tabclose<CR>
 " 次のタブへ移動
 noremap gt <Nop>
 noremap gn :tabnext<CR>
