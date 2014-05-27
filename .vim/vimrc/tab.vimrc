@@ -6,9 +6,14 @@
 noremap gc :tabnew<CR>
 " 現在のタブを閉じる
 noremap gd :tabclose<CR>
-" 次のタブへ移動
-noremap gt <Nop>
-noremap gn :tabnext<CR>
+
+" vim-submode
+" 次のタブへ移動 
+call submode#enter_with('changetab', 'n', '', 'gn', 'gt')
+call submode#map('changetab', 'n', '', 'n', 'gt')
 " 前のタブへ移動
-noremap gT <Nop>
-noremap gp :tabNext<CR>
+call submode#enter_with('changetab', 'n', '', 'gp', 'gT')
+call submode#map('changetab', 'n', '', 'p', 'gT')
+
+" unite.vim
+nnoremap <silent> [unite]<space> :<C-u>Unite tab<CR>

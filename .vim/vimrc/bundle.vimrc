@@ -89,6 +89,9 @@ NeoBundle 'https://github.com/kannokanno/previm.git'
 " スクロール
 NeoBundle 'https://github.com/yonchu/accelerated-smooth-scroll.git'
 
+" submode.vim
+NeoBundle 'https://github.com/kana/vim-submode.git'
+
 " end plugins
 
 filetype plugin indent on
