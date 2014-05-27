@@ -15,13 +15,6 @@ let g:NERDTreeShowHidden = 1
 
 " unite.vim
 "--------------------------------
-" 挿入モードで開始する
-let g:unite_enable_start_insert = 1
-
-" C-c で unite を終了する
-au FileType unite nmap <buffer> <C-c> <Plug>(unite_exit)
-au FileType unite imap <buffer> <C-c> <Plug>(unite_insert_leave) <Plug>(unite_exit)
-
 " unite.vim からファイルを開くときに dwm で新しいウィンドウで開くようにする
 let s:action = {
       \ 'description' : 'new dwm',
@@ -44,13 +37,11 @@ nmap     <Leader>f [unite]
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " ファイル、ディレクトリの一覧を再帰表示
-nnoremap <silent> [unite]r :<C-u>Unite directory_rec file_rec file/new -buffer-name=file<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -start-insert directory_rec file_rec file/new -buffer-name=file<CR>
 " 最近開いたファイルの一覧表示
-nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]m :<C-u>Unite -start-insert file_mru<CR>
 " アウトライン表示
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
-" タブ一覧表示
-nnoremap <silent> [unite]g :<C-u>Unite tab<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
