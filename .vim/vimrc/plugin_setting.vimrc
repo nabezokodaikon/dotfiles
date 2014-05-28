@@ -49,6 +49,9 @@ command!
 \ |Unite -immediately tag:<args>
 noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR>
 
+" action 選択時に、インサートモードで開始する。
+call unite#custom#profile('action', 'context', {'start_insert' : 1})
+
 
 " nerdcommenter
 "--------------------------------
