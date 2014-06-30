@@ -5,7 +5,7 @@ export JAVA_HOME=/Library/Java/Home
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 
 # vim
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+export EDITOR=/usr/local/bin/vim
 
 # homebrew
 export PATH=/usr/local/bin:$PATH
