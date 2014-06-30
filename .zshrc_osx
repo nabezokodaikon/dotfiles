@@ -14,7 +14,7 @@ export PATH=$PATH:.
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/play/default
 
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 alias tmux='tmux -2'
 
