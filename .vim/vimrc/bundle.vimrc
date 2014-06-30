@@ -86,9 +86,6 @@ NeoBundle 'https://github.com/drmingdrmer/xptemplate.git'
 NeoBundle 'https://github.com/tyru/open-browser.vim.git'
 NeoBundle 'https://github.com/kannokanno/previm.git'
 
-" スクロール
-NeoBundle 'https://github.com/yonchu/accelerated-smooth-scroll.git'
-
 " submode.vim
 NeoBundle 'https://github.com/kana/vim-submode.git'
 
