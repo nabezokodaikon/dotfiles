@@ -23,15 +23,6 @@ colors
 PROMPT="%{${fg[blue]}%}%~%{${reset_color}%}
 [%n@%m]$ "
 
-# rbenv
-if [ -d "${HOME}/.rbenv" ]; then
-    echo "rbenv exists."
-    export PATH=$HOME/.rbenv/bin:$PATH
-    eval "$(rbenv init -)"
-else
-    echo "rbenv not exists."
-fi
-
 case "${OSTYPE}" in
     darwin*)
         # OSX
