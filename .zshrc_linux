@@ -3,12 +3,15 @@ PATH=/usr/sbin:$PATH
 PATH=/usr/local/sbin:$PATH
 PATH=$HOME/bin:$PATH
 
+# zsh 使用時の term 設定
+export TERM=xterm
+
 # java
-JAVA_HOME=/etc/alternatives/jre_openjdk
+export JAVA_HOME=/etc/alternatives/jre_openjdk
 PATH=$JAVA_HOME/bin:$PATH
 
 # scala
-SCALA_HOME=/usr/scala/default
+export SCALA_HOME=/usr/scala/default
 PATH=$SCALA_HOME/bin:$PATH
 
 # playframework
