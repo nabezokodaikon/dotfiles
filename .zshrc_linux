@@ -4,7 +4,7 @@ PATH=/usr/local/sbin:$PATH
 PATH=$HOME/bin:$PATH
 
 # zsh 使用時の term 設定
-export TERM=xterm
+export TERM=screen-256color
 
 # java
 export JAVA_HOME=/etc/alternatives/jre_openjdk
