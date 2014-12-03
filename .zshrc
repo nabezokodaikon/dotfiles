@@ -16,6 +16,7 @@ export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
 # キーバインドを vim モードにする。
+bindkey -d
 bindkey -v
 
 # プロンプト
@@ -44,6 +45,32 @@ zle -N zle-keymap-select
 # ノーマルモードに移行するキーを変更する。
 # 参考: http://qiita.com/syui/items/8cc534c2c30543965950
 bindkey -M viins '^j' vi-cmd-mode
+
+# インクリメンタルサーチ
+bindkey '^f' history-incremental-search-forward
+bindkey '^h' history-incremental-search-backward
+bindkey '^g' send-break
+
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+
+# 履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=10000
+
+# 重複を記録しない
+setopt hist_ignore_dups
+
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
 
 case "${OSTYPE}" in
     darwin*)
