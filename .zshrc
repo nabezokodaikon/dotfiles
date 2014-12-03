@@ -8,9 +8,6 @@ setopt auto_cd
 # ディレクトリの移動履歴を利用
 setopt auto_pushd
 
-# コマンドのスペルチェックを有効化
-#setopt correct
-
 # 日本語設定
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
@@ -19,10 +16,16 @@ export LESSCHARSET=utf-8
 bindkey -d
 bindkey -v
 
-# プロンプト
 # 色設定
 autoload colors
 colors
+
+# 履歴設定
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=10000
+setopt hist_ignore_dups
+setopt EXTENDED_HISTORY
 
 # git の情報を表示
 autoload -Uz vcs_info
@@ -68,21 +71,6 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
-
-# 履歴ファイルの保存先
-export HISTFILE=${HOME}/.zsh_history
-
-# メモリに保存される履歴の件数
-export HISTSIZE=1000
-
-# 履歴ファイルに保存される履歴の件数
-export SAVEHIST=10000
-
-# 重複を記録しない
-setopt hist_ignore_dups
-
-# 開始と終了を記録
-setopt EXTENDED_HISTORY
 
 case "${OSTYPE}" in
     darwin*)
