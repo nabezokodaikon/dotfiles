@@ -39,7 +39,7 @@ nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " ファイル、ディレクトリの一覧を再帰表示
 nnoremap <silent> [unite]r :<C-u>Unite -start-insert directory_rec file_rec file/new -buffer-name=file<CR>
 " 最近開いたファイルの一覧表示
-nnoremap <silent> [unite]m :<C-u>Unite -start-insert file_mru<CR>
+nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
 " アウトライン表示
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
 
