@@ -54,6 +54,7 @@ NeoBundle 'https://github.com/spolu/dwm.vim.git'
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
 
 " surround.vim
+" テキストを囲ったり、囲いを外したりするプラグイン。
 NeoBundle 'https://github.com/tpope/vim-surround.git'
 
 " tagbar
@@ -81,6 +82,8 @@ NeoBundle 'https://github.com/tyru/open-browser.vim.git'
 NeoBundle 'https://github.com/kannokanno/previm.git'
 
 " submode.vim
+" ユーザが自由にサブモードを定義できるプラグイン。
+" タブ操作をカスタマイズするのに使用している。
 NeoBundle 'https://github.com/kana/vim-submode.git'
 
 " end plugins
