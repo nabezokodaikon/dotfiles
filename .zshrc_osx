@@ -12,18 +12,9 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=.:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=/usr/local/play/default:$PATH
 
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.phpenv\/shims:/} brew"
 alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
 alias ctags='/usr/local/bin/ctags'
 alias tmux='tmux -2'
-
-# rbenv
-if [ -d "${HOME}/.rbenv" ]; then
-    echo "rbenv exists."
-    eval "$(rbenv init -)"
-else
-    echo "rbenv not exists."
-fi
 
