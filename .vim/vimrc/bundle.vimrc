@@ -86,6 +86,15 @@ NeoBundle 'https://github.com/kannokanno/previm.git'
 " タブ操作をカスタマイズするのに使用している。
 NeoBundle 'https://github.com/kana/vim-submode.git'
 
+" vim-gista
+" vim で gist を使用する。
+NeoBundleLazy 'https://github.com/lambdalisue/vim-gista.git', {
+    \ 'autoload': {
+    \    'commands': ['Gista'],
+    \    'mappings': '<Plug>(gista-',
+    \    'unite_sources': 'gista',
+    \}}
+
 " end plugins
 call neobundle#end()
 
