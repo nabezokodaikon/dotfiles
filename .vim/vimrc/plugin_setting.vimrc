@@ -12,6 +12,9 @@ nmap <silent> <C-e> :NERDTreeToggle<CR>
 " 1: 隠しファイルを表示する
 let g:NERDTreeShowHidden = 1
 
+" vim-gista
+"--------------------------------
+let g:gista#github_user = 'nabezokodaikon'
 
 " unite.vim
 "--------------------------------
@@ -42,6 +45,8 @@ nnoremap <silent> [unite]r :<C-u>Unite -start-insert directory_rec file_rec file
 nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
 " アウトライン表示
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
+" gist 一覧表示
+nnoremap <silent> [unite]g :<C-u>Unite -start-insert gista<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
