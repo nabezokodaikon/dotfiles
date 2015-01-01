@@ -1,4 +1,0 @@
-このディレクトリに絶対パスで作成したタグファイルを
-拡張子'.tags'で作成することで vim 起動時に自動で読み込まれる。
-<例>
-$ ctags -f ~/dotfiles/tags/scala.tags -R /usr/local/github/scala/src
