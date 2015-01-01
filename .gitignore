@@ -14,4 +14,5 @@ tags.lock
 
 # tags ファイル配置ディレクトリのみを対象とする
 /tags/*.tags
+/tags/*/
 !/tags/README
