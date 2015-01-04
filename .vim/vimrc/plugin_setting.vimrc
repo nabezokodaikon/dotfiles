@@ -32,6 +32,15 @@ endfunction
 call unite#custom_action('openable', 'dwm_new', s:action)
 unlet s:action
 
+" git ディレクトリを判定する。
+function! DispatchUniteFileRecAsyncOrGit()
+  if isdirectory(getcwd()."/.git")
+    Unite -start-insert directory_rec/async file_rec/git file/new -buffer-name=file
+  else
+    Unite -start-insert directory_rec/async file_rec/async file/new -buffer-name=file
+  endif
+endfunction
+
 " プレフィックスを <Leader>f にする
 nnoremap [unite] <Nop>
 nmap     <Leader>f [unite]
@@ -40,7 +49,7 @@ nmap     <Leader>f [unite]
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " ファイル、ディレクトリの一覧を再帰表示
-nnoremap <silent> [unite]r :<C-u>Unite -start-insert directory_rec file_rec file/new -buffer-name=file<CR>
+nnoremap <silent> [unite]r :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 " 最近開いたファイルの一覧表示
 nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
 " アウトライン表示
