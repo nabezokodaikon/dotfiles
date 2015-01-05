@@ -35,9 +35,9 @@ unlet s:action
 " git ディレクトリを判定する。
 function! DispatchUniteFileRecAsyncOrGit()
   if isdirectory(getcwd()."/.git")
-    Unite -start-insert directory_rec/async file_rec/git file/new -buffer-name=file
+    Unite -start-insert file_rec/git file/new -buffer-name=file
   else
-    Unite -start-insert directory_rec/async file_rec/async file/new -buffer-name=file
+    Unite -start-insert file_rec/async file/new -buffer-name=file
   endif
 endfunction
 
