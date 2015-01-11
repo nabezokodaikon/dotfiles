@@ -12,9 +12,11 @@ nmap <silent> <C-e> :NERDTreeToggle<CR>
 " 1: 隠しファイルを表示する
 let g:NERDTreeShowHidden = 1
 
+
 " vim-gista
 "--------------------------------
 let g:gista#github_user = 'nabezokodaikon'
+
 
 " unite.vim
 "--------------------------------
@@ -49,13 +51,13 @@ nmap     <Leader>f [unite]
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " ファイル、ディレクトリの一覧を再帰表示
-nnoremap <silent> [unite]r :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -start-insert file_rec/async file/new -buffer-name=file<CR>
+" git 管理ファイル一覧表示 
+nnoremap <silent> [unite]g :<C-u>Unite -start-insert file_rec/git file/new -buffer-name=file<CR>
 " 最近開いたファイルの一覧表示
 nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
 " アウトライン表示
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
-" gist 一覧表示
-nnoremap <silent> [unite]g :<C-u>Unite -start-insert gista<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
@@ -83,6 +85,7 @@ nnoremap <silent> <F8> :TagbarToggle<Cr>
 let g:tagbar_autofocus = 1
 " タグバーで項目選択後、タグバーを自動で閉じる
 let g:tagbar_autoclose = 1
+
 
 " Previm.vim
 "--------------------------------
