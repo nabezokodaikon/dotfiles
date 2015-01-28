@@ -31,6 +31,7 @@ NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 
 " スニペット
 NeoBundle 'https://github.com/Shougo/neosnippet.git'
+NeoBundle 'https://github.com/Shougo/neosnippet-snippets.git'
 
 " unite.vim
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
@@ -76,9 +77,6 @@ NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 
 " Scala のシンタックスハイライト
 NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
-
-" スニペット
-NeoBundle 'https://github.com/drmingdrmer/xptemplate.git'
 
 " Markdown
 NeoBundle 'https://github.com/tyru/open-browser.vim.git'
