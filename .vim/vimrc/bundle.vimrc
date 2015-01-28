@@ -29,6 +29,9 @@ NeoBundle 'https://github.com/Shougo/vimproc.git', {
 " 自動補完
 NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 
+" スニペット
+NeoBundle 'https://github.com/Shougo/neosnippet.git'
+
 " unite.vim
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
