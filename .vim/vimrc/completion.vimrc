@@ -56,7 +56,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 
 
-" neocomplcache.vim
+" neosnippet-snippets.vim
 "--------------------------------
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
