@@ -96,6 +96,9 @@ NeoBundleLazy 'https://github.com/lambdalisue/vim-gista.git', {
     \    'unite_sources': 'gista',
     \}}
 
+" タブごとにカレントディレクトリを切り替える。
+NeoBundle 'https://github.com/kana/vim-tabpagecd.git'
+
 " end plugins
 call neobundle#end()
 
