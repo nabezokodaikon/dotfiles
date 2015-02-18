@@ -10,16 +10,10 @@ nnoremap gc :tabnew<CR>
 nnoremap gd <Nop>
 nnoremap gd :tabclose<CR>
 
-" 次のタブへ移動
-nnoremap gn <Nop>
-nnoremap gn :tabnext<CR>
-
-" 前のタブへ移動
-nnoremap gp <Nop>
-nnoremap gp :tabNext<CR>
-
 " vim-submode
 " 次のタブへ移動する操作を押しっぱなしでできるようにする。 
+nnoremap gn <Nop>
+nnoremap gp <Nop>
 call submode#enter_with('changetab', 'n', '', 'gn', 'gt')
 call submode#map('changetab', 'n', '', 'n', 'gt')
 
