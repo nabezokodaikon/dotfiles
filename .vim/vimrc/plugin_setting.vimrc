@@ -20,6 +20,35 @@ let g:gista#github_user = 'nabezokodaikon'
 
 " unite.vim
 "--------------------------------
+" プレフィックスを <Leader>f にする
+nnoremap [unite] <Nop>
+nmap     <Leader>f [unite]
+
+" 各種表示
+" ファイル一覧
+nnoremap <silent> [unite]r :<C-u>Unite -start-insert file_rec/async file/new -buffer-name=file<CR>
+" 最近開いたファイル一覧
+nnoremap <silent> [unite]m :<C-u>Unite -start-insert file_mru<CR>
+" ディレクトリ一覧
+nnoremap <silent> [unite]dr :<C-u>Unite -start-insert directory_rec/async<CR>
+" 最近開いたディレクトリ一覧
+nnoremap <silent> [unite]dm :<C-u>Unite -start-insert directory_mru<CR>
+" バッファ一覧
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+" git 管理ファイル一覧 
+nnoremap <silent> [unite]g :<C-u>Unite -start-insert file_rec/git file/new -buffer-name=file<CR>
+" アウトライン
+nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
+
+" タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
+command!
+\ -nargs=? PopupTags
+\ |Unite -immediately tag:<args>
+noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR>
+
+" action 選択時に、インサートモードで開始する。
+call unite#custom#profile('action', 'context', {'start_insert' : 1})
+
 " unite.vim からファイルを開くときに dwm で新しいウィンドウで開くようにする
 let s:action = {
       \ 'description' : 'new dwm',
@@ -33,40 +62,6 @@ function! s:action.func(candidates)
 endfunction
 call unite#custom_action('openable', 'dwm_new', s:action)
 unlet s:action
-
-" git ディレクトリを判定する。
-function! DispatchUniteFileRecAsyncOrGit()
-  if isdirectory(getcwd()."/.git")
-    Unite -start-insert file_rec/git file/new -buffer-name=file
-  else
-    Unite -start-insert file_rec/async file/new -buffer-name=file
-  endif
-endfunction
-
-" プレフィックスを <Leader>f にする
-nnoremap [unite] <Nop>
-nmap     <Leader>f [unite]
-
-" 各種表示
-" バッファ一覧
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-" ファイル、ディレクトリの一覧を再帰表示
-nnoremap <silent> [unite]r :<C-u>Unite -start-insert file_rec/async file/new -buffer-name=file<CR>
-" git 管理ファイル一覧表示 
-nnoremap <silent> [unite]g :<C-u>Unite -start-insert file_rec/git file/new -buffer-name=file<CR>
-" 最近開いたファイルの一覧表示
-nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
-" アウトライン表示
-nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
-
-" タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
-command!
-\ -nargs=? PopupTags
-\ |Unite -immediately tag:<args>
-noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR>
-
-" action 選択時に、インサートモードで開始する。
-call unite#custom#profile('action', 'context', {'start_insert' : 1})
 
 
 " nerdcommenter
