@@ -3,23 +3,21 @@
 "--------------------------------
 " tmux のタブ(ウィンドウ操作に合わせる)
 " 新しいタブを開く
-nnoremap gc <Nop>
-nnoremap gc :tabnew<CR>
+nnoremap gn <Nop>
+nnoremap gn :tabnew<CR>
 
 " 現在のタブを閉じる
-nnoremap gd <Nop>
-nnoremap gd :tabclose<CR>
+nnoremap gc <Nop>
+nnoremap gc :tabclose<CR>
 
 " vim-submode
 " 次のタブへ移動する操作を押しっぱなしでできるようにする。 
-nnoremap gn <Nop>
-nnoremap gp <Nop>
-call submode#enter_with('changetab', 'n', '', 'gn', 'gt')
-call submode#map('changetab', 'n', '', 'n', 'gt')
+call submode#enter_with('changetab', 'n', '', 'gt', 'gt')
+call submode#map('changetab', 'n', '', 't', 'gt')
 
 " 前のタブへ移動する操作を押しっぱなしでできるようにする。
-call submode#enter_with('changetab', 'n', '', 'gp', 'gT')
-call submode#map('changetab', 'n', '', 'p', 'gT')
+call submode#enter_with('changetab', 'n', '', 'gT', 'gT')
+call submode#map('changetab', 'n', '', 'T', 'gT')
 
 " unite.vim
 nnoremap <silent> [unite]<space> :<C-u>Unite tab<CR>
