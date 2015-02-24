@@ -38,7 +38,7 @@ let s:action = {
       \ }
 function! s:action.func(candidates)
   for l:candidate in a:candidates
-    call DWM_New()
+    call unite#util#command_with_restore_cursor('rightbelow split')
     call unite#take_action('open', candidate)
   endfor
 endfunction
