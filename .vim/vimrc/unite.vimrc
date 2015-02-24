@@ -40,6 +40,7 @@ function! s:action.func(candidates)
   for l:candidate in a:candidates
     call unite#util#command_with_restore_cursor('rightbelow split')
     call unite#take_action('open', candidate)
+    call DWM_Focus()
   endfor
 endfunction
 call unite#custom_action('openable', 'dwm_new', s:action)
