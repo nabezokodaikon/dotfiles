@@ -10,6 +10,9 @@ source ~/.vim/vimrc/indent.vimrc
 " プラグイン設定
 source ~/.vim/vimrc/plugin_setting.vimrc
 
+" unite.vim 設定
+source ~/.vim/vimrc/unite.vimrc
+
 " 補完設定
 source ~/.vim/vimrc/completion.vimrc
 
