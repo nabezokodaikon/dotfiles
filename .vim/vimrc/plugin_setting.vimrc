@@ -63,6 +63,13 @@ endfunction
 call unite#custom_action('openable', 'dwm_new', s:action)
 unlet s:action
 
+" unite grep に ag(The Silver Searcher) を使用する。
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 
 " nerdcommenter
 "--------------------------------
