@@ -99,6 +99,9 @@ NeoBundleLazy 'https://github.com/lambdalisue/vim-gista.git', {
 " タブごとにカレントディレクトリを切り替える。
 NeoBundle 'https://github.com/kana/vim-tabpagecd.git'
 
+" grep の高速版 ag(The Silver Searcher)
+NeoBundle 'https://github.com/rking/ag.vim.git'
+
 " end plugins
 call neobundle#end()
 
