@@ -102,6 +102,9 @@ NeoBundle 'https://github.com/kana/vim-tabpagecd.git'
 " grep の高速版 ag(The Silver Searcher)
 NeoBundle 'https://github.com/rking/ag.vim.git'
 
+" Fcitx 環境でインサートモードからノーマルモードになると、Fcitx が OFF になる。
+NeoBundle 'https://github.com/anekos/felis-cat-igirisu-toast-express.git'
+
 " end plugins
 call neobundle#end()
 
