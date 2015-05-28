@@ -58,3 +58,6 @@ set ttimeoutlen=0
 
 " <C-j> で挿入モードから抜ける(ESCと同じ動作)
 imap <C-j> <esc>
+
+" <Leader> キーを「,」に変更
+let mapleader = ","
