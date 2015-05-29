@@ -48,3 +48,7 @@ augroup END
 "--------------------------------
 nmap <C-[> <Plug>DWMRotateCounterclockwise
 
+" seiya.vim
+"--------------------------------
+" 背景の透過を有効化する。
+let g:seiya_auto_enable = 1

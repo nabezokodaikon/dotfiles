@@ -105,6 +105,9 @@ NeoBundle 'https://github.com/rking/ag.vim.git'
 " Fcitx 環境でインサートモードからノーマルモードになると、Fcitx が OFF になる。
 NeoBundle 'https://github.com/anekos/felis-cat-igirisu-toast-express.git'
 
+" カラースキーム使用時に背景を端末と同じにする。(透過している場合は透過する。)
+NeoBundle 'https://github.com/miyakogi/seiya.vim.git'
+
 " end plugins
 call neobundle#end()
 
