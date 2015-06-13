@@ -20,9 +20,9 @@ nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " アウトライン
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
 " git 管理ファイル一覧 
-nnoremap <silent> [unite]gi :<C-u>Unite -start-insert file_rec/git file/new -buffer-name=file<CR>
+nnoremap <silent> [unite]g :<C-u>Unite -start-insert file_rec/git file/new -buffer-name=file<CR>
 " gist 一覧
-nnoremap <silent> [unite]gs :<C-u>Unite -start-insert gista<CR>
+nnoremap <silent> [unite]s :<C-u>Unite -start-insert gista<CR>
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!
