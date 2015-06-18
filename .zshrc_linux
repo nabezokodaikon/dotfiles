@@ -18,7 +18,11 @@ export PATH=$SCALA_HOME/bin:$PATH
 # 不明な証明書を許可する。
 export GIT_SSL_NO_VERIFY=1
 
+# sudo
 alias sudo='sudo env PATH=$PATH'
+
+# docker
+alias dl='docker ps -l -q'
 
 if [ -e "/usr/bin/vim" ]; then
     alias vim='env LANG=ja_JP.UTF-8 /usr/bin/vim "$@"'
