@@ -24,12 +24,15 @@ alias sudo='sudo env PATH=$PATH'
 # docker
 alias dl='docker ps -l -q'
 
-if [ -e "/usr/bin/vim" ]; then
+# vim
+if [ -e '/usr/bin/vim' ]; then
+    echo 'vim exists.'
     alias vim='env LANG=ja_JP.UTF-8 /usr/bin/vim "$@"'
 elif [ -e "/usr/local/bin/vim" ]; then
+    echo 'vim exists.'
     alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
 else
-    echo "vim not exists."
+    echo 'vim not exists.'
 fi
 
 # keychain
