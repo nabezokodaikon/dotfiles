@@ -32,3 +32,11 @@ else
     echo "vim not exists."
 fi
 
+# keychain
+type keychain > /dev/null 2>&1
+if [ $? = 0 ]; then
+    echo 'keychain exists.'
+    keychain $HOME/.ssh/sakuravps $HOME/.ssh/github > /dev/null 2>/dev/null
+else
+    echo 'keychain not exists.'
+fi
