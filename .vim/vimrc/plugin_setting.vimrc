@@ -2,17 +2,6 @@
 " プラグイン設定 
 "--------------------------------
 
-" The-NERD-tree
-"--------------------------------
-" ツリーをトグル
-nmap <silent> <C-e> :NERDTreeToggle<CR>
-
-" 隠しファイルを表示する
-" 0: 隠しファイルを表示しない
-" 1: 隠しファイルを表示する
-let g:NERDTreeShowHidden = 1
-
-
 " vim-gista
 "--------------------------------
 let g:gista#github_user = 'nabezokodaikon'
@@ -47,6 +36,7 @@ augroup END
 " dwm.vim
 "--------------------------------
 nmap <C-[> <Plug>DWMRotateCounterclockwise
+
 
 " seiya.vim
 "--------------------------------

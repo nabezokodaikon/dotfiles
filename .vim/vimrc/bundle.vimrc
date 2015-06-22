@@ -48,9 +48,6 @@ NeoBundle 'https://github.com/tsukkee/unite-tag.git'
 " クリップボード連携
 NeoBundle 'https://github.com/kana/vim-fakeclip.git'
 
-" ツリー型ファイラー
-NeoBundle 'https://github.com/vim-scripts/The-NERD-tree.git'
-
 " dwm.vim
 NeoBundle 'https://github.com/spolu/dwm.vim.git'
 
