@@ -68,8 +68,6 @@ NeoBundle 'https://github.com/soramugi/auto-ctags.vim.git'
 NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
 
 " Color Scheme
-NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'https://github.com/w0ng/vim-hybrid.git'
 NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 
 " Scala のシンタックスハイライト
