@@ -44,7 +44,8 @@ set wildmenu wildmode=list:full
 set laststatus=2
 
 " ステータスラインの書式
-set statusline=%F%=%l/%L%4c%8P
+" *要 vim-fugitive
+set statusline=%F\ [%Y][%{&fileencoding}]%=%{fugitive#statusline()}\ %l/%L\ %c\ %P
 
 " クリップボード連携
 set clipboard=unnamed,autoselect
