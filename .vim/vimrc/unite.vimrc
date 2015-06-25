@@ -4,7 +4,7 @@
 
 " プレフィックスを <Leader>f にする
 nnoremap [unite] <Nop>
-nmap     <Leader>f [unite]
+nmap     <Space>f [unite]
 
 " 各種表示
 " ファイル一覧
