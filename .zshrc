@@ -72,6 +72,21 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
+# <Ctrl> + z で vim と shell を切り替える。
+# 本来なら vim (<Ctrl> + z) > shell (fg<Enter>) > vim
+# http://postd.cc/how-to-boost-your-vim-productivity/
+fancy-ctrl-z () {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 case "${OSTYPE}" in
     darwin*)
         # OSX
