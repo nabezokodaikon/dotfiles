@@ -2,7 +2,7 @@
 " unite.vim 設定 
 "--------------------------------
 
-" プレフィックスを <Leader>f にする
+" プレフィックスを <Space>f にする
 nnoremap [unite] <Nop>
 nmap     <Space>f [unite]
 
