@@ -2,9 +2,9 @@
 " unite.vim 設定 
 "--------------------------------
 
-" プレフィックスを <Space>f にする
+" プレフィックスを <Space>u にする
 nnoremap [unite] <Nop>
-nmap     <Space>f [unite]
+nmap     <Space>u [unite]
 
 " 各種表示
 " ファイル一覧
