@@ -8,13 +8,11 @@ nmap     <Space>u [unite]
 
 " 各種表示
 " ファイル一覧
-nnoremap <silent> [unite]r :<C-u>Unite -start-insert file_rec/async file/new -buffer-name=file<CR>
+nnoremap <silent> [unite]f :<C-u>Unite -start-insert file_rec/async file/new -buffer-name=file<CR>
 " 最近開いたファイル一覧
-nnoremap <silent> [unite]m :<C-u>Unite -start-insert file_mru<CR>
+nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
 " ディレクトリ一覧
-nnoremap <silent> [unite]dr :<C-u>Unite -start-insert directory_rec/async<CR>
-" 最近開いたディレクトリ一覧
-nnoremap <silent> [unite]dm :<C-u>Unite -start-insert directory_mru<CR>
+nnoremap <silent> [unite]d :<C-u>Unite -start-insert directory_rec/async<CR>
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " アウトライン
