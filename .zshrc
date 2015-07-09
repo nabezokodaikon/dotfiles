@@ -72,6 +72,11 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
+# 自前の sbtconfig を読み込む。
+if [ -f "$HOME/.sbtconfig" ]; then
+  . "$HOME/.sbtconfig"
+fi
+
 # <Ctrl> + z で vim と shell を切り替える。
 # 本来なら vim (<Ctrl> + z) > shell (fg<Enter>) > vim
 # http://postd.cc/how-to-boost-your-vim-productivity/
