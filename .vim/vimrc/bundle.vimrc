@@ -40,7 +40,7 @@ NeoBundle 'https://github.com/Shougo/unite.vim.git'
 NeoBundle 'https://github.com/Shougo/neomru.vim.git'
 
 " unite-outline
-NeoBundle 'https://github.com/nabezokodaikon/unite-outline.git'
+NeoBundle 'https://github.com/Shougo/unite-outline.git'
 
 " unite-tag
 NeoBundle 'https://github.com/tsukkee/unite-tag.git'
