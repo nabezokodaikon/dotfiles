@@ -62,3 +62,6 @@ imap <C-j> <esc>
 
 " <Leader> を <Space> に変更
 let mapleader = "\<Space>"
+
+" 保存されていないファイルがあるときでも別のファイルを開く
+set hidden
