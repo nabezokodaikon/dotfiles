@@ -39,7 +39,7 @@ fi
 type keychain > /dev/null 2>&1
 if [ $? = 0 ]; then
     echo 'keychain exists.'
-    keychain $HOME/.ssh/sakuravps $HOME/.ssh/github > /dev/null 2>/dev/null
+    keychain $HOME/.ssh/sakuravps > /dev/null 2>/dev/null
     source $HOME/.keychain/$HOST-sh
 else
     echo 'keychain not exists.'
