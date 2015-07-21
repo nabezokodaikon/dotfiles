@@ -65,3 +65,6 @@ let mapleader = "\<Space>"
 
 " 保存されていないファイルがあるときでも別のファイルを開く
 set hidden
+
+" マウスを無効化
+set mouse=
