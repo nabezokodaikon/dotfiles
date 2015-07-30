@@ -68,3 +68,6 @@ set hidden
 
 " マウスを無効化
 set mouse=
+
+" 外部で変更のあったファイルを自動的に読みなおす
+set autoread
