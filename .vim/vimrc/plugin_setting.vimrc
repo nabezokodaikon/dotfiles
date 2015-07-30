@@ -42,3 +42,12 @@ nmap <C-[> <Plug>DWMRotateCounterclockwise
 "--------------------------------
 " 背景の透過を有効化する。
 let g:seiya_auto_enable = 1
+
+
+" rainbow_parentheses.vim
+"--------------------------------
+" 常に有効化する。
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
