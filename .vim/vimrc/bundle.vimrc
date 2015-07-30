@@ -106,9 +106,6 @@ NeoBundle 'https://github.com/miyakogi/seiya.vim.git'
 " vim 上で git を操作する。
 NeoBundle 'https://github.com/tpope/vim-fugitive.git'
 
-" vim の括弧をカラフルにする。
-NeoBundle 'https://github.com/kien/rainbow_parentheses.vim.git'
-
 " end plugins
 call neobundle#end()
 
