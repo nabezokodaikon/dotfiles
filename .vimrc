@@ -24,3 +24,6 @@ source ~/.vim/vimrc/tags.vimrc
 
 " tab 設定
 source ~/.vim/vimrc/tab.vimrc
+
+" split 設定
+source ~/.vim/vimrc/split.vimrc
