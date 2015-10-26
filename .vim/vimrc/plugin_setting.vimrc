@@ -33,11 +33,6 @@ augroup PrevimSettings
 augroup END
 
 
-" dwm.vim
-"--------------------------------
-nmap <C-[> <Plug>DWMRotateCounterclockwise
-
-
 " seiya.vim
 "--------------------------------
 " 背景の透過を有効化する。

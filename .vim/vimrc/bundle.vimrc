@@ -48,9 +48,6 @@ NeoBundle 'https://github.com/tsukkee/unite-tag.git'
 " クリップボード連携
 NeoBundle 'https://github.com/kana/vim-fakeclip.git'
 
-" dwm.vim
-NeoBundle 'https://github.com/spolu/dwm.vim.git'
-
 " emmet-vim
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
 

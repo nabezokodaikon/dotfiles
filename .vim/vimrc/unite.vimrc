@@ -31,21 +31,6 @@ noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR>
 " action 選択時に、インサートモードで開始する。
 call unite#custom#profile('action', 'context', {'start_insert' : 1})
 
-" unite.vim からファイルを開くときに dwm で新しいウィンドウで開くようにする
-let s:action = {
-      \ 'description' : 'new dwm',
-      \ 'is_selectable' : 1,
-      \ }
-function! s:action.func(candidates)
-  for l:candidate in a:candidates
-    call DWM_Focus()
-    call unite#util#command_with_restore_cursor('rightbelow split')
-    call unite#take_action('open', candidate)
-  endfor
-endfunction
-call unite#custom_action('openable', 'dwm_new', s:action)
-unlet s:action
-
 " unite grep に ag(The Silver Searcher) を使用する。
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
