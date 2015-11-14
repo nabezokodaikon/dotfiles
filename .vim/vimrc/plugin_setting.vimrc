@@ -15,16 +15,6 @@ nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
 
 
-" tagbar
-"--------------------------------
-" タグバーをトグル
-nnoremap <silent> <F8> :TagbarToggle<Cr>
-" タグバー表示時に、タグバーにフォーカスする
-let g:tagbar_autofocus = 1
-" タグバーで項目選択後、タグバーを自動で閉じる
-let g:tagbar_autoclose = 1
-
-
 " Previm.vim
 "--------------------------------
 augroup PrevimSettings
@@ -37,6 +27,7 @@ augroup END
 "--------------------------------
 " 背景の透過を有効化する。
 let g:seiya_auto_enable = 1
+
 
 " vim-easymotion
 "--------------------------------
