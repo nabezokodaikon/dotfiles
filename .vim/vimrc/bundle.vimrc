@@ -106,6 +106,9 @@ NeoBundle 'https://github.com/tpope/vim-fugitive.git'
 " vim のカーソル移動を便利にする。
 NeoBundle 'https://github.com/easymotion/vim-easymotion.git'
 
+" vim で git を 操作する。
+NeoBundle 'https://github.com/tpope/vim-fugitive.git'
+
 " end plugins
 call neobundle#end()
 
