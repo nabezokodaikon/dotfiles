@@ -8,6 +8,9 @@ setopt auto_cd
 # ディレクトリの移動履歴を利用
 setopt auto_pushd
 
+# auto_pushd で重複するディレクトリを記録しない。
+setopt pushd_ignore_dups
+
 # 日本語設定
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
