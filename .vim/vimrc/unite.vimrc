@@ -28,6 +28,9 @@ nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
 " gist 一覧
 nnoremap <silent> [unite]s :<C-u>Unite -start-insert gista<CR>
+" タブ一覧
+nnoremap <silent> [unite]g :<C-u>Unite tab<CR>
+
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
 command!

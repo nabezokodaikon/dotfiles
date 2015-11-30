@@ -19,9 +19,6 @@ call submode#map('changetab', 'n', '', 't', 'gt')
 call submode#enter_with('changetab', 'n', '', 'gT', 'gT')
 call submode#map('changetab', 'n', '', 'T', 'gT')
 
-" unite.vim
-nnoremap <silent> [unite]<space> :<C-u>Unite tab<CR>
-
 " タブページを常に表示
 set showtabline=2
 
