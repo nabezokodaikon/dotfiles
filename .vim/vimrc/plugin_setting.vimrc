@@ -37,3 +37,9 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 " 2文字のキーワード検索のみを有効化する。
 nmap <Leader>s <Plug>(easymotion-s2)
+
+
+" emmet-vim
+"--------------------------------
+" プレフィックスを変更する。
+let g:user_emmet_leader_key='<C-e>'
