@@ -79,11 +79,18 @@ NeoBundle 'https://github.com/kana/vim-submode.git'
 " vim-gista
 " vim で gist を使用する。
 NeoBundleLazy 'https://github.com/lambdalisue/vim-gista.git', {
-    \ 'autoload': {
-    \    'commands': ['Gista'],
-    \    'mappings': '<Plug>(gista-',
-    \    'unite_sources': 'gista',
-    \}}
+    \   'on_cmd': ['Gista'],
+    \   'on_func': 'gista#'
+    \}
+
+" vim-gista と unite を連携させる。
+NeoBundle 'https://github.com/lambdalisue/vim-gista-unite', {
+    \ 'depends': [
+    \   'lambdalisue/vim-gista',
+    \   'Shougo/unite.vim',
+    \ ],
+    \ 'on_unite': ['gista', 'gista/file', 'gista/commit'],
+    \}
 
 " タブごとにカレントディレクトリを切り替える。
 NeoBundle 'https://github.com/kana/vim-tabpagecd.git'

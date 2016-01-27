@@ -4,7 +4,7 @@
 
 " vim-gista
 "--------------------------------
-let g:gista#github_user = 'nabezokodaikon'
+let g:gista#client#default_username = 'nabezokodaikon'
 
 
 " nerdcommenter
