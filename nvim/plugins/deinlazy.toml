@@ -1,0 +1,9 @@
+[[plugins]]
+repo = 'lambdalisue/vim-gista'
+on_cmd = 'Gista'
+on_func = 'gista#'
+
+[[plugins]]
+repo = 'lambdalisue/vim-gista-unite'
+depends = ['lambdalisue/vim-gista', 'Shougo/unite.vim']
+on_unite = ['gista', 'gista/file', 'gista/commit']

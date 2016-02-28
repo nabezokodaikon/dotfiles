@@ -13,7 +13,7 @@ tags.lock
 /.vim/bundle/
 
 # neovim プラグインディレクトリを対象外にする
-/.nvim/plugins
+/nvim/plugins/repos/
 
 # tags ファイル配置ディレクトリのみを対象とする
 /tags/*.tags
