@@ -75,6 +75,9 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
+# neovimの設定ファイル
+export XDG_CONFIG_HOME="$HOME"/.config
+
 # 自前の sbtconfig を読み込む。
 if [ -f "$HOME/.sbtconfig" ]; then
   . "$HOME/.sbtconfig"
