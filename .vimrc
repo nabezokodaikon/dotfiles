@@ -8,7 +8,7 @@ source ~/.vim/vimrc/basic.vimrc
 source ~/.vim/vimrc/indent.vimrc
 
 " プラグイン設定
-source ~/.vim/vimrc/plugin_setting.vimrc
+source ~/.vim/vimrc/plugin-setting.vimrc
 
 " unite.vim 設定
 source ~/.vim/vimrc/unite.vimrc

@@ -8,7 +8,7 @@ source ~/.config/nvim/rc/basic.rc.vim
 source ~/.config/nvim/rc/indent.rc.vim
 
 " プラグイン設定
-source ~/.config/nvim/rc/plugin_setting.rc.vim
+source ~/.config/nvim/rc/plugin-setting.rc.vim
 
 " unite.vim 設定
 source ~/.config/nvim/rc/unite.rc.vim
