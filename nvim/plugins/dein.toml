@@ -9,7 +9,7 @@ build = 'make'
 
 # 補完
 [[plugins]]
-repo = 'Shougo/neocomplete'
+repo = 'Shougo/deoplete.nvim'
 
 # スニペット
 [[plugins]]

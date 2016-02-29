@@ -2,53 +2,53 @@
 " 補完設定
 "--------------------------------
 
-" neocomplete.vim
+" deoplete.nvim
 "--------------------------------
 " AutoComplPop プラグインを無効にする 
 let g:acp_enableAtStartup = 0
 
-" 起動時に有効にする
-let g:neocomplete#enable_at_startup = 1
+" deoplete を利用する
+let g:deoplete#enable_at_startup = 1
 
 " 自動補完を開始するキーワードの長さ
-let g:neocomplete#auto_completion_start_length = 3
+let g:deoplete#auto_completion_start_length = 3
 
 " 大文字が入力されるまで、大文字小文字の区別を無視する
-let g:neocomplete#enable_smart_case = 1
+let g:deoplete#enable_smart_case = 1
 
 " シンタックスをキャッシュするときの最小文字長を 3 にする
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:deoplete#sources#syntax#min_keyword_length = 3
 
 " 辞書ファイル
-let g:neocomplete#sources#dictionary#dictionaries = {
+let g:deoplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'scala' : $HOME.'/.vim/dict/scala.dict'
     \ }
 
 " Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
+if !exists('g:deoplete#keyword_patterns')
+    let g:deoplete#keyword_patterns = {}
 endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+let g:deoplete#keyword_patterns['default'] = '\h\w*'
 
 " <C-h>や<BS>を押したときに確実にポップアップを削除する
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<BS>"
+inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<BS>"
 
 " 現在選択している候補を確定する
-inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-y> deoplete#close_popup()
 
 " 現在選択している候補をキャンセルし、ポップアップを閉じる
-inoremap <expr><C-e> neocomplete#cancel_popup()
+inoremap <expr><C-e> deoplete#cancel_popup()
 
 " 最初の候補を選択する
-let g:neocomplete#enable_auto_select = 1
+let g:deoplete#enable_auto_select = 1
 
 " TABで補完できるようにする
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " 補完候補が出ていたら確定、なければ改行する
-inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "<CR>"
+inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 
 
 " neosnippet-snippets.vim
