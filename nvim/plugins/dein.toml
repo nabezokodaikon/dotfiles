@@ -69,10 +69,7 @@ repo = 'anekos/felis-cat-igirisu-toast-express'
 repo = 'miyakogi/seiya.vim'
 
 [[plugins]]
-repo = 'tpope/vim-five'
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-
-[[plugins]]
-repo = 'tpope/vim-five'

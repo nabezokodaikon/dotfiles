@@ -47,9 +47,6 @@ set laststatus=2
 " *要 vim-fugitive
 set statusline=%F\ [%Y][%{&fileencoding}]%=%{fugitive#statusline()}\ %l/%L\ %c\ %P
 
-" クリップボード連携
-set clipboard=unnamed,autoselect
-
 " 自動改行させない
 " デフォルト vimrc_example の textwidth 設定を上書き
 autocmd FileType text setlocal textwidth=0
