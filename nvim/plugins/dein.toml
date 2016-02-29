@@ -1,75 +1,93 @@
+# プラグイン管理
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# vimproc
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
+# 補完
 [[plugins]]
 repo = 'Shougo/neocomplete'
 
+# スニペット
 [[plugins]]
 repo = 'Shougo/neosnippet'
-
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
+# unite.vim
 [[plugins]]
 repo = 'Shougo/unite.vim'
 
+# neomru.vim
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 
+# unite-outline
 [[plugins]]
 repo = 'Shougo/unite-outline'
 
+# unite-tag
 [[plugins]]
 repo = 'tsukkee/unite-tag'
 
-[[plugins]]
-repo = 'kana/vim-fakeclip'
-
+# emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
+# テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+# auto-ctags
 [[plugins]]
 repo = 'soramugi/auto-ctags.vim'
 
+# コメントアウト
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
 
+# カラースキーム
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
 
+# Scala のシンタックスハイライト
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
 
+# Markdown
 [[plugins]]
 repo = 'tyru/open-browser.vim'
-
 [[plugins]]
 repo = 'kannokanno/previm'
 
+# ユーザが自由にサブモードを定義できるプラグイン。
+# タブ操作をカスタマイズするのに使用している。
 [[plugins]]
 repo = 'kana/vim-submode'
 
+# タブごとにカレントディレクトリを切り替える。
 [[plugins]]
 repo = 'kana/vim-tabpagecd'
 
+# grep の高速版 ag(The Silver Searcher)
 [[plugins]]
 repo = 'rking/ag.vim'
 
+# Fcitx 環境でインサートモードからノーマルモードになると、Fcitx が OFF になる。
 [[plugins]]
 repo = 'anekos/felis-cat-igirisu-toast-express'
 
+# カラースキーム使用時に背景を端末と同じにする。(透過している場合は透過する。)
 [[plugins]]
 repo = 'miyakogi/seiya.vim'
 
+# git を操作する。
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+# カーソル移動を便利にする。
 [[plugins]]
 repo = 'easymotion/vim-easymotion'

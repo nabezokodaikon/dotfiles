@@ -1,8 +1,10 @@
+# gist を使用する。
 [[plugins]]
 repo = 'lambdalisue/vim-gista'
 on_cmd = 'Gista'
 on_func = 'gista#'
 
+# vim-gista と unite を連携させる。
 [[plugins]]
 repo = 'lambdalisue/vim-gista-unite'
 depends = ['lambdalisue/vim-gista', 'Shougo/unite.vim']
