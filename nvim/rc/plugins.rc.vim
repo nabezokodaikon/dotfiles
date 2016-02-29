@@ -16,12 +16,10 @@ call dein#begin(s:dein_dir)
 
 " プラグインリストを収めた TOML ファイル
 let s:toml      = '~/.config/nvim/plugins/dein.toml'
-let s:lazy_toml = '~/.config/nvim/plugins/deinlazy.toml'
 
 " TOML を読み込み、キャッシュしておく
-if dein#load_cache([expand('<sfile>'), s:toml, s:lazy_toml])
+if dein#load_cache([expand('<sfile>'), s:toml])
   call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
   call dein#save_cache()
 endif
 
