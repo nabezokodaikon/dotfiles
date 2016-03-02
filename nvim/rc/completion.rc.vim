@@ -38,12 +38,6 @@ inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<BS>"
 " 現在選択している候補を確定する
 inoremap <expr><C-y> deoplete#mappings#close_popup()
 
-" 現在選択している候補をキャンセルし、ポップアップを閉じる
-inoremap <expr><C-e> deoplete#cancel_popup()
-
-" 最初の候補を選択する
-let g:deoplete#enable_auto_select = 1
-
 " TABで補完できるようにする
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
