@@ -35,6 +35,17 @@ else
     echo 'vim not exists.'
 fi
 
+# nvim
+if [ -e '/usr/bin/nvim' ]; then
+    echo 'neovim exists.'
+    alias nvim='env LANG=ja_JP.UTF-8 /usr/bin/nvim "$@"'
+elif [ -e "/usr/local/bin/nvim" ]; then
+    echo 'neovim exists.'
+    alias nvim='env LANG=ja_JP.UTF-8 /usr/local/bin/nvim "$@"'
+else
+    echo 'neovim not exists.'
+fi
+
 # keychain
 type keychain > /dev/null 2>&1
 if [ $? = 0 ]; then
