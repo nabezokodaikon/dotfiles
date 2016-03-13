@@ -7,17 +7,7 @@ $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
 
 2. シンボリックリンクを作成する
 ```
-# zsh
-$ ln -s ~/dotfiles/.zshrc ~/.zshrc
-# vim
-$ ln -s ~/dotfiles/.vimrc ~/.vimrc
-$ ln -s ~/dotfiles/.vim ~/.vim
-# tmux
-$ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf 
-# ctags
-$ ln -s ~/dotfiles/.ctags ~/.ctags 
-# sbt
-$ ln -s ~/dotfiles/.sbtconfig ~/.sbtconfig
+$ ./install.sh
 ```
 
 3. KeyRemap4MacBook 設定ファイル配置
