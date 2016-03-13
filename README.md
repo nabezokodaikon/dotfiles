@@ -32,3 +32,10 @@ $ git clone git://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vi
 6. vim プラグイン導入
 $ vim
 :NeoBundleInstall
+
+7. neovim
+```
+$ yaourt -S python-pip --noconfirm
+$ sudo pip3 install neovim
+```
+
