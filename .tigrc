@@ -1,0 +1,4 @@
+# tig 設定
+
+# 色設定
+source ~/dotfiles/tig/colorscheme.tigrc
