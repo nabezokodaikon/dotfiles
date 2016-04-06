@@ -101,10 +101,10 @@ bindkey '^Z' fancy-ctrl-z
 case "${OSTYPE}" in
     darwin*)
         # OSX
-        [ -f ~/dotfiles/.zshrc_osx ] && source ~/dotfiles/.zshrc_osx
+        [ -f ~/dotfiles/zsh/osx.zshrc ] && source ~/dotfiles/zsh/osx.zshrc
         ;;
     linux*)
         # Linux 設定
-        [ -f ~/dotfiles/.zshrc_linux ] && source ~/dotfiles/.zshrc_linux 
+        [ -f ~/dotfiles/zsh/linux.zshrc ] && source ~/dotfiles/zsh/linux.zshrc 
         ;;
 esac
