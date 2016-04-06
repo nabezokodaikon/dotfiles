@@ -1,103 +1,91 @@
 # tig 色設定
 
-# Neonwolf Color Scheme for Tig
-#
-# Based mostly on the colors from the badwolf airline theme
-#
-# Github: https://github.com/h3xx/tig-colors-neonwolf
-#
+# 参考: https://github.com/cbertoldi/dotfiles/blob/master/tigrc.symlink
+# *color* 'area' 'fgcolor' 'bgcolor' '[attributes]'
 
-# disable importing colors from git config
-# (breaks main-ref coloring, probably others)
-set git-colors = no
+# general
+color   default                 15      235
+color   cursor                  15      241
+color   title-focus             242     221
+color   title-blur              242     221
+color   delimiter               213     default
+color   author                  156     default
+color   date                    81      default
+color   line-number             221     default
+color   mode                    255     default
 
-color header        121 235 bold
-color section       39  235 bold
+# main
+color   main-tag                213     default     bold
+color   main-local-tag          213     default
+color   main-remote             221     default
+color   main-replace            81      default
+color   main-tracked            221     default     bold
+color   main-ref                81      default
+color   main-head               213     default     bold
+color   graph-commit            226     default
 
-# diff view
-color diff-header       39  235 bold
-color diff-index        39  235 bold
-color diff-oldmode      39  235 bold
-color diff-newmode      39  235 bold
-color diff-stat         222 235 bold
-color diff-chunk        165 235 bold
-color diff-add          154 235 bold
-color diff-del          196 235 bold
-color " +"              154 default
-color " -"              196 default
-color "--- "            39  235 bold
-color "+++ "            39  235 bold
-color "Merge: "         222 235 bold
-color "Refs: "          222 235 bold
-color "commit "         154 235 bold
-color "Commit: "        39  235 bold
-color "CommitDate: "    165 235 bold
-color "Author: "        39  235 bold
-color "AuthorDate: "    165 235 bold
-color "Tagger: "        222 235 bold
-color "TaggerDate: "    222 235 bold
-color "---"             165 default bold
+# status
+#color  stat-head       81      default
 
-# log view, mostly
-color "Date: "              165 235 bold
-color "    Signed-off-by"   222 235 bold
-color "    Acked-by"        222 235 bold
-color "    Tested-by"       222 235 bold
-color "    Reviewed-by"     222 235 bold
+# Diff   colors
+color   diff_add                10      default
+color   diff_add2               10      default
+color   diff_del                196     default
+color   diff_del2               196     default
+color   diff-header             221     default
+color   diff-index              81      default
+color   diff-chunk              213     default
+color   diff_oldmode            221     default
+color   diff_newmode            221     default
+color   'deleted file mode'     221     default
+color   'copy from'             223     default
+color   'copy to'               221     default
+color   'rename from'           221     default
+color   'rename to'             221     default
+color   diff_similarity         221     default
+color   'dissimilarity'         221     default
+color   'diff_tree'             81      default
+color   diff-stat               81      default
+color   "Reported-by:"          156     default
 
-# main view
-color author            39  235 bold
-color date              165 235 bold
-color graph-commit      154 default bold
-color id                154 235 bold
-color main-remote       222 235 bold
-color main-tracked      222 235 bold
-color main-tag          166 235 bold
-color main-local-tag    166 235 bold
-color main-head         81  235 bold
-color main-ref          121 235 bold
-color overflow          196 default
+color   'Author:'               156     default
+color   'Commit:'               213     default
+color   'AuthorDate:'           221     default
+color   'CommitDate:'           221     default
+color   'Date:'                 81      default
+color   pp_refs                 213     default
+color   palette-0               226     default
+color   palette-1               213     default
+color   palette-2               118     default
+color   palette-3               51      default
+color   palette-4               196     default
+color   palette-5               219     default
+color   palette-6               190     default
 
-# window dressing
-color title-blur        39  235 bold
-color title-focus       39  232 bold reverse
-color cursor            232 154 bold
-color status            82  default
+# status
+color   status.header           221     default
+color   status.section          81      default
+color   stat_staged             213     default
+color   stat_unstaged           213     default
+color   stat_untracked          213     default
 
-# tree view
-color mode              121 default
-color directory         121 default bold
-color file              255 default
+# raw commit header
+color   commit                  156     default
+color   committer               213     default
 
-# status view
-color stat-none         82  default
-color stat-staged       154 235 bold
-color stat-unstaged     166 235 bold
-color stat-untracked    81  235 bold
+# commit message
+color   'Signed-off-by'         221     default
+color   'Acked-by'              221     default
+color   'Tested-by'             221     default
+color   'Reviewed-by'           221     default
 
-# lines in digraph
-color palette-0         165 default bold
-color palette-1         39  default bold
-color palette-2         222 default bold
-color palette-3         166 default bold
-color palette-4         121 default bold
-color palette-5         82  default bold
-color palette-6         196 default bold
-color palette-7         238 default bold
-# repeat
-color palette-8         165 default
-color palette-9         39  default
-color palette-10        222 default
-color palette-11        166 default
-color palette-12        121 default
-color palette-13        82  default
+# tree
+color   tree.directory         221     default
 
-# grep view
-color grep.file         39  235 bold
-color grep.line-number  165 235 bold
-color grep.delimiter    82  235 bold # no effect?
-color delimiter         82  235 bold # no effect?
-
-# help view
-color help-group        165 235 bold
-color help-action       222 235 bold
+# LINE(PALETTE_0, "", COLOR_MAGENTA, COLOR_DEFAULT, 0), \
+#   LINE(PALETTE_1, "", COLOR_YELLOW, COLOR_DEFAULT, 0), \
+#   LINE(PALETTE_2, "", COLOR_CYAN, COLOR_DEFAULT, 0), \
+#   LINE(PALETTE_3, "", COLOR_GREEN, COLOR_DEFAULT, 0), \
+#   LINE(PALETTE_4, "", COLOR_DEFAULT, COLOR_DEFAULT, 0), \
+#   LINE(PALETTE_5, "", COLOR_WHITE, COLOR_DEFAULT, 0), \
+#   LINE(PALETTE_6, "", COLOR_RED, )
