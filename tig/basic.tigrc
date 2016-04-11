@@ -1,0 +1,4 @@
+# tig 基本設定
+
+# 差分の前後の表示行数（diff-context)を指定 
+set diff-context = 8
