@@ -1,4 +1,19 @@
 # tig 基本設定
 
-# 差分の前後の表示行数（diff-context)を指定 
+# 差分の前後の表示行数を指定。 
 set diff-context = 8
+
+# generic key binds.
+bind generic G none
+bind generic g none
+bind generic <Ctrl-f> move-page-down
+bind generic <Ctrl-b> move-page-up
+bind generic gg move-first-line
+bind generic G move-last-line
+
+# main key binds.
+bind main G none
+
+# status key binds.
+bind status C none
+bind status C !git commit -v
