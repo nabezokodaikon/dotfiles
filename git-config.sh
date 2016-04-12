@@ -17,3 +17,6 @@ git config --global push.default simple
 
 # リモートリポジトリが自己証明書であっても接続する。
 git config --global http.sslVerify false
+
+# diffの前後行数を変更。
+git config --global diff.context 8
