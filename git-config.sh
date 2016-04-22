@@ -20,3 +20,6 @@ git config --global http.sslVerify false
 
 # diffの前後行数を変更。
 git config --global diff.context 8
+
+# git log --graph の書式を指定。
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
