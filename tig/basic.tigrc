@@ -3,6 +3,9 @@
 # 差分の前後の表示行数を指定。 
 set diff-context = 8
 
+# 画面分割を水平分割のみにする。
+set vertical-split = no
+
 # generic key binds.
 bind generic G none
 bind generic g none
