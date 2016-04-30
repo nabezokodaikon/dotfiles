@@ -19,3 +19,7 @@ tags.lock
 /tags/*.tags
 /tags/*/
 !/tags/README
+
+# nvimのログディレクトリを空の状態で対象とする
+/nvim/logs/*
+!.gitkeep

@@ -78,6 +78,9 @@ bindkey "^n" history-beginning-search-forward-end
 # neovimの設定ファイル
 export XDG_CONFIG_HOME="$HOME"/.config
 
+# neovimのログファイル
+export NVIM_PYTHON_LOG_FILE="$HOME"/.config/nvim/logs/log
+
 # 自前の sbtconfig を読み込む。
 if [ -f "$HOME/.sbtconfig" ]; then
   . "$HOME/.sbtconfig"
