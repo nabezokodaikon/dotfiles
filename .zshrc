@@ -66,7 +66,7 @@ bindkey -M viins '^j' vi-cmd-mode
 
 # インクリメンタルサーチ
 bindkey '^f' history-incremental-search-forward
-bindkey '^h' history-incremental-search-backward
+bindkey '^b' history-incremental-search-backward
 bindkey '^g' send-break
 
 autoload history-search-end
