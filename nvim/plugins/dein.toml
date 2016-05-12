@@ -57,12 +57,6 @@ repo = 'nanotech/jellybeans.vim'
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
 
-# Markdown
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-[[plugins]]
-repo = 'kannokanno/previm'
-
 # ユーザが自由にサブモードを定義できるプラグイン。
 # タブ操作をカスタマイズするのに使用している。
 [[plugins]]
