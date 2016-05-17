@@ -6,6 +6,9 @@ set diff-context = 8
 # 画面分割を水平分割のみにする。
 set vertical-split = no
 
+# リビジョングラフの文字コードを指定。
+set line-graphics = ascii
+
 # generic key binds.
 bind generic G none
 bind generic g none
