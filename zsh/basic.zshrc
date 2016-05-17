@@ -24,7 +24,7 @@ autoload colors
 colors
 
 # 履歴設定
-export HISTFILE=${HOME}/.zsh_history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=10000
 setopt hist_ignore_dups
@@ -76,10 +76,10 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
 # neovimの設定ファイル
-export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_CONFIG_HOME=$HOME/.config
 
 # neovimのログファイル
-export NVIM_PYTHON_LOG_FILE="$HOME"/.config/nvim/logs/log
+export NVIM_PYTHON_LOG_FILE=$HOME/.config/nvim/logs/log
 
 # 自前の sbtconfig を読み込む。
 if [ -f "$HOME/.sbtconfig" ]; then
