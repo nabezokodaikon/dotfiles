@@ -9,9 +9,9 @@ nmap     <Space>u [unite]
 " file_rec/asyncとfile_rec/gitを自動的に切り換える
 function! DispatchUniteFileRecAsyncOrGit()
   if isdirectory(getcwd()."/.git")
-    Unite -start-insert file_rec/git file/new -buffer-name=file
+    Unite file_rec/git file/new -buffer-name=file -start-insert
   else
-    Unite -start-insert file_rec/async file/new -buffer-name=file
+    Unite file_rec/async file/new -buffer-name=file -start-insert
   endif
 endfunction
 
@@ -19,17 +19,17 @@ endfunction
 " ファイル一覧 or git 管理ファイル一覧
 nnoremap <silent> [unite]f :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 " 最近開いたファイル一覧
-nnoremap <silent> [unite]h :<C-u>Unite -start-insert file_mru<CR>
+nnoremap <silent> [unite]h :<C-u>Unite file_mru -start-insert<CR>
 " ディレクトリ一覧
-nnoremap <silent> [unite]d :<C-u>Unite -start-insert directory_rec/async<CR>
+nnoremap <silent> [unite]d :<C-u>Unite directory_rec/async -start-insert<CR>
 " バッファ一覧
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer -no-start-insert<CR>
 " アウトライン
-nnoremap <silent> [unite]o :<C-u>Unite outline -no-start-insert<CR>
+nnoremap <silent> [unite]o :<C-u>Unite outline -start-insert<CR>
 " gist 一覧
-nnoremap <silent> [unite]s :<C-u>Unite -start-insert gista<CR>
+nnoremap <silent> [unite]s :<C-u>Unite gista -start-insert<CR>
 " タブ一覧
-nnoremap <silent> [unite]g :<C-u>Unite tab<CR>
+nnoremap <silent> [unite]g :<C-u>Unite tab -no-start-insert<CR>
 
 
 " タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
