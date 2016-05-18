@@ -47,11 +47,11 @@ RPROMPT='${vcs_info_msg_0_}'
 function zle-line-init zle-keymap-select {
   case $KEYMAP in
     vicmd)
-    PROMPT="%{${fg[blue]}%}%~%{${reset_color}%}
+    PROMPT="%{${fg[cyan]}%}%~%{${reset_color}%}
 [%n@%m/NOR]$ "
     ;;
     main|viins)
-    PROMPT="%{${fg[blue]}%}%~%{${reset_color}%}
+    PROMPT="%{${fg[cyan]}%}%~%{${reset_color}%}
 [%n@%m/INS]$ "
     ;;
   esac
