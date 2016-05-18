@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# 各種設定ファイルのシンボリックリンクを削除します。
+unlink $HOME/.zshrc
+unlink $HOME/.vimrc
+unlink $HOME/.vim
+unlink $HOME/.tmux.conf
+unlink $HOME/.ctags
+unlink $HOME/.sbtconfig
+unlink $HOME/.tigrc
+unlink $HOME/.config/nvim
+unlink $HOME/.config/termite
+
 # 各種設定ファイルのシンボリックリンクを作成します。
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
