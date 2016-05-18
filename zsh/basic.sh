@@ -23,6 +23,9 @@ bindkey -v
 autoload colors
 colors
 
+# lsコマンドのカラー設定。
+alias ls='ls --color=auto'
+
 # 履歴設定
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000
