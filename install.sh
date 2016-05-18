@@ -9,5 +9,6 @@ ln -s $HOME/dotfiles/.ctags $HOME/.ctags
 ln -s $HOME/dotfiles/.sbtconfig $HOME/.sbtconfig
 ln -s $HOME/dotfiles/.tigrc $HOME/.tigrc
 ln -s $HOME/dotfiles/.config/nvim/ $HOME/.config/nvim
+ln -s $HOME/dotfiles/.config/termite/ $HOME/.config/termite
 
 exit 0
