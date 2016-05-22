@@ -6,6 +6,9 @@ export PATH=$HOME/bin:$PATH
 # zsh 使用時の term 設定
 export TERM=screen-256color
 
+# lsコマンドのカラー設定。
+alias ls='ls --color=auto'
+
 # java
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 export PATH=$JAVA_HOME/bin:$PATH
