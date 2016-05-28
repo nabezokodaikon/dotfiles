@@ -30,13 +30,11 @@ nnoremap <silent> [unite]o :<C-u>Unite outline -start-insert<CR>
 nnoremap <silent> [unite]s :<C-u>Unite gista -start-insert<CR>
 " タブ一覧
 nnoremap <silent> [unite]g :<C-u>Unite tab -no-start-insert<CR>
-
-
-" タグ一覧を表示するときに、カーソル下の単語に完全一致するタグのみを検索する
-command!
-\ -nargs=? PopupTags
-\ |Unite -immediately tag:<args>
-noremap <silent> [unite]t :<C-u>execute "PopupTags ".expand('<cword>')<CR>
+" タグ一覧
+autocmd BufEnter *
+\   if empty(&buftype)
+\|      nnoremap <buffer> [unite]t :<C-u>UniteWithCursorWord -immediately tag<CR>
+\|  endif
 
 " action 選択時に、インサートモードで開始する。
 call unite#custom#profile('action', 'context', {'start_insert' : 1})
