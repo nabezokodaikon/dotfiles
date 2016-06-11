@@ -1,14 +1,27 @@
+# 参考
+# https://github.com/thestinger/termite/blob/master/config
+# jellybeans.termite
+
 [options]
 font = Ricty 12
 
+# "system", "on" or "off"
+cursor_blink = off
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
 [colors]
-# 参考: jellybeans.termite
-# https://doc-04-78-docs.googleusercontent.com/docs/securesc/f959vvddo9oe6qu5r2clajbiat5c4esb/u77iad2r4hhjahje4h7vo4e7tt3m8amd/1463580000000/14280855234491466152/02306751526591139488/0B2RIKQ9QDz7udjN0TDlHeUdUU1E?e=download&nonce=3mj88mjipe80i&user=02306751526591139488&hash=tqcfgoa508mh1e0u8kpk5m1h2glasqnp
-# special
+#cursor = #dcdccc
+#cursor_foreground = #dcdccc
 foreground      = #e8e8d3
 foreground_bold = #e8e8d3
-cursor          = #e8e8d3
 background      = rgba(15, 15, 15, 0.9)
+
+# if unset, will reverse foreground and background
+highlight = #2f2f2f
+
+# colors from color0 to color254 can be set
 # black
 color0  = #3b3b3b
 color8  = #6c6c6c
