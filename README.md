@@ -40,10 +40,7 @@ Vim で挿入モードから抜ける時に英数入力に切り替える。
 $ cp ~/dotfiles/KeyRemap4MacBook-private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
 ```
 
-### tmux クリップボード
-```
-$ git clone https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
-$ cd tmux-MacOSX-pasteboard
-$ make reattach-to-user-namespace
-$ cp reattach-to-user-namespace /usr/local/bin/
-```
+## tmux
+### クリップボード
+* linuxでは`xclip`を使用するため、別途xclipをインストールする。
+* macでは既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
