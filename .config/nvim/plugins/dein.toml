@@ -93,11 +93,3 @@ repo = 'lambdalisue/vim-gista-unite'
 # Scala のシンタックスハイライト
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
-
-# ensime
-[[plugins]]
-repo = 'ensime/ensime-vim'
-
-# syntastic
-[[plugins]]
-repo = 'scrooloose/syntastic'

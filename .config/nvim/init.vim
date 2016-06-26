@@ -27,6 +27,3 @@ source ~/.config/nvim/rc/tab.rc.vim
 
 " split 設定
 source ~/.config/nvim/rc/split.rc.vim
-
-" ensime-vim 設定
-source ~/.config/nvim/rc/ensime.rc.vim
