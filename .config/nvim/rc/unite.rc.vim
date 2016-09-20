@@ -24,6 +24,8 @@ nnoremap <silent> [unite]h :<C-u>Unite file_mru -start-insert<CR>
 nnoremap <silent> [unite]d :<C-u>Unite directory_rec/async -start-insert<CR>
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite buffer -no-start-insert<CR>
+" yank一覧
+nnoremap <silent> [unite]y :<C-u>Unite history/yank -default-action=append<CR><CR>
 " アウトライン
 nnoremap <silent> [unite]o :<C-u>Unite outline -start-insert<CR>
 " gist 一覧

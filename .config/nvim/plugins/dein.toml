@@ -33,6 +33,10 @@ repo = 'Shougo/unite-outline'
 [[plugins]]
 repo = 'tsukkee/unite-tag'
 
+# uniteでyankの履歴を表示する。
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
