@@ -2,7 +2,7 @@
 export JAVA_HOME=/Library/Java/Home
 
 # python
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+export PYTHONPATH=/usr/local/lib/python3.5/site-packages/
 
 # vim
 export EDITOR=/usr/local/bin/vim
