@@ -1,6 +1,9 @@
 # デフォルトの補完機能を有効化
 autoload -Uz compinit
-compinit
+# 以下の警告を抑止する。
+# zsh compinit: insecure directories, run compaudit for list.
+# Ignore insecure directories and continue [y] or abort compinit [n]?
+compinit -u
 
 # ディレクトリ名で cd
 setopt auto_cd
