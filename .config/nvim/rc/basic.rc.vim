@@ -55,7 +55,7 @@ autocmd FileType text setlocal textwidth=0
 set ttimeoutlen=0
 
 " <C-j> で挿入モードから抜ける(ESCと同じ動作)
-imap <C-j> <esc>
+inoremap <silent> <C-j> <esc>
 
 " <Leader> を <Space> に変更
 let mapleader = "\<Space>"
