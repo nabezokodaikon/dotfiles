@@ -18,12 +18,27 @@ export SCALA_HOME=/usr/scala/default
 export PATH=$SCALA_HOME/bin:$PATH
 
 # nvm
-if [ -e '/usr/share/nvm/nvm.sh' ]; then
+if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
     echo 'nvm exists.'
-    [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-    source /usr/share/nvm/nvm.sh
-    source /usr/share/nvm/bash_completion
-    source /usr/share/nvm/install-nvm-exec
+    # nvmの遅延読み込み。
+    # 参考: http://broken-by.me/lazy-load-nvm/
+    nvm() {
+        unset -f nvm
+        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
+        nvm "$@"
+    }
+
+    node() {
+        unset -f node
+        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
+        node "$@"
+    }
+
+    npm() {
+        unset -f npm
+        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
+        npm "$@"
+    }
 else
     echo 'nvm not exists.'
 fi
