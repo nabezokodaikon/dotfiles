@@ -17,6 +17,17 @@ export PATH=$JAVA_HOME/bin:$PATH
 export SCALA_HOME=/usr/scala/default
 export PATH=$SCALA_HOME/bin:$PATH
 
+# nvm
+if [ -e '/usr/bin/vim' ]; then
+    echo 'nvm exists.'
+    [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+    source /usr/share/nvm/nvm.sh
+    source /usr/share/nvm/bash_completion
+    source /usr/share/nvm/install-nvm-exec
+else
+    echo 'nvm not exists.'
+fi
+
 # git
 # 不明な証明書を許可する。
 export GIT_SSL_NO_VERIFY=1
