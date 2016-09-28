@@ -18,7 +18,7 @@ export SCALA_HOME=/usr/scala/default
 export PATH=$SCALA_HOME/bin:$PATH
 
 # nvm
-if [ -e '/usr/bin/vim' ]; then
+if [ -e '/usr/share/nvm/nvm.sh' ]; then
     echo 'nvm exists.'
     [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
     source /usr/share/nvm/nvm.sh
