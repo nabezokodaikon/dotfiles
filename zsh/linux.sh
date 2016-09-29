@@ -19,7 +19,6 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 # nvm
 if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
-    echo 'nvm exists.'
     # nvmの遅延読み込み。
     # 参考: http://broken-by.me/lazy-load-nvm/
     nvm() {
@@ -39,8 +38,6 @@ if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
         [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
         npm "$@"
     }
-else
-    echo 'nvm not exists.'
 fi
 
 # git
@@ -55,32 +52,21 @@ alias dl='docker ps -l -q'
 
 # vim
 if [ -e '/usr/bin/vim' ]; then
-    echo 'vim exists.'
     alias vim='env LANG=ja_JP.UTF-8 /usr/bin/vim "$@"'
 elif [ -e "/usr/local/bin/vim" ]; then
-    echo 'vim exists.'
     alias vim='env LANG=ja_JP.UTF-8 /usr/local/bin/vim "$@"'
-else
-    echo 'vim not exists.'
 fi
 
 # nvim
 if [ -e '/usr/bin/nvim' ]; then
-    echo 'neovim exists.'
     alias nvim='env LANG=ja_JP.UTF-8 /usr/bin/nvim "$@"'
 elif [ -e "/usr/local/bin/nvim" ]; then
-    echo 'neovim exists.'
     alias nvim='env LANG=ja_JP.UTF-8 /usr/local/bin/nvim "$@"'
-else
-    echo 'neovim not exists.'
 fi
 
 # keychain
 type keychain > /dev/null 2>&1
 if [ $? = 0 ]; then
-    echo 'keychain exists.'
     keychain $HOME/.ssh/sakuravps > /dev/null 2>/dev/null
     source $HOME/.keychain/$HOST-sh
-else
-    echo 'keychain not exists.'
 fi
