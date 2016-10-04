@@ -2,7 +2,6 @@ export PATH=/sbin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
 
 # zsh 使用時の term 設定
 export TERM=screen-256color
@@ -17,13 +16,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 # scala
 export SCALA_HOME=/usr/scala/default
 export PATH=$SCALA_HOME/bin:$PATH
-
-# python
-# USAGE
-# $ mkdir -p $HOME/.local/lib/python3.5/site-packages
-# $ easy_install --prefix=$HOME/.local pip
-# $ pip install --install-option="--prefix=$HOME/.local" neovim
-export PYTHONPATH=$HOME/.local/lib/python3.5/site-packages:$PYTHONPATH
 
 # nvm
 if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
