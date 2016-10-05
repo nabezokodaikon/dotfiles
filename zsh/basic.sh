@@ -18,8 +18,10 @@ setopt pushd_ignore_dups
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
-# キーバインドを vim モードにする。
+# キーバインドをリセットする。
 bindkey -d
+
+# キーバインドを vim モードにする。
 bindkey -v
 
 # 色設定
