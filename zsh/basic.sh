@@ -18,6 +18,9 @@ setopt pushd_ignore_dups
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
+# エスケープシーケンスの待ち時間を10msにする。
+KEYTIMEOUT=1
+
 # キーバインドをリセットする。
 bindkey -d
 
