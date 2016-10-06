@@ -18,8 +18,6 @@ set tabstop=4
 set expandtab
 
 if has("autocmd")
-    filetype plugin on
-    filetype indent on
     autocmd FileType scala  setlocal sw=2 sts=2 ts=2 et
     autocmd FileType play-template setlocal sw=2 sts=2 et
 endif

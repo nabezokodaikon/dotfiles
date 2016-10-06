@@ -24,7 +24,6 @@ if &compatible
 endif
 
 if !dein#load_state(s:path)
-    filetype plugin indent on
     finish
 endif
 
@@ -41,5 +40,3 @@ call dein#save_state()
 if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
-
-filetype plugin indent on

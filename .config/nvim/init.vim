@@ -1,3 +1,7 @@
+filetype off
+filetype plugin indent off
+
+
 " プラグイン管理設定
 source ~/.config/nvim/rc/dein.rc.vim
 
@@ -30,3 +34,6 @@ source ~/.config/nvim/rc/tab.rc.vim
 
 " split 設定
 source ~/.config/nvim/rc/split.rc.vim
+
+
+filetype plugin indent on
