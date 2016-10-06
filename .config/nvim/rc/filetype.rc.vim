@@ -10,6 +10,12 @@ augroup filetypedetect
 
     " .config/nvim/ftpluginディレクトリ内に言語ごとの設定ファイルを用意する。
 
+    " HTML
+    autocmd BufRead,BufNewFile *.html setfiletype html
+
+    " CSS
+    autocmd BufRead,BufNewFile *.css setfiletype css
+
     " JavaScript
     autocmd BufRead,BufNewFile *.js setfiletype javascript
 augroup END
