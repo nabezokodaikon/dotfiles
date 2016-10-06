@@ -8,9 +8,6 @@ source ~/.config/nvim/rc/dein.rc.vim
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim
 
-" ファイルの種類に応じた設定
-source ~/.config/nvim/rc/filetype.rc.vim
-
 " プラグイン設定
 source ~/.config/nvim/rc/plugins.rc.vim
 
