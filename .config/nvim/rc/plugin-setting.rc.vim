@@ -21,14 +21,6 @@ nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
 
 
-" Previm.vim
-"--------------------------------
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-
-
 " seiya.vim
 "--------------------------------
 " 背景の透過を有効化する。
