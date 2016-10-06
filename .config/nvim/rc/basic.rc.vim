@@ -43,10 +43,6 @@ set wildmenu wildmode=list:full
 " ステータスラインを常に表示する
 set laststatus=2
 
-" ステータスラインの書式
-" *要 vim-fugitive
-set statusline=%F\ [%Y][%{&fileencoding}]%=%{fugitive#statusline()}\ %l/%L\ %c\ %P
-
 " 自動改行させない
 " デフォルト vimrc_example の textwidth 設定を上書き
 autocmd FileType text setlocal textwidth=0

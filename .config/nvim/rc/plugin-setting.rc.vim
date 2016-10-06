@@ -2,6 +2,12 @@
 " プラグイン設定 
 "--------------------------------
 
+" vim-fugitive
+"--------------------------------
+" ステータスラインの書式にgitの情報を表示する。
+set statusline=%F\ [%Y][%{&fileencoding}]%=%{fugitive#statusline()}\ %l/%L\ %c\ %P
+
+
 " vim-gista
 "--------------------------------
 let g:gista#client#default_username = 'nabezokodaikon'
