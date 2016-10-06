@@ -11,9 +11,6 @@ source ~/.config/nvim/rc/basic.rc.vim
 " ファイルの種類に応じた設定
 source ~/.config/nvim/rc/filetype.rc.vim
 
-" インデント設定
-source ~/.config/nvim/rc/indent.rc.vim
-
 " プラグイン設定
 source ~/.config/nvim/rc/plugins.rc.vim
 

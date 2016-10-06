@@ -67,3 +67,28 @@ set autoread
 
 " クリップボードと連携
 set clipboard+=unnamedplus
+
+
+"--------------------------------
+" インデント設定(規定値) 
+"--------------------------------
+" 新しい行の自動インデントを有効化。
+set autoindent
+
+" 新しい行の高度な自動インデントを有効化。
+set smartindent
+
+" タブ入力を空白入力に置き換える。
+set expandtab
+
+" ファイル内のタブが対応する空白の数。
+set tabstop=4
+
+" shiftwidthの設定を有効化。
+set smarttab
+
+" 自動インデントの空白の長さ。
+set shiftwidth=4
+
+" タブ入力で挿入される空白の長さをshiftwidthと同じにする。
+set softtabstop=-1
