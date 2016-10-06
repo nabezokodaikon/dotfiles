@@ -1,5 +1,5 @@
-" プラグインを読み込む。
-source ~/.config/nvim/rc/plugins.rc.vim
+" プラグイン管理設定
+source ~/.config/nvim/rc/dein.rc.vim
 
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim
@@ -11,7 +11,7 @@ source ~/.config/nvim/rc/filetype.rc.vim
 source ~/.config/nvim/rc/indent.rc.vim
 
 " プラグイン設定
-source ~/.config/nvim/rc/plugin-setting.rc.vim
+source ~/.config/nvim/rc/plugins.rc.vim
 
 " unite.vim 設定
 source ~/.config/nvim/rc/unite.rc.vim
