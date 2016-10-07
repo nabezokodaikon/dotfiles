@@ -3,10 +3,10 @@
 ## dotfiles クローン
 ```
 $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
+$ cd ~/dotfiles
 ```
 
-## git
-グローバル設定。
+## Git
 ```
 $ ./git-config.sh
 ```
@@ -16,31 +16,27 @@ $ ./git-config.sh
 $ ./install.sh
 ```
 
-## vim
+## Neovim
+### Arch Linux
 ```
-# NeoBundle 導入
-$ ./neobundle-install.sh
-
-# vim プラグイン導入
-$ vim
-:NeoBundleInstall
-```
-
-## neovim
-### archlinux
-```
-$ yaourt -S python-pip --noconfirm
-$ sudo pip3 install neovim
-```
-
-## Mac 固有設定
-### KeyRemap4MacBook 設定ファイル配置
-Vim で挿入モードから抜ける時に英数入力に切り替える。
-```
-$ cp ~/dotfiles/KeyRemap4MacBook-private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+$ yaourt -S --noconfirm python-pip 
+$ pip install --user neovim
 ```
 
 ## tmux
 ### クリップボード
 * linuxでは`xclip`を使用するため、別途xclipをインストールする。
 * macでは既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
+
+## Mac
+### Karabiner
+>2016/10/07の時点ではmacOS Sierraに対応していないため、以下の操作はできない。
+
+Vim で挿入モードから抜ける時に英数入力に切り替える。
+```
+$ cd ./mac/karabiner
+$ ./reset.sh
+$ ./import.sh
+$ cp ~/dotfiles/KeyRemap4MacBook-private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+$ cp ~/dotfiles/mac/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
+```
