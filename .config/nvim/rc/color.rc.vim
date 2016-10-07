@@ -1,10 +1,22 @@
 "--------------------------------
-" カラー設定
+" 色設定
 "--------------------------------
+" 256色を有効化。
 set t_Co=256
 
-" vim カラースキーム
-colorscheme jellybeans
+" Color Scheme.
+let g:jellybeans_overrides = {
+\   'CursorLine': {
+\       '256ctermbg': '235',
+\       'attr': 'bold'
+\   },
+\   'Visual': {
+\       '256ctermbg': '238',
+\       'attr': 'bold'
+\   },
+\   'PmenuSel': {
+\       'attr': 'bold'
+\   }
+\}
 
-" neocomplete.vim カラースキーム
-hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
+colorscheme jellybeans

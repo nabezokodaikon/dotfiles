@@ -20,7 +20,7 @@ source ~/.config/nvim/rc/denite.rc.vim
 " 補完設定
 source ~/.config/nvim/rc/completion.rc.vim
 
-" カラー設定
+" 色設定
 source ~/.config/nvim/rc/color.rc.vim
 
 " tags 設定
