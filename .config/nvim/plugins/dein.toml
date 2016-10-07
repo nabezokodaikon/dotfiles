@@ -21,6 +21,10 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/unite.vim'
 
+# denite.nvim
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
 # neomru.vim
 [[plugins]]
 repo = 'Shougo/neomru.vim'
