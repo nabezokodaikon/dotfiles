@@ -22,7 +22,7 @@ let g:deoplete#sources#syntax#min_keyword_length = 3
 " 辞書ファイル
 let g:deoplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
-    \ 'scala' : $HOME.'/.vim/dict/scala.dict'
+    \ 'scala' : $HOME.'/.config/nvim/dict/scala.dict'
     \ }
 
 " Define keyword.
