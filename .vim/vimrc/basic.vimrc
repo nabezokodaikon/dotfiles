@@ -43,13 +43,6 @@ set wildmenu wildmode=list:full
 " ステータスラインを常に表示する
 set laststatus=2
 
-" ステータスラインの書式
-" *要 vim-fugitive
-set statusline=%F\ [%Y][%{&fileencoding}]%=%{fugitive#statusline()}\ %l/%L\ %c\ %P
-
-" クリップボード連携
-set clipboard=unnamed,autoselect
-
 " 自動改行させない
 " デフォルト vimrc_example の textwidth 設定を上書き
 autocmd FileType text setlocal textwidth=0
@@ -58,7 +51,7 @@ autocmd FileType text setlocal textwidth=0
 set ttimeoutlen=0
 
 " <C-j> で挿入モードから抜ける(ESCと同じ動作)
-imap <C-j> <esc>
+inoremap <silent> <C-j> <esc>
 
 " <Leader> を <Space> に変更
 let mapleader = "\<Space>"
@@ -71,3 +64,34 @@ set mouse=
 
 " 外部で変更のあったファイルを自動的に読みなおす
 set autoread
+
+
+"--------------------------------
+" ステータスライン
+"--------------------------------
+set statusline=%F\ [%Y][%{&fileencoding}]%=%l/%L\ %c\ %P
+
+
+"--------------------------------
+" インデント設定(規定値) 
+"--------------------------------
+" 新しい行の自動インデントを有効化。
+set autoindent
+
+" 新しい行の高度な自動インデントを有効化。
+set smartindent
+
+" タブ入力を空白入力に置き換える。
+set expandtab
+
+" ファイル内のタブが対応する空白の数。
+set tabstop=4
+
+" shiftwidthの設定を有効化。
+set smarttab
+
+" 自動インデントの空白の長さ。
+set shiftwidth=4
+
+" タブ入力で挿入される空白の長さをshiftwidthと同じにする。
+set softtabstop=-1

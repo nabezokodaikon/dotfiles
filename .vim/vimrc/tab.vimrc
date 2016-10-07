@@ -10,15 +10,6 @@ nnoremap gn :tabnew<CR>
 nnoremap gc <Nop>
 nnoremap gc :tabclose<CR>
 
-" vim-submode
-" 次のタブへ移動する操作を押しっぱなしでできるようにする。 
-call submode#enter_with('changetab', 'n', '', 'gt', 'gt')
-call submode#map('changetab', 'n', '', 't', 'gt')
-
-" 前のタブへ移動する操作を押しっぱなしでできるようにする。
-call submode#enter_with('changetab', 'n', '', 'gT', 'gT')
-call submode#map('changetab', 'n', '', 'T', 'gT')
-
 " タブページを常に表示
 set showtabline=2
 
