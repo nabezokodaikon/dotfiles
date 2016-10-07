@@ -68,6 +68,9 @@ set autoread
 " クリップボードと連携
 set clipboard+=unnamedplus
 
+" 256色を有効化。
+set t_Co=256
+
 
 "--------------------------------
 " インデント設定(規定値) 

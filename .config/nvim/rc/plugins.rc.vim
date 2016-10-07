@@ -35,3 +35,23 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 " 2文字のキーワード検索のみを有効化する。
 nmap <Leader>s <Plug>(easymotion-s2)
+
+
+"--------------------------------
+" jellybeans.vim
+"--------------------------------
+let g:jellybeans_overrides = {
+\   'CursorLine': {
+\       '256ctermbg': '235',
+\       'attr': 'bold'
+\   },
+\   'Visual': {
+\       '256ctermbg': '238',
+\       'attr': 'bold'
+\   },
+\   'PmenuSel': {
+\       'attr': 'bold'
+\   }
+\}
+
+colorscheme jellybeans
