@@ -1,5 +1,9 @@
 # 導入手順
 
+## TODO
+* split.rc.vimのsubmodeは、プラグインに依存している。
+* tab.rc.vimのsubmodeは、プラグインに依存している。
+
 ## dotfiles クローン
 ```
 $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
