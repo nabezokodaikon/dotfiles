@@ -3,6 +3,8 @@
 ## TODO
 * split.rc.vimのsubmodeは、プラグインに依存している。
 * tab.rc.vimのsubmodeは、プラグインに依存している。
+* vim-gista-uniteを削除し、gistaのキーマッピングを指定する。
+* unite.vimを削除する。
 
 ## dotfiles クローン
 ```
