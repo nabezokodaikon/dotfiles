@@ -19,3 +19,26 @@ alias nvim='env LANG=ja_JP.UTF-8 /usr/local/bin/nvim "$@"'
 alias ctags='/usr/local/bin/ctags'
 alias tmux='tmux -2'
 
+# nvm
+if [ -d "$(brew --cellar)/nvm" ]; then
+    # nvmの遅延読み込み。
+    # 参考: http://broken-by.me/lazy-load-nvm/
+    export NVM_DIR="$HOME/.nvm"
+    nvm() {
+        unset -f nvm
+        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh" 
+        nvm "$@"
+    }
+
+    node() {
+        unset -f node
+        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh" 
+        node "$@"
+    }
+
+    npm() {
+        unset -f npm
+        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh" 
+        npm "$@"
+    }
+fi
