@@ -2,8 +2,10 @@
 " denite.nvim 設定 
 "--------------------------------
 " キーマッピング
+call denite#custom#map('_', "\<C-j>", 'quit')
 call denite#custom#map('_', "\<C-n>", 'move_to_next_line')
 call denite#custom#map('_', "\<C-p>", 'move_to_prev_line')
+call denite#custom#map('_', "\<C-g>", 'input_command_line')
 
 " 最近開いたファイル一覧
 nnoremap <silent> <space>uh :<C-u>Denite file_mru<CR>
