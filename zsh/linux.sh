@@ -7,6 +7,7 @@
 export PATH=/sbin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
 # zsh 使用時の term 設定
