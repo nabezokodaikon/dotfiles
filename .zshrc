@@ -3,8 +3,8 @@ source $HOME/dotfiles/zsh/basic.sh
 
 case "$OSTYPE" in
     darwin*)
-        # OSX
-        source $HOME/dotfiles/zsh/osx.sh
+        # macOS
+        source $HOME/dotfiles/zsh/mac.sh
         ;;
     linux*)
         # Linux
