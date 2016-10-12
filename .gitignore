@@ -20,6 +20,5 @@ tags.lock
 /tags/*/
 !/tags/README
 
-# nvimのログディレクトリを空の状態で対象とする
+# Neovimのログディレクトリを対象外とする
 /.config/nvim/logs/*
-!/.config/nvim/logs/.gitkeep
