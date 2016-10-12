@@ -108,3 +108,9 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+
+# tmux
+if [ ! -e "$HOME/.config/tmux/logs" ]; then
+    # ログディレクトリを作成する。
+    mkdir -pv "$HOME/.config/tmux/logs"
+fi
