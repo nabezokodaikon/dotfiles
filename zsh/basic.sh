@@ -20,6 +20,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 # Neovimのログファイル
 export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvimlog.
 
+
 # Zsh
 #--------------------------------
 # デフォルトの補完機能を有効化
