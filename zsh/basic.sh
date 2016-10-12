@@ -1,3 +1,27 @@
+#--------------------------------
+# Zsh 基本設定 
+#--------------------------------
+
+# 環境変数
+#--------------------------------
+# 日本語設定
+export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
+
+# 履歴設定
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=10000
+
+# Xdg
+# アプリケーションの設定ファイルを保存するディレクトリ
+export XDG_CONFIG_HOME=$HOME/.config
+
+# Neovimのログファイル
+export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvimlog.
+
+# Zsh
+#--------------------------------
 # デフォルトの補完機能を有効化
 autoload -Uz compinit
 # 以下の警告を抑止する。
@@ -5,18 +29,11 @@ autoload -Uz compinit
 # Ignore insecure directories and continue [y] or abort compinit [n]?
 compinit -u
 
-# ディレクトリ名で cd
-setopt auto_cd
-
 # ディレクトリの移動履歴を利用
 setopt auto_pushd
 
 # auto_pushd で重複するディレクトリを記録しない。
 setopt pushd_ignore_dups
-
-# 日本語設定
-export LANG=ja_JP.UTF-8
-export LESSCHARSET=utf-8
 
 # エスケープシーケンスの待ち時間を10msにする。
 KEYTIMEOUT=1
@@ -32,9 +49,6 @@ autoload colors
 colors
 
 # 履歴設定
-export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=10000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 
@@ -83,17 +97,6 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
-# neovimの設定ファイル
-export XDG_CONFIG_HOME=$HOME/.config
-
-# neovimのログファイル
-export NVIM_PYTHON_LOG_FILE=$HOME/.config/nvim/logs/nvimlog.
-
-# 自前の sbtconfig を読み込む。
-if [ -f "$HOME/.sbtconfig" ]; then
-  . "$HOME/.sbtconfig"
-fi
-
 # <Ctrl> + z で vim と shell を切り替える。
 # 本来なら vim (<Ctrl> + z) > shell (fg<Enter>) > vim
 # http://postd.cc/how-to-boost-your-vim-productivity/
@@ -109,8 +112,26 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+
 # tmux
-if [ ! -e "$HOME/.config/tmux/logs" ]; then
-    # ログディレクトリを作成する。
-    mkdir -pv "$HOME/.config/tmux/logs"
+#--------------------------------
+# ログディレクトリを作成する。
+if [ ! -e "$XDG_CONFIG_HOME/tmux/logs" ]; then
+    mkdir -pv "$XDG_CONFIG_HOME/tmux/logs"
+fi
+
+
+# Neovim
+#--------------------------------
+# ログディレクトリを作成する。
+if [ ! -e "$XDG_CONFIG_HOME/nvim/logs" ]; then
+    mkdir -pv "$XDG_CONFIG_HOME/nvim/logs"
+fi
+
+
+# sbt
+#--------------------------------
+# sbt 設定を読み込む。
+if [ -f "$HOME/.sbtconfig" ]; then
+  source "$HOME/.sbtconfig"
 fi
