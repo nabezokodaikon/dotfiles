@@ -33,49 +33,45 @@ filter_unmatched_urls = true
 
 
 [colors]
-# jellybeans.termite
-# https://github.com/nanotech/jellybeans.vim/issues/21
+# Ref https://github.com/bahlo/iterm-colors
 
-# if unset, will reverse foreground and background
-# highlight = #2f2f2f
-
-# cursor = #e8e8d3
-# cursor_foreground = #dcdccc
-foreground      = #e8e8d3
-foreground_bold = #e8e8d3
-background      = rgba(15, 15, 15, 0.9)
+# special
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+background      = rgba(22, 23, 25, 0.9)
 
 # black
-color0  = #3b3b3b
-color8  = #6c6c6c
+color0  = #000000
+color8  = #000000
 
 # red
-color1  = #cf6a4c
-color9  = #db8f78
+color1  = #fd5ff1
+color9  = #fd5ff1
 
 # green
-color2  = #99ad6a
-color10 = #b2c18f
+color2  = #87c38a
+color10 = #94fa36
 
 # yellow
-color3  = #d8ad4c
-color11 = #e1c178
+color3  = #ffd7b1
+color11 = #f5ffa8
 
 # blue
-color4  = #597bc5
-color12 = #829cd3
+color4  = #85befd
+color12 = #96cbfe
 
 # magenta
-color5  = #a037b0
-color13 = #b769c3
+color5  = #b9b6fc
+color13 = #b9b6fc
 
 # cyan
-color6  = #71b9f8
-color14 = #94caf9
+color6  = #85befd
+color14 = #85befd
 
 # white
-color7  = #adadad
-color15 = #c1c1c1
+color7  = #e0e0e0
+color15 = #e0e0e0
 
 
 # vim: ft=dosini cms=#%s
