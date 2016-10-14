@@ -10,10 +10,10 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 font = Ricty 12
-scrollback_lines = 10000
-search_wrap = true
+scrollback_lines = 0
+search_wrap = false
 #icon_name = terminal
-#geometry = 640x480
+geometry = 1280x800
 
 # "system", "on" or "off"
 cursor_blink = off
