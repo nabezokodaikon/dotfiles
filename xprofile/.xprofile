@@ -1,0 +1,8 @@
+# fcitx 設定。
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# xmodmap 設定。
+# GUI のキー割り当て機能が無い場合、以下を実行する。
+# [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap

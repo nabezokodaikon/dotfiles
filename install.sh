@@ -2,6 +2,8 @@
 
 # 各種設定ファイルのシンボリックリンクを削除します。
 unlink $HOME/.zshrc
+unlink $HOME/.xprofile
+unlink $HOME/.Xmodmap
 unlink $HOME/.vimrc
 unlink $HOME/.tmux.conf
 unlink $HOME/.ctags
@@ -12,6 +14,8 @@ unlink $HOME/.config/termite
 
 # 各種設定ファイルのシンボリックリンクを作成します。
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/xprofile/.xprofile $HOME/.xprofile
+ln -s $HOME/dotfiles/xprofile/.Xmodmap $HOME/.Xmodmap
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.ctags $HOME/.ctags
