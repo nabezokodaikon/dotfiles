@@ -101,3 +101,11 @@ repo = 'lambdalisue/vim-gista-unite'
 # Scala のシンタックスハイライト
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
+
+# 編集ファイルの全体または一部を実行する。
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# Vim scriptでのイミディエイトウィンドウ
+[[plugins]]
+repo = 'rbtnn/vimconsole.vim'
