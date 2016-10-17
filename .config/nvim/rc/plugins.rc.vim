@@ -37,7 +37,6 @@ let g:EasyMotion_smartcase = 1
 nmap <Leader>s <Plug>(easymotion-s2)
 
 
-"--------------------------------
 " jellybeans.vim
 "--------------------------------
 let g:jellybeans_overrides = {
