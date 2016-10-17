@@ -77,6 +77,7 @@ set t_Co=256
 " コマンドラインモードを直接開く
 nnoremap <silent> : q:i
 vnoremap <silent> : q:i
+set cmdwinheight=1
 
 
 " インデント設定(規定値) 
