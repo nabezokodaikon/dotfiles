@@ -11,12 +11,6 @@ build = 'make'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 
-# スニペット
-[[plugins]]
-repo = 'Shougo/neosnippet'
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
 # unite.vim
 [[plugins]]
 repo = 'Shougo/unite.vim'
