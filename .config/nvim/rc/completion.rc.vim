@@ -35,11 +35,19 @@ let g:deoplete#keyword_patterns['default'] = '\h\w*'
 inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<BS>"
 
-" 現在選択している候補を確定する
-inoremap <expr><C-y> deoplete#mappings#close_popup()
-
 " TABで補完できるようにする
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+inoremap <silent><expr> <S-TAB>
+    \ pumvisible() ? "\<C-p>" :
+    \ <SID>check_back_space() ? "\<S-TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
 
 " 補完候補が出ていたら確定、なければ改行する
 inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
