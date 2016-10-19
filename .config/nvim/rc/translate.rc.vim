@@ -62,4 +62,4 @@ function! Translate()
     echo ret
 endfunction
 
-vnoremap <silent> <space>t :<C-u>call Translate()<CR>
+vnoremap <silent> <leader>t :<C-u>call Translate()<CR>

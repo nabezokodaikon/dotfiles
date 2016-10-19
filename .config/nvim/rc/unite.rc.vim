@@ -2,9 +2,9 @@
 " unite.vim 設定 
 "--------------------------------
 
-" プレフィックスを <Space>u にする
+" プレフィックスを <leader>u にする
 nnoremap [unite] <Nop>
-nmap     <Space>u [unite]
+nmap     <leader>u [unite]
 
 " file_rec/asyncとfile_rec/gitを自動的に切り換える
 function! DispatchUniteFileRecAsyncOrGit()

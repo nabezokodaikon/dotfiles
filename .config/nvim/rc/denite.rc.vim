@@ -8,16 +8,16 @@ call denite#custom#map('_', "\<C-p>", 'move_to_prev_line')
 call denite#custom#map('_', "\<C-g>", 'input_command_line')
 
 " 最近開いたファイル一覧
-nnoremap <silent> <space>uh :<C-u>Denite file_mru<CR>
+nnoremap <silent> <leader>uh :<C-u>Denite file_mru<CR>
 
 " yank一覧
-nnoremap <silent> <space>uy :<C-u>Denite neoyank<CR>
+nnoremap <silent> <leader>uy :<C-u>Denite neoyank<CR>
 
 " ファイル内の行検索
-nnoremap <silent> <space>ul :<C-u>Denite line<CR>
+nnoremap <silent> <leader>ul :<C-u>Denite line<CR>
 
 " grep
-nnoremap <silent> <space>ur :<C-u>Denite grep<CR>
+nnoremap <silent> <leader>ur :<C-u>Denite grep<CR>
 
 " コマンドカスタマイズ
 " Ripgrep command on grep source.

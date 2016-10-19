@@ -50,8 +50,8 @@ set ttimeoutlen=0
 " <C-j> で挿入モードから抜ける(ESCと同じ動作)
 inoremap <silent> <C-j> <esc>
 
-" <Leader> を <Space> に変更
-let mapleader = "\<Space>"
+" <leader> を <space> に変更
+let mapleader = "\<space>"
 
 " 保存されていないファイルがあるときでも別のファイルを開く
 set hidden
