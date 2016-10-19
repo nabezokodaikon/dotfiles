@@ -107,7 +107,3 @@ repo = 'rbtnn/vimconsole.vim'
 # webapi-vim
 [[plugins]]
 repo = 'mattn/webapi-vim'
-
-# Translate
-[[plugins]]
-repo = 'daisuzu/translategoogle.vim'

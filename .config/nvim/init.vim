@@ -29,5 +29,7 @@ source ~/.config/nvim/rc/tab.rc.vim
 " split 設定
 source ~/.config/nvim/rc/split.rc.vim
 
+" Translation process
+source ~/.config/nvim/rc/translate.rc.vim
 
 filetype plugin indent on

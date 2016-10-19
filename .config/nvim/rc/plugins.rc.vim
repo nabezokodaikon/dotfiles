@@ -54,33 +54,3 @@ let g:jellybeans_overrides = {
 \}
 
 colorscheme jellybeans
-
-
-" translategoogle.vim
-"--------------------------------
-function! Translate_En2Ja()
-    let tmp = @@
-    silent normal = gvy
-    let selected = @@
-    let ret = translategoogle#command(join([
-                \   '--sl=en',
-                \   '--tl=ja',
-                \   selected
-                \ ], ' '))
-    echo ret
-endfunction
-
-function! Translate_Ja2En()
-    let tmp = @@
-    silent normal = gvy
-    let selected = @@
-    let ret = translategoogle#command(join([
-                \   '--sl=ja',
-                \   '--tl=en',
-                \   selected
-                \ ], ' '))
-    echo ret
-endfunction
-
-vnoremap <space>tej :<C-u>call Translate_En2Ja()<CR>
-vnoremap <space>tje :<C-u>call Translate_Ja2En()<CR>
