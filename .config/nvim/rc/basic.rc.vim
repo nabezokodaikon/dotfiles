@@ -69,33 +69,6 @@ set clipboard+=unnamedplus
 set t_Co=256
 
 
-" コマンドラインモード設定
-"--------------------------------
-set cmdwinheight=1
-
-" Open the Command-line window directly.
-" Reference
-" http://vim-jp.org/vim-users-jp/2010/07/14/Hack-161.html
-nnoremap <sid>(command-line-enter) q:
-xnoremap <sid>(command-line-enter) q:
-nnoremap <sid>(command-line-norange) q:<C-u>
-nmap :  <sid>(command-line-enter)
-xmap :  <sid>(command-line-enter)
-augroup MyCmdWinEnter
-    autocmd!
-    autocmd CmdWinEnter * call s:init_cmdwin()    
-    function! s:init_cmdwin()
-        nnoremap <buffer> q :<C-u>quit<CR>
-        nnoremap <buffer> <TAB> :<C-u>quit<CR>
-        inoremap <buffer><expr><CR> pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
-        inoremap <buffer><expr><C-h> pumvisible() ? "\<C-y>\<C-h>" : "\<C-h>"
-        inoremap <buffer><expr><BS> pumvisible() ? "\<C-y>\<C-h>" : "\<C-h>"
-        inoremap <buffer><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-        startinsert!
-    endfunction
-augroup END
-
-
 " インデント設定(規定値) 
 "--------------------------------
 " 新しい行の自動インデントを有効化。
