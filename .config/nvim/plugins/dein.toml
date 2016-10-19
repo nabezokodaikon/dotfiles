@@ -100,10 +100,6 @@ repo = 'derekwyatt/vim-scala'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
-# Vim scriptでのイミディエイトウィンドウ
-[[plugins]]
-repo = 'rbtnn/vimconsole.vim'
-
 # webapi-vim
 [[plugins]]
 repo = 'mattn/webapi-vim'
