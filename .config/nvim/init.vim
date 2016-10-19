@@ -32,4 +32,7 @@ source ~/.config/nvim/rc/split.rc.vim
 " Translation process
 source ~/.config/nvim/rc/translate.rc.vim
 
+" Hacks
+source ~/.config/nvim/rc/hacks.rc.vim
+
 filetype plugin indent on
