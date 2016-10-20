@@ -64,10 +64,6 @@ repo = 'kana/vim-submode'
 [[plugins]]
 repo = 'kana/vim-tabpagecd'
 
-# grep の高速版 ag(The Silver Searcher)
-[[plugins]]
-repo = 'rking/ag.vim'
-
 # Fcitx 環境でインサートモードからノーマルモードになると、Fcitx が OFF になる。
 [[plugins]]
 repo = 'anekos/felis-cat-igirisu-toast-express'
