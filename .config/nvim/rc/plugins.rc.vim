@@ -21,12 +21,6 @@ nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
 
 
-" seiya.vim
-"--------------------------------
-" 背景の透過を有効化する。
-let g:seiya_auto_enable = 1
-
-
 " vim-easymotion
 "--------------------------------
 " デフォルトのキーマッピングを無効化する。
