@@ -32,6 +32,12 @@ source ~/.config/nvim/rc/dein.rc.vim
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim
 
+" denite.nvim configurations
+source ~/.config/nvim/rc/plugins/denite.rc.vim
+
+" unite.nvim configurations
+source ~/.config/nvim/rc/plugins/unite.rc.vim
+
 " プラグイン設定
 source ~/.config/nvim/rc/plugins.rc.vim
 

@@ -1,5 +1,5 @@
 "--------------------------------
-" denite.nvim configurations.
+" denite.nvim lazy configurations
 "--------------------------------
 " Key mapping.
 call denite#custom#map('insert', "\<C-n>", 'move_to_next_line')
