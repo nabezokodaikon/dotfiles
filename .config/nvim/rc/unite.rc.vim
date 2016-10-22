@@ -17,7 +17,7 @@ nnoremap <silent> [denite]g :<C-u>Unite tab -no-start-insert<CR>
 augroup vimrc-unite-tag
     autocmd!
     autocmd BufEnter *
-    \   if empty(&buftype)
-    \|      nnoremap <buffer> [denite]t :<C-u>UniteWithCursorWord -immediately tag<CR>
-    \|  endif
+                \   if empty(&buftype)
+                \|      nnoremap <buffer> [denite]t :<C-u>UniteWithCursorWord -immediately tag<CR>
+                \|  endif
 augroup END
