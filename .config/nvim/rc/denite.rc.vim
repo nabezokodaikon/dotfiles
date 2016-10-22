@@ -23,7 +23,7 @@ nnoremap <silent> [denite]y :<C-u>Denite neoyank<CR>
 nnoremap <silent> [denite]l :<C-u>Denite line<CR>
 
 " grep
-nnoremap <silent> [denite]r :<C-u>Denite grep<CR>
+nnoremap <silent> [denite]r :<C-u>DeniteCursorWord grep<CR>
 
 " バッファ一覧
 nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
