@@ -14,7 +14,7 @@ nnoremap <silent> [denite]s :<C-u>Unite gista -start-insert<CR>
 nnoremap <silent> [denite]g :<C-u>Unite tab -no-start-insert<CR>
 
 " タグ一覧
-augroup vimrc-auto-unite-tag
+augroup vimrc-unite-tag
     autocmd!
     autocmd BufEnter *
     \   if empty(&buftype)
