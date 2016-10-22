@@ -67,10 +67,12 @@ repo = 'kana/vim-tabpagecd'
 # Fcitx 環境でインサートモードからノーマルモードになると、Fcitx が OFF になる。
 [[plugins]]
 repo = 'anekos/felis-cat-igirisu-toast-express'
+if = "IsLinux()"
 
 # カラースキーム使用時に背景を端末と同じにする。(透過している場合は透過する。)
 [[plugins]]
 repo = 'miyakogi/seiya.vim'
+if = "IsLinux()"
 
 # git を操作する。
 [[plugins]]
