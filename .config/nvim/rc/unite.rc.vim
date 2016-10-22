@@ -18,8 +18,6 @@ endfunction
 " 各種表示
 " ファイル一覧 or git 管理ファイル一覧
 nnoremap <silent> [unite]f :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
-" バッファ一覧
-nnoremap <silent> [unite]b :<C-u>Unite buffer -no-start-insert<CR>
 " アウトライン
 nnoremap <silent> [unite]o :<C-u>Unite outline -start-insert<CR>
 " gist 一覧
