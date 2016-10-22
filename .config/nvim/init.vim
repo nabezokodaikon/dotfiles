@@ -34,9 +34,6 @@ source ~/.config/nvim/rc/unite.rc.vim
 " denite.nvim 設定
 source ~/.config/nvim/rc/denite.rc.vim
 
-" 補完設定
-source ~/.config/nvim/rc/completion.rc.vim
-
 " tags 設定
 source ~/.config/nvim/rc/tags.rc.vim
 
