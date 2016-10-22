@@ -1,5 +1,6 @@
-" dein configurations.
-
+"--------------------------------
+" dein.nvim configurations.
+"--------------------------------
 let $CACHE = expand('~/.cache')
 if !isdirectory(expand($CACHE))
     call mkdir(expand($CACHE), 'p')
@@ -19,19 +20,16 @@ if s:dein_dir != '' || &runtimepath !~ '/dein.vim'
     execute ' set runtimepath^=' . substitute(fnamemodify(s:dein_dir, ':p') , '/$', '', '')
 endif
 
-if &compatible
-    set nocompatible
-endif
-
 if !dein#load_state(s:path)
     finish
 endif
 
-let s:toml_path = '~/.config/nvim/plugins/dein.toml'
+call dein#begin(s:dein_dir)
 
-call dein#begin(s:dein_dir, [expand('<sfile>'), s:toml_path])
-
-call dein#load_toml(s:toml_path, {'lazy': 0})
+call dein#load_toml('~/.config/nvim/rc/dein.toml', {'lazy': 0})
+call dein#load_toml('~/.config/nvim/rc/deinlazy.toml', {'lazy': 1})
+call dein#call_hook('source')
+call dein#call_hook('post_source')
 
 call dein#end()
 call dein#save_state()

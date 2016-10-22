@@ -11,30 +11,6 @@ build = 'make'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 
-# unite.vim
-[[plugins]]
-repo = 'Shougo/unite.vim'
-
-# denite.nvim
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-
-# neomru.vim
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-# unite-outline
-[[plugins]]
-repo = 'Shougo/unite-outline'
-
-# unite-tag
-[[plugins]]
-repo = 'tsukkee/unite-tag'
-
-# uniteでyankの履歴を表示する。
-[[plugins]]
-repo = 'Shougo/neoyank.vim'
-
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -76,14 +52,6 @@ repo = 'tpope/vim-fugitive'
 # カーソル移動を便利にする。
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-
-# gist を使用する。
-[[plugins]]
-repo = 'lambdalisue/vim-gista'
-
-# vim-gista と unite を連携させる。
-[[plugins]]
-repo = 'lambdalisue/vim-gista-unite'
 
 # Scala のシンタックスハイライト
 [[plugins]]

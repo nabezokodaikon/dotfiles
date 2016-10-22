@@ -1,6 +1,12 @@
 filetype off
 filetype plugin indent off
 
+
+if &compatible
+    set nocompatible
+endif
+
+
 let s:is_windows = has('win32') || has('win64')
 let s:is_mac = !s:is_windows 
     \ && !has('win32unix')
@@ -19,6 +25,7 @@ function! IsLinux() abort
     return s:is_linux
 endfunction
 
+
 " プラグイン管理設定
 source ~/.config/nvim/rc/dein.rc.vim
 
@@ -27,12 +34,6 @@ source ~/.config/nvim/rc/basic.rc.vim
 
 " プラグイン設定
 source ~/.config/nvim/rc/plugins.rc.vim
-
-" unite.vim 設定
-source ~/.config/nvim/rc/unite.rc.vim
-
-" denite.nvim 設定
-source ~/.config/nvim/rc/denite.rc.vim
 
 " tags 設定
 source ~/.config/nvim/rc/tags.rc.vim
@@ -48,5 +49,6 @@ source ~/.config/nvim/rc/translate.rc.vim
 
 " Hacks
 source ~/.config/nvim/rc/hacks.rc.vim
+
 
 filetype plugin indent on
