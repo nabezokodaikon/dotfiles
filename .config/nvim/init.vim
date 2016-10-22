@@ -1,10 +1,13 @@
-filetype off
-filetype plugin indent off
-
-
+"--------------------------------
+" Initial configurations
+"--------------------------------
 if &compatible
     set nocompatible
 endif
+
+
+filetype off
+filetype plugin indent off
 
 
 let s:is_windows = has('win32') || has('win64')
@@ -32,15 +35,6 @@ source ~/.config/nvim/rc/dein.rc.vim
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim
 
-" denite.nvim configurations
-source ~/.config/nvim/rc/plugins/denite.rc.vim
-
-" unite.nvim configurations
-source ~/.config/nvim/rc/plugins/unite.rc.vim
-
-" プラグイン設定
-source ~/.config/nvim/rc/plugins.rc.vim
-
 " tags 設定
 source ~/.config/nvim/rc/tags.rc.vim
 
@@ -55,6 +49,17 @@ source ~/.config/nvim/rc/translate.rc.vim
 
 " Hacks
 source ~/.config/nvim/rc/hacks.rc.vim
+
+" Plugins configurations
+source ~/.config/nvim/rc/plugins/denite.rc.vim
+source ~/.config/nvim/rc/plugins/deoplete.rc.vim
+source ~/.config/nvim/rc/plugins/jellybeans.rc.vim
+source ~/.config/nvim/rc/plugins/nerdcommenter.rc.vim
+source ~/.config/nvim/rc/plugins/unite.rc.vim
+source ~/.config/nvim/rc/plugins/vim-easymotion.rc.vim
+source ~/.config/nvim/rc/plugins/vim-fugitive.rc.vim
+source ~/.config/nvim/rc/plugins/vim-gista.rc.vim
+source ~/.config/nvim/rc/plugins/vim-submode.rc.vim
 
 
 filetype plugin indent on

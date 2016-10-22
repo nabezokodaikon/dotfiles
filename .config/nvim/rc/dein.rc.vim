@@ -28,8 +28,6 @@ call dein#begin(s:dein_dir)
 
 call dein#load_toml('~/.config/nvim/rc/dein.toml', {'lazy': 0})
 call dein#load_toml('~/.config/nvim/rc/deinlazy.toml', {'lazy': 1})
-call dein#call_hook('source')
-call dein#call_hook('post_source')
 
 call dein#end()
 call dein#save_state()
