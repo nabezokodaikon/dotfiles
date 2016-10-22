@@ -40,6 +40,10 @@ nmap <Leader>s <Plug>(easymotion-s2)
 " jellybeans.vim
 "--------------------------------
 let g:jellybeans_overrides = {
+\   'background': {
+\       'ctermbg': 'none',
+\       '256ctermbg': 'none'
+\   },
 \   'CursorLine': {
 \       '256ctermbg': '235',
 \       'attr': 'bold'

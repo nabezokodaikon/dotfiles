@@ -4,8 +4,8 @@
 # *color* 'area' 'fgcolor' 'bgcolor' '[attributes]'
 
 # general
-color   default                 15      235
-color   cursor                  15      241
+color   default                 15      default
+color   cursor                  default 235         bold
 color   title-focus             242     221
 color   title-blur              242     221
 color   delimiter               213     default
