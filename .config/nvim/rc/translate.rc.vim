@@ -59,7 +59,9 @@ function! Translate()
     endif
 
     let ret = join(text)
-    echo ret
+    redi @+>
+    echon ret
+    redi END
 endfunction
 
 vnoremap <silent> <leader>t :<C-u>call Translate()<CR>
