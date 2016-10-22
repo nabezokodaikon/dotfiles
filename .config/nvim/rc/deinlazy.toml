@@ -4,7 +4,7 @@ repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 depends = ['neomru.vim', 'neoyank.vim']
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/denite.rc.vim
+    source ~/.config/nvim/rc/plugins/denite-lazy.rc.vim
 '''
 
 # unite.vim
@@ -13,7 +13,7 @@ repo = 'Shougo/unite.vim'
 on_cmd = 'Unite'
 depends = ['vim-gista-unite', 'unite-outline', 'unite-tag']
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/unite.rc.vim
+    source ~/.config/nvim/rc/plugins/unite-lazy.rc.vim
 '''
 
 # denite.nvimでファイル表示履歴を表示する。
