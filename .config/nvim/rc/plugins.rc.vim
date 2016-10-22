@@ -31,6 +31,19 @@ let g:EasyMotion_smartcase = 1
 nmap <Leader>s <Plug>(easymotion-s2)
 
 
+" vim-submode
+"--------------------------------
+" Window resize.
+call submode#enter_with('window-resize', 'n', '', '<C-w>>', '<C-w>>')
+call submode#enter_with('window-resize', 'n', '', '<C-w><', '<C-w><')
+call submode#enter_with('window-resize', 'n', '', '<C-w>+', '<C-w>+')
+call submode#enter_with('window-resize', 'n', '', '<C-w>-', '<C-w>-')
+call submode#map('window-resize', 'n', '', '>', '<C-w>>')
+call submode#map('window-resize', 'n', '', '<', '<C-w><')
+call submode#map('window-resize', 'n', '', '+', '<C-w>+')
+call submode#map('window-resize', 'n', '', '-', '<C-w>-')
+
+
 " jellybeans.vim
 "--------------------------------
 let g:jellybeans_overrides = {

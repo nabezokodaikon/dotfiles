@@ -1,22 +1,24 @@
 "--------------------------------
 " split 設定
 "--------------------------------
-" ウィンドウのサイズ変更を押しっぱなしでできるようにする。
-call submode#enter_with('window-resize', 'n', '', '<C-w>>', '<C-w>>')
-call submode#enter_with('window-resize', 'n', '', '<C-w><', '<C-w><')
-call submode#enter_with('window-resize', 'n', '', '<C-w>+', '<C-w>+')
-call submode#enter_with('window-resize', 'n', '', '<C-w>-', '<C-w>-')
-call submode#map('window-resize', 'n', '', '>', '<C-w>>')
-call submode#map('window-resize', 'n', '', '<', '<C-w><')
-call submode#map('window-resize', 'n', '', '+', '<C-w>+')
-call submode#map('window-resize', 'n', '', '-', '<C-w>-')
-
-" 次のウィンドウ選択を押しっぱなしでできるようにする。
-call submode#enter_with('window-resize', 'n', '', '<C-w>w', '<C-w>w')
-call submode#map('window-resize', 'n', '', 'w', '<C-w>w')
-
-" 新規ウィンドウで空ファイルを開くとき、垂直分割して開く。
+" Unmapping
+nnoremap <C-w>s <Nop>
+nnoremap <C-w>S <Nop>
+nnoremap <C-w><C-s> <Nop>
+nnoremap <C-w><C-S> <Nop>
+nnoremap <C-w>v <Nop>
+nnoremap <C-w>V <Nop>
+nnoremap <C-w><C-v> <Nop>
+nnoremap <C-w><C-V> <Nop>
 nnoremap <C-w>n <Nop>
+nnoremap <C-w>N <Nop>
 nnoremap <C-w><C-n> <Nop>
-nnoremap <C-w>n :vne<CR>
-nnoremap <C-w><C-n> :vne<CR>
+nnoremap <C-w><C-N> <Nop>
+
+" Current split
+nnoremap <silent> <C-w>s :vsplit<CR>
+nnoremap <silent> <C-w>S :split<CR>
+
+" New split
+nnoremap <silent> <C-w>n :vnew<CR>
+nnoremap <silent> <C-w>N :new<CR>
