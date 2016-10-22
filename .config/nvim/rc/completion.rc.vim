@@ -4,9 +4,6 @@
 
 " deoplete.nvim
 "--------------------------------
-" AutoComplPop プラグインを無効にする 
-let g:acp_enableAtStartup = 0
-
 " deoplete を利用する
 let g:deoplete#enable_at_startup = 1
 
