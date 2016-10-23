@@ -2,13 +2,13 @@
 " unite.vim configurations
 "--------------------------------
 " アウトライン
-nnoremap <silent> [denite]o :<C-u>Unite outline -start-insert<CR>
+nnoremap <silent> <leader>uo :<C-u>Unite outline -start-insert<CR>
 
 " gist 一覧
-nnoremap <silent> [denite]s :<C-u>Unite gista -start-insert<CR>
+nnoremap <silent> <leader>us :<C-u>Unite gista -start-insert<CR>
 
 " タブ一覧
-nnoremap <silent> [denite]g :<C-u>Unite tab -no-start-insert<CR>
+nnoremap <silent> <leader>ug :<C-u>Unite tab -no-start-insert<CR>
 
 " タグ一覧
 augroup vimrc-unite-tag
