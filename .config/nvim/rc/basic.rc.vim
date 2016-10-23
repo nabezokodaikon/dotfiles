@@ -94,3 +94,17 @@ set shiftwidth=4
 
 " タブ入力で挿入される空白の長さをshiftwidthと同じにする。
 set softtabstop=-1
+
+
+" tagsファイル読み込み
+"--------------------------------
+set tags=tags
+" ~/dotfiles/tags/ ディレクトリに絶対パスで作成したタグファイルを
+" 拡張子'.tags'で作成することで vim 起動時に自動で読み込まれる。
+" <例>
+" $ ctags -f ~/dotfiles/tags/scala.tags -R /usr/local/github/scala/src
+if exists('g:loaded_tags')
+    finish
+endif
+execute ":set tags+=" . join(split(glob("~/dotfiles/tags/*.tags"), "\n"), ",")
+let g:loaded_tags = 1
