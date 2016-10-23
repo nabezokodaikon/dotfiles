@@ -35,14 +35,8 @@ source ~/.config/nvim/rc/dein.rc.vim
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim
 
-" tags 設定
-source ~/.config/nvim/rc/tags.rc.vim
-
-" tab 設定
-source ~/.config/nvim/rc/tab.rc.vim
-
-" split 設定
-source ~/.config/nvim/rc/split.rc.vim
+" Key mapping configurations
+source ~/.config/nvim/rc/mappings.rc.vim
 
 " Translation process
 source ~/.config/nvim/rc/translate.rc.vim
