@@ -15,3 +15,29 @@ augroup vimrc-auto-mkdir
     endfunction
     autocmd BufWritePre * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
 augroup END
+
+
+" Command-line window.
+"--------------------------------
+" Toggle display by <esc><esc>.
+" nnoremap <esc><esc> <Nop>
+" nnoremap <esc><esc> q:
+" xnoremap <esc><esc> <Nop>
+" xnoremap <esc><esc> q:
+" augroup vimrc-cmdwin-toggle
+    " autocmd!
+    " function! s:vimrc_cmdwin_enter()
+        " nnoremap <esc><esc> <Nop>
+        " nnoremap <esc><esc> :q<CR>
+        " xnoremap <esc><esc> <Nop>
+        " xnoremap <esc><esc> :q<CR>
+    " endfunction
+    " function! s:vimrc_cmdwin_leave()
+        " nnoremap <esc><esc> <Nop>
+        " nnoremap <esc><esc> q:
+        " xnoremap <esc><esc> <Nop>
+        " xnoremap <esc><esc> q:
+    " endfunction
+    " autocmd CmdwinEnter * call s:vimrc_cmdwin_enter()
+    " autocmd CmdwinLeave * call s:vimrc_cmdwin_leave()
+" augroup END
