@@ -22,6 +22,9 @@ set whichwrap=b,s,h,l,<,>,[,]
 " 行番号を表示する
 set number
 
+" 常にタブラインを表示する。
+set showtabline=2
+
 " シンタックスハイライトを有効
 syntax on
 

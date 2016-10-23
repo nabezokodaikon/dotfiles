@@ -9,6 +9,3 @@ nnoremap gn :tabnew<CR>
 " 現在のタブを閉じる
 nnoremap gc <Nop>
 nnoremap gc :tabclose<CR>
-
-" タブページを常に表示
-set showtabline=2
