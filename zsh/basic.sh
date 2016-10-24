@@ -36,8 +36,9 @@ setopt auto_pushd
 # auto_pushd で重複するディレクトリを記録しない。
 setopt pushd_ignore_dups
 
-# エスケープシーケンスの待ち時間を10msにする。
-KEYTIMEOUT=1
+# インサートモードからノーマルモードへ移行するキーを'jj'としたため、
+# エスケープシーケンスの待ち時間をデフォルトの0.4s(400ms)にする。
+KEYTIMEOUT=40
 
 # キーバインドをリセットする。
 bindkey -d
@@ -85,7 +86,7 @@ zle -N zle-keymap-select
 
 # ノーマルモードに移行するキーを変更する。
 # 参考: http://qiita.com/syui/items/8cc534c2c30543965950
-bindkey -M viins '^j' vi-cmd-mode
+bindkey -M viins 'jj' vi-cmd-mode
 
 # インクリメンタルサーチ
 bindkey '^f' history-incremental-search-forward
