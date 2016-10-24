@@ -1,8 +1,8 @@
 "--------------------------------
 " Key mapping configurations
 "--------------------------------
-" <C-j> で挿入モードから抜ける(ESCと同じ動作)
-inoremap <silent> <C-j> <esc>
+" Switch To the command mode.
+inoremap <silent> jj <esc>
 
 " <leader> を <space> に変更
 let mapleader = "\<space>"

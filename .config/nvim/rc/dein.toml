@@ -40,11 +40,6 @@ repo = 'kana/vim-submode'
 [[plugins]]
 repo = 'kana/vim-tabpagecd'
 
-# Fcitx 環境でインサートモードからノーマルモードになると、Fcitx が OFF になる。
-[[plugins]]
-repo = 'anekos/felis-cat-igirisu-toast-express'
-if = "IsLinux()"
-
 # git を操作する。
 [[plugins]]
 repo = 'tpope/vim-fugitive'
