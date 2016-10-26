@@ -4,8 +4,9 @@
 " Switch To the command mode.
 inoremap jj <ESC>
 
-" <Leader> を <space> に変更。
-let mapleader = "\<space>"
+" <Leader> を <Space> に変更。
+nnoremap <Space> <Nop>
+let mapleader = "\<Space>"
 
 " Disable the Ex mode.
 nnoremap Q <Nop>
