@@ -22,3 +22,15 @@ nnoremap <silent> [denite]r :<C-u>DeniteCursorWord grep<CR>
 
 " バッファ一覧
 nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
+
+" gist 一覧
+nnoremap <silent> [denite]s :<C-u>Denite unite:gista<CR>
+
+" タグ一覧
+augroup vimrc-unite-tag
+    autocmd!
+    autocmd BufEnter *
+                \   if empty(&buftype)
+                \|      nnoremap <buffer> [denite]t :<C-u>DeniteCursorWord -immediately unite:tag<CR>
+                \|  endif
+augroup END
