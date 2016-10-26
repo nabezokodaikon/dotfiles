@@ -117,14 +117,6 @@ augroup vimrc-denite-tag
 augroup END
 
 
-" unite.vim
-"--------------------------------
-" アウトライン
-nnoremap <silent> <Leader>uo :<C-u>Unite outline -start-insert<CR>
-" タブ一覧
-nnoremap <silent> <Leader>ug :<C-u>Unite tab -no-start-insert<CR>
-
-
 " deoplete.nvim
 "--------------------------------
 " <C-h>や<BS>を押したときに確実にポップアップを削除する。
