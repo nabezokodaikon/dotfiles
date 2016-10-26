@@ -7,6 +7,10 @@ inoremap jj <ESC>
 " <Leader> を <space> に変更。
 let mapleader = "\<space>"
 
+" Disable the Ex mode.
+nnoremap Q <Nop>
+nnoremap gQ <Nop>
+
 
 " split
 "--------------------------------
