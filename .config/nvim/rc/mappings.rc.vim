@@ -72,8 +72,10 @@ let g:user_emmet_leader_key='<C-e>'
 
 " nerdcommenter
 "--------------------------------
-nmap <Leader>c <Plug>NERDCommenterToggle
-vmap <Leader>c <Plug>NERDCommenterToggle
+nnoremap co <Nop>
+vnoremap co <Nop>
+nmap co <Plug>NERDCommenterToggle
+vmap co <Plug>NERDCommenterToggle
 
 
 " vim-easymotion
