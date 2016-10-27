@@ -13,10 +13,18 @@ let g:deoplete#enable_smart_case = 1
 " シンタックスをキャッシュするときの最小文字長を 3 にする
 let g:deoplete#sources#syntax#min_keyword_length = 3
 
+
+if !exists('g:deoplete#sources')
+    let g:deoplete#sources = {}
+endif
+let g:deoplete#sources.scala = ['buffer', 'file', 'tag', 'dictionary']
+
+
 if !exists('g:deoplete#omni_patterns')
     let g:deoplete#omni_patterns = {}
 endif
 let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
+
 
 if !exists('g:deoplete#omni#input_patterns')
     let g:deoplete#omni#input_patterns = {}
