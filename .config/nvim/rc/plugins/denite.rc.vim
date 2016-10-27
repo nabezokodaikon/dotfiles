@@ -19,3 +19,10 @@ call denite#custom#var('grep', 'final_opts', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
     \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*', '--color', 'never'])
+
+" Because changing focus, if the vim-gista-unite's narrow action.
+call unite#custom#profile('default', 'context', {
+            \   'start_insert': 0,
+            \   'prompt_direction': 'top',
+            \   'split' : 0
+            \})
