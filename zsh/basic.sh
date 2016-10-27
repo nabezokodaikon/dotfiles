@@ -133,7 +133,6 @@ fi
 
 # sbt
 #--------------------------------
-# sbt 設定を読み込む。
-if [ -f "$HOME/.sbtconfig" ]; then
-  source "$HOME/.sbtconfig"
-fi
+export SBT_OPTS=" \
+-Dfile.encoding=UTF-8 \
+"

@@ -1,8 +1,0 @@
-export SBT_OPTS=" \
--Xms512M \
--Xmx1536M \
--Xss1M \
--XX:+CMSClassUnloadingEnabled \
--XX:MaxMetaspaceSize=256M \
--Dfile.encoding=UTF-8 \
-"
