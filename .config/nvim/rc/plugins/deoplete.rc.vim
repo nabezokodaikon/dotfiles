@@ -13,14 +13,16 @@ let g:deoplete#enable_smart_case = 1
 " シンタックスをキャッシュするときの最小文字長を 3 にする
 let g:deoplete#sources#syntax#min_keyword_length = 3
 
-" 辞書ファイル
-let g:deoplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'scala' : $HOME.'/.config/nvim/dict/scala.dict'
-    \ }
-
-" Define keyword.
-if !exists('g:deoplete#keyword_patterns')
-    let g:deoplete#keyword_patterns = {}
+if !exists('g:deoplete#omni_patterns')
+    let g:deoplete#omni_patterns = {}
 endif
-let g:deoplete#keyword_patterns['default'] = '\h\w*'
+let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
+
+if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+endif
+let g:deoplete#omni#input_patterns.scala = [
+            \ '[^. *\t]\.\w*',
+            \ '[:\[,] ?\w*',
+            \ '^import .*'
+            \ ] 
