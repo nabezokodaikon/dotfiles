@@ -15,6 +15,10 @@ if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     unlink $HOME/.Xmodmap
 fi
 
+if [ -d ${HOME}/.sbt/0.13/plugins ]; then
+    rm -rf $HOME/.sbt/0.13/plugins
+fi
+
 # 各種設定ファイルのシンボリックリンクを作成します。
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
@@ -28,6 +32,11 @@ if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # Linux
     ln -s $HOME/dotfiles/xprofile/.xprofile $HOME/.xprofile
     ln -s $HOME/dotfiles/xprofile/.Xmodmap $HOME/.Xmodmap
+fi
+
+if [ ! -d ${HOME}/.sbt/0.13/plugins ]; then
+    mkdir -p $HOME/.sbt/0.13/plugins
+    ln -s $HOME/dotfiles/.sbt/0.13/plugins/build.sbt $HOME/.sbt/0.13/plugins/build.sbt
 fi
 
 exit 0
