@@ -24,7 +24,7 @@ export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvimlog.
 # Zsh
 #--------------------------------
 # デフォルトの補完機能を有効化
-autoload -Uz compinit
+autoload -U compinit
 # 以下の警告を抑止する。
 # zsh compinit: insecure directories, run compaudit for list.
 # Ignore insecure directories and continue [y] or abort compinit [n]?
@@ -47,7 +47,7 @@ bindkey -d
 bindkey -v
 
 # 色設定
-autoload colors
+autoload -U colors
 colors
 
 # 履歴設定
@@ -55,7 +55,7 @@ setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 
 # git の情報を表示
-autoload -Uz vcs_info
+autoload -U vcs_info
 setopt prompt_subst
 zstyle ":vcs_info:*" enable git
 zstyle ":vcs_info:git:*" check-for-changes true
@@ -93,7 +93,7 @@ bindkey '^f' history-incremental-search-forward
 bindkey '^b' history-incremental-search-backward
 bindkey '^g' send-break
 
-autoload history-search-end
+autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
