@@ -10,6 +10,9 @@ let g:jellybeans_overrides = {
 \       '256ctermbg': '235',
 \       'attr': 'bold'
 \   },
+\   'CursorColumn': {
+\       '256ctermbg': '235'
+\   },
 \   'Visual': {
 \       '256ctermbg': '238',
 \       'attr': 'bold'
