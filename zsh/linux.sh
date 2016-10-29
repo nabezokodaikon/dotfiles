@@ -87,4 +87,10 @@ if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
         [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
         npm "$@"
     }
+
+    electron() {
+        unset -f electron
+        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
+        electron "$@"
+    }
 fi
