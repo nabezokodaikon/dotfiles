@@ -23,18 +23,14 @@ let g:deoplete#sources.scala = ['buffer', 'file', 'tag', 'dictionary']
 if !exists('g:deoplete#omni_patterns')
     let g:deoplete#omni_patterns = {}
 endif
+let g:deoplete#omni_patterns.html = '<[^>]*'
+let g:deoplete#omni_patterns.css = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
 let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
 
 
 if !exists('g:deoplete#omni#input_patterns')
     let g:deoplete#omni#input_patterns = {}
 endif
-let g:deoplete#omni#input_patterns.html = [
-            \ '<[^>]*'
-            \ ]
-let g:deoplete#omni#input_patterns.css = [
-            \ '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
-            \ ]
 let g:deoplete#omni#input_patterns.scala = [
             \ '[^. *\t]\.\w*',
             \ '[:\[,] ?\w*',
