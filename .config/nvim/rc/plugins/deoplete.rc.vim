@@ -29,6 +29,12 @@ let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
 if !exists('g:deoplete#omni#input_patterns')
     let g:deoplete#omni#input_patterns = {}
 endif
+let g:deoplete#omni#input_patterns.html = [
+            \ '<[^>]*'
+            \ ]
+let g:deoplete#omni#input_patterns.css = [
+            \ '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
+            \ ]
 let g:deoplete#omni#input_patterns.scala = [
             \ '[^. *\t]\.\w*',
             \ '[:\[,] ?\w*',
