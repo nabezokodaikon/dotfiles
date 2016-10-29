@@ -112,7 +112,7 @@ augroup vimrc-denite-tag
     autocmd!
     autocmd BufEnter *
                 \   if empty(&buftype)
-                \|      nnoremap <buffer> [denite]t :<C-u>DeniteCursorWord unite:tag<CR>
+                \|      nnoremap <buffer> [denite]d :<C-u>DeniteCursorWord unite:tag<CR>
                 \|  endif
 augroup END
 
