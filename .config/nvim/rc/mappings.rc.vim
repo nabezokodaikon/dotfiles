@@ -106,6 +106,8 @@ nnoremap <silent> [denite]r :<C-u>DeniteCursorWord grep<CR>
 nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
 " gista
 nnoremap <silent> [denite]s :<C-u>Denite unite:gista<CR>
+" File type
+nnoremap <silent> [denite]t :<C-u>Denite filetype<CR>
 
 " タグ一覧
 augroup vimrc-denite-tag
