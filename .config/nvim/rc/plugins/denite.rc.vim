@@ -4,7 +4,6 @@
 " Key mapping.
 call denite#custom#map('insert', "\<C-n>", 'move_to_next_line')
 call denite#custom#map('insert', "\<C-p>", 'move_to_prev_line')
-call denite#custom#map('insert', "\<C-g>", 'input_command_line')
 
 " Ripgrep command on file_rec source.
 call denite#custom#var('file_rec', 'command',
