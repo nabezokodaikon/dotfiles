@@ -13,6 +13,15 @@ nnoremap Q <Nop>
 nnoremap gQ <Nop>
 
 
+" Unmappings
+"--------------------------------
+nnoremap <CR> <Nop>
+nnoremap <C-j> <Nop>
+nnoremap <C-m> <Nop>
+nnoremap <C-n> <Nop>
+nnoremap <C-p> <Nop>
+
+
 " split
 "--------------------------------
 " Unmappings
