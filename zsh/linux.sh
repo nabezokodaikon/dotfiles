@@ -65,6 +65,14 @@ if [ $? = 0 ]; then
 fi
 
 
+# pip
+#--------------------------------
+type pip > /dev/null 2>&1
+if [ $? = 0 ]; then
+    alias pip='LC_ALL=C pip'
+fi
+
+
 # nvm
 #--------------------------------
 if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
