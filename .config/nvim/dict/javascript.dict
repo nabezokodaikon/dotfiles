@@ -1,0 +1,17 @@
+createEvent
+KeyboardEvent
+preventDefault
+key
+code
+location
+ctrlKey
+shiftKey
+altKey
+metaKey
+repeat
+isComposing
+bobbles
+cancelable
+composed
+view
+dispatchEvent
