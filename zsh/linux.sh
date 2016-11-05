@@ -45,7 +45,7 @@ fi
 #--------------------------------
 type vim > /dev/null 2>&1
 if [ $? = 0 ]; then
-    alias vim="env LANG=ja_JP.UTF-8 $(which vim 2>/dev/null) \"\$@\""
+    alias vim="env LANG=en_US.UTF-8 $(which vim 2>/dev/null) \"\$@\""
 fi
 
 
@@ -53,7 +53,7 @@ fi
 #--------------------------------
 type nvim > /dev/null 2>&1
 if [ $? = 0 ]; then
-    alias nvim="env LANG=ja_JP.UTF-8 $(which nvim 2>/dev/null) \"\$@\""
+    alias nvim="env LANG=en_US.UTF-8 $(which nvim 2>/dev/null) \"\$@\""
 fi
 
 
