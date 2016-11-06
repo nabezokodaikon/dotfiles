@@ -5,7 +5,17 @@ var
 let
 const
 
+if
+else
+true
+false
+
+null
 undefined
+NaN
+
+console
+log
 
 createEvent
 KeyboardEvent
