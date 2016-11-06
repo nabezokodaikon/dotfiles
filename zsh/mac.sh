@@ -4,8 +4,24 @@ export JAVA_HOME=/Library/Java/Home
 # python
 export PYTHONPATH=/usr/local/lib/python3.5/site-packages/
 
-# vim
-export EDITOR=/usr/local/bin/vim
+
+# Vim
+#--------------------------------
+type vim > /dev/null 2>&1
+if [ $? = 0 ]; then
+    alias vim="env LANG=en_US.UTF-8 $(which vim 2>/dev/null) \"\$@\""
+    export EDITOR=vim
+fi
+
+
+# Neovim
+#--------------------------------
+type nvim > /dev/null 2>&1
+if [ $? = 0 ]; then
+    alias nvim="env LANG=en_US.UTF-8 $(which nvim 2>/dev/null) \"\$@\""
+    export EDITOR=nvim
+fi
+
 
 # homebrew
 export PATH=/usr/local/bin:$PATH
