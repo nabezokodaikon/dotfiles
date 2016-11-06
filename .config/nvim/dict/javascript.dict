@@ -5,6 +5,8 @@ var
 let
 const
 
+undefined
+
 createEvent
 KeyboardEvent
 preventDefault
