@@ -12,6 +12,9 @@ let mapleader = "\<Space>"
 nnoremap Q <Nop>
 nnoremap gQ <Nop>
 
+" Disable CR.
+inoremap <C-j> <Nop>
+
 
 " Unmappings
 "--------------------------------
