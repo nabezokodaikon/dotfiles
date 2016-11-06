@@ -1,3 +1,6 @@
+use
+strict
+
 createEvent
 KeyboardEvent
 preventDefault
