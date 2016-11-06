@@ -14,12 +14,17 @@ null
 undefined
 NaN
 
-console
-log
+console.
+log(
+
+Number.
+isNaN(
+isFinite(
 
 createEvent
-KeyboardEvent
 preventDefault
+dispatchEvent
+KeyboardEvent
 key
 code
 location
@@ -33,4 +38,3 @@ bobbles
 cancelable
 composed
 view
-dispatchEvent
