@@ -33,6 +33,7 @@ export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
 alias ctags='/usr/local/bin/ctags'
 alias tmux='tmux -2'
 
+
 # nvm
 if [ -d "$(brew --cellar)/nvm" ]; then
     # nvmの遅延読み込み。
@@ -54,5 +55,11 @@ if [ -d "$(brew --cellar)/nvm" ]; then
         unset -f npm
         [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
         npm "$@"
+    }
+
+    electron() {
+        unset -f electron
+        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
+        electron "$@"
     }
 fi
