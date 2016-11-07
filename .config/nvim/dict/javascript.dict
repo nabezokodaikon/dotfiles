@@ -1,6 +1,9 @@
 use
 strict
 
+console
+log(
+
 var
 let
 const
@@ -14,17 +17,24 @@ null
 undefined
 NaN
 
-console.
-log(
+Boolean
+Number
+String
+    length
+Symbol
+Object
+KeyboardEvent
 
-Number.
 isNaN(
 isFinite(
 
-createEvent
-preventDefault
-dispatchEvent
-KeyboardEvent
+parseInt(
+parseFloat(
+
+createEvent(
+preventDefault(
+dispatchEvent(
+
 key
 code
 location
