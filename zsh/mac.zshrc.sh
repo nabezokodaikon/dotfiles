@@ -4,18 +4,15 @@
 
 # PATH
 #--------------------------------
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 
 
 # Alias
 #--------------------------------
-alias ls="ls --color=auto"
+alias ls="ls -G"
 alias vim="env LANG=en_US.UTF-8 vim \"\$@\""
 alias nvim="env LANG=en_US.UTF-8 nvim \"\$@\""
 alias tmux="env LANG=en_US.UTF-8 tmux -2u \"\$@\""
-alias ctags='/usr/local/bin/ctags'
 
 
 # nvm
