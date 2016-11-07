@@ -1,15 +1,12 @@
 # echo "Call local zshrc."
 
-# 基本設定
-source $HOME/dotfiles/zsh/basic.sh
+source $HOME/dotfiles/zsh/common.zshrc.sh
 
 case "$OSTYPE" in
     darwin*)
-        # macOS
-        source $HOME/dotfiles/zsh/mac.sh
+        source $HOME/dotfiles/zsh/mac.zshrc.sh
         ;;
     linux*)
-        # Linux
-        source $HOME/dotfiles/zsh/linux.sh 
+        source $HOME/dotfiles/zsh/linux.zshrc.sh 
         ;;
 esac
