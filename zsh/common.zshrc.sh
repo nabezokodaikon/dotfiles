@@ -1,28 +1,7 @@
 #--------------------------------
-# Zsh 基本設定 
+# Zsh .zshrc for common
 #--------------------------------
 
-# 環境変数
-#--------------------------------
-# 日本語設定
-export LANG=ja_JP.UTF-8
-export LESSCHARSET=utf-8
-
-# 履歴設定
-export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=10000
-
-# Xdg
-# アプリケーションの設定ファイルを保存するディレクトリ
-export XDG_CONFIG_HOME=$HOME/.config
-
-# Neovimのログファイル
-export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvimlog.
-
-
-# Zsh
-#--------------------------------
 # デフォルトの補完機能を有効化
 autoload -U compinit
 # 以下の警告を抑止する。
@@ -113,26 +92,3 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
-
-
-# tmux
-#--------------------------------
-# ログディレクトリを作成する。
-if [ ! -e "$XDG_CONFIG_HOME/tmux/logs" ]; then
-    mkdir -pv "$XDG_CONFIG_HOME/tmux/logs"
-fi
-
-
-# Neovim
-#--------------------------------
-# ログディレクトリを作成する。
-if [ ! -e "$XDG_CONFIG_HOME/nvim/logs" ]; then
-    mkdir -pv "$XDG_CONFIG_HOME/nvim/logs"
-fi
-
-
-# sbt
-#--------------------------------
-export SBT_OPTS=" \
--Dfile.encoding=UTF-8 \
-"

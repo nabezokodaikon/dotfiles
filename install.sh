@@ -21,11 +21,11 @@ unlink ${HOME}/.Xmodmap
 # Install
 #--------------------------------
 if [ ! -d "${HOME}/.config" ]; then
-    mkdir -p ${HOME}/.config
+    mkdir -pv ${HOME}/.config
 fi
 
 if [ ! -d "${HOME}/.sbt/0.13/plugins" ]; then
-    mkdir -p ${HOME}/.sbt/0.13/plugins
+    mkdir -pv ${HOME}/.sbt/0.13/plugins
 fi
 
 ln -s ${HOME}/dotfiles/zsh/.zshenv ${HOME}/.zshenv
@@ -45,6 +45,14 @@ if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # For Linux only.
     ln -s ${HOME}/dotfiles/xprofile/.xprofile ${HOME}/.xprofile
     ln -s ${HOME}/dotfiles/xprofile/.Xmodmap ${HOME}/.Xmodmap
+fi
+
+if [ ! -d "$XDG_CONFIG_HOME/tmux/logs" ]; then
+    mkdir -pv "$XDG_CONFIG_HOME/tmux/logs"
+fi
+
+if [ ! -d "$XDG_CONFIG_HOME/nvim/logs" ]; then
+    mkdir -pv "$XDG_CONFIG_HOME/nvim/logs"
 fi
 
 
