@@ -1,3 +1,5 @@
+# echo "Call local zshrc."
+
 # 基本設定
 source $HOME/dotfiles/zsh/basic.sh
 
