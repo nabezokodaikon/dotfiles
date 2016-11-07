@@ -18,6 +18,7 @@ if !exists('g:deoplete#sources')
     let g:deoplete#sources = {}
 endif
 let g:deoplete#sources._ = []
+let g:deoplete#sources.javascript = ["buffer", "member", "tag", "file", "dictionary"]
 
 
 if !exists('g:deoplete#omni#input_patterns')
