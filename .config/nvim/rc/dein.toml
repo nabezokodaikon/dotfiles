@@ -11,10 +11,6 @@ build = 'make'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 
-# emmet-vim
-[[plugins]]
-repo = 'mattn/emmet-vim'
-
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
@@ -47,10 +43,6 @@ repo = 'tpope/vim-fugitive'
 # カーソル移動を便利にする。
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-
-# Scala のシンタックスハイライト
-[[plugins]]
-repo = 'derekwyatt/vim-scala'
 
 # 編集ファイルの全体または一部を実行する。
 [[plugins]]

@@ -37,3 +37,13 @@ repo = 'tsukkee/unite-tag'
 [[plugins]]
 repo = 'lambdalisue/vim-gista'
 on_cmd = 'Gista'
+
+# emmet-vim
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html', 'css']
+
+# Scala のシンタックスハイライト
+[[plugins]]
+repo = 'derekwyatt/vim-scala'
+on_ft = 'scala'
