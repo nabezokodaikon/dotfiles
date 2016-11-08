@@ -59,7 +59,7 @@ function! Translate()
     endif
 
     let ret = join(text)
-    redi @+>
+    redi @">
     echon ret
     redi END
 endfunction
