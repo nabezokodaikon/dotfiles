@@ -10,11 +10,14 @@ require
 length
 Symbol
 
-KeyboardEvent
-
 createEvent(
 preventDefault(
 dispatchEvent(
+addEventListener(
+
+textContent
+
+KeyboardEvent
 
 key
 code
