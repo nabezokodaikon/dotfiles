@@ -13,10 +13,18 @@ let g:jellybeans_overrides = {
 \       '256ctermbg': '235'
 \   },
 \   'Visual': {
-\       '256ctermbg': '238',
-\       'attr': 'bold'
+\       '256ctermbg': '238'
 \   },
 \   'PmenuSel': {
+\       'attr': 'bold'
+\   },
+\   'TabLineFill': {
+\       'attr': 'bold'
+\   },
+\   'TabLine': {
+\       'attr': 'bold'
+\   },
+\   'TabLineSel': {
 \       'attr': 'bold'
 \   }
 \}
