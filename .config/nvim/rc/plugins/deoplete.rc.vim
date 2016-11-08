@@ -17,8 +17,44 @@ let g:deoplete#sources#syntax#min_keyword_length = 3
 if !exists('g:deoplete#sources')
     let g:deoplete#sources = {}
 endif
-let g:deoplete#sources._ = []
-let g:deoplete#sources.javascript = ["buffer", "member", "tag", "file", "dictionary"]
+let g:deoplete#sources._ = [
+            \ "buffer",
+            \ "member",
+            \ "tag",
+            \ "file",
+            \ "dictionary"
+            \ ]
+let g:deoplete#sources.html = [
+            \ "buffer",
+            \ "member",
+            \ "tag",
+            \ "file",
+            \ "dictionary"
+            \ ]
+let g:deoplete#sources.css = [
+            \ "buffer",
+            \ "member",
+            \ "tag",
+            \ "file",
+            \ "omni",
+            \ "dictionary"
+            \ ]
+let g:deoplete#sources.javascript = [
+            \ "buffer",
+            \ "member",
+            \ "tag",
+            \ "file",
+            \ "omni",
+            \ "dictionary"
+            \ ]
+let g:deoplete#sources.scala = [
+            \ "buffer",
+            \ "member",
+            \ "tag",
+            \ "file",
+            \ "omni",
+            \ "dictionary"
+            \ ]
 
 
 if !exists('g:deoplete#omni#input_patterns')
