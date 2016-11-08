@@ -26,6 +26,12 @@ let g:jellybeans_overrides = {
 \   },
 \   'TabLineSel': {
 \       'attr': 'bold'
+\   },
+\   'StatusLine': {
+\       'attr': 'bold'
+\   },
+\   'StatusLineNC': {
+\       'attr': 'bold'
 \   }
 \}
 
