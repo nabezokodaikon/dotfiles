@@ -57,5 +57,8 @@ $ cp ~/dotfiles/mac/karabiner/private.xml ~/Library/Application\ Support/Karabin
 >Reference
 * [zshの設定ファイルの読み込み順序と使い方Tipsまとめ](http://qiita.com/muran001/items/7b104d33f5ea3f75353f)
 
+### Color
+* [Bash tips: Colors and formatting](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
 
 ## TODO
