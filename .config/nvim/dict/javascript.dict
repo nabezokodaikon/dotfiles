@@ -4,33 +4,13 @@ strict
 console
 log(
 
-var
 let
-const
 require
 
-if
-else
-true
-false
-
-null
-undefined
-NaN
-
-Boolean
-Number
-String
-    length
+length
 Symbol
-Object
+
 KeyboardEvent
-
-isNaN(
-isFinite(
-
-parseInt(
-parseFloat(
 
 createEvent(
 preventDefault(
