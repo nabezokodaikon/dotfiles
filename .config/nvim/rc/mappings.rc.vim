@@ -113,7 +113,7 @@ nnoremap <silent> [denite]y :<C-u>Denite neoyank<CR>
 " ファイル内の行検索
 nnoremap <silent> [denite]l :<C-u>Denite line<CR>
 " grep
-nnoremap <silent> [denite]r :<C-u>DeniteCursorWord grep<CR>
+nnoremap <silent> [denite]g :<C-u>DeniteCursorWord grep<CR>
 " buffer
 nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
 " gista
