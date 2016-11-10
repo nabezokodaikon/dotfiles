@@ -57,3 +57,11 @@ if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
         electron "$@"
     }
 fi
+
+
+# termite
+#--------------------------------
+if [[ $TERM == xterm-termite ]]; then
+  source /etc/profile.d/vte.sh
+  __vte_prompt_command
+fi
