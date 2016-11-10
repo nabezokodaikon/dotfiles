@@ -16,6 +16,7 @@ unlink ${HOME}/.config/termite
 unlink ${HOME}/.sbt/0.13/plugins/build.sbt
 unlink ${HOME}/.xprofile
 unlink ${HOME}/.Xmodmap
+unlink ${HOME}/.Xresources
 
 
 # Install
@@ -45,6 +46,7 @@ if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # For Linux only.
     ln -s ${HOME}/dotfiles/x/.xprofile ${HOME}/.xprofile
     ln -s ${HOME}/dotfiles/x/.Xmodmap ${HOME}/.Xmodmap
+    ln -s ${HOME}/dotfiles/x/.Xresources ${HOME}/.Xresources
 fi
 
 if [ ! -d "$XDG_CONFIG_HOME/tmux/logs" ]; then
