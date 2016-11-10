@@ -63,5 +63,3 @@ function! Translate()
     echon ret
     redi END
 endfunction
-
-vnoremap <silent> <leader>t :<C-u>call Translate()<CR>
