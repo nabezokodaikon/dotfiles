@@ -88,8 +88,10 @@ vmap co <Plug>NERDCommenterToggle
 "--------------------------------
 " デフォルトのキーマッピングを無効化。
 let g:EasyMotion_do_mapping = 0
-" 2文字のキーワード検索のみを有効化。
-nmap <Leader>m <Plug>(easymotion-s2)
+" 検索後、Enterでカーソル位置に一番近いマッチした箇所に移動する。
+let g:EasyMotion_enter_jump_first = 1
+" キーワードの入力を2文字まで受け付ける。
+nmap <Leader>m <Plug>(easymotion-overwin-f2)
 
 
 " denite.nvim
