@@ -7,6 +7,15 @@ log(
 let
 const
 
+switch
+break
+default
+return
+
+try
+catch
+finally
+
 module
 exports
 require
