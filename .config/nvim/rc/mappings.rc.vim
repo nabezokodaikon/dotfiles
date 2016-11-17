@@ -96,33 +96,29 @@ nmap <Leader>m <Plug>(easymotion-overwin-f2)
 
 " denite.nvim
 "--------------------------------
-" Prefix		
-nnoremap [denite] <Nop>		
-nmap <C-l> [denite]
-
 " ファイル一覧
-nnoremap <silent> [denite]f :<C-u>Denite file_rec<CR>
+nnoremap <silent> <Leader>f :<C-u>Denite file_rec<CR>
 " ファイル表示履歴
-nnoremap <silent> [denite]h :<C-u>Denite file_mru<CR>
+nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
 " yank
-nnoremap <silent> [denite]y :<C-u>Denite neoyank<CR>
+nnoremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
 " ファイル内の行検索
-nnoremap <silent> [denite]l :<C-u>Denite line<CR>
+nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
 " grep
-nnoremap <silent> [denite]g :<C-u>DeniteCursorWord grep<CR>
+nnoremap <silent> <Leader>g :<C-u>DeniteCursorWord grep<CR>
 " buffer
-nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
+nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 " gista
-nnoremap <silent> [denite]s :<C-u>Denite unite:gista<CR>
+nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 " File type
-nnoremap <silent> [denite]e :<C-u>Denite filetype<CR>
+nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 
 " タグ一覧
 augroup vimrc-denite-tag
     autocmd!
     autocmd BufEnter *
                 \   if empty(&buftype)
-                \|      nnoremap <buffer> [denite]d :<C-u>DeniteCursorWord unite:tag<CR>
+                \|      nnoremap <buffer> <Leader>d :<C-u>DeniteCursorWord unite:tag<CR>
                 \|  endif
 augroup END
 
