@@ -51,6 +51,12 @@ if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
         npm "$@"
     }
 
+    babel() {
+        unset -f babel
+        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
+        babel "$@"
+    }
+
     electron() {
         unset -f electron
         [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
