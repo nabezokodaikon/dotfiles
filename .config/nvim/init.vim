@@ -52,6 +52,7 @@ source ~/.config/nvim/rc/plugins/vim-easymotion.rc.vim
 source ~/.config/nvim/rc/plugins/vim-fugitive.rc.vim
 source ~/.config/nvim/rc/plugins/vim-gista.rc.vim
 source ~/.config/nvim/rc/plugins/vim-submode.rc.vim
+source ~/.config/nvim/rc/plugins/emmet-vim.rc.vim
 
 
 filetype plugin indent on
