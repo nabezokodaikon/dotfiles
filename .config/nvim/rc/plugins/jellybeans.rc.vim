@@ -7,11 +7,10 @@ let g:jellybeans_overrides = {
 \       '256ctermbg': 'none'
 \   },
 \   'CursorLine': {
-\       '256ctermbg': '235',
-\       'attr': 'bold'
+\       '256ctermbg': '236'
 \   },
 \   'CursorColumn': {
-\       '256ctermbg': '235'
+\       '256ctermbg': '236'
 \   },
 \   'Visual': {
 \       '256ctermbg': '238'
