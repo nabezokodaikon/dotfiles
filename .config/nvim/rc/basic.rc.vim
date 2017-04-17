@@ -65,6 +65,9 @@ set autoread
 " クリップボードと連携
 set clipboard+=unnamedplus
 
+" ターミナルで使用するシェルを指定
+set shell=/bin/sh
+
 
 " インデント設定(規定値) 
 "--------------------------------
