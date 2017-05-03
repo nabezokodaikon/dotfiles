@@ -1,6 +1,10 @@
 "--------------------------------
 " 基本設定
 "--------------------------------
+
+" unity on cursor to the block 
+set guicursor=a:block
+
 " スワップファイルを作成しない
 set noswapfile
 
