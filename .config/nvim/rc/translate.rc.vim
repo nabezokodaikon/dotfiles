@@ -3,7 +3,6 @@
 "
 " Required: webapi-vim
 "--------------------------------
-
 function! s:getSelectedText()
     let tmp = @@
     silent normal = gvy
@@ -40,26 +39,19 @@ function! Translate()
     let dom = webapi#html#parse(iconv(res.content, encode, &encoding))
     let result = dom.find({'id': 'result_box'}).childNodes()
 
-    let text = []
-    let tmp_string = ""
-    for childs in result
-        for child in childs.child
-            if type(child) == 4
-                call add(text, tmp_string)
-                let tmp_string = ""
-            else
-                let tmp_string.= substitute(child, '&quot', '"', 'g')
-            endif
-            unlet child
-        endfor
+    let textList = []
+    for item in result
+        if len(item.child) > 0
+            let srcText = item.child[0]
+            let destText = substitute(srcText, '&quot;', '', 'g')
+            call add(textList, destText)
+        endif
     endfor
 
-    if tmp_string != ""
-        call add(text, tmp_string)
+    if len(textList) > 0
+        let ret = join(textList)
+        redi @">
+        echon ret
+        redi END
     endif
-
-    let ret = join(text)
-    redi @">
-    echon ret
-    redi END
 endfunction
