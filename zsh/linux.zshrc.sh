@@ -50,24 +50,6 @@ if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
         [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
         npm "$@"
     }
-
-    babel() {
-        unset -f babel
-        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
-        babel "$@"
-    }
-
-    browserify() {
-        unset -f browserify
-        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
-        browserify "$@"
-    }
-
-    electron() {
-        unset -f electron
-        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
-        electron "$@"
-    }
 fi
 
 

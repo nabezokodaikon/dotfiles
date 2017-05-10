@@ -37,16 +37,4 @@ if [ -d "$(brew --cellar)/nvm" ]; then
         [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
         npm "$@"
     }
-
-    browserify() {
-        unset -f browserify
-        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
-        browserify "$@"
-    }
-    
-    electron() {
-        unset -f electron
-        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
-        electron "$@"
-    }
 fi
