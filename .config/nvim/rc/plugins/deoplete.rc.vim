@@ -11,9 +11,7 @@ let g:deoplete#auto_complete_start_length = 3
 let g:deoplete#enable_smart_case = 1
 
 
-if !exists('g:deoplete#sources')
-    let g:deoplete#sources = {}
-endif
+let g:deoplete#sources = {}
 let g:deoplete#sources._ = [
             \ "buffer",
             \ "member",
@@ -53,9 +51,7 @@ let g:deoplete#sources.scala = [
             \ ]
 
 
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-endif
+let g:deoplete#omni#input_patterns = {}
 let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
 let g:deoplete#omni#input_patterns.scala = [
             \ '[^. *\t]\.\w*',
