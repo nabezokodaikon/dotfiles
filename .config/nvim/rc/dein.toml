@@ -2,11 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# vimproc
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
 # 補完
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
