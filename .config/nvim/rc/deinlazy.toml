@@ -52,3 +52,8 @@ on_ft = 'scala'
 [[plugins]]
 repo = 'jelera/vim-javascript-syntax'
 on_ft = 'javascript'
+
+# JSX Syntax
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = 'javascript'
