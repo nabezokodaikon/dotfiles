@@ -4,23 +4,32 @@ strict
 console
 log(
 
+var
 let
 const
+
+null
 
 switch
 break
 default
+function
 return
 
 try
 catch
 finally
 
+export
+import
+from
 module
 exports
 require
 
 class
+extends
+super(
 constructor(
 static
 new
