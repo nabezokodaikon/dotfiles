@@ -6,8 +6,7 @@ depends = [
     'unite.vim',
     'neomru.vim',
     'neoyank.vim',
-    'vim-gista-unite',
-    'unite-tag'
+    'vim-gista-unite'
     ]
 hook_source = '''
     source ~/.config/nvim/rc/plugins/denite.rc.vim
@@ -28,10 +27,6 @@ repo = 'Shougo/neoyank.vim'
 # vim-gista と unite を連携させる。
 [[plugins]]
 repo = 'lambdalisue/vim-gista-unite'
-
-# unite-tag
-[[plugins]]
-repo = 'tsukkee/unite-tag'
 
 # gist を使用する。
 [[plugins]]

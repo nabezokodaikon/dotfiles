@@ -112,15 +112,8 @@ nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 " File type
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
-
-" タグ一覧
-augroup vimrc-denite-tag
-    autocmd!
-    autocmd BufEnter *
-                \   if empty(&buftype)
-                \|      nnoremap <buffer> <Leader>d :<C-u>DeniteCursorWord unite:tag<CR>
-                \|  endif
-augroup END
+" tag
+nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
 
 
 " deoplete.nvim
