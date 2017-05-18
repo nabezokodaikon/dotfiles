@@ -27,10 +27,6 @@ repo = 'nanotech/jellybeans.vim'
 [[plugins]]
 repo = 'kana/vim-submode'
 
-# タブごとにカレントディレクトリを切り替える。
-[[plugins]]
-repo = 'kana/vim-tabpagecd'
-
 # git を操作する。
 [[plugins]]
 repo = 'tpope/vim-fugitive'
