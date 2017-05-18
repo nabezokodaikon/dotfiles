@@ -2,6 +2,11 @@
 --exclude=log
 --exclude=build
 --exclude=node_modules
+--exclude=*.html
+--exclude=*.css
+--exclude=*.xml
+--exclude=*.xsl
+--exclude=*.properties
 
 --langdef=Scala
 --langmap=Scala:.scala
