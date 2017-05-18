@@ -50,7 +50,7 @@ on_ft = 'scala'
 
 # JavaScript Syntax
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
+repo = 'othree/yajs.vim'
 on_ft = 'javascript'
 
 # JSX Syntax
