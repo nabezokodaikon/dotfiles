@@ -26,6 +26,12 @@ $ pip install --user neovim
 * linuxでは`xclip`を使用するため、別途xclipをインストールする。
 * macでは既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
 
+
+### Ctags
+本家の`Ctags`は2009年以降更新が途絶えているため、`Universal Ctags`を使用する。
+* [Universal Ctags](https://github.com/universal-ctags/ctags)
+
+
 ### Karabiner
 #### Mac
 >2016/10/07の時点ではmacOS Sierraに対応していないため、以下の操作はできない。
