@@ -41,6 +41,9 @@ source ~/.config/nvim/rc/mappings.rc.vim
 " Translation process
 source ~/.config/nvim/rc/translate.rc.vim
 
+" Ctags command
+source ~/.config/nvim/rc/ctags.rc.vim
+
 " Hacks
 source ~/.config/nvim/rc/hacks.rc.vim
 
