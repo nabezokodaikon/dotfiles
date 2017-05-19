@@ -2,7 +2,7 @@ use
 strict
 
 console
-log(
+log
 
 var
 let
@@ -29,43 +29,43 @@ require
 
 class
 extends
-super(
-constructor(
+super
+constructor
 static
 new
 
 length
 Symbol
 
-isNaN(
+isNaN
 
-Date(
-getDate(
-getDay(
-getFullYear(
-getHours(
-getMilliseconds(
-getMinutes(
-getMonth(
-getSeconds(
-getTime(
-getTimezoneOffset(
-getUTCDate(
-getUTCDay(
-getUTCFullYear(
-getUTCHours(
-getUTCMilliseconds(
-getUTCMinutes(
-getUTCMonth(
-getUTCSeconds(
-toDateString(
-toISOString(
-toJSON(
-toLocaleDateString(
-toLocaleString(
-toLocaleTimeString(
-toTimeString(
-toUTCString(
+Date
+getDate
+getDay
+getFullYear
+getHours
+getMilliseconds
+getMinutes
+getMonth
+getSeconds
+getTime
+getTimezoneOffset
+getUTCDate
+getUTCDay
+getUTCFullYear
+getUTCHours
+getUTCMilliseconds
+getUTCMinutes
+getUTCMonth
+getUTCSeconds
+toDateString
+toISOString
+toJSON
+toLocaleDateString
+toLocaleString
+toLocaleTimeString
+toTimeString
+toUTCString
 
-parseInt(
-parseFloat(
+parseInt
+parseFloat
