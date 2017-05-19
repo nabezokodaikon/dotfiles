@@ -4,11 +4,11 @@
 " deoplete を利用する
 let g:deoplete#enable_at_startup = 1
 
-" 自動補完を開始するキーワードの長さ
-let g:deoplete#auto_complete_start_length = 3
-
 " 大文字が入力されるまで、大文字小文字の区別を無視する
 let g:deoplete#enable_smart_case = 1
+
+" 自動補完を開始するキーワードの長さ
+call deoplete#custom#set('_', 'min_pattern_length', 3)
 
 
 let g:deoplete#sources = {}
