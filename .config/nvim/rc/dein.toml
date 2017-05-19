@@ -10,10 +10,6 @@ repo = 'Shougo/deoplete.nvim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-# auto-ctags
-[[plugins]]
-repo = 'soramugi/auto-ctags.vim'
-
 # コメントアウト
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
