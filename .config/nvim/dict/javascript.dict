@@ -33,6 +33,7 @@ super
 constructor
 static
 new
+this
 
 length
 Symbol
