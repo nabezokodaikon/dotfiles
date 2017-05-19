@@ -37,6 +37,8 @@ new
 length
 Symbol
 
+isNaN(
+
 Date(
 getDate(
 getDay(
@@ -64,3 +66,6 @@ toLocaleString(
 toLocaleTimeString(
 toTimeString(
 toUTCString(
+
+parseInt(
+parseFloat(
