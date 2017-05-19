@@ -39,6 +39,7 @@ let g:deoplete#sources.javascript = [
             \ "member",
             \ "tag",
             \ "file",
+            \ "omni",
             \ "dictionary"
             \ ]
 let g:deoplete#sources.scala = [
