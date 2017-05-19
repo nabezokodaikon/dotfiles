@@ -15,6 +15,10 @@ call denite#custom#map(
             \ 'noremap'
             \ )
 
+" Command option.
+call denite#custom#option('_', 'winheight', 10)
+call denite#custom#option('_', 'highlight_mode_insert', 'Search')
+
 " Ripgrep command on file_rec source.
 call denite#custom#var('file_rec', 'command',
     \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])

@@ -97,23 +97,23 @@ nmap <Leader>m <Plug>(easymotion-overwin-f2)
 " denite.nvim
 "--------------------------------
 " ファイル一覧
-nnoremap <silent> <Leader>f :<C-u>Denite file_rec -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>f :<C-u>Denite file_rec<CR>
 " ファイル表示履歴
-nnoremap <silent> <Leader>h :<C-u>Denite file_mru -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
 " yank
-nnoremap <silent> <Leader>y :<C-u>Denite neoyank -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
 " ファイル内の行検索
-nnoremap <silent> <Leader>l :<C-u>Denite line -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
 " grep
-nnoremap <silent> <Leader>g :<C-u>DeniteCursorWord grep -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>g :<C-u>DeniteCursorWord grep<CR>
 " buffer
-nnoremap <silent> <Leader>b :<C-u>Denite buffer -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 " gista
-nnoremap <silent> <Leader>s :<C-u>Denite unite:gista -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 " File type
-nnoremap <silent> <Leader>e :<C-u>Denite filetype -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 " tag
-nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag -highlight-mode-insert=Search<CR>
+nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
 
 
 " deoplete.nvim
