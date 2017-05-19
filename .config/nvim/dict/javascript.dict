@@ -39,6 +39,7 @@ length
 Symbol
 
 isNaN
+round
 
 Date
 getDate
@@ -70,3 +71,6 @@ toUTCString
 
 parseInt
 parseFloat
+
+Number
+Math
