@@ -42,6 +42,7 @@ isNaN
 round
 
 Date
+forEach
 getDate
 getDay
 getFullYear
@@ -60,6 +61,7 @@ getUTCMilliseconds
 getUTCMinutes
 getUTCMonth
 getUTCSeconds
+indexOf
 toDateString
 toISOString
 toJSON
