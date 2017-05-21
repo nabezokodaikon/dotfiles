@@ -66,5 +66,7 @@ toLocaleTimeString
 toTimeString
 toUTCString
 try
+typeof
+undefined
 use
 var
