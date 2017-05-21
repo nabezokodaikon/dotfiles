@@ -1,10 +1,13 @@
 Date
 Math
 Number
+Object
 Symbol
+assign
 break
 catch
 class
+concat
 console
 const
 constructor
@@ -40,6 +43,7 @@ isNaN
 length
 let
 log
+map
 module
 new
 null
