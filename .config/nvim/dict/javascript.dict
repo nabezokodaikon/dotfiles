@@ -1,3 +1,4 @@
+Array
 Date
 Math
 Number
@@ -11,7 +12,10 @@ concat
 console
 const
 constructor
+create
 default
+defineProperties
+defineProperty
 export
 exports
 extends
@@ -26,6 +30,8 @@ getHours
 getMilliseconds
 getMinutes
 getMonth
+getOwnPropertyDescriptor
+getOwnPropertySymbols
 getSeconds
 getTime
 getTimezoneOffset
@@ -37,6 +43,7 @@ getUTCMilliseconds
 getUTCMinutes
 getUTCMonth
 getUTCSeconds
+hasOwnProperty
 import
 indexOf
 isNaN
@@ -49,6 +56,7 @@ new
 null
 parseFloat
 parseInt
+prototype
 require
 return
 round
