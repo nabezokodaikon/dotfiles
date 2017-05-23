@@ -118,6 +118,11 @@ nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag -no-quit<CR>
 " outline
 nnoremap <silent> <Leader>o :<C-u>Denite outline<CR>
+" Move to next/previous line of denite's buffer
+nnoremap <C-n> <Nop>
+nnoremap <C-p> <Nop>
+nnoremap <silent> <C-n> :<C-u>Denite -resume -select=+1 -immediately<CR>
+nnoremap <silent> <C-p> :<C-u>Denite -resume -select=-1 -immediately<CR>
 
 
 " deoplete.nvim
