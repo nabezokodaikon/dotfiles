@@ -114,6 +114,8 @@ nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 " tag
 nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
+" outline
+nnoremap <silent> <Leader>o :<C-u>Denite outline<CR>
 " Move to next/previous line of denite's buffer
 nnoremap <C-n> <Nop>
 nnoremap <C-p> <Nop>
