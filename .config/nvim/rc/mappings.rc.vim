@@ -105,9 +105,9 @@ nnoremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
 " ファイル内の行検索
 nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
 " grep for empty word
-nnoremap <silent> <Leader>gg :<C-u>Denite grep<CR>
+nnoremap <silent> <Leader>gg :<C-u>Denite grep -no-quit<CR>
 " grep for cursor word
-nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
+nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep -no-quit<CR>
 " buffer
 nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 " gista
@@ -115,7 +115,7 @@ nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 " File type
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 " tag
-nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
+nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag -no-quit<CR>
 " outline
 nnoremap <silent> <Leader>o :<C-u>Denite outline<CR>
 " Move to next/previous line of denite's buffer
