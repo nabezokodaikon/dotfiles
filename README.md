@@ -21,6 +21,11 @@ $ apacman -S --noconfirm python-pip
 $ pip install --user neovim
 ```
 
+#### grep
+grepには`ripgrep`を使用する。
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+
 ### tmux
 #### How to use Clipboard
 * linuxでは`xclip`を使用するため、別途xclipをインストールする。
