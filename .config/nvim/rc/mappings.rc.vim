@@ -104,8 +104,10 @@ nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
 nnoremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
 " ファイル内の行検索
 nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
-" grep
-nnoremap <silent> <Leader>g :<C-u>DeniteCursorWord grep<CR>
+" grep for empty word
+nnoremap <silent> <Leader>gg :<C-u>Denite grep<CR>
+" grep for cursor word
+nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
 " buffer
 nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 " gista
