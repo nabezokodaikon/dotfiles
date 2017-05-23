@@ -114,6 +114,11 @@ nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 " tag
 nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
+" Move to next/previous line of denite's buffer
+nnoremap <C-n> <Nop>
+nnoremap <C-p> <Nop>
+nnoremap <silent> <C-n> :<C-u>Denite -resume -select=+1 -immediately<CR>
+nnoremap <silent> <C-p> :<C-u>Denite -resume -select=-1 -immediately<CR>
 
 
 " deoplete.nvim
