@@ -37,4 +37,9 @@ if [ -d "$(brew --cellar)/nvm" ]; then
         [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
         npm "$@"
     }
+    yarn() {
+        unset -f yarn
+        [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
+        yarn "$@"
+    }
 fi
