@@ -8,7 +8,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
 " 自動補完を開始するキーワードの長さ
-call deoplete#custom#set('_', 'min_pattern_length', 3)
+call deoplete#custom#set('_', 'min_pattern_length', 2)
 
 
 let g:deoplete#sources = {}
