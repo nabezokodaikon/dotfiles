@@ -1,12 +1,14 @@
 --exclude=.git
 --exclude=log
 --exclude=build
+--exclude=dest
 --exclude=node_modules
 --exclude=*.html
 --exclude=*.css
 --exclude=*.xml
 --exclude=*.xsl
 --exclude=*.properties
+--exclude=*.json
 
 --langdef=Scala
 --langmap=Scala:.scala
