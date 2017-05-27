@@ -43,11 +43,6 @@ on_ft = ['html', 'css']
 repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
 
-# JavaScript Syntax
-[[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = 'javascript'
-
 # JSX Syntax
 [[plugins]]
 repo = 'mxw/vim-jsx'
