@@ -3,6 +3,7 @@
 --exclude=build
 --exclude=dest
 --exclude=node_modules
+--exclude=coverage
 --exclude=*.html
 --exclude=*.css
 --exclude=*.xml
