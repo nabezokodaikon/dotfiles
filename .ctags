@@ -4,6 +4,7 @@
 --exclude=dest
 --exclude=node_modules
 --exclude=coverage
+--exclude=publish
 --exclude=*.html
 --exclude=*.css
 --exclude=*.xml
