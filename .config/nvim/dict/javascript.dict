@@ -73,8 +73,10 @@ toJSON
 toLocaleDateString
 toLocaleString
 toLocaleTimeString
+toLowerCase
 toTimeString
 toUTCString
+toUpperCase
 try
 typeof
 undefined
