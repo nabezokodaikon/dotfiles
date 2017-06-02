@@ -2,6 +2,7 @@
 --exclude=log
 --exclude=build
 --exclude=dest
+--exclude=dist
 --exclude=node_modules
 --exclude=coverage
 --exclude=publish
