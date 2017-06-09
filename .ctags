@@ -6,6 +6,7 @@
 --exclude=node_modules
 --exclude=coverage
 --exclude=publish
+--exclude=yarn.lock
 --exclude=*.html
 --exclude=*.css
 --exclude=*.xml
