@@ -33,6 +33,14 @@ repo = 'lambdalisue/vim-gista-unite'
 repo = 'lambdalisue/vim-gista'
 on_cmd = 'Gista'
 
+# 補完
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_source = '''
+    source ~/.config/nvim/rc/plugins/deoplete.rc.vim
+'''
+
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'

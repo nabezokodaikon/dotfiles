@@ -48,7 +48,6 @@ source ~/.config/nvim/rc/ctags.rc.vim
 source ~/.config/nvim/rc/hacks.rc.vim
 
 " Plugins configurations
-source ~/.config/nvim/rc/plugins/deoplete.rc.vim
 source ~/.config/nvim/rc/plugins/jellybeans.rc.vim
 source ~/.config/nvim/rc/plugins/nerdcommenter.rc.vim
 source ~/.config/nvim/rc/plugins/vim-easymotion.rc.vim

@@ -2,10 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# 補完
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
