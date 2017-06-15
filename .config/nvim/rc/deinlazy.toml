@@ -32,6 +32,9 @@ repo = 'lambdalisue/vim-gista-unite'
 [[plugins]]
 repo = 'lambdalisue/vim-gista'
 on_cmd = 'Gista'
+hook_source = '''
+    source ~/.config/nvim/rc/plugins/vim-gista.rc.vim
+'''
 
 # 補完
 [[plugins]]

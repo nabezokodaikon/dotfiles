@@ -52,7 +52,6 @@ source ~/.config/nvim/rc/plugins/jellybeans.rc.vim
 source ~/.config/nvim/rc/plugins/nerdcommenter.rc.vim
 source ~/.config/nvim/rc/plugins/vim-easymotion.rc.vim
 source ~/.config/nvim/rc/plugins/vim-fugitive.rc.vim
-source ~/.config/nvim/rc/plugins/vim-gista.rc.vim
 source ~/.config/nvim/rc/plugins/vim-submode.rc.vim
 source ~/.config/nvim/rc/plugins/emmet-vim.rc.vim
 
