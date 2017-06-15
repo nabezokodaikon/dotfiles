@@ -47,7 +47,10 @@ hook_source = '''
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html', 'css']
+on_ft = ['html', 'css', 'javascript']
+hook_source = '''
+    source ~/.config/nvim/rc/plugins/emmet-vim.rc.vim
+'''
 
 # Scala のシンタックスハイライト
 [[plugins]]
