@@ -51,8 +51,7 @@ set wildmenu wildmode=list:full
 set laststatus=2
 
 " 自動改行させない
-" デフォルト vimrc_example の textwidth 設定を上書き
-autocmd FileType text setlocal textwidth=0
+set textwidth=0
 
 " 挿入モードへ戻るときの esc キーの反応を早くする
 set ttimeoutlen=0
