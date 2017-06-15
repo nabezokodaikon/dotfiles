@@ -2,7 +2,7 @@
 " deoplete.nvim configurations
 "--------------------------------
 " deoplete を利用する
-let g:deoplete#enable_at_startup = 1
+call deoplete#enable()
 
 " 大文字が入力されるまで、大文字小文字の区別を無視する
 let g:deoplete#enable_smart_case = 1
