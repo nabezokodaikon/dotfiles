@@ -39,11 +39,6 @@ export GIT_SSL_NO_VERIFY=1
 export XDG_CONFIG_HOME=$HOME/.config
 
 
-# Neovim
-#--------------------------------
-export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvimlog.
-
-
 # sbt
 #--------------------------------
 export SBT_OPTS=" \
