@@ -12,6 +12,11 @@ export PATH=$PATH:~/bin
 export JAVA_HOME=$(readlink -f `which javac 2>/dev/null` | sed "s:/bin/javac::")
 
 
+# nvm
+#--------------------------------
+export NVM_DIR="$HOME/.nvm"
+
+
 # Scala
 #--------------------------------
 export SCALA_HOME=$(readlink -f `which scalac 2>/dev/null` | sed "s:/bin/scalac::") 
