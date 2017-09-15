@@ -15,13 +15,6 @@ $ ./git-config.sh
 
 
 ## Mac
-### iTerm2
-* Font
-  * 14pt Myrica Monospace
-* Color Presets
-  * [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
-    * Atom
-
 ### Homebrew
   * git
   * giter8
@@ -44,6 +37,16 @@ $ brew cask install font-myrica
 
 ### Clipboard
 * 既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
+
+
+### Neovim
+```
+$ pip3 install neovim
+$ nvim
+
+# Neovimで以下のコマンドを実行する。
+:UpdateRemotePlugins
+```
 
 
 ## Arch Linux
