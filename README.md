@@ -1,9 +1,10 @@
 # dotfiles
-## How to Install
+## Install
 ```
 # Clone from GitHub.
+$ cd ~
 $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
+$ cd ~/dotfiles/script
 
 # Run install script.
 $ ./install.sh
@@ -13,42 +14,56 @@ $ ./git-config.sh
 ```
 
 
-## Tools
+## Mac
+### iTerm2
+* Font
+  * 14pt Myrica Monospace
+* Color Presets
+  * [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+    * Atom
+
+### Homebrew
+  * git
+  * giter8
+  * neovim
+  * nvm
+  * python3
+  * reattach-to-user-namespace
+  * ripgrep
+  * sbt
+  * tig
+  * tmux
+  * tree
+  * universal-ctags
+  * zsh
+#### Font
+```
+$ brew tap caskroom/fonts 
+$ brew cask install font-myrica
+```
+
+### Clipboard
+* 既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
+
+
+## Arch Linux
 ### Neovim
-#### Arch Linux
 ```
 $ apacman -S --noconfirm python-pip 
 $ pip install --user neovim
 ```
 
-#### grep
+### grep
 grepには`ripgrep`を使用する。
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-
 ### tmux
-#### How to use Clipboard
-* linuxでは`xclip`を使用するため、別途xclipをインストールする。
-* macでは既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
-
+#### Clipboard
+* `xclip`を使用するため、別途xclipをインストールする。
 
 ### Ctags
 本家の`Ctags`は2009年以降更新が途絶えているため、`Universal Ctags`を使用する。
 * [Universal Ctags](https://github.com/universal-ctags/ctags)
-
-
-### Karabiner
-#### Mac
->2016/10/07の時点ではmacOS Sierraに対応していないため、以下の操作はできない。
-
-Vim で挿入モードから抜ける時に英数入力に切り替える。
-```
-$ cd ./mac/karabiner
-$ ./reset.sh
-$ ./import.sh
-$ cp ~/dotfiles/KeyRemap4MacBook-private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
-$ cp ~/dotfiles/mac/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
-```
 
 
 ## MEMO
