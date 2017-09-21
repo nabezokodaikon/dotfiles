@@ -16,19 +16,31 @@ $ ./git-config.sh
 
 ## Mac
 ### Homebrew
-  * git
-  * giter8
-  * neovim
-  * nvm
-  * python3
-  * reattach-to-user-namespace
-  * ripgrep
-  * sbt
-  * tig
-  * tmux
-  * tree
-  * universal-ctags
-  * zsh
+#### Java
+```
+$ brew cask install java
+```
+#### formula
+```
+$ brew install \
+    git \
+    giter8 \
+    neovim \
+    nvm \
+    python3 \
+    reattach-to-user-namespace \
+    ripgrep \
+    sbt \
+    tig \
+    tmux \
+    tree \
+    zsh
+```
+#### Universal Ctags
+```
+$ brew tap universal-ctags/universal-ctags
+$ brew install --HEAD universal-ctags
+```
 #### Font
 ```
 $ brew tap caskroom/fonts 
