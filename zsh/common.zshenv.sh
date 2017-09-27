@@ -44,5 +44,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 export SBT_OPTS=" \
 -Dfile.encoding=UTF-8 \
 -XX:+CMSClassUnloadingEnabled \
--XX:MaxPermSize=256M
+-XX:ReservedCodeCacheSize=128M \
+-XX:MetaspaceSize=256M \
+-XX:MaxMetaspaceSize=512M \
+-Xms2G \
+-Xmx2G
 "
