@@ -4,7 +4,6 @@
 
 # PATH
 #--------------------------------
-export PATH=$SCALA_HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 

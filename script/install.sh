@@ -13,7 +13,6 @@ unlink ${HOME}/.ctags
 unlink ${HOME}/.vimrc
 unlink ${HOME}/.config/nvim
 unlink ${HOME}/.config/termite
-unlink ${HOME}/.sbt/0.13/plugins/build.sbt
 unlink ${HOME}/.xprofile
 unlink ${HOME}/.Xmodmap
 unlink ${HOME}/.Xresources
@@ -23,10 +22,6 @@ unlink ${HOME}/.Xresources
 #--------------------------------
 if [ ! -d "${HOME}/.config" ]; then
     mkdir -pv ${HOME}/.config
-fi
-
-if [ ! -d "${HOME}/.sbt/0.13/plugins" ]; then
-    mkdir -pv ${HOME}/.sbt/0.13/plugins
 fi
 
 ln -s ${HOME}/dotfiles/zsh/.zshenv ${HOME}/.zshenv
@@ -40,7 +35,6 @@ ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc
 ln -s ${HOME}/dotfiles/.ctags ${HOME}/.ctags
 ln -s ${HOME}/dotfiles/.config/nvim/ ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/.config/termite/ ${HOME}/.config/termite
-ln -s ${HOME}/dotfiles/.sbt/0.13/plugins/build.sbt ${HOME}/.sbt/0.13/plugins/build.sbt
 
 if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # For Linux only.

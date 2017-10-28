@@ -37,16 +37,3 @@ export GIT_SSL_NO_VERIFY=1
 # Xdg
 #--------------------------------
 export XDG_CONFIG_HOME=$HOME/.config
-
-
-# sbt
-#--------------------------------
-export SBT_OPTS=" \
--Dfile.encoding=UTF-8 \
--XX:+CMSClassUnloadingEnabled \
--XX:ReservedCodeCacheSize=128M \
--XX:MetaspaceSize=256M \
--XX:MaxMetaspaceSize=512M \
--Xms2G \
--Xmx2G
-"
