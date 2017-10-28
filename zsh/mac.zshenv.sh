@@ -7,11 +7,6 @@
 export PATH=$PATH:/usr/local/bin:~/bin
 
 
-# Homebrew
-#--------------------------------
-export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
-
-
 # nvm
 #--------------------------------
 export NVM_DIR="$HOME/.nvm"
