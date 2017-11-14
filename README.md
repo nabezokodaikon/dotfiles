@@ -26,7 +26,6 @@ $ brew install \
     git \
     giter8 \
     neovim \
-    nvm \
     python3 \
     reattach-to-user-namespace \
     ripgrep \
@@ -45,6 +44,10 @@ $ brew install --HEAD universal-ctags
 ```
 $ brew tap caskroom/fonts 
 $ brew cask install font-myrica
+```
+#### homebrew-rmtree
+```
+$ brew tap beeftornado/rmtree
 ```
 
 ### Clipboard
