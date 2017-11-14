@@ -27,31 +27,6 @@ if [ $? = 0 ]; then
 fi
 
 
-# nvm
-#--------------------------------
-if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
-    # nvmの遅延読み込み。
-    # 参考: http://broken-by.me/lazy-load-nvm/
-    nvm() {
-        unset -f nvm
-        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
-        nvm "$@"
-    }
-
-    node() {
-        unset -f node
-        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
-        node "$@"
-    }
-
-    npm() {
-        unset -f npm
-        [ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh"
-        npm "$@"
-    }
-fi
-
-
 # termite
 #--------------------------------
 if [[ $TERM == xterm-termite ]]; then

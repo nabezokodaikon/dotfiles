@@ -12,11 +12,6 @@ export PATH=$PATH:~/bin
 export JAVA_HOME=$(readlink -f `which javac 2>/dev/null` | sed "s:/bin/javac::")
 
 
-# nvm
-#--------------------------------
-export NVM_DIR="$HOME/.nvm"
-
-
 # Neovim
 #--------------------------------
 export NVIM_PYTHON_LOG_FILE=/tmp/log
