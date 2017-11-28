@@ -19,6 +19,9 @@ repo = 'Shougo/unite.vim'
 # denite.nvimでファイル表示履歴を表示する。
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+hook_source = '''
+    source ~/.config/nvim/rc/plugins/neomru.rc.vim
+'''
 
 # denite.vimでyankの履歴を表示する。
 [[plugins]]
