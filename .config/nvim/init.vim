@@ -28,6 +28,10 @@ function! IsLinux() abort
     return s:is_linux
 endfunction
 
+if IsMac()
+    let g:python3_host_prog = '/usr/local/bin/python3'
+endif
+
 
 " プラグイン管理設定
 source ~/.config/nvim/rc/dein.rc.vim
