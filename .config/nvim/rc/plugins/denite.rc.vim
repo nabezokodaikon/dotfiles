@@ -20,6 +20,10 @@ call denite#custom#option('_', 'winheight', 16)
 call denite#custom#option('_', 'highlight_mode_insert', 'Search')
 call denite#custom#option('_', 'previewheight', 100)
 
+" Change matches to perfect matching.
+call denite#custom#source('_', 'matchers',
+    \ ['matcher/substring'])
+
 " Ripgrep command on file_rec source.
 call denite#custom#var('file_rec', 'command',
     \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
