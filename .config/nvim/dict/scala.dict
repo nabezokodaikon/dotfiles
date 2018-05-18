@@ -102,7 +102,6 @@ scala.xml.pull
 scala.xml.transform
 scala.xml.include.sax
 
-
 !
 ::
 ANY
@@ -806,3 +805,5 @@ uncheckedVariance
 volatile
 
 annotation
+scala.Nothing
+Nothing
