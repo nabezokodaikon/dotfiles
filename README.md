@@ -16,6 +16,10 @@ $ ./git-config.sh
 
 ## Mac
 ### Homebrew
+#### Hyper
+```
+$ brew cask install hyper
+```
 #### Java
 ```
 $ brew cask install java

@@ -16,6 +16,7 @@ unlink ${HOME}/.config/termite
 unlink ${HOME}/.xprofile
 unlink ${HOME}/.Xmodmap
 unlink ${HOME}/.Xresources
+unlink ${HOME}/.hyper.js
 
 
 # Install
@@ -35,6 +36,7 @@ ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc
 ln -s ${HOME}/dotfiles/.ctags.d ${HOME}/.ctags.d
 ln -s ${HOME}/dotfiles/.config/nvim/ ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/.config/termite/ ${HOME}/.config/termite
+ln -s ${HOME}/dotfiles/hyper/.hyper.js ${HOME}/.hyper.js
 
 if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # For Linux only.
