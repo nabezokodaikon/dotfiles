@@ -3,6 +3,9 @@
 "--------------------------------
 call deoplete#enable()
 
+call deoplete#custom#source('_',
+            \ 'matchers', ['matcher_head'])
+
 call deoplete#custom#option({
             \ 'auto_complete_delay': 200,
             \ 'smart_case': v:true,
