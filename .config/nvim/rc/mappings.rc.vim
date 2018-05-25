@@ -72,7 +72,6 @@ nnoremap tl :<C-u>tags<CR>
 
 " emmet-vim
 "--------------------------------
-nnoremap <C-e> <Nop>
 let g:user_emmet_leader_key='<C-e>'
 
 
