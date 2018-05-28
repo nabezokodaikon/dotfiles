@@ -126,10 +126,6 @@ nnoremap <silent> <C-p> :<C-u>Denite -resume -select=-1 -immediately<CR>
 
 " deoplete.nvim
 "--------------------------------
-" <C-h>や<BS>を押したときに確実にポップアップを削除する。
-inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<BS>"
-
 " 補完候補が出ていたら確定、なければ改行する。
 inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
 
