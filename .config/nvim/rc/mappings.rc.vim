@@ -19,6 +19,11 @@ nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
 
+" File reload
+"--------------------------------
+nnoremap <silent> <Leader>\ :e!<CR>
+
+
 " split
 "--------------------------------
 " Unmappings
