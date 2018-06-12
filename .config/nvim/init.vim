@@ -30,12 +30,12 @@ endfunction
 
 
 " Set disable providers
-let g:loaded_python_provider = 1
 let g:loaded_ruby_provider = 1
 let g:loaded_node_provider = 1
 
 " Set path on providers
 if IsMac()
+    let g:python_host_prog = '/usr/local/bin/python2'
     let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
