@@ -809,3 +809,4 @@ volatile
 annotation
 scala.Nothing
 Nothing
+curried
