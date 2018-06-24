@@ -17,14 +17,15 @@ if s:dein_dir != '' || &runtimepath !~ '/dein.vim'
             execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
         endif
     endif
-    execute ' set runtimepath^=' . substitute(fnamemodify(s:dein_dir, ':p') , '/$', '', '')
+    execute 'set runtimepath^=' . substitute(fnamemodify(s:dein_dir, ':p') , '/$', '', '')
 endif
 
+" dein configurations.
 if !dein#load_state(s:path)
     finish
 endif
 
-call dein#begin(s:dein_dir)
+call dein#begin(s:path, expand('<sfile>'))
 
 call dein#load_toml('~/.config/nvim/rc/dein.toml', {'lazy': 0})
 call dein#load_toml('~/.config/nvim/rc/deinlazy.toml', {'lazy': 1})
