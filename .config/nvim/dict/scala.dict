@@ -810,3 +810,4 @@ annotation
 scala.Nothing
 Nothing
 curried
+identity
