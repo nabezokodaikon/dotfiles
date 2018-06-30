@@ -12,6 +12,7 @@
 --exclude=sample
 --exclude=package-lock.json
 --exclude=yarn.lock
+--exclude=test
 --exclude=*.html
 --exclude=*.css
 --exclude=*.xml
