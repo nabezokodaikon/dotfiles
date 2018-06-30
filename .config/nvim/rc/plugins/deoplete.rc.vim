@@ -17,5 +17,6 @@ call deoplete#custom#option('sources', {
             \ 'html': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
             \ 'css': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
             \ 'javascript.jsx': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
-            \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag']
+            \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+            \ 'haskell': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag']
             \ })
