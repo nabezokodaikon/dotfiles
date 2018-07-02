@@ -64,3 +64,8 @@ on_ft = 'scala'
 [[plugins]]
 repo = 'mxw/vim-jsx'
 on_ft = 'javascript'
+
+# Syntax Highlighting and Indentation for Haskell and Cabal
+[[plugins]]
+repo = 'neovimhaskell/haskell-vim'
+on_ft = 'haskell'
