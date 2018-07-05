@@ -51,7 +51,9 @@ maxBound
 sin
 cos
 sqrt
+pi
 fromIntegral
+subtract
 
 not
 head
@@ -68,8 +70,14 @@ minimum
 sum
 product
 elem
+zip
+zipWith
+flip
 
 fst
 snd
 
 error
+
+where
+otherwise
