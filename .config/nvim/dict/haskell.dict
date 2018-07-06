@@ -62,8 +62,12 @@ last
 init
 length
 null
+map
+filter
+replicate
 reverse
 take
+takeWhile
 drop
 maximum
 minimum
@@ -73,6 +77,10 @@ elem
 zip
 zipWith
 flip
+foldl
+foldl1
+foldr
+foldr1
 
 fst
 snd
