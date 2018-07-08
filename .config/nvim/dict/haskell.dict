@@ -50,10 +50,12 @@ minBound
 maxBound
 sin
 cos
+tan
 sqrt
 pi
 fromIntegral
 subtract
+ceiling
 
 not
 head
@@ -81,6 +83,9 @@ foldl
 foldl1
 foldr
 foldr1
+scanl
+scanr
+negate
 
 fst
 snd
