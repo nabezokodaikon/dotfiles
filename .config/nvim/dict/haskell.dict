@@ -97,3 +97,7 @@ otherwise
 
 even
 odd
+
+module
+import
+qualified
