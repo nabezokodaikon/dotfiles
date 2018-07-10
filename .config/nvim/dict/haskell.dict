@@ -111,3 +111,8 @@ sort
 isPrefixOf
 any
 isInfixOf
+digitToInt
+find
+Maybe
+Just
+Nothing
