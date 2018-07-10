@@ -101,3 +101,13 @@ odd
 module
 import
 qualified
+
+Data
+List
+tails
+nub
+group
+sort
+isPrefixOf
+any
+isInfixOf
