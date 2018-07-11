@@ -116,3 +116,9 @@ find
 Maybe
 Just
 Nothing
+Map
+fromList
+fromListWith
+lookup
+size
+isDigit
