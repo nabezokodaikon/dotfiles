@@ -122,3 +122,6 @@ fromListWith
 lookup
 size
 isDigit
+
+data
+deriving
