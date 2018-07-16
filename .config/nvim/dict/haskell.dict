@@ -64,6 +64,8 @@ group
 head
 if
 import
+infixl
+infixr
 init
 isDigit
 isInfixOf
@@ -109,6 +111,7 @@ tails
 take
 takeWhile
 tan
+type
 then
 where
 zip
