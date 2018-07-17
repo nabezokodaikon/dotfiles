@@ -4,7 +4,7 @@
 
 # PATH
 #--------------------------------
-export PATH=$PATH:/usr/local/bin:~/bin
+export PATH=$PATH:/usr/local/bin:$HOME/bin:$HOME/.local/bin
 
 
 # Neovim
