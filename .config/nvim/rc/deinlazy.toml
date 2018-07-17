@@ -9,7 +9,52 @@ depends = [
     'vim-gista-unite'
     ]
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/denite.rc.vim
+    " Key mapping.
+    call denite#custom#map(
+                \ 'insert',
+                \ '<C-n>',
+                \ '<denite:move_to_next_line>',
+                \ 'noremap'
+                \ )
+    call denite#custom#map(
+                \ 'insert',
+                \ '<C-p>',
+                \ '<denite:move_to_previous_line>',
+                \ 'noremap'
+                \ )
+
+    " Command option.
+    call denite#custom#option('_', 'winheight', 16)
+    call denite#custom#option('_', 'highlight_mode_insert', 'Search')
+    call denite#custom#option('_', 'previewheight', 100)
+
+    " Change matches to perfect matching.
+    call denite#custom#source('_', 'matchers',
+        \ ['matcher/substring'])
+
+    call denite#custom#source('buffer', 'matchers',
+        \ ['matcher/fuzzy', 'matcher/project_files'])
+
+    " Ripgrep command on file_rec source.
+    call denite#custom#var('file_rec', 'command',
+        \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
+
+    " Ripgrep command on grep source.
+    " Reference 
+    " https://github.com/BurntSushi/ripgrep/issues/73
+    call denite#custom#var('grep', 'command', ['rg'])
+    call denite#custom#var('grep', 'recursive_opts', [])
+    call denite#custom#var('grep', 'final_opts', [])
+    call denite#custom#var('grep', 'separator', ['--'])
+    call denite#custom#var('grep', 'default_opts',
+        \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*', '--color', 'never'])
+
+    " Because changing focus, if the vim-gista-unite's narrow action.
+    call unite#custom#profile('default', 'context', {
+                \   'start_insert': 0,
+                \   'prompt_direction': 'top',
+                \   'split' : 0
+                \})
 '''
 
 # unite.vim
@@ -20,7 +65,8 @@ repo = 'Shougo/unite.vim'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/neomru.rc.vim
+    let g:neomru#file_mru_limit = 64
+    let g:neomru#time_format = "%y/%m/%d %H:%M"
 '''
 
 # denite.vimでyankの履歴を表示する。
@@ -36,7 +82,7 @@ repo = 'lambdalisue/vim-gista-unite'
 repo = 'lambdalisue/vim-gista'
 on_cmd = 'Gista'
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/vim-gista.rc.vim
+    let g:gista#client#default_username = 'nabezokodaikon'
 '''
 
 # 補完
@@ -44,7 +90,25 @@ hook_source = '''
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/deoplete.rc.vim
+    call deoplete#enable()
+
+    call deoplete#custom#source('_',
+                \ 'matchers', ['matcher_head'])
+
+    call deoplete#custom#option({
+                \ 'auto_complete_delay': 200,
+                \ 'smart_case': v:true,
+                \ 'min_pattern_length': 2
+                \ })
+
+    call deoplete#custom#option('sources', {
+                \ '_': ['buffer'],
+                \ 'html': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+                \ 'css': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+                \ 'javascript.jsx': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+                \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+                \ 'haskell': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag']
+                \ })
 '''
 
 # emmet-vim
@@ -52,7 +116,11 @@ hook_source = '''
 repo = 'mattn/emmet-vim'
 on_ft = ['html', 'css', 'javascript']
 hook_source = '''
-    source ~/.config/nvim/rc/plugins/emmet-vim.rc.vim
+    let g:user_emmet_install_global = 0
+    augroup emmet-vim
+        autocmd!
+        autocmd FileType html,css,javascript EmmetInstall
+    augroup END
 '''
 
 # Scala のシンタックスハイライト
