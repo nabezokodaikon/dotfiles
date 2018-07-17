@@ -21,6 +21,7 @@ Eq
 False
 Float
 Floating
+Functor
 GT
 Int
 Integer
@@ -53,6 +54,7 @@ even
 filter
 find
 flip
+fmap
 foldl
 foldl1
 foldr
