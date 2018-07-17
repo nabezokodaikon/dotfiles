@@ -69,3 +69,8 @@ on_ft = 'javascript'
 [[plugins]]
 repo = 'neovimhaskell/haskell-vim'
 on_ft = 'haskell'
+
+# toml syntax
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
