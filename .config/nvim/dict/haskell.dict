@@ -39,6 +39,7 @@ String
 True
 any
 ceiling
+class
 compare
 cos
 data
@@ -62,11 +63,13 @@ fromListWith
 fst
 group
 head
+id
 if
 import
 infixl
 infixr
 init
+instance
 isDigit
 isInfixOf
 isPrefixOf
