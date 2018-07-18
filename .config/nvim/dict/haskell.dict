@@ -59,6 +59,8 @@ foldl
 foldl1
 foldr
 foldr1
+forever
+forM
 fromIntegral
 fromList
 fromListWith
@@ -80,6 +82,7 @@ length
 let
 lookup
 map
+mapM
 max
 maxBound
 maximum
@@ -95,13 +98,18 @@ odd
 otherwise
 pi
 pred
+print
 product
+putChar
+putStr
+putStrLn
 qualified
 read
 replicate
 reverse
 scanl
 scanr
+sequence
 show
 sin
 size
@@ -118,6 +126,9 @@ takeWhile
 tan
 type
 then
+unwords
+when
 where
+words
 zip
 zipWith
