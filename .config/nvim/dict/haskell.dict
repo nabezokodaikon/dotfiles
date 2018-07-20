@@ -14,11 +14,13 @@ AppendMode
 Bool
 Bounded
 Char
+Control
 Data
 Double
 ENum
 EQ
 Eq
+Exception
 False
 Float
 Floating
@@ -47,6 +49,8 @@ System
 True
 WriteMode
 any
+appendFile
+bracket
 ceiling
 class
 compare
@@ -74,11 +78,17 @@ fromIntegral
 fromList
 fromListWith
 fst
+getChar
 getContents
+getLine
 group
 head
 hClose
+hGetChar
 hGetContents
+hGetLine
+hPutStr
+hPutStrLn
 id
 if
 import
@@ -121,6 +131,7 @@ putStr
 putStrLn
 qualified
 read
+readFile
 replicate
 reverse
 scanl
@@ -148,6 +159,8 @@ unlines
 unwords
 when
 where
+withFile
+writeFile
 words
 zip
 zipWith
