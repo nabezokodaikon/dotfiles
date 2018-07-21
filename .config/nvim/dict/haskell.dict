@@ -16,6 +16,7 @@ Bounded
 Char
 Control
 Data
+Directory
 Double
 ENum
 EQ
@@ -51,6 +52,7 @@ WriteMode
 any
 appendFile
 bracket
+bracketOnError
 ceiling
 class
 compare
@@ -121,6 +123,7 @@ nub
 null
 odd
 openFile
+openTempFile
 otherwise
 pi
 pred
@@ -132,6 +135,8 @@ putStrLn
 qualified
 read
 readFile
+removeFile
+renameFile
 replicate
 reverse
 scanl
