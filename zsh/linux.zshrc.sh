@@ -18,6 +18,11 @@ alias pip="LC_ALL=C pip"
 alias dl="docker ps -l -q"
 
 
+# dircolors
+#--------------------------------
+eval $(dircolors -b $HOME/dotfiles/zsh/.dircolors)
+
+
 # keychain
 #--------------------------------
 type keychain > /dev/null 2>&1
