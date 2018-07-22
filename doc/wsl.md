@@ -10,7 +10,7 @@
 
 ### フォント
 1. [Myrica](https://myrica.estable.jp/)をダウンロード & インストール。
-2. ウィンドウのタイトルバーを`右クリック -> プロパティ -> フォント`で設定。
+1. ウィンドウのタイトルバーを`右クリック -> プロパティ -> フォント`で設定。
 
 ### 更新
 ```
@@ -49,7 +49,7 @@ $ cd dotfiles/script
 $ ./install.sh
 $ ./git-config.sh
 ```
-TODO: `XDG_CONFIG_HOME`の�  無を確認する。
+TODO: `XDG_CONFIG_HOME`の有無を確認する。
 
 ### ログインシェルを`zsh`に変更
 1. `zsh`インストール。
@@ -57,13 +57,13 @@ TODO: `XDG_CONFIG_HOME`の�  無を確認する。
 $ sudo apt install zsh
 ```
 
-1. `zsh`のパスを確認する。
+2. `zsh`のパスを確認する。
 ```
 $ which zsh
 /usr/bin/zsh
 ```
 
-1. 確認したパスを設定する。
+3. 確認したパスを設定する。
 ```
 $ chsh -s /usr/bin/zsh
 ```
