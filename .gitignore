@@ -1,4 +1,6 @@
 # 無効にするファイルの種類
+*.log
+*.logs
 .svn
 .DS_Store
 .netwhist
