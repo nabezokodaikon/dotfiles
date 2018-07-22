@@ -19,6 +19,7 @@ Data
 Directory
 Double
 ENum
+Environment
 EQ
 Eq
 Exception
@@ -80,9 +81,11 @@ fromIntegral
 fromList
 fromListWith
 fst
+getArgs
 getChar
 getContents
 getLine
+getProgName
 group
 head
 hClose
