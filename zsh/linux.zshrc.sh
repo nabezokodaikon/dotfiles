@@ -20,7 +20,7 @@ alias dl="docker ps -l -q"
 
 # dircolors
 #--------------------------------
-eval $(dircolors -b $HOME/dotfiles/zsh/.dircolors)
+eval $(dircolors -b $HOME/dotfiles/zsh/dircolors)
 
 
 # keychain
