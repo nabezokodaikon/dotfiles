@@ -1,5 +1,5 @@
-setlocal tabstop=2
-setlocal shiftwidth=2
+setlocal tabstop=4
+setlocal shiftwidth=4
 setlocal dictionary=~/.config/nvim/dict/haskell.dict
 
 call denite#custom#var('outline', 'command', ['hasktags'])
