@@ -42,10 +42,13 @@ Maybe
 Nothing
 Num
 Ord
+Random
+RandomGen
 Read
 ReadMode
 ReadWriteMode
 Show
+StdGen
 String
 System
 True
@@ -119,6 +122,7 @@ maximum
 min
 minBound
 minimum
+mkStdGen
 module
 negate
 not
@@ -136,6 +140,8 @@ putChar
 putStr
 putStrLn
 qualified
+random
+randoms
 read
 readFile
 removeFile
