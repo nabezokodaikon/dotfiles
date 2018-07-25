@@ -34,10 +34,10 @@ GT
 Handle
 Int
 Integer
+IO
 IOMode
 Itegral
 Just
-Lazy
 LT
 Maybe
 Nothing
@@ -65,6 +65,7 @@ ceiling
 class
 compare
 concat
+copyFile
 cos
 data
 deriving
