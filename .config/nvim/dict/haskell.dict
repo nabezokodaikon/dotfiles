@@ -120,6 +120,7 @@ last
 length
 let
 lines
+log
 lookup
 map
 mapM
