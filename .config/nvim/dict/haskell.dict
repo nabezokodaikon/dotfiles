@@ -5,14 +5,17 @@
 ::
 <-
 <=
+<*>
 ==
 =>
 >=
 \=
 ||
 AppendMode
+Applicative
 Bool
 Bounded
+Control.Applicative
 Control.Exception
 Control.Monad
 Chunk
@@ -148,6 +151,7 @@ pi
 pred
 print
 product
+pure
 putChar
 putStr
 putStrLn
