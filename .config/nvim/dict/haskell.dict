@@ -6,6 +6,7 @@
 <-
 <=
 <*>
+<$>
 ==
 =>
 >=
@@ -59,6 +60,7 @@ System.IO
 System.Random
 True
 WriteMode
+ZipList
 anpack
 any
 appendFile
@@ -100,6 +102,7 @@ getContents
 getLine
 getProgName
 getStdGen
+getZipList
 group
 head
 hClose
@@ -123,6 +126,7 @@ isPrefixOf
 last
 length
 let
+liftA2
 lines
 log
 lookup
@@ -196,3 +200,9 @@ writeFile
 words
 zip
 zipWith
+zipWith2
+zipWith3
+zipWith4
+zipWith5
+zipWith6
+zipWith7
