@@ -26,6 +26,7 @@ Data.Char
 Data.Functor
 Data.List
 Data.Map
+Data.Monoid
 Double
 ENum
 EQ
@@ -61,6 +62,7 @@ System.Random
 True
 WriteMode
 ZipList
+and
 anpack
 any
 appendFile
@@ -133,15 +135,19 @@ lookup
 map
 mapM
 mapM_
+mappend
 max
 maxBound
 maximum
+mconcat
+mempty 
 min
 minBound
 minimum
 mkStdGen
 module
 negate
+newtype
 newStdGen
 not
 nub
@@ -171,6 +177,7 @@ reverse
 scanl
 scanr
 sequence
+sequenceA
 show
 sin
 size
