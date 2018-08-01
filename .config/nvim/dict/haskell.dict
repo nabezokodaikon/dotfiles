@@ -12,6 +12,8 @@
 >=
 \=
 ||
+>>
+>>=
 All
 Any
 AppendMode
@@ -25,6 +27,7 @@ Chunk
 Data.ByteString
 Data.ByteString.Lazy
 Data.Char
+Data.Foldable
 Data.Functor
 Data.List
 Data.Map
@@ -88,10 +91,12 @@ elem
 else
 error
 even
+fail
 filter
 find
 flip
 fmap
+foldMap
 foldl
 foldl1
 foldr
@@ -183,6 +188,7 @@ readFile
 removeFile
 renameFile
 replicate
+return
 reverse
 scanl
 scanr
