@@ -59,11 +59,7 @@ source ~/.config/nvim/rc/ctags.rc.vim
 source ~/.config/nvim/rc/hacks.rc.vim
 
 " Plugins configurations
-source ~/.config/nvim/rc/plugins/jellybeans.rc.vim
-source ~/.config/nvim/rc/plugins/nerdcommenter.rc.vim
-source ~/.config/nvim/rc/plugins/vim-easymotion.rc.vim
-source ~/.config/nvim/rc/plugins/vim-fugitive.rc.vim
-source ~/.config/nvim/rc/plugins/vim-submode.rc.vim
+source ~/.config/nvim/rc/plugins.rc.vim
 
 
 filetype plugin indent on
