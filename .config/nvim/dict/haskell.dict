@@ -77,6 +77,7 @@ any
 appendFile
 bracket
 bracketOnError
+case
 ceiling
 class
 compare
@@ -84,6 +85,7 @@ concat
 copyFile
 cos
 data
+default
 deriving
 digitToInt
 do
@@ -133,6 +135,8 @@ hPutStrLn
 id
 if
 import
+in
+infix
 infixl
 infixr
 init
@@ -170,6 +174,7 @@ not
 nub
 null
 odd
+of
 openFile
 openTempFile
 otherwise
