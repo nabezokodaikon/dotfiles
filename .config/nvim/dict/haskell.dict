@@ -42,10 +42,12 @@ False
 First
 Float
 Floating
+Fractional
 GT
 Handle
 Int
 Integer
+Integral
 IO
 IOMode
 Itegral
@@ -71,6 +73,7 @@ System.Random
 True
 WriteMode
 ZipList
+abs
 and
 anpack
 any
@@ -88,6 +91,7 @@ data
 default
 deriving
 digitToInt
+div
 do
 drop
 elem
@@ -166,6 +170,7 @@ min
 minBound
 minimum
 mkStdGen
+mod
 module
 negate
 newtype
@@ -192,6 +197,7 @@ random
 randoms
 read
 readFile
+recip
 removeFile
 renameFile
 replicate
@@ -202,6 +208,7 @@ scanr
 sequence
 sequenceA
 show
+signum
 sin
 size
 snd
