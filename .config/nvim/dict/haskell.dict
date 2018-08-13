@@ -74,6 +74,7 @@ True
 WriteMode
 ZipList
 abs
+all
 and
 anpack
 any
@@ -94,6 +95,7 @@ digitToInt
 div
 do
 drop
+dropWhile
 elem
 else
 error
