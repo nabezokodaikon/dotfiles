@@ -34,3 +34,7 @@ repo = 'thinca/vim-quickrun'
 # webapi-vim
 [[plugins]]
 repo = 'mattn/webapi-vim'
+
+# Translation
+[[plugins]]
+repo = 'mattn/excitetranslate-vim'
