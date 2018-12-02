@@ -49,9 +49,6 @@ source ~/.config/nvim/rc/basic.rc.vim
 " Key mapping configurations
 source ~/.config/nvim/rc/mappings.rc.vim
 
-" Translation process
-source ~/.config/nvim/rc/translate.rc.vim
-
 " Ctags command
 source ~/.config/nvim/rc/ctags.rc.vim
 

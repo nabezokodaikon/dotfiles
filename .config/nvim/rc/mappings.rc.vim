@@ -137,4 +137,4 @@ inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
 
 " Translate
 "--------------------------------
-vnoremap <silent> <Leader>t :<C-u>call Translate()<CR>
+vnoremap <silent> <Leader>t :<C-u>ExciteTranslate<CR>
