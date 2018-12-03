@@ -107,6 +107,7 @@ hook_source = '''
                 \ 'css': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
                 \ 'javascript': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
                 \ 'javascript.jsx': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+                \ 'typescript': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
                 \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
                 \ 'haskell': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag']
                 \ })
@@ -155,4 +156,10 @@ on_ft = 'typescript'
 # Provides more syntax highlighting and DOM keywords for TypeScript
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
+on_ft = 'typescript'
+
+# Typescript tooling for Neovim
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+build = './install.sh'
 on_ft = 'typescript'
