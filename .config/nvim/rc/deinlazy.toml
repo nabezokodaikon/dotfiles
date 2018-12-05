@@ -90,8 +90,6 @@ hook_source = '''
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
-    call deoplete#enable()
-
     call deoplete#custom#source('_',
                 \ 'matchers', ['matcher_head'])
 

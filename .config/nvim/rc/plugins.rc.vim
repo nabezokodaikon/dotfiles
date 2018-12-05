@@ -81,3 +81,9 @@ let g:jellybeans_overrides = {
 \}
 
 colorscheme jellybeans
+
+
+"--------------------------------
+" deoplete.nvim configurations
+"--------------------------------
+let g:deoplete#enable_at_startup = 1
