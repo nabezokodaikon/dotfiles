@@ -119,7 +119,7 @@ hook_source = '''
     let g:user_emmet_install_global = 0
     augroup emmet-vim
         autocmd!
-        autocmd FileType html,css,javascript EmmetInstall
+        autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
     augroup END
 '''
 
