@@ -85,22 +85,58 @@ hook_source = '''
     let g:gista#client#default_username = 'nabezokodaikon'
 '''
 
-# 補完
+# Completion
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
-    call deoplete#custom#source('_',
-                \ 'matchers', ['matcher_head'])
+    call deoplete#custom#option('sources', {
+        \ 'scala': ['buffer', 'member', 'tag', 'file', 'omni', 'ultisnips'],
+        \})
 
-    call deoplete#custom#option({
-                \ 'auto_complete_delay': 200,
-                \ 'smart_case': v:true,
-                \ 'min_pattern_length': 2
-                \ })
+    call deoplete#custom#source('_', 
+        \ 'matchers', ['matcher_head'])
+
+    call deoplete#custom#var('omni', 'input_patterns', {
+        \ 'scala': '[^. *\t]\.\w*'
+        \})
 
     call deoplete#enable()
 '''
+
+# TODO
+# https://github.com/w0rp/ale#usage-completion
+[[plugins]]
+repo = 'neomake/neomake'
+hook_source = '''
+    " Linting with neomake
+    let g:neomake_sbt_maker = {
+        \ 'exe': 'sbt',
+        \ 'args': ['-Dsbt.log.noformat=true', 'compile'],
+        \ 'append_file': 0,
+        \ 'auto_enabled': 1,
+        \ 'output_stream': 'stdout',
+        \ 'errorformat':
+            \ '%E[%trror]\ %f:%l:\ %m,' .
+            \ '%-Z[error]\ %p^,' .
+            \ '%-C%.%#,' .
+            \ '%-G%.%#'
+        \ }
+
+    let g:neomake_enabled_makers = ['sbt']
+    let g:neomake_verbose=3
+
+    " Neomake on text change
+    autocmd InsertLeave,TextChanged * update | Neomake! sbt
+'''
+depends = [
+    'ensime-vim'
+]
+
+# Completion for Scala
+[[plugins]]
+repo = 'ensime/ensime-vim'
+on_ft = 'scala'
 
 # emmet-vim
 [[plugins]]
