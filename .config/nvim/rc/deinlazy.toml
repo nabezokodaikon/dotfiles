@@ -3,10 +3,8 @@
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 depends = [
-    'unite.vim',
     'neomru.vim',
-    'neoyank.vim',
-    'vim-gista-unite'
+    'neoyank.vim'
     ]
 hook_source = '''
     " Key mapping.
@@ -48,18 +46,7 @@ hook_source = '''
     call denite#custom#var('grep', 'separator', ['--'])
     call denite#custom#var('grep', 'default_opts',
         \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*', '--color', 'never'])
-
-    " Because changing focus, if the vim-gista-unite's narrow action.
-    call unite#custom#profile('default', 'context', {
-                \   'start_insert': 0,
-                \   'prompt_direction': 'top',
-                \   'split' : 0
-                \})
 '''
-
-# unite.vim
-[[plugins]]
-repo = 'Shougo/unite.vim'
 
 # denite.nvimでファイル表示履歴を表示する。
 [[plugins]]
@@ -72,18 +59,6 @@ hook_source = '''
 # denite.vimでyankの履歴を表示する。
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
-
-# vim-gista と unite を連携させる。
-[[plugins]]
-repo = 'lambdalisue/vim-gista-unite'
-
-# gist を使用する。
-[[plugins]]
-repo = 'lambdalisue/vim-gista'
-on_cmd = 'Gista'
-hook_source = '''
-    let g:gista#client#default_username = 'nabezokodaikon'
-'''
 
 # Completion
 [[plugins]]

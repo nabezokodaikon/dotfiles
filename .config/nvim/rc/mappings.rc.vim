@@ -114,8 +114,6 @@ nnoremap <silent> <Leader>gg :<C-u>Denite grep<CR>
 nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
 " buffer
 nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
-" gista
-nnoremap <silent> <Leader>s :<C-u>Denite unite:gista<CR>
 " File type
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 " tag
