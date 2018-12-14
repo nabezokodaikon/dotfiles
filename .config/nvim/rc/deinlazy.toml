@@ -98,45 +98,32 @@ hook_source = '''
         \ 'matchers', ['matcher_head'])
 
     call deoplete#custom#var('omni', 'input_patterns', {
-        \ 'scala': '[^. *\t]\.\w*'
+        \ 'scala': [
+        \     '[^. *\t]\.\w*',
+        \     '[:\[,] ?\w*',
+        \     '^import .*'
+        \   ]
         \})
 
     call deoplete#enable()
 '''
 
-# TODO
-# https://github.com/w0rp/ale#usage-completion
+# Completion for Scala
+# $ sbt ensimeConfig
+# $ sbt ensimeConfigProject
 [[plugins]]
-repo = 'neomake/neomake'
+repo = 'ensime/ensime-vim'
+on_ft = 'scala'
+
+# Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
+[[plugins]]
+repo = 'w0rp/ale'
 hook_source = '''
-    " Linting with neomake
-    let g:neomake_sbt_maker = {
-        \ 'exe': 'sbt',
-        \ 'args': ['-Dsbt.log.noformat=true', 'compile'],
-        \ 'append_file': 0,
-        \ 'auto_enabled': 1,
-        \ 'output_stream': 'stdout',
-        \ 'errorformat':
-            \ '%E[%trror]\ %f:%l:\ %m,' .
-            \ '%-Z[error]\ %p^,' .
-            \ '%-C%.%#,' .
-            \ '%-G%.%#'
-        \ }
-
-    let g:neomake_enabled_makers = ['sbt']
-    let g:neomake_verbose=3
-
-    " Neomake on text change
-    autocmd InsertLeave,TextChanged * update | Neomake! sbt
+    let g:ale_completion_enabled = 1
 '''
 depends = [
     'ensime-vim'
 ]
-
-# Completion for Scala
-[[plugins]]
-repo = 'ensime/ensime-vim'
-on_ft = 'scala'
 
 # emmet-vim
 [[plugins]]
