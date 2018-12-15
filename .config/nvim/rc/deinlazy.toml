@@ -88,11 +88,11 @@ hook_source = '''
 # $ sbt ensimeConfigProject
 [[plugins]]
 repo = 'ensime/ensime-vim'
-on_ft = 'scala'
 
 # Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
 [[plugins]]
 repo = 'w0rp/ale'
+on_ft = 'scala'
 hook_source = '''
     let g:ale_completion_enabled = 1
 '''
