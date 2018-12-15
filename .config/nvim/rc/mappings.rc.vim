@@ -116,8 +116,6 @@ nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
 nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 " File type
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
-" tag
-nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
 " outline
 nnoremap <silent> <Leader>o :<C-u>Denite outline<CR>
 " Move to next/previous line of denite's buffer
