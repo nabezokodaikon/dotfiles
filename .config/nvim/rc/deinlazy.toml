@@ -66,7 +66,7 @@ repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
     call deoplete#custom#option('sources', {
-        \ 'scala': ['buffer', 'member', 'tag', 'file', 'omni', 'ultisnips'],
+        \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
         \})
 
     call deoplete#custom#source('_', 
