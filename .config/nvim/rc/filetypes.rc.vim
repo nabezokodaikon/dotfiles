@@ -32,4 +32,6 @@ augroup fileTypeDeclaration
     autocmd!
     autocmd BufRead,BufNewFile *.* nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
     autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>d :<C-u>EnDeclaration<CR>
+    autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>d :<C-u>TSDef<CR>
+    autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>d :<C-u>TSDef<CR>
 augroup END
