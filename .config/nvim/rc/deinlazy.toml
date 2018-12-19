@@ -100,6 +100,20 @@ depends = [
     'ensime-vim'
 ]
 
+# Completion for other language
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+on_ft = 'rust'
+hook_source = '''
+    set hidden
+
+    let g:LanguageClient_serverCommands = {
+        \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+        \ }
+'''
+
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
