@@ -101,6 +101,7 @@ depends = [
 ]
 
 # Completion for other language
+# Rust: https://github.com/rust-lang/rls
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
@@ -108,6 +109,7 @@ build = 'bash install.sh'
 on_ft = 'rust'
 hook_source = '''
     set hidden
+    set completeopt=menu
 
     let g:LanguageClient_serverCommands = {
         \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
