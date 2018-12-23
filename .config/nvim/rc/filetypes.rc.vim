@@ -37,3 +37,8 @@ augroup fileTypeDeclaration
     autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>d :<C-u>TSDef<CR>
     autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>d :<C-u>TSDef<CR>
 augroup END
+
+augroup fileTypeVariableRename
+    autocmd!
+    autocmd BufRead,BufNewFile *.rs nnoremap <silent> <F2> :<C-u>call LanguageClient#textDocument_rename()<CR>
+augroup END
