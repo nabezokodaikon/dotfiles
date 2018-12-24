@@ -166,3 +166,10 @@ on_ft = 'typescript'
 repo = 'mhartington/nvim-typescript'
 build = './install.sh'
 on_ft = 'typescript'
+
+# Vim configuration for Rust.
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_source = '''
+    let g:rustfmt_autosave = 1 
+'''
