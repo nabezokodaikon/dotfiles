@@ -110,10 +110,24 @@ on_ft = 'rust'
 hook_source = '''
     set hidden
     set completeopt=menu
+    set signcolumn=yes
 
     let g:LanguageClient_serverCommands = {
         \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
         \ }
+
+    function! s:restartLanguageClient()
+        LanguageClientStop
+        sleep 200m
+        LanguageClientStart
+    endfunction
+
+    augroup languageClient-neovim
+        autocmd!
+        autocmd BufWritePre *.rs call s:restartLanguageClient()
+    augroup END
+
+    command! LanguageClientReStart call s:restartLanguageClient()
 '''
 
 # emmet-vim
