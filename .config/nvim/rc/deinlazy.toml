@@ -182,6 +182,7 @@ build = './install.sh'
 on_ft = 'typescript'
 
 # Vim configuration for Rust.
+[[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 hook_source = '''
