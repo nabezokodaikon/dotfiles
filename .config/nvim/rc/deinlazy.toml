@@ -118,7 +118,7 @@ hook_source = '''
 
     function! s:restartLanguageClient()
         LanguageClientStop
-        sleep 200m
+        sleep 300m
         LanguageClientStart
     endfunction
 
