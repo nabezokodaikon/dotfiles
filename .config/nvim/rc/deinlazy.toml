@@ -65,6 +65,12 @@ repo = 'Shougo/neoyank.vim'
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
+
+    call deoplete#custom#option({
+        \ 'smart_case': v:true,
+        \})
+
+
     call deoplete#custom#option('sources', {
         \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
         \})
