@@ -119,7 +119,7 @@ hook_source = '''
     set signcolumn=yes
 
     let g:LanguageClient_serverCommands = {
-        \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+        \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
         \ }
 
     function! s:restartLanguageClient()
