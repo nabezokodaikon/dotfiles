@@ -132,7 +132,7 @@ hook_source = '''
 
     augroup languageClient-neovim
         autocmd!
-        " autocmd BufWritePre *.rs call s:restartLanguageClient()
+        autocmd BufWritePre *.rs call s:restartLanguageClient()
     augroup END
 
     command! LanguageClientReStart call s:restartLanguageClient()
