@@ -136,6 +136,8 @@ hook_source = '''
     augroup END
 
     command! LanguageClientReStart call s:restartLanguageClient()
+
+    LanguageClientReStart
 '''
 
 # emmet-vim
