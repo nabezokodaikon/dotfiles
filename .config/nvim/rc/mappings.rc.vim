@@ -101,7 +101,7 @@ nmap <Leader>m <Plug>(easymotion-overwin-f2)
 " denite.nvim
 "--------------------------------
 " ファイル一覧
-nnoremap <silent> <Leader>f :<C-u>Denite file_rec<CR>
+nnoremap <silent> <Leader>f :<C-u>Denite file/rec<CR>
 " ファイル表示履歴
 nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
 " yank

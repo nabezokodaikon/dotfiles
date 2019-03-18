@@ -33,8 +33,8 @@ hook_source = '''
     call denite#custom#source('buffer', 'matchers',
         \ ['matcher/fuzzy', 'matcher/project_files'])
 
-    " Ripgrep command on file_rec source.
-    call denite#custom#var('file_rec', 'command',
+    " Ripgrep command on file/rec source.
+    call denite#custom#var('file/rec', 'command',
         \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
 
     " Ripgrep command on grep source.
