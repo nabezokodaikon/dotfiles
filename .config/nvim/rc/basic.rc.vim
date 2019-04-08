@@ -44,9 +44,6 @@ set cursorline
 " 現在の列を強調する
 set cursorcolumn
 
-" 補完機能有
-set wildmenu wildmode=list:full
-
 " ステータスラインを常に表示する
 set laststatus=2
 
