@@ -15,11 +15,6 @@ call submode#map('window-resize', 'n', '', '<', '<C-w><')
 call submode#map('window-resize', 'n', '', '+', '<C-w>+')
 call submode#map('window-resize', 'n', '', '-', '<C-w>-')
 
-" Tab change.
-call submode#enter_with('tab-next', 'n', '', 'gt', 'gt')
-call submode#map('tab-next', 'n', '', 't', 'gt')
-call submode#enter_with('tab-preview', 'n', '', 'gT', 'gT')
-call submode#map('tab-preview', 'n', '', 'T', 'gT')
 
 "--------------------------------
 " nerdcommenter configurations
