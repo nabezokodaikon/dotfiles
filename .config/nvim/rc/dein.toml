@@ -19,10 +19,6 @@ repo = 'nanotech/jellybeans.vim'
 [[plugins]]
 repo = 'kana/vim-submode'
 
-# git を操作する。
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
 # カーソル移動を便利にする。
 [[plugins]]
 repo = 'easymotion/vim-easymotion'

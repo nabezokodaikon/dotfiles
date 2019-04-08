@@ -21,14 +21,6 @@ call submode#map('tab-next', 'n', '', 't', 'gt')
 call submode#enter_with('tab-preview', 'n', '', 'gT', 'gT')
 call submode#map('tab-preview', 'n', '', 'T', 'gT')
 
-
-"--------------------------------
-" vim-fugitive configurations
-"--------------------------------
-" ステータスラインの書式にgitの情報を表示する。
-set statusline=%F\ [%Y][%{&fileencoding}]%=%{fugitive#statusline()}\ %l/%L\ %c\ %P
-
-
 "--------------------------------
 " nerdcommenter configurations
 "--------------------------------
