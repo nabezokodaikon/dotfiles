@@ -3,6 +3,73 @@
 "--------------------------------
 
 "--------------------------------
+" emmet-vim
+"--------------------------------
+let g:user_emmet_leader_key='<C-e>'
+
+
+"--------------------------------
+" nerdcommenter
+"--------------------------------
+nnoremap co <Nop>
+vnoremap co <Nop>
+nmap co <Plug>NERDCommenterToggle
+vmap co <Plug>NERDCommenterToggle
+
+
+"--------------------------------
+" vim-easymotion
+"--------------------------------
+" デフォルトのキーマッピングを無効化。
+let g:EasyMotion_do_mapping = 0
+" 検索後、Enterでカーソル位置に一番近いマッチした箇所に移動する。
+let g:EasyMotion_enter_jump_first = 1
+" キーワードの入力を2文字まで受け付ける。
+nmap <Leader>m <Plug>(easymotion-overwin-f2)
+
+
+"--------------------------------
+" denite.nvim
+"--------------------------------
+" ファイル一覧
+nnoremap <silent> <Leader>f :<C-u>Denite file/rec<CR>
+" ファイル表示履歴
+nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
+" yank
+nnoremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
+" ファイル内の行検索
+nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
+" grep for empty word
+nnoremap <silent> <Leader>gg :<C-u>Denite grep<CR>
+" grep for cursor word
+nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
+" buffer
+nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
+" File type
+nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
+" outline
+nnoremap <silent> <Leader>o :<C-u>Denite outline<CR>
+" Move to next/previous line of denite's buffer
+nnoremap <C-n> <Nop>
+nnoremap <C-p> <Nop>
+nnoremap <silent> <C-n> :<C-u>Denite -resume -select=+1 -immediately<CR>
+nnoremap <silent> <C-p> :<C-u>Denite -resume -select=-1 -immediately<CR>
+
+
+"--------------------------------
+" deoplete.nvim
+"--------------------------------
+" 補完候補が出ていたら確定、なければ改行する。
+inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
+
+
+"--------------------------------
+" Translate
+"--------------------------------
+vnoremap <silent> <Leader>t :<C-u>ExciteTranslate<CR>
+
+
+"--------------------------------
 " vim-submode configurations
 "--------------------------------
 " Window resize.
