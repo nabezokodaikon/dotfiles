@@ -57,6 +57,13 @@ nnoremap <silent> <C-p> :<C-u>Denite -resume -select=-1 -immediately<CR>
 
 
 "--------------------------------
+" defx.nvim
+"--------------------------------
+nnoremap F <Nop>
+nnoremap <silent> F :<C-u>Defx -resume<CR>
+
+
+"--------------------------------
 " Translate
 "--------------------------------
 vnoremap <silent> <Leader>t :<C-u>ExciteTranslate<CR>
