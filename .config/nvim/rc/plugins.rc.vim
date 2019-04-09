@@ -57,13 +57,6 @@ nnoremap <silent> <C-p> :<C-u>Denite -resume -select=-1 -immediately<CR>
 
 
 "--------------------------------
-" deoplete.nvim
-"--------------------------------
-" 補完候補が出ていたら確定、なければ改行する。
-inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
-
-
-"--------------------------------
 " Translate
 "--------------------------------
 vnoremap <silent> <Leader>t :<C-u>ExciteTranslate<CR>

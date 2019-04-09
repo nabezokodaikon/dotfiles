@@ -65,7 +65,6 @@ repo = 'Shougo/neoyank.vim'
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
-
     call deoplete#custom#option({
         \ 'smart_case': v:true,
         \})
@@ -87,6 +86,8 @@ hook_source = '''
         \})
 
     call deoplete#enable()
+
+    inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
 '''
 
 # Completion for Scala
