@@ -68,6 +68,16 @@ $ nvim
 ```
 
 
+### Translate Shell
+[Translate Shell](https://github.com/soimort/translate-shell)
+```
+$ brew install gawk
+$ git clone https://github.com/soimort/translate-shell.git
+$ make
+$ make install
+```
+
+
 ## Arch Linux
 ### Neovim
 ```
