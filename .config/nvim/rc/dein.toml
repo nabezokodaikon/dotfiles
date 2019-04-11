@@ -23,10 +23,6 @@ repo = 'easymotion/vim-easymotion'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
-# webapi-vim
-[[plugins]]
-repo = 'mattn/webapi-vim'
-
 # Color scheme
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
