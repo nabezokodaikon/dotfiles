@@ -2,6 +2,11 @@
 # Zsh .zshenv for Linux
 #--------------------------------
 
+# SHELL
+#--------------------------------
+export SHELL=/usr/bin/zsh
+
+
 # PATH
 #--------------------------------
 export PATH=$PATH:~/bin

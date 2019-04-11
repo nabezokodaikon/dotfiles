@@ -13,6 +13,10 @@ $ ./install.sh
 $ ./git-config.sh
 ```
 
+## Windows
+### Terminal
+[wsl-terminal](https://goreliu.github.io/wsl-terminal/)
+
 
 ## Mac
 ### Homebrew
