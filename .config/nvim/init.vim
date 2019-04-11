@@ -55,6 +55,9 @@ source ~/.config/nvim/rc/filetypes.rc.vim
 " Ctags command
 source ~/.config/nvim/rc/ctags.rc.vim
 
+" Translation script
+source ~/.config/nvim/rc/translate.rc.vim
+
 " Hacks
 source ~/.config/nvim/rc/hacks.rc.vim
 

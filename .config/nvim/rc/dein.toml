@@ -27,10 +27,6 @@ repo = 'thinca/vim-quickrun'
 [[plugins]]
 repo = 'mattn/webapi-vim'
 
-# Translation
-[[plugins]]
-repo = 'mattn/excitetranslate-vim'
-
 # Color scheme
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'

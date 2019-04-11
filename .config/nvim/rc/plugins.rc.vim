@@ -64,12 +64,6 @@ nnoremap <silent> F :<C-u>Defx -resume<CR>
 
 
 "--------------------------------
-" Translate
-"--------------------------------
-vnoremap <silent> <Leader>t :<C-u>ExciteTranslate<CR>
-
-
-"--------------------------------
 " vim-submode configurations
 "--------------------------------
 " Window resize.
@@ -101,3 +95,9 @@ let NERDSpaceDelims = 1
 "--------------------------------
 " 大文字、小文字を区別しない。
 let g:EasyMotion_smartcase = 1
+
+
+"--------------------------------
+" Translate script
+"--------------------------------
+vnoremap <silent> <Leader>t :<C-u>call Translate()<CR>
