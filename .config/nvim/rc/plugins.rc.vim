@@ -100,4 +100,4 @@ let g:EasyMotion_smartcase = 1
 "--------------------------------
 " Translate script
 "--------------------------------
-vnoremap <silent> <Leader>t :<C-u>Translate<CR>
+vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
