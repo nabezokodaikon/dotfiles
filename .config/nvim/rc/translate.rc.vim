@@ -20,7 +20,7 @@ function! s:getTransrateLang(sl)
   return a:sl == 'en' ? 'ja' : 'en'
 endfunction
 
-function! Translate()
+function! s:translate()
     let word = s:getSelectedText()
     let sl = s:getSourceLang(word)
     let tl = s:getTransrateLang(sl)
@@ -33,3 +33,5 @@ function! Translate()
         redi END
     endif
 endfunction
+
+command! -nargs=0 Translate call s:translate()
