@@ -275,6 +275,13 @@ hook_source = '''
     let g:rustfmt_autosave = 1 
 '''
 
+[[plugins]]
+repo = 'jdonaldson/vaxe'
+on_ft = 'haxe'
+hook_source = '''
+    let g:vaxe_haxe_version = 3
+'''
+
 # Translate Japanese/English
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
