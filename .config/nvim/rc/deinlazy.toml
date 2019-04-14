@@ -273,3 +273,8 @@ hook_source = '''
     let g:rustfmt_command = 'rustfmt'
     let g:rustfmt_autosave = 1 
 '''
+
+# Translate Japanese/English
+[[plugins]]
+repo = 'nabezokodaikon/jaen-translate.vim'
+on_cmd = 'JaEnTranslate'
