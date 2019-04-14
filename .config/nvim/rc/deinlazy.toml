@@ -145,6 +145,7 @@ hook_source = '''
 
     call deoplete#custom#option('sources', {
         \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
+        \ 'haxe': ['buffer', 'file', 'member', 'tag']
         \})
 
     call deoplete#custom#source('_', 
