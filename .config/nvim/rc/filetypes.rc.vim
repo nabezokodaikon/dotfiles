@@ -7,6 +7,7 @@ augroup fileTypeIndent
     autocmd BufRead,BufNewFile *.css setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.html setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.hs setlocal tabstop=4 shiftwidth=4
+    autocmd BufRead,BufNewFile *.hx setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.js setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.json setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.jsx setlocal tabstop=2 shiftwidth=2
@@ -32,6 +33,7 @@ augroup END
 augroup fileTypeDeclaration
     autocmd!
     autocmd BufRead,BufNewFile *.hs nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
+    autocmd BufRead,BufNewFile *.hx nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
     autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
     autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
     autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>d :<C-u>call LanguageClient#textDocument_definition()<CR>
