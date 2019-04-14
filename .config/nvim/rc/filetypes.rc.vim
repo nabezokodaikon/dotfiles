@@ -24,6 +24,7 @@ augroup END
 augroup fileTypeDictionary
     autocmd!
     autocmd BufRead,BufNewFile *.hs setlocal dictionary=~/.config/nvim/dict/haskell.dict
+    autocmd BufRead,BufNewFile *.hx setlocal dictionary=~/.config/nvim/dict/haxe.dict
     autocmd BufRead,BufNewFile *.js setlocal dictionary=~/.config/nvim/dict/javascript.dict
     autocmd BufRead,BufNewFile *.jsx setlocal dictionary=~/.config/nvim/dict/javascript.dict
     autocmd BufRead,BufNewFile *.sbt setlocal dictionary=~/.config/nvim/dict/scala.dict
