@@ -59,6 +59,12 @@ $ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" 
 $ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 ```
 
+### homebrew-rmtree
+```
+$ brew tap beeftornado/rmtree
+$ brew install beeftornado/rmtree/brew-rmtree
+```
+
 ### ログインシェル変更
 brew でインストールすると、ログインシェルに設定できない。
 ```
