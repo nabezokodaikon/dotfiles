@@ -14,3 +14,12 @@ Nan
 Null
 trace
 return
+interface
+extends
+implements
+enum
+Enum
+EnumValue
+switch
+case
+trace
