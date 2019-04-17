@@ -140,7 +140,11 @@ $ sudo make install
 ```
 #### Translate
 ```
-$ brew install translate-shell
+$ sudo apt install gawk
+$ git clone https://github.com/soimort/translate-shell
+$ cd translate-shell/
+$ make
+$ sudo make install
 ```
 
 ### Trouble shooting
