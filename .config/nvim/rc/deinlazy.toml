@@ -60,7 +60,6 @@ hook_source = '''
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
 
-
 # File browser
 [[plugins]]
 repo = 'Shougo/defx.nvim'
@@ -137,6 +136,10 @@ hook_source = '''
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
+depends = [
+    'deoplete-dictionary',
+    'deoplete-tag'
+    ]
 hook_source = '''
     call deoplete#custom#option({
         \ 'smart_case': v:true,
@@ -144,8 +147,8 @@ hook_source = '''
 
 
     call deoplete#custom#option('sources', {
-        \ 'scala': ['buffer', 'dictionary', 'file', 'member', 'omni', 'tag'],
-        \ 'haxe': ['buffer', 'dictionary', 'file', 'member', 'tag']
+        \ 'scala': ['buffer', 'file', 'member', 'omni', 'dictionary', 'tag'],
+        \ 'haxe': ['buffer', 'file', 'member', 'dictionary', 'tag']
         \})
 
     call deoplete#custom#source('_', 
@@ -163,6 +166,12 @@ hook_source = '''
 
     inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
 '''
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-dictionary'
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-tag'
 
 # Completion for Scala
 # $ sbt ensimeConfig
