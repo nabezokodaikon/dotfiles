@@ -23,3 +23,7 @@ EnumValue
 switch
 case
 trace
+typedef
+optional
+Iterable
+type
