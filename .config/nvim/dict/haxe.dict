@@ -4,6 +4,7 @@ Void
 Bool
 Float
 Int
+String
 true
 false
 public
@@ -27,3 +28,16 @@ typedef
 optional
 Iterable
 type
+Dynamic
+for
+haxe
+DynamicAccess
+set
+get
+exists
+abstract
+from
+to
+Any
+$type
+inline
