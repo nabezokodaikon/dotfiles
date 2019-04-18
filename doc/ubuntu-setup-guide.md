@@ -16,6 +16,7 @@ APT::Periodic::Unattended-Upgrade "1";
 ```
 #### Update
 ```
+$ sudo apt dist-upgrade
 $ sudo apt update
 $ sudo apt upgrade
 # 再起動
