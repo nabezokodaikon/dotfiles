@@ -50,6 +50,7 @@ if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     ln -s ${HOME}/dotfiles/x/.Xresources ${HOME}/.Xresources
 fi
 
+export XDG_CONFIG_HOME=$HOME/.config
 if [ ! -d "$XDG_CONFIG_HOME/tmux/logs" ]; then
     mkdir -pv "$XDG_CONFIG_HOME/tmux/logs"
 fi
