@@ -1,12 +1,13 @@
 # VirtualBox setup guid
 
 ## ゲスト側の設定
-### ポートフォワーディング
+### SSH接続
+#### ポートフォワーディング
 1. 設定
 1. ネットワーク
 1. 高度
 1. ポートフォワーディング
-### 設定
+#### 設定
 * 名前
   * 任意
 * プロトコル
@@ -19,10 +20,25 @@
   * 空白
 * ゲストポート
   * ゲストが公開しているポート番号(sshの場合は、デフォルトが`22`)
-### openssh-server
+#### openssh-server
 ```
 $ sudo apt install openssh-server
 ```
+
+### 共有フォルダ
+設定から、共有フォルダを追加する。
+**自動マウントにチェックを入れない**
+```
+# 手動マウント
+$ sudo mount -t vboxsf develop /home/nabezokodaikon/workspace/develop
+# 自動マウント
+$ sudo sh -c "echo 'develop /home/nabezokodaikon/workspace/develop vboxsf defaults 0 0' >> /etc/fstab"
+```
+#### グループ追加
+```
+$ sudo adduser nabezokodaikon vboxsf
+```
+
 
 ## ホスト側の設定
 ### ~/.ssh/config ファイル
