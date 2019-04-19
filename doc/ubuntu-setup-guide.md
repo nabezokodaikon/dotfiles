@@ -25,10 +25,9 @@ $ sudo apt upgrade
 ## Install fcitx-mozc
 ### インストール
 ```
-$ sudo apt install fcitx-mozc
+$ sudo apt-get install fcitx-mozc
 # 再起動
 ```
-
 ### 設定
 1. `地域と言語`の設定から、`インストールされている言語の管理`を選択。
 1. `キーボード入力に使うIMシステム`を、`fcitx`に変更。
@@ -42,70 +41,54 @@ $ sudo apt install fcitx-mozc
 1. `入力メソッドのオンオフ`に`Ctrl+Space`を設定する。
 1. OSを再起動する。
 
-### Install Chromium
-#### 本体
-Ubuntusソフトウェアからインストールする。
-#### プラグイン
-* Google翻訳
-* Adblock Plus
-* Tabs to the Front
-* Save to Pocket
 
-### Homebrew on Linux
-#### インストール
-[linuxbrew](https://docs.brew.sh/Homebrew-on-Linux)
+## Install Chromium
 ```
-$ sudo apt install build-essential curl file git
+$ sudo apt-get install chromium-browser
+```
+
+### clipboard
+```
+$ sudo apt-get install xclip
 # 再起動
-
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)
-# 再起動
-
-$ test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-$ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-$ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-$ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-# 再起動
-```
-#### rmtree
-```
-$ brew tap beeftornado/rmtree
-$ brew install brew-rmtree 
-```
-
-### homebrew-rmtree
-```
-$ brew tap beeftornado/rmtree
-$ brew install beeftornado/rmtree/brew-rmtree
 ```
 
 ### ログインシェル変更
 brew でインストールすると、ログインシェルに設定できない。
 ```
-$ sudo apt install zsh
+$ sudo apt-get install zsh
 $ which zsh
 $ chsh
 # 再起動
 ```
 
-### clipboard
+## Install Homebrew on Linux
+### 本体
+[Homebrew-on-Linux](https://docs.brew.sh/Homebrew-on-Linux)
 ```
-$ sudo apt install xclip
-# 再起動
-```
+$ sudo apt install build-essential curl file git
 
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)
+
+$ test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+$ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+$ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+$ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+```
+### rmtree
+```
+$ brew tap beeftornado/rmtree
+```
 ### 開発ツールインストール
 ```
 $ brew install git
-# 再起動
-
 $ brew install tig
 $ brew install tmux
 $ brew install autoconf
 $ brew install automake
 ```
 
-### dotfilesインストール
+### dotfileseンストール
 
 ### Install neovim
 #### Neovim
@@ -165,4 +148,25 @@ $ brew cleanup -s
 ```
 $ brew cleanup -s
 $ brew update
+```
+#### apt-get update が失敗する場合の対処法
+[Ubuntu　E:Read error - read (5 Input/output error), E:The package lists or status file could not be parsed or opened.](http://kurumatorajirou.blogspot.com/2012_09_01_archive.html)
+:w
+```
+$ sudo rm /var/lib/dpkg/status
+$ sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
+$ sudo rm -rf /var/lib/apt/lists/*
+$ sudo dpkg --configure -a
+$ sudo aptitude update
+$ sudo aptitude upgrade
+$ sudo aptitude install -f
+
+# 上記で上手くいかないなら、下記を実行する。
+$ sudo rm /var/lib/dpkg/status
+$ sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
+$ sudo rm -rf /var/lib/apt/lists/*
+$ sudo dpkg --configure -a
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get -f install
 ```
