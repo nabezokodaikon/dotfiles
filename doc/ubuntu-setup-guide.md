@@ -1,10 +1,4 @@
 # Ubuntu setup guide
-## caps to ctrl
-`/etc/defalt/keyboard`ファイルを以下のように書き変える。
-```
-XKBOPTIONS="ctrl:nocaps"
-# 再起動
-```
 
 ## 更新
 ### 自動更新無効化
@@ -14,11 +8,18 @@ APT::Periodic::Update-Package-Lists "1";
 APT::Periodic::Unattended-Upgrade "1";
 # 再起動
 ```
-#### Update
+### Update
 ```
 $ sudo apt dist-upgrade
 $ sudo apt update
 $ sudo apt upgrade
+# 再起動
+```
+
+## caps to ctrl
+`/etc/defalt/keyboard`ファイルを以下のように書き変える。
+```
+XKBOPTIONS="ctrl:nocaps"
 # 再起動
 ```
 
@@ -39,7 +40,7 @@ $ sudo apt-get install fcitx-mozc
   1. Mozc
 #### 全体の設定
 1. `入力メソッドのオンオフ`に`Ctrl+Space`を設定する。
-1. OSを再起動する。
+1. 再起動。
 
 
 ## Install Chromium
@@ -47,13 +48,13 @@ $ sudo apt-get install fcitx-mozc
 $ sudo apt-get install chromium-browser
 ```
 
-### clipboard
+## clipboard
 ```
 $ sudo apt-get install xclip
 # 再起動
 ```
 
-### ログインシェル変更
+## ログインシェル変更
 brew でインストールすると、ログインシェルに設定できない。
 ```
 $ sudo apt-get install zsh
@@ -88,14 +89,14 @@ $ brew install autoconf
 $ brew install automake
 ```
 
-### dotfileseンストール
+## dotfileseンストール
 
-### Install neovim
-#### Neovim
+## Install neovim
+### Neovim
 ```
 $ brew install neovim
 ```
-#### python
+### python
 ```
 $ brew install python3
 $ pip3 install pynvim
@@ -104,19 +105,19 @@ $ pip3 install websocket-client sexpdata
 $ brew install python2
 $ pip2 install pynvim
 ```
-#### node
+### node
 ```
 $ brew install node
 $ npm install --global neovim 
 ```
-#### ripgrep
+### ripgrep
 ```
 $ brew install ripgrep
 # OR
 $ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep_11.0.1_amd64.deb
 $ sudo dpkg -i ripgrep_11.0.1_amd64.deb
 ```
-#### universal-ctags
+### universal-ctags
 ```
 $ git clone https://github.com/universal-ctags/ctags.git
 $ cd ctags
@@ -125,7 +126,7 @@ $ ./configure
 $ make
 $ sudo make install
 ```
-#### Translate
+### Translate
 ```
 $ sudo apt install gawk
 $ git clone https://github.com/soimort/translate-shell
@@ -134,24 +135,23 @@ $ make
 $ sudo make install
 ```
 
-### Trouble shooting
-#### "システムプログラムの問題が見つかりました"ダイアログが表示される場合
+## Trouble shooting
+### "システムプログラムの問題が見つかりました"ダイアログが表示される場合
 /var/crashに問題のあったアプリの情報を削除する。
 ```
 $ sudo rm -rf /var/crash/*
 ```
-#### Homebrewのキャッシュ削除
+### Homebrewのキャッシュ削除
 ```
 $ brew cleanup -s
 ```
-#### brew upgradeでError: SHA1 mismatchが出た時の対処法
+### brew upgradeでError: SHA1 mismatchが出た時の対処法
 ```
 $ brew cleanup -s
 $ brew update
 ```
-#### apt-get update が失敗する場合の対処法
+### apt-get update が失敗する場合の対処法
 [Ubuntu　E:Read error - read (5 Input/output error), E:The package lists or status file could not be parsed or opened.](http://kurumatorajirou.blogspot.com/2012_09_01_archive.html)
-:w
 ```
 $ sudo rm /var/lib/dpkg/status
 $ sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
