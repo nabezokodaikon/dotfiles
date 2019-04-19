@@ -26,8 +26,7 @@ XKBOPTIONS="ctrl:nocaps"
 ## Install fcitx-mozc
 ### インストール
 ```
-$ sudo apt-get install fcitx-mozc
-# 再起動
+$ sudo apt install fcitx-mozc
 ```
 ### 設定
 1. `地域と言語`の設定から、`インストールされている言語の管理`を選択。
@@ -40,24 +39,23 @@ $ sudo apt-get install fcitx-mozc
   1. Mozc
 #### 全体の設定
 1. `入力メソッドのオンオフ`に`Ctrl+Space`を設定する。
-1. 再起動。
 
 
 ## Install Chromium
 ```
-$ sudo apt-get install chromium-browser
+$ sudo apt install chromium-browser
 ```
 
 ## clipboard
 ```
-$ sudo apt-get install xclip
+$ sudo apt install xclip
 # 再起動
 ```
 
 ## ログインシェル変更
 brew でインストールすると、ログインシェルに設定できない。
 ```
-$ sudo apt-get install zsh
+$ sudo apt install zsh
 $ which zsh
 $ chsh
 # 再起動
@@ -85,8 +83,6 @@ $ brew tap beeftornado/rmtree
 $ brew install git
 $ brew install tig
 $ brew install tmux
-$ brew install autoconf
-$ brew install automake
 ```
 
 ## dotfileseンストール
@@ -112,27 +108,15 @@ $ npm install --global neovim
 ```
 ### ripgrep
 ```
-$ brew install ripgrep
-# OR
-$ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep_11.0.1_amd64.deb
-$ sudo dpkg -i ripgrep_11.0.1_amd64.deb
+$ sudo apt install ripgrep
 ```
 ### universal-ctags
 ```
-$ git clone https://github.com/universal-ctags/ctags.git
-$ cd ctags
-$ ./autogen.sh 
-$ ./configure
-$ make
-$ sudo make install
+$ sudo apt install universal-ctags
 ```
 ### Translate
 ```
-$ sudo apt install gawk
-$ git clone https://github.com/soimort/translate-shell
-$ cd translate-shell/
-$ make
-$ sudo make install
+$ sudo apt install translate-shell 
 ```
 
 ## Trouble shooting
@@ -150,7 +134,7 @@ $ brew cleanup -s
 $ brew cleanup -s
 $ brew update
 ```
-### apt-get update が失敗する場合の対処法
+### apt update が失敗する場合の対処法
 [Ubuntu　E:Read error - read (5 Input/output error), E:The package lists or status file could not be parsed or opened.](http://kurumatorajirou.blogspot.com/2012_09_01_archive.html)
 ```
 $ sudo rm /var/lib/dpkg/status
