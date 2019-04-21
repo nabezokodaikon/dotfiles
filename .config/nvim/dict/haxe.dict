@@ -3,6 +3,7 @@ Array
 Bool
 Constraints
 Constructible
+Date
 Dynamic
 DynamicAccess
 Enum
@@ -20,6 +21,7 @@ abstract
 add
 addassign
 and
+allow
 arrayAccess
 assign
 bitand
@@ -107,6 +109,7 @@ this
 throw
 to
 toUpperCase
+toLowerCase
 trace
 true
 try
