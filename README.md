@@ -62,6 +62,11 @@ $ brew tap beeftornado/rmtree
 * 既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
 
 
+### coc.nvim
+```
+$ brew install yarn
+```
+
 ### Neovim
 ```
 $ pip3 install neovim
