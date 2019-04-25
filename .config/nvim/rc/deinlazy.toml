@@ -29,11 +29,12 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 # Completion
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_source = 'source ~/.config/nvim/rc/plugins/deoplete.rc.vim'
 depends = [
     'deoplete-dictionary',
     'deoplete-tag'
     ]
-hook_source = 'source ~/.config/nvim/rc/plugins/deoplete.rc.vim'
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-dictionary'
@@ -65,32 +66,7 @@ repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
 on_ft = 'rust'
-hook_source = '''
-    set hidden
-    set completeopt=menu
-    set signcolumn=yes
-
-    let g:LanguageClient_useVirtualText = 0
-
-    let g:LanguageClient_serverCommands = {
-        \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-        \ }
-
-    function! s:restartLanguageClient()
-        LanguageClientStop
-        sleep 300m
-        LanguageClientStart
-    endfunction
-
-    augroup languageClient-neovim
-        autocmd!
-        autocmd BufWritePre *.rs call s:restartLanguageClient()
-    augroup END
-
-    command! LanguageClientReStart call s:restartLanguageClient()
-
-    LanguageClientReStart
-'''
+hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
 
 # emmet-vim
 [[plugins]]
@@ -163,3 +139,10 @@ hook_source = '''
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
 on_cmd = 'JaEnTranslate'
+
+# Intellisense engine
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = 'yarn install --frozen-lockfile'
+on_ft = 'haxe'
+hook_source = 'source ~/.config/nvim/rc/plugins/coc.rc.vim'
