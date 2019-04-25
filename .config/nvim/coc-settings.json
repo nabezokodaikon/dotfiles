@@ -2,7 +2,7 @@
   "languageserver": {
     "haxe": {
       "command": "node",
-      "args": ["/Users/nabezokodaikon/.vscode/extensions/nadako.vshaxe-2.9.1/server/bin/server.js"],
+      "args": ["../../../workspace/src/haxe/haxe-language-server/bin/server.js"],
       "filetypes": ["haxe"],
       "trace.server": "verbose",
       "initializationOptions": {
