@@ -2,7 +2,7 @@
   "languageserver": {
     "haxe": {
       "command": "node",
-      "args": ["../../../workspace/src/haxe/haxe-language-server/bin/server.js"],
+      "args": ["../../../dotfiles/.config/nvim/haxelsp/server.js"],
       "filetypes": ["haxe"],
       "trace.server": "verbose",
       "initializationOptions": {
