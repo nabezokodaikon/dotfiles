@@ -62,19 +62,39 @@ $ brew tap beeftornado/rmtree
 * 既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
 
 
-### coc.nvim
-```
-$ brew install yarn
-```
-
 ### Neovim
 ```
+$ pip2 install neovim
 $ pip3 install neovim
-$ nvim
 
 # Neovimで以下のコマンドを実行する。
 :UpdateRemotePlugins
 ```
+#### coc.nvim
+```
+$ brew install yarn
+
+# Neovimで以下のコマンドを実行する。
+:CocInstall coc-json # For Haxe
+:CocInstall coc-rls # For Rust
+```
+#### Haxe
+Haxe4の最新版(Nightly Builds)をインストールする。
+```
+$ git clone https://github.com/vshaxe/haxe-language-server.git --recursive
+$ cd haxe-languageserver
+
+# 上記リポジトリの.travis.ymlに記述してあるコマンドを実行する。
+$ haxelib git vshaxe-build https://github.com/vshaxe/vshaxe-build
+$ haxelib run vshaxe-build -t language-server -t language-server-tests -m both
+# haxe-languageserver/bin/server.js が生成されていることを確認する。
+
+# coc-settings.jsonに生成されたserver.jsのパスを記述する。
+
+# Neovimで以下のコマンドを実行する。
+:CocInstall coc-json # For Haxe
+```
+
 
 
 ### Translate Shell
