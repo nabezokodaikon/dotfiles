@@ -45,5 +45,6 @@ augroup END
 
 augroup fileTypeVariableRename
     autocmd!
+    autocmd BufRead,BufNewFile *.hx nmap <F2> <Plug>(coc-rename)
     autocmd BufRead,BufNewFile *.rs nnoremap <silent> <F2> :<C-u>call LanguageClient#textDocument_rename()<CR>
 augroup END
