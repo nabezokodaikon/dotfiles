@@ -118,6 +118,10 @@ $ sudo apt install universal-ctags
 ```
 $ sudo apt install translate-shell 
 ```
+### yarn
+```
+$ brew install yarn
+```
 
 ## Trouble shooting
 ### "システムプログラムの問題が見つかりました"ダイアログが表示される場合
