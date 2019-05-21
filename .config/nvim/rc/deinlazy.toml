@@ -1,6 +1,7 @@
 # denite.nvim
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+rev = 'ui'
 on_cmd = 'Denite'
 depends = [
     'neomru.vim',
