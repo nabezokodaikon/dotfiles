@@ -7,6 +7,7 @@ call deoplete#custom#option({
 
 call deoplete#custom#option('keyword_patterns', {
     \ '_': '[a-zA-Z_]\k*',
+    \ 'deoplete': ''
     \ 'haxe': ''
     \})
 

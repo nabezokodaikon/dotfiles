@@ -14,6 +14,10 @@ nnoremap gQ <Nop>
 " Switch to the normal mode.
 inoremap jj <ESC>
 
+" Disable completion
+inoremap <C-n> <Nop>
+inoremap <C-p> <Nop>
+
 " Change of the leader key. 
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
