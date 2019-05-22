@@ -52,8 +52,8 @@ nnoremap <silent> <Leader>o :<C-u>Denite outline -start-filter<CR>
 " Move to next/previous line of denite's buffer
 nnoremap <C-n> <Nop>
 nnoremap <C-p> <Nop>
-nnoremap <silent> <C-n> :<C-u>Denite -resume -cursor-pos=+1<CR>
-nnoremap <silent> <C-p> :<C-u>Denite -resume -cursor-pos=-1<CR>
+nnoremap <silent> <C-n> :<C-u>Denite -resume -cursor-pos=+1 -immediately<CR>
+nnoremap <silent> <C-p> :<C-u>Denite -resume -cursor-pos=-1 -immediately<CR>
 
 
 "--------------------------------
