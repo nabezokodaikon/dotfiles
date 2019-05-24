@@ -113,5 +113,10 @@ on_cmd = 'JaEnTranslate'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = 'yarn install --frozen-lockfile'
-on_ft = ['haxe', 'rust', 'scala']
+on_ft = [
+    'haxe', 
+    'rust',
+    'scala',
+    'typescript'
+    ]
 hook_source = 'source ~/.config/nvim/rc/plugins/coc.rc.vim'

@@ -10,7 +10,8 @@ call deoplete#custom#option('keyword_patterns', {
     \ 'denite-filter': '',
     \ 'haxe': '',
     \ 'rust': '',
-    \ 'scala': ''
+    \ 'scala': '',
+    \ 'typescript': ''
     \})
 
 call deoplete#custom#source('_', 
