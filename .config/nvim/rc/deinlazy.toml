@@ -43,15 +43,6 @@ repo = 'deoplete-plugins/deoplete-dictionary'
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-tag'
 
-# Completion for other language
-# Rust: https://github.com/rust-lang/rls
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-on_ft = 'rust'
-hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
-
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -128,5 +119,5 @@ on_cmd = 'JaEnTranslate'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = 'yarn install --frozen-lockfile'
-on_ft = ['haxe', 'scala']
+on_ft = ['haxe', 'rust', 'scala']
 hook_source = 'source ~/.config/nvim/rc/plugins/coc.rc.vim'
