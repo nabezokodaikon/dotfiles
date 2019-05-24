@@ -32,7 +32,7 @@ nmap <Leader>m <Plug>(easymotion-overwin-f2)
 " denite.nvim
 "--------------------------------
 " ファイル一覧
-nnoremap <silent> <Leader>f :<C-u>Denite file/rec -start-filter<CR>
+nnoremap <silent> <Leader>f :<C-u>Denite file/rec -start-filter -highlight-matched-char=Underlined<CR>
 " ファイル表示履歴
 nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
 " yank
