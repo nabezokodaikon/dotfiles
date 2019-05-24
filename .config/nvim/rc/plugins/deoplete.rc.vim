@@ -7,23 +7,25 @@ call deoplete#custom#option({
 
 call deoplete#custom#option('keyword_patterns', {
     \ '_': '[a-zA-Z_]\k*',
+    \ 'denite-filter': '',
+    \ 'scala': '',
     \ 'haxe': ''
     \})
 
-call deoplete#custom#option('sources', {
-    \ 'scala': ['buffer', 'file', 'member', 'omni', 'dictionary', 'tag'],
-    \})
+" call deoplete#custom#option('sources', {
+    " \ 'scala': ['buffer', 'file', 'member', 'omni', 'dictionary', 'tag'],
+    " \})
 
 call deoplete#custom#source('_', 
     \ 'matchers', ['matcher_head'])
 
-call deoplete#custom#var('omni', 'input_patterns', {
-    \ 'scala': [
-    \     '[^. *\t]\.\w*',
-    \     '[:\[,] ?\w*',
-    \     '^import .*'
-    \   ]
-    \})
+" call deoplete#custom#var('omni', 'input_patterns', {
+    " \ 'scala': [
+    " \     '[^. *\t]\.\w*',
+    " \     '[:\[,] ?\w*',
+    " \     '^import .*'
+    " \   ]
+    " \})
 
 call deoplete#enable()
 
