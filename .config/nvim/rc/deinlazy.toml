@@ -88,12 +88,6 @@ on_ft = 'typescript'
 repo = 'HerringtonDarkholme/yats.vim'
 on_ft = 'typescript'
 
-# Typescript tooling for Neovim
-[[plugins]]
-repo = 'mhartington/nvim-typescript'
-build = './install.sh'
-on_ft = 'typescript'
-
 # Vim configuration for Rust.
 [[plugins]]
 repo = 'rust-lang/rust.vim'
