@@ -19,10 +19,6 @@ repo = 'kana/vim-submode'
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 
-# 編集ファイルの全体または一部を実行する。
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
 # Color scheme
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
