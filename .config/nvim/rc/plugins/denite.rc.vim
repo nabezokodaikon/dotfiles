@@ -3,17 +3,17 @@
 "--------------------------------
 " Key mapping.
 call denite#custom#map(
-            \ 'insert',
-            \ '<C-n>',
-            \ '<denite:move_to_next_line>',
-            \ 'noremap'
-            \ )
+    \ 'insert',
+    \ '<C-n>',
+    \ '<denite:move_to_next_line>',
+    \ 'noremap'
+    \ )
 call denite#custom#map(
-            \ 'insert',
-            \ '<C-p>',
-            \ '<denite:move_to_previous_line>',
-            \ 'noremap'
-            \ )
+    \ 'insert',
+    \ '<C-p>',
+    \ '<denite:move_to_previous_line>',
+    \ 'noremap'
+    \ )
 
 " Command option.
 call denite#custom#option('_', 'winheight', 16)
@@ -45,15 +45,13 @@ call denite#custom#var('grep', 'default_opts',
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
+    \ denite#do_map('do_action')
   nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
+    \ denite#do_map('do_action', 'delete')
   nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
+    \ denite#do_map('do_action', 'preview')
   nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
+    \ denite#do_map('quit')
   nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
+    \ denite#do_map('open_filter_buffer')
 endfunction
