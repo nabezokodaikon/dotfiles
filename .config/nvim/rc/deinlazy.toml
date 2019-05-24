@@ -3,15 +3,12 @@
 repo = 'Shougo/denite.nvim'
 rev = 'ui'
 on_cmd = 'Denite'
-depends = [
-    'neomru.vim',
-    'neoyank.vim'
-    ]
 hook_source = 'source ~/.config/nvim/rc/plugins/denite.rc.vim'
 
 # denite.nvimでファイル表示履歴を表示する。
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+on_source = ['denite.nvim']
 hook_source = '''
     let g:neomru#file_mru_limit = 64
     let g:neomru#time_format = "%y/%m/%d %H:%M"
@@ -20,6 +17,7 @@ hook_source = '''
 # denite.vimでyankの履歴を表示する。
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
+on_source = ['denite.nvim']
 
 # File browser
 [[plugins]]
@@ -32,16 +30,14 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = 'source ~/.config/nvim/rc/plugins/deoplete.rc.vim'
-depends = [
-    'deoplete-dictionary',
-    'deoplete-tag'
-    ]
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-dictionary'
+on_source = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-tag'
+on_source = ['deoplete.nvim']
 
 # emmet-vim
 [[plugins]]
