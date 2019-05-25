@@ -50,7 +50,7 @@ function! s:defx_my_settings() abort
     \ defx#do_action('cd', ['..'])
     nnoremap <silent><buffer><expr> ~
     \ defx#do_action('cd')
-    nnoremap <silent><buffer><expr> q
+    nnoremap <silent><buffer><expr> <C-c>
     \ defx#do_action('quit')
     nnoremap <silent><buffer><expr> <Space>
     \ defx#do_action('toggle_select') . 'j'
