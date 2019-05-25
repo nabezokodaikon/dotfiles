@@ -108,7 +108,8 @@ on_cmd = 'JaEnTranslate'
 # Intellisense engine
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-build = 'yarn install --frozen-lockfile'
+rev = '*'
+build = './install.sh'
 on_ft = [
     'haxe', 
     'rust',
