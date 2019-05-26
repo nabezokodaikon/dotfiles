@@ -10,6 +10,13 @@
 :CocInstall coc-rls
 ```
 
+## Sources
+[neoclide/coc-sources](https://github.com/neoclide/coc-sources)
+```
+:CocInstall coc-dictionary
+:CocInstall coc-tag
+```
+
 ## Scala
 ### LSP server
 * [Metals](https://scalameta.org/metals/)
