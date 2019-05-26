@@ -52,7 +52,7 @@ $ ./coursier bootstrap \
 .metals
 project/.bloop
 ```
-#### 4. Scalaファイルを開いたときに、Metalsを起動する
+#### 5. Scalaファイルを開いたときに、Metalsを起動する
 * `1 - Import build`を選択する。
 * 表示しないを選択した場合は、`.metals`ディレクトリを削除して開き直す。
 
