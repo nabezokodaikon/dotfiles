@@ -29,7 +29,7 @@ call denite#custom#source('buffer', 'matchers',
 
 " Ripgrep command on file/rec source.
 call denite#custom#var('file/rec', 'command',
-    \ ['rg', '--hidden', '--glob', '!.git/*', '--files', '--sort-files'])
+    \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
 
 " Ripgrep command on grep source.
 " Reference 
@@ -39,7 +39,7 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'final_opts', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
-    \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*', '--color', 'never', '--sort-files'])
+    \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*', '--color', 'never'])
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
