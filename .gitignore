@@ -10,6 +10,7 @@
 .*~
 tags.lock
 /.vim/.netrwhist
+.metals
 
 # vim プラグインディレクトリを対象外にする
 /.vim/bundle/
