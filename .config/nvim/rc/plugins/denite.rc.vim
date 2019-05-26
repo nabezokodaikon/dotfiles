@@ -39,7 +39,7 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'final_opts', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
-    \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*', '--color', 'never'])
+    \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'])
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
