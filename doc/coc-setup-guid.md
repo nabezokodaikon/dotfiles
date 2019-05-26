@@ -18,11 +18,18 @@
 #### 1. Java8をインストールする
 Mac
 ```
+# インストール
 $ brew cask install caskroom/versions/adoptopenjdk8
+# 環境変数を設定
 $ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 ```
 Linux
 ```
+# OpenJDKのバージョンを検索
+$ sudo apt search openjdk-\(\.\)\+-jdk$
+# インストール
+sudo apt install openjdk-8-jdk
+# 環境変数を設定
 $ export JAVA_HOME=$(readlink -f `which javac 2>/dev/null` | sed "s:/bin/javac::")
 ```
 #### 2. SBTに設定を追加する。
