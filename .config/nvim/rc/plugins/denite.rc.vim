@@ -24,7 +24,8 @@ call denite#custom#option('_', 'previewheight', 100)
 call denite#custom#source('_', 'matchers',
     \ ['matcher/substring'])
 
-call denite#custom#source('buffer', 'matchers',
+" Matchers
+call denite#custom#source('_', 'matchers',
     \ ['matcher/fuzzy', 'matcher/project_files'])
 
 " Ripgrep command on file/rec source.
