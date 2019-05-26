@@ -25,7 +25,14 @@ Linux
 ```
 $ export JAVA_HOME=$(readlink -f `which javac 2>/dev/null` | sed "s:/bin/javac::")
 ```
-#### 2. Metalsを生成する
+#### 2. SBTに設定を追加する。
+`~/.sbt/1.0/plugins/plugins.sbt`
+```
+resolvers += Resolver.sonatypeRepo("snapshots")
+addSbtPlugin("org.scalameta" % "sbt-metals" % "0.5.2+29-221f01bf-SNAPSHOT")
+addSbtPlugin("ch.epfl.scala" % "sbt-bloop" % "1.2.5")
+```
+#### 3. Metalsを生成する
 ```
 $ curl -L -o coursier https://git.io/coursier
 $ chmod 744 coursier
@@ -39,7 +46,7 @@ $ ./coursier bootstrap \
   -o /usr/local/bin/metals-vim -f
 ```
 `coursier`ファイルは削除しても構わない。
-#### 3. .gitignoreに追加する 
+#### 4. .gitignoreに追加する 
 ```
 .bloop
 .metals
