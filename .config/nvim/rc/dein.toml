@@ -25,7 +25,6 @@ repo = 'nanotech/jellybeans.vim'
 hook_add = '''
     let g:jellybeans_overrides = {
     \   'background': {
-    \       'ctermbg': 'none',
     \       '256ctermbg': 'none'
     \   },
     \   'CursorLine': {
@@ -33,6 +32,9 @@ hook_add = '''
     \   },
     \   'CursorColumn': {
     \       '256ctermbg': '236'
+    \   },
+    \   'Comment': {
+    \       '256ctermfg': '248'
     \   },
     \   'Visual': {
     \       '256ctermbg': '238'
@@ -48,14 +50,17 @@ hook_add = '''
     \   },
     \   'TabLineSel': {
     \       'attr': 'bold'
-    \   },
-    \   'StatusLine': {
-    \       'attr': 'bold'
-    \   },
-    \   'StatusLineNC': {
-    \       'attr': 'bold'
     \   }
     \}
 
     colorscheme jellybeans
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+    let g:airline_theme = 'jellybeans'
 '''

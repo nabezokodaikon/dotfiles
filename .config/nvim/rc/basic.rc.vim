@@ -29,6 +29,9 @@ set number
 " 常にタブラインを表示する。
 set showtabline=2
 
+" vim-airlineを使用するため、現在のモードを非表示にする。
+set noshowmode
+
 " シンタックスハイライトを有効
 syntax on
 

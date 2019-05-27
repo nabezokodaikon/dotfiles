@@ -19,6 +19,7 @@ call denite#custom#map(
 call denite#custom#option('_', 'winheight', 16)
 call denite#custom#option('_', 'highlight_mode_insert', 'Search')
 call denite#custom#option('_', 'previewheight', 100)
+call denite#custom#option('_', 'statusline', v:false)
 
 " Change matches to perfect matching.
 call denite#custom#source('_', 'matchers',
