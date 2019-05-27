@@ -33,9 +33,6 @@ hook_add = '''
     \   'CursorColumn': {
     \       '256ctermbg': '236'
     \   },
-    \   'Comment': {
-    \       '256ctermfg': '248'
-    \   },
     \   'Visual': {
     \       '256ctermbg': '238'
     \   },
