@@ -1,33 +1,19 @@
 "--------------------------------
 " denite.nvim
 "--------------------------------
-" Key mapping.
-call denite#custom#map(
-    \ 'insert',
-    \ '<C-n>',
-    \ '<denite:move_to_next_line>',
-    \ 'noremap'
-    \ )
-call denite#custom#map(
-    \ 'insert',
-    \ '<C-p>',
-    \ '<denite:move_to_previous_line>',
-    \ 'noremap'
-    \ )
-
 " Command option.
 call denite#custom#option('_', 'winheight', 16)
 call denite#custom#option('_', 'highlight_mode_insert', 'Search')
 call denite#custom#option('_', 'previewheight', 100)
 call denite#custom#option('_', 'statusline', v:false)
 
-" Change matches to perfect matching.
-call denite#custom#source('_', 'matchers',
-    \ ['matcher/substring'])
-
 " Matchers
 call denite#custom#source('_', 'matchers',
-    \ ['matcher/fuzzy', 'matcher/project_files'])
+    \ ['matcher/substring', 'matcher/project_files'])
+
+" Sorters
+call denite#custom#source('file/rec', 'sorters',
+    \ ['sorter/word'])
 
 " Ripgrep command on file/rec source.
 call denite#custom#var('file/rec', 'command',
@@ -37,8 +23,9 @@ call denite#custom#var('file/rec', 'command',
 " Reference 
 " https://github.com/BurntSushi/ripgrep/issues/73
 call denite#custom#var('grep', 'command', ['rg'])
-call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
     \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'])
@@ -46,10 +33,19 @@ call denite#custom#var('grep', 'default_opts',
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-    \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> <C-c>
-    \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-    \ denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer><expr> <CR>
+        \ denite#do_map('do_action')
+    nnoremap <silent><buffer><expr> i
+        \ denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer><expr> <C-c>
+        \ denite#do_map('quit')
+endfunction
+
+" Define filter mappings
+autocmd FileType denite-filter call s:denite_filter_my_settings()
+function! s:denite_filter_my_settings() abort
+    inoremap <silent><buffer><expr> <C-c>
+        \ denite#do_map('quit')
+    nnoremap <silent><buffer><expr> <C-c>
+        \ denite#do_map('quit')
 endfunction
