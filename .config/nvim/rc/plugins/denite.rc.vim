@@ -13,7 +13,7 @@ call denite#custom#source('_', 'matchers',
 
 " Sorters
 call denite#custom#source('file/rec', 'sorters',
-    \ ['sorter/word'])
+    \ ['sorter/rank'])
 
 " Ripgrep command on file/rec source.
 call denite#custom#var('file/rec', 'command',
