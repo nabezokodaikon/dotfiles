@@ -1,13 +1,10 @@
 # coc.nvim setup guide
 [coc.nvim](https://github.com/neoclide/coc.nvim)
 
-## Haxe
-[Haxe support #510](https://github.com/neoclide/coc.nvim/issues/510)
-
-## Rust
-[neoclide/coc-rls](https://github.com/neoclide/coc-rls)
+## Warning
+extension rootディレクトリが空だとcocのinitializeに失敗してしまうので、作成しておく必要がある。
 ```
-:CocInstall coc-rls
+$ mkdir -p ~/.config/coc/extensions 
 ```
 
 ## Sources
@@ -16,6 +13,9 @@
 :CocInstall coc-dictionary
 :CocInstall coc-tag
 ```
+
+## Haxe
+[Haxe support #510](https://github.com/neoclide/coc.nvim/issues/510)
 
 ## Scala
 ### LSP server
@@ -69,9 +69,3 @@ project/.bloop
 #### 5. Scalaファイルを開いたときに、Metalsを起動する
 * `1 - Import build`を選択する。
 * 表示しないを選択した場合は、`.metals`ディレクトリを削除して開き直す。
-
-## TypeScript
-[neoclide/coc-tsserver](https://github.com/neoclide/coc-tsserver)
-```
-:CocInstall coc-tsserver
-```
