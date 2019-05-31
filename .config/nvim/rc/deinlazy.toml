@@ -96,10 +96,15 @@ on_cmd = 'JaEnTranslate'
 repo = 'neoclide/coc.nvim'
 rev = '*'
 build = './install.sh'
-on_ft = [
-    'haxe', 
-    'rust',
-    'scala',
-    'typescript'
-    ]
 hook_source = 'source ~/.config/nvim/rc/plugins/coc.rc.vim'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'neoclide/coc-tsserver'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
+
+[[plugins]]
+repo = 'neoclide/coc-rls'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
