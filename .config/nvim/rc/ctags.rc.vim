@@ -7,7 +7,6 @@ function! s:generateTagsFile()
     call system('ctags -R . /dev/null 2>&1')
     let ret = v:shell_error
     if ret == 0
-        call deoplete#refresh()
         echon 'Success to generate tags file!'
     else
         echon 'Failed to generate tags file!'
