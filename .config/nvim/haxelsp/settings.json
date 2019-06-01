@@ -1,0 +1,10 @@
+{
+  "initializationOptions": {
+    "displayServerConfig": {
+      "env": {},
+      "path": "haxe",
+      "arguments": []
+    },
+    "displayArguments": ["build.hxml"]
+  }
+}
