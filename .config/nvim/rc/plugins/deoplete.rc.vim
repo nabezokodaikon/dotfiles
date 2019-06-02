@@ -23,9 +23,9 @@ call deoplete#custom#option('keyword_patterns', {
    " \ 'denite-filter': '',	
    " \})	
 
-call deoplete#custom#var('omni', 'input_patterns', {
-    \ 'haxe': '[^. *\t]\.\w*',
-    \ })
+" call deoplete#custom#var('omni', 'input_patterns', {
+    " \ 'haxe': '[^. *\t]\.\w*',
+    " \ })
 
 " call deoplete#custom#option('omni_patterns', {
     " \ 'haxe': '[^. *\t]\.\w*'
@@ -39,7 +39,11 @@ call deoplete#custom#var('omni', 'input_patterns', {
 
 " call deoplete#custom#option('sources', {
     " \ 'hexe': ['omni', 'dictionary'],
-    " \ 'scala': ['buffer', 'file', 'member', 'omni', 'dictionary', 'tag'],
+    " \ 'scala': ['buffer', 'file', 'member', 'omni', 'dictionary'],
+    " \})
+" call deoplete#custom#option('sources', {
+    " \ 'hexe': ['omni', 'dictionary'],
+    " \ 'scala': ['omni', 'dictionary'],
     " \})
 
 " call deoplete#custom#var('omni', 'input_patterns', {
