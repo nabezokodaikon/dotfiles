@@ -125,5 +125,5 @@ on_cmd = 'JaEnTranslate'
 repo = 'autozimu/LanguageClient-neovim'	
 rev = 'next'	
 build = 'bash install.sh'	
-on_ft = ['haxe', 'rust']
+on_ft = ['haxe', 'rust', 'scala']
 hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
