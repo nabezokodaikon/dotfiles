@@ -20,10 +20,6 @@ $ ./git-config.sh
 
 ## Mac
 ### Homebrew
-#### Hyper
-```
-$ brew cask install hyper
-```
 #### Java
 ```
 $ brew cask install java
@@ -70,20 +66,33 @@ $ pip3 install neovim
 # Neovimで以下のコマンドを実行する。
 :UpdateRemotePlugins
 ```
+### Scala
+[Metals](http://scalameta.org/metals/docs/editors/vim.html)
+```
+$ curl -L -o coursier https://git.io/coursier
+$ chmod +x coursier
+$ ./coursier bootstrap \
+  --java-opt -Xss4m \
+  --java-opt -Xms100m \
+  --java-opt -Dmetals.client=LanguageClient-neovim \
+  org.scalameta:metals_2.12:0.5.2 \
+  -r bintray:scalacenter/releases \
+  -r sonatype:snapshots \
+  -o /usr/local/bin/metals-vim -f
 ```
 #### Haxe
-Haxe4の最新版(Nightly Builds)をインストールする。
 ```
+# Haxe4の最新版(Nightly Builds)をインストールする。
 $ git clone https://github.com/vshaxe/haxe-language-server.git --recursive
 $ cd haxe-languageserver
 
-# 上記リポジトリの.travis.ymlに記述してあるコマンドを実行する。
+# .travis.ymlに記述してあるコマンドを実行し、server.jsを生成する。
 $ haxelib git vshaxe-build https://github.com/vshaxe/vshaxe-build
 $ haxelib run vshaxe-build -t language-server -t language-server-tests -m both
-# haxe-languageserver/bin/server.js が生成されていることを確認する。
 
+# 生成したserver.jsを、dotfile内のserver.jsを置き換える。
+$ mv haxe-languageserver/bin/server.js ~/dotfiles/.config/nvim/haxelsp/server.js
 ```
-
 
 
 ### Translate Shell
