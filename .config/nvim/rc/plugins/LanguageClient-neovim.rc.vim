@@ -7,7 +7,6 @@ set signcolumn=yes
 
 let g:LanguageClient_useVirtualText = 0	
 let g:LanguageClient_autoStart = 1
-let g:LanguageClient_settingsPath = '~/.config/nvim/haxelsp/settings.json'
 let g:LanguageClient_loadSettings = 1
 
 let g:LanguageClient_serverCommands = {	

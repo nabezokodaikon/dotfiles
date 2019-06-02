@@ -40,17 +40,9 @@ augroup fileTypeDeclaration
     autocmd BufRead,BufNewFile *.hx nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
     autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
     autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
-    autocmd BufRead,BufNewFile *.rs nmap <silent> <Leader>d <Plug>(coc-definition)
-    autocmd BufRead,BufNewFile *.scala nmap <silent> <Leader>d <Plug>(coc-definition)
-    autocmd BufRead,BufNewFile *.ts nmap <silent> <Leader>d <Plug>(coc-definition)
-    autocmd BufRead,BufNewFile *.tsx nmap <silent> <Leader>d <Plug>(coc-definition)
 augroup END
 
 augroup fileTypeVariableRename
     autocmd!
     autocmd BufRead,BufNewFile *.hx nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
-    autocmd BufRead,BufNewFile *.rs nmap <F2> <Plug>(coc-rename)
-    autocmd BufRead,BufNewFile *.scala nmap <F2> <Plug>(coc-rename)
-    autocmd BufRead,BufNewFile *.ts nmap <F2> <Plug>(coc-rename)
-    autocmd BufRead,BufNewFile *.tsx nmap <F2> <Plug>(coc-rename)
 augroup END

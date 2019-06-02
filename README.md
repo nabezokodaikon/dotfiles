@@ -70,13 +70,6 @@ $ pip3 install neovim
 # Neovimで以下のコマンドを実行する。
 :UpdateRemotePlugins
 ```
-#### coc.nvim
-```
-$ brew install yarn
-
-# Neovimで以下のコマンドを実行する。
-:CocInstall coc-json # For Haxe
-:CocInstall coc-rls # For Rust
 ```
 #### Haxe
 Haxe4の最新版(Nightly Builds)をインストールする。
@@ -89,10 +82,6 @@ $ haxelib git vshaxe-build https://github.com/vshaxe/vshaxe-build
 $ haxelib run vshaxe-build -t language-server -t language-server-tests -m both
 # haxe-languageserver/bin/server.js が生成されていることを確認する。
 
-# coc-settings.jsonに生成されたserver.jsのパスを記述する。
-
-# Neovimで以下のコマンドを実行する。
-:CocInstall coc-json # For Haxe
 ```
 
 
