@@ -31,6 +31,19 @@ on_source = ['deoplete.nvim']
 repo = 'deoplete-plugins/deoplete-tag'	
 on_source = ['deoplete.nvim']
 
+[[plugins]]	
+repo = 'lighttiger2505/deoplete-vim-lsp'	
+on_source = ['deoplete.nvim']
+hook_source = 'source ~/.config/nvim/rc/plugins/vim-lsp.rc.vim'
+
+[[plugins]]	
+repo = 'prabirshrestha/vim-lsp'	
+on_source = ['deoplete-vim-lsp']
+
+[[plugins]]	
+repo = 'prabirshrestha/async.vim'	
+on_source = ['deoplete-vim-lsp']
+
 # File browser
 [[plugins]]
 repo = 'Shougo/defx.nvim'
@@ -121,9 +134,9 @@ on_cmd = 'JaEnTranslate'
 # build = 'yarn install --frozen-lockfile'
 # on_source = ['coc.nvim']
 
-[[plugins]]	
-repo = 'autozimu/LanguageClient-neovim'	
-rev = 'next'	
-build = 'bash install.sh'	
-on_ft = ['haxe', 'rust', 'scala']
-hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
+# [[plugins]]	
+# repo = 'autozimu/LanguageClient-neovim'	
+# rev = 'next'	
+# build = 'bash install.sh'	
+# on_ft = ['haxe', 'rust', 'scala']
+# hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
