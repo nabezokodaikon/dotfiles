@@ -57,7 +57,6 @@ call deoplete#custom#option('keyword_patterns', {
 call deoplete#custom#option('sources', {
     \ 'hexe': ['buffer', 'dictionary', 'LanguageClient'],
     \ 'scala': ['buffer', 'dictionary', 'LanguageClient'],
-    \ 'rust': ['buffer', 'dictionary', 'LanguageClient'],
     \})
    
 " 補完の余計な文字を除去する。

@@ -38,11 +38,11 @@ hook_source = 'source ~/.config/nvim/rc/plugins/vim-lsp.rc.vim'
 
 [[plugins]]	
 repo = 'prabirshrestha/vim-lsp'	
-on_source = ['deoplete-vim-lsp']
+on_source = ['deoplete.nvim']
 
 [[plugins]]	
 repo = 'prabirshrestha/async.vim'	
-on_source = ['deoplete-vim-lsp']
+on_source = ['deoplete.nvim']
 
 # File browser
 [[plugins]]

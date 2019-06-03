@@ -10,6 +10,7 @@ export SHELL=/usr/bin/zsh
 # PATH
 #--------------------------------
 export PATH=$PATH:~/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 
 # Java
