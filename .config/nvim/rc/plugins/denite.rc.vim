@@ -8,8 +8,8 @@ call denite#custom#option('_', 'previewheight', 100)
 call denite#custom#option('_', 'statusline', v:false)
 
 " Matchers
-call denite#custom#source('_', 'matchers',
-    \ ['matcher/substring', 'matcher/project_files'])
+" call denite#custom#source('_', 'matchers',
+    " \ ['matcher/substring', 'matcher/project_files'])
 
 " Sorters
 call denite#custom#source('file/rec', 'sorters',
