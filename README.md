@@ -66,7 +66,7 @@ $ pip3 install neovim
 # Neovimで以下のコマンドを実行する。
 :UpdateRemotePlugins
 ```
-### Scala
+#### Scala
 [Metals](http://scalameta.org/metals/docs/editors/vim.html)
 ```
 $ curl -L -o coursier https://git.io/coursier
@@ -94,7 +94,6 @@ $ haxelib run vshaxe-build -t language-server -t language-server-tests -m both
 $ mv haxe-languageserver/bin/server.js ~/dotfiles/.config/nvim/haxelsp/server.js
 ```
 
-
 ### Translate Shell
 [Translate Shell](https://github.com/soimort/translate-shell)
 ```
@@ -104,22 +103,18 @@ $ make
 $ make install
 ```
 
-
 ## Arch Linux
 ### Neovim
 ```
 $ apacman -S --noconfirm python-pip 
 $ pip install --user neovim
 ```
-
 ### grep
 grepには`ripgrep`を使用する。
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
-
 ### tmux
 #### Clipboard
 * `xclip`を使用するため、別途xclipをインストールする。
-
 ### Ctags
 本家の`Ctags`は2009年以降更新が途絶えているため、`Universal Ctags`を使用する。
 * [Universal Ctags](https://github.com/universal-ctags/ctags)
@@ -141,9 +136,8 @@ grepには`ripgrep`を使用する。
 
 >Reference
 * [zshの設定ファイルの読み込み順序と使い方Tipsまとめ](http://qiita.com/muran001/items/7b104d33f5ea3f75353f)
-
 ### Color
 * [Bash tips: Colors and formatting](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
 
-
 ## TODO
+LanguageClient-neovim専用のREADMEを作る。
