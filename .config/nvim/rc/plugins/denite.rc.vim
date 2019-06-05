@@ -49,6 +49,12 @@ function! s:denite_my_settings() abort
         \ denite#do_map('nop')
     nnoremap <silent><buffer><expr> <C-w>k
         \ denite#do_map('nop')
+    nnoremap <silent><buffer><expr> gn
+        \ denite#do_map('nop')
+    nnoremap <silent><buffer><expr> gt
+        \ denite#do_map('nop')
+    nnoremap <silent><buffer><expr> gT
+        \ denite#do_map('nop')
 endfunction
 
 " Define filter mappings
