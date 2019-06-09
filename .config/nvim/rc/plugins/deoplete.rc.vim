@@ -54,6 +54,9 @@ call deoplete#custom#option('keyword_patterns', {
 call deoplete#custom#source('_',
     \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
+call denite#custom#source('file_mru',
+    \ 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
+
 call deoplete#custom#option('sources', {
     \ 'hexe': ['buffer', 'dictionary', 'LanguageClient'],
     \ 'scala': ['buffer', 'dictionary', 'LanguageClient'],
