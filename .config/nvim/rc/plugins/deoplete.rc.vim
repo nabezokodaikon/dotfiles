@@ -51,8 +51,8 @@ call deoplete#custom#option('keyword_patterns', {
     " \   ]
     " \})
 
-" call deoplete#custom#source('_', 	
-   " \ 'matchers', ['matcher_head'])	
+call deoplete#custom#source('_',
+    \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
 call deoplete#custom#option('sources', {
     \ 'hexe': ['buffer', 'dictionary', 'LanguageClient'],
