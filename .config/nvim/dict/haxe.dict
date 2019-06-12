@@ -2,6 +2,7 @@ Enum
 EnumValue
 case
 class
+default
 enum
 extends
 function
@@ -14,4 +15,5 @@ return
 static
 super
 switch
+typedef
 var
