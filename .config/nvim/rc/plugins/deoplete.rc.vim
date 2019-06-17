@@ -55,6 +55,7 @@ call deoplete#custom#source('_',
     \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
 call deoplete#custom#option('sources', {
+    \ 'hexe': ['buffer', 'dictionary', 'LanguageClient'],
     \ 'scala': ['buffer', 'dictionary', 'LanguageClient'],
     \ 'rust': ['buffer', 'dictionary', 'LanguageClient'],
     \})
