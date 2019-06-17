@@ -19,6 +19,10 @@ repo = 'kana/vim-submode'
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 
+# Git操作
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
 # Color scheme
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
