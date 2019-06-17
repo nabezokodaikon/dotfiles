@@ -1,5 +1,14 @@
 # tig 基本設定
 
+# main view
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+
+# 差分表示に diff-highlight
+set diff-highlight = true
+
+# merge に diffを表示する
+set diff-options = -m --first-parent
+
 # 差分の前後の表示行数を指定。 
 set diff-context = 8
 
