@@ -28,7 +28,11 @@ bind generic G move-last-line
 
 # main key binds.
 bind main G none
+bind main B !git rebase -i %(commit)
 
 # status key binds.
 bind status C none
 bind status C !git commit -v
+
+# diff key binds
+bind diff B !git rebase -i %(commit)
