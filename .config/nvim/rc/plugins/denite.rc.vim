@@ -19,6 +19,9 @@ call denite#custom#source('file/rec', 'sorters',
 call denite#custom#var('file/rec', 'command',
     \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
 
+call denite#custom#source('buffer', 'matchers',
+    \ ['matcher/fuzzy', 'matcher/project_files'])
+
 call denite#custom#source('file_mru', 'matchers',
     \ ['matcher/fuzzy', 'matcher/project_files'])
 
