@@ -19,9 +19,9 @@ let g:LanguageClient_serverCommands = {
     \ 'scala': ['metals-vim']
     \ }	
 
-let g:LanguageClient_rootMarkers = {
-    \ 'haxe': ['build.hxml']
-    \ }
+" let g:LanguageClient_rootMarkers = {
+    " \ 'haxe': ['build.hxml']
+    " \ }
 
 function! s:restartLanguageClient()	
     LanguageClientStop	
