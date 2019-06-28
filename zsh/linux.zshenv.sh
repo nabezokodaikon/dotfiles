@@ -11,6 +11,7 @@ export SHELL=/usr/bin/zsh
 #--------------------------------
 export PATH=$PATH:~/bin
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/opt/node@10/bin
 
 
 # Java
