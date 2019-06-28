@@ -4,7 +4,11 @@
 
 # PATH
 #--------------------------------
-export PATH=$HOME/bin:$PATH
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:/usr/local/opt/node@10/bin
 
 
 # Alias
