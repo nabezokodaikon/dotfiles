@@ -108,7 +108,7 @@ $ npm install --global neovim
 ```
 ### ripgrep
 ```
-$ sudo apt install ripgrep
+$ brew install ripgrep
 ```
 ### universal-ctags
 ```
