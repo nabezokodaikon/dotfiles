@@ -11,6 +11,11 @@ export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/opt/node@10/bin:$PATH
 
 
+# Linux brew 
+#--------------------------------
+umask 002
+
+
 # Alias
 #--------------------------------
 alias ls="ls --color=auto"
