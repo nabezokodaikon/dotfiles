@@ -77,6 +77,7 @@ $ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 ### rmtree
 ```
 $ brew tap beeftornado/rmtree
+$ brew install beeftornado/rmtree/brew-rmtree
 ```
 ### 開発ツールインストール
 ```
@@ -96,7 +97,6 @@ $ brew install neovim
 ```
 $ brew install python3
 $ pip3 install pynvim
-$ pip3 install websocket-client sexpdata
 
 $ brew install python2
 $ pip2 install pynvim
@@ -112,15 +112,11 @@ $ sudo apt install ripgrep
 ```
 ### universal-ctags
 ```
-$ sudo apt install universal-ctags
+$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 ### Translate
 ```
-$ sudo apt install translate-shell 
-```
-### yarn
-```
-$ brew install yarn
+$ brew install translate-shell
 ```
 
 ## Trouble shooting
