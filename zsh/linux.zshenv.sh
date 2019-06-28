@@ -7,13 +7,6 @@
 export SHELL=/usr/bin/zsh
 
 
-# PATH
-#--------------------------------
-export PATH=$PATH:~/bin
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/opt/node@10/bin
-
-
 # Java
 #--------------------------------
 export JAVA_HOME=$(readlink -f `which javac 2>/dev/null` | sed "s:/bin/javac::")
