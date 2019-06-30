@@ -71,6 +71,11 @@ call deoplete#custom#source('_', 'converters', [
     \ 'converter_auto_delimiter',
     \])
 
-call deoplete#enable()	
 
+" Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
+
+" TABで補完を決定する。
+inoremap <expr><TAB>  pumvisible() ? deoplete#mappings#close_popup() : "<TAB>"
+
+call deoplete#enable()	
