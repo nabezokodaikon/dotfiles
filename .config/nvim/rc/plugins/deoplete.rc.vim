@@ -87,4 +87,8 @@ inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
 " TABで補完を決定する。
 inoremap <expr><TAB>  pumvisible() ? deoplete#mappings#close_popup() : "<TAB>"
 
+" call deoplete#custom#option('profile', v:true)
+" call deoplete#enable_logging('DEBUG', 'deoplete.log')
+" call deoplete#custom#source('LanguageClient', 'is_debug_enabled', 1)
+
 call deoplete#enable()	
