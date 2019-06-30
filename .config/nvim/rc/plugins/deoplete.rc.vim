@@ -71,6 +71,15 @@ call deoplete#custom#source('_', 'converters', [
     \ 'converter_auto_delimiter',
     \])
 
+" 補完候補からスニペットを除外する。
+call deoplete#custom#source('LanguageClient', 'converters', ['converter_reorder_attr'])
+call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
+    \ 'haxe': {
+    \    'kind': [
+    \      '!Snippet'
+    \    ]
+    \ }
+    \})
 
 " Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
