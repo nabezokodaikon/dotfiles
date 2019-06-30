@@ -51,7 +51,6 @@ call deoplete#custom#option('keyword_patterns', {
     " \   ]
     " \})
 
-
 call deoplete#custom#source('_',
     \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
@@ -71,11 +70,25 @@ call deoplete#custom#source('_', 'converters', [
     \ 'converter_auto_delimiter',
     \])
 
+" 補完候補からスニペットを除外する。
+call deoplete#custom#source('LanguageClient', 'converters', ['converter_reorder_attr'])
+call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
+    \ 'haxe': {
+    \    'kind': [
+    \      '!Snippet'
+    \    ]
+    \ }
+    \})
 
 " Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
 
 " TABで補完を決定する。
 inoremap <expr><TAB>  pumvisible() ? deoplete#mappings#close_popup() : "<TAB>"
+
+" ログ出力(カレントディレクトリに出力される。)
+" call deoplete#custom#option('profile', v:true)
+" call deoplete#enable_logging('DEBUG', 'deoplete.log')
+" call deoplete#custom#source('LanguageClient', 'is_debug_enabled', 1)
 
 call deoplete#enable()	
