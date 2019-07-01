@@ -6,9 +6,9 @@
 #--------------------------------
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/sbin
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/opt/node@10/bin
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/opt/node@10/bin:$PATH
 
 
 # Linux brew 
