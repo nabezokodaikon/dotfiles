@@ -17,6 +17,9 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> o
     \ defx#do_action('open_or_close_tree')
 
+  nnoremap <silent><buffer><expr> <CR>
+	  \ defx#do_action('open')
+
   nnoremap <silent><buffer><expr> <C-n>
     \ defx#do_action('new_multiple_files')
 
