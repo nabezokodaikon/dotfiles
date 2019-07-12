@@ -77,6 +77,11 @@ on_ft = 'toml'
 repo = 'leafgarland/typescript-vim'
 on_ft = 'typescript'
 
+# Vue.js syntax
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
 # Provides more syntax highlighting and DOM keywords for TypeScript
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
