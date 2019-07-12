@@ -23,6 +23,7 @@ augroup fileTypeIndent
     autocmd BufRead,BufNewFile *.scala setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.ts setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.tsx setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile *.vue setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.xml setlocal tabstop=2 shiftwidth=2
 augroup END
 
