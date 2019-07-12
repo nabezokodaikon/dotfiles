@@ -40,12 +40,12 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html', 'css', 'javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']
+on_ft = ['html', 'css', 'javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'vue']
 hook_source = '''
     let g:user_emmet_install_global = 0
     augroup emmet-vim
         autocmd!
-        autocmd FileType html,css,javascript,javascript.jsx,typescript,typescript.tsx EmmetInstall
+        autocmd FileType html,css,javascript,javascript.jsx,typescript,typescript.tsx,vue EmmetInstall
     augroup END
 '''
 
