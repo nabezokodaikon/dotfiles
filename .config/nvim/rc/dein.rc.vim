@@ -7,7 +7,7 @@ if !isdirectory(expand($CACHE))
 endif
 
 let s:dein_dir = expand('$CACHE/dein')
-let s:dein_repo_dir = s:dein_dir . '\repos\github.com\Shougo\dein.vim'
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if &runtimepath !~# '/dein.vim'
     if !isdirectory(s:dein_repo_dir)
         execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
