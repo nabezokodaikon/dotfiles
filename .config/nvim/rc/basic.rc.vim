@@ -69,7 +69,11 @@ set autoread
 set clipboard+=unnamedplus
 
 " ターミナルで使用するシェルを指定
-set shell=/bin/sh
+if IsWindows()
+    " set shell=/bin/sh
+else
+    set shell=/bin/sh
+endif
 
 
 " インデント設定(規定値) 
