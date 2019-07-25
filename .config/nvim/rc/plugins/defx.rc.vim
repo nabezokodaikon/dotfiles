@@ -59,5 +59,8 @@ function! s:defx_my_settings() abort
 
   nnoremap <silent><buffer><expr> <C-g>
     \ defx#do_action('print')
+
+  nnoremap <silent><buffer><expr> ~
+    \ defx#do_action('change_vim_cwd')
   
 endfunction
