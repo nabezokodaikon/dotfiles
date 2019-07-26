@@ -27,6 +27,9 @@ repo = "tpope/vim-fugitive"
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
 hook_add = '''
+    let g:jellybeans_use_gui_italics=0
+    let g:jellybeans_use_term_italics=0
+
     let g:jellybeans_overrides = {
     \   'background': {
     \       '256ctermbg': 'none'
