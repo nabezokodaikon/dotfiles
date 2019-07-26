@@ -43,12 +43,6 @@ elseif IsMac()
 endif
 
 
-" nvim-qt font setting.
-if IsWindows()
-    set guifont=MyricaM\ M:h13
-endif
-
-
 " プラグイン管理設定
 source ~/.config/nvim/rc/dein.rc.vim
 
