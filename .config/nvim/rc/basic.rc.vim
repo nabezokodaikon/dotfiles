@@ -23,6 +23,9 @@ set nobackup
 " ]     ] キー      Insert,Replace
 set whichwrap=b,s,h,l,<,>,[,]
 
+" カーソルを点滅させない。
+set guicursor=a:blinkon0
+
 " 行番号を表示する
 set number
 
