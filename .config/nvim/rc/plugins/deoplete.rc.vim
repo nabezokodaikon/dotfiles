@@ -81,10 +81,10 @@ call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
     \})
 
 " Enterで補完を決定する。
-inoremap <expr><CR>  pumvisible() ? deoplete#mappings#close_popup() : "<CR>"
+inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 
 " TABで補完を決定する。
-inoremap <expr><TAB>  pumvisible() ? deoplete#mappings#close_popup() : "<TAB>"
+inoremap <expr><TAB>  pumvisible() ? deoplete#close_popup() : "<TAB>"
 
 " ログ出力(カレントディレクトリに出力される。)
 " call deoplete#custom#option('profile', v:true)
