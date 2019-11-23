@@ -35,7 +35,7 @@ let g:loaded_python_provider = 0
 
 " Set path on providers
 if IsWindows()
-    let g:python3_host_prog = 'C:\workspace\tool\Python\Python37\python.exe'
+    let g:python3_host_prog = 'C:\workspace\tool\Python\Python38-32\python.exe'
     " let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 elseif IsMac()
     let g:python3_host_prog = '/usr/local/bin/python3'
