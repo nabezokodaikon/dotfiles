@@ -11,6 +11,9 @@ let g:LanguageClient_loadSettings = 1
 
 if &ft=="haxe"
     let g:LanguageClient_settingsPath = '~/dotfiles/.config/nvim/haxelsp/settings.json'
+    let g:LanguageClient_rootMarkers = {
+        \ 'haxe': ['build.hxml']
+        \ }
 endif
 
 let g:LanguageClient_serverCommands = {	
@@ -19,6 +22,3 @@ let g:LanguageClient_serverCommands = {
     \ 'scala': ['metals-vim']
     \ }	
 
-let g:LanguageClient_rootMarkers = {
-    \ 'haxe': ['build.hxml']
-    \ }
