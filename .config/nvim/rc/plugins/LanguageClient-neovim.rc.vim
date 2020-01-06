@@ -22,16 +22,3 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_rootMarkers = {
     \ 'haxe': ['build.hxml']
     \ }
-
-function! s:restartLanguageClient()	
-    LanguageClientStop	
-    sleep 300m	
-    LanguageClientStart	
-endfunction	
-
-" augroup languageClient-neovim	
-    " autocmd!	
-    " autocmd BufWritePre *.rs call s:restartLanguageClient()	
-" augroup END	
-
-command! LanguageClientReStart call s:restartLanguageClient()	
