@@ -109,8 +109,8 @@ repo = 'nabezokodaikon/jaen-translate.vim'
 on_cmd = 'JaEnTranslate'
 
 [[plugins]]	
-repo = 'nabezokodaikon/LanguageClient-neovim'	
-rev = 'feature/#939'	
+repo = 'autozimu/LanguageClient-neovim'	
+rev = 'next'	
 hook_post_update = '''
 	if IsWindows()
 	    call system('powershell -executionpolicy bypass -File install.ps1')
