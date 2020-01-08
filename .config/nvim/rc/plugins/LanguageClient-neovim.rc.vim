@@ -5,7 +5,7 @@ set hidden
 set completeopt=menu	
 set signcolumn=yes	
 
-let g:LanguageClient_useVirtualText = 0	
+let g:LanguageClient_useVirtualText = 'No'
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loadSettings = 1
 
@@ -22,3 +22,8 @@ let g:LanguageClient_serverCommands = {
     \ 'scala': ['metals-vim']
     \ }	
 
+let $RUST_BACKTRACE = 1
+let g:LanguageClient_loggingLevel = 'INFO'
+let g:LanguageClient_virtualTextPrefix = ''
+let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
+let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
