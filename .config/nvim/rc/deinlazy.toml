@@ -31,11 +31,25 @@ on_source = ['deoplete.nvim']
 repo = 'deoplete-plugins/deoplete-tag'	
 on_source = ['deoplete.nvim']
 
+# [[plugins]]
+# repo = 'Shougo/deoplete-lsp'	
+# on_source = ['deoplete.nvim']
+
 # File browser
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
 hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
+
+# [[plugins]]
+# repo = 'neovim/nvim-lsp'	
+# on_source = ['deoplete.nvim']
+# hook_source = '''
+    # if version >= 500
+        # command! Scratch lua require'lsp'.makeScratch()
+        # Scratch
+    # endif
+# '''
 
 # emmet-vim
 [[plugins]]
