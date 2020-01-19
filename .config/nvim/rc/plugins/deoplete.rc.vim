@@ -52,6 +52,8 @@ call deoplete#custom#option('keyword_patterns', {
     " \ 'rust': '(\.|::|->)\w',
     " \})
 
+call deoplete#custom#option('min_pattern_length', 1)
+
 call deoplete#custom#source('_',
     \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
