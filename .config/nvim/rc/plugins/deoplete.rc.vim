@@ -81,6 +81,9 @@ call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
     \ }
     \})
 
+" プレビューウィンドウを表示しない。
+set completeopt-=preview
+
 " Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 
