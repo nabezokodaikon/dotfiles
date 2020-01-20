@@ -42,15 +42,15 @@ call deoplete#custom#option('keyword_patterns', {
     " \ 'hexe': ['omni', 'dictionary'],
     " \ 'scala': ['omni', 'dictionary'],
 
-" call deoplete#custom#var('omni', 'input_patterns', {
-    " \ 'haxe': '\v([\]''"\)]|\w|(^\s*))(\.|\()',
-    " \ 'scala': [
-    " \     '[^. *\t]\.\w*',
-    " \     '[:\[,] ?\w*',
-    " \     '^import .*'
-    " \   ],
-    " \ 'rust': '(\.|::|->)\w',
-    " \})
+call deoplete#custom#var('omni', 'input_patterns', {
+    \ 'haxe': '\v([\]''"\)]|\w|(^\s*))(\.|\()',
+    \ 'scala': [
+    \     '[^. *\t]\.\w*',
+    \     '[:\[,] ?\w*',
+    \     '^import .*'
+    \   ],
+    \ 'rust': '(\.|::|->)\w',
+    \})
 
 call deoplete#custom#option('min_pattern_length', 1)
 
