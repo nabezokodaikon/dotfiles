@@ -19,3 +19,5 @@ trait
 type
 use
 where
+true
+false
