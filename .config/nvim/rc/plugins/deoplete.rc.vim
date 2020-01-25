@@ -54,9 +54,6 @@ call deoplete#custom#var('omni', 'input_patterns', {
 
 call deoplete#custom#option('min_pattern_length', 1)
 
-call deoplete#custom#source('_',
-    \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
-
 call deoplete#custom#option('sources', {
     \ 'scala': ['buffer', 'dictionary', 'LanguageClient', 'lsp'],
     \ 'rust': ['buffer', 'dictionary', 'LanguageClient', 'lsp'],
