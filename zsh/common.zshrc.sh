@@ -67,6 +67,10 @@ zle -N zle-keymap-select
 # 参考: http://qiita.com/syui/items/8cc534c2c30543965950
 bindkey -M viins 'jj' vi-cmd-mode
 
+# 行頭、行末移動
+bindkey -M vicmd '^h' vi-digit-or-beginning-of-line
+bindkey -M vicmd '^l' vi-end-of-line
+
 # インクリメンタルサーチ
 bindkey '^f' history-incremental-search-forward
 bindkey '^b' history-incremental-search-backward
