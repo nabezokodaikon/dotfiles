@@ -14,6 +14,10 @@ nnoremap gQ <Nop>
 " Switch to the normal mode.
 inoremap jj <ESC>
 
+" Jump to the line head and tail
+noremap <C-h> 0
+noremap <C-l> $
+
 " Disable completion
 inoremap <C-n> <Nop>
 inoremap <C-p> <Nop>
