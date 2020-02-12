@@ -17,17 +17,16 @@ function M.makeScratch()
     -- }
 
     -- Scala
-    if not nvim_lsp.scala_lsp then
-        configs.scala_lsp = {
-            default_config = {
-                cmd = {'metals-vim'};
-                filetypes = {'scala', 'sbt'};
-                root_dir = nvim_lsp.util.root_pattern('build.sbt');
-        };
-      }
-    end
-
-    nvim_lsp.scala_lsp.setup{}
+    require'nvim_lsp'.metals.setup{}
+    -- if not nvim_lsp.scala_lsp then
+        -- configs.scala_lsp = {
+            -- default_config = {
+                -- cmd = {'metals-vim'};
+                -- filetypes = {'scala', 'sbt'};
+                -- root_dir = nvim_lsp.util.root_pattern('build.sbt');
+        -- };
+      -- }
+    -- end
 end
 
 return M
