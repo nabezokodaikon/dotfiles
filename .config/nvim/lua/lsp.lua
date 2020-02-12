@@ -15,6 +15,8 @@ function M.makeScratch()
             -- }
         -- }
     -- }
+    -- rust_analyzer
+    require'nvim_lsp'.rust_analyzer.setup{}
 
     -- Scala
     require'nvim_lsp'.metals.setup{}
