@@ -22,6 +22,14 @@ let g:LanguageClient_serverCommands = {
     \ 'scala': ['metals-vim']
     \ }	
 
+function! s:restartLanguageClient()		
+    LanguageClientStop		
+    sleep 500m		
+    LanguageClientStart		
+endfunction		
+
+command! LanguageClientReStart call s:restartLanguageClient()	
+
 " let $RUST_BACKTRACE = 1
 " let g:LanguageClient_loggingLevel = 'INFO'
 " let g:LanguageClient_virtualTextPrefix = ''
