@@ -4,6 +4,7 @@ crate
 crateenum
 derive
 dyn
+enum
 fn
 impl
 let
