@@ -81,7 +81,6 @@ $ brew install beeftornado/rmtree/brew-rmtree
 ```
 ### 開発ツールインストール
 ```
-$ brew install git
 $ brew install tig
 $ brew install tmux
 ```
@@ -111,8 +110,12 @@ $ npm install --global neovim
 $ brew install ripgrep
 ```
 ### universal-ctags
+[universal-ctagsのUbuntu 18.04 LTS用debパッケージをビルドした](https://hnakamur.github.io/blog/2018/06/08/build-universal-ctags-deb-for-ubuntu-18.04-lts/)
 ```
-$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository ppa:hnakamur/universal-ctags
+$ sudo apt update
+$ sudo apt install universal-ctags
 ```
 ### Translate
 ```
