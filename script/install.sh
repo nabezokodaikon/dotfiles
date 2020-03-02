@@ -16,7 +16,6 @@ unlink ${HOME}/.config/termite
 unlink ${HOME}/.xprofile
 unlink ${HOME}/.Xmodmap
 unlink ${HOME}/.Xresources
-unlink ${HOME}/.hyper.js
 unlink ${HOME}/.sbt/1.0/global.sbt
 unlink ${HOME}/.sbt/1.0/plugins/plugins.sbt
 
@@ -38,7 +37,6 @@ ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc
 ln -s ${HOME}/dotfiles/.ctags.d ${HOME}/.ctags.d
 ln -s ${HOME}/dotfiles/.config/nvim/ ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/.config/termite/ ${HOME}/.config/termite
-ln -s ${HOME}/dotfiles/hyper/.hyper.js ${HOME}/.hyper.js
 mkdir -p ${HOME}/.sbt/1.0/plugins
 ln -s ${HOME}/dotfiles/.sbt/1.0/global.sbt ${HOME}/.sbt/1.0/global.sbt
 ln -s ${HOME}/dotfiles/.sbt/1.0/plugins/plugins.sbt ${HOME}/.sbt/1.0/plugins/plugins.sbt
