@@ -53,6 +53,9 @@ set cursorcolumn
 " ステータスラインを常に表示する
 set laststatus=2
 
+" ポップアップの行数
+set pumheight=10
+
 " 自動改行させない
 set textwidth=0
 
