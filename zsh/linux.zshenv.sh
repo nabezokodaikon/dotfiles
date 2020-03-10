@@ -29,4 +29,5 @@ export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
 # pkg config
 #--------------------------------
 # Ubuntu
-export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
