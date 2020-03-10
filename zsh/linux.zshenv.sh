@@ -24,3 +24,9 @@ export NVIM_PYTHON_LOG_LEVEL=DEBUG
 # sudo apt install cmake libssl-dev pkg-config
 export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
 export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
+
+
+# pkg config
+#--------------------------------
+# Ubuntu
+export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
