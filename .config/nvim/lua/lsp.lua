@@ -12,3 +12,6 @@ require'nvim_lsp'.rls.setup{}
 -- nvim_lsp.rust_analyzer.setup {
     -- cmd = { '~/.local/bin/rust-analyzer' }
 -- }
+
+
+require'nvim_lsp'.pyls.setup{}
