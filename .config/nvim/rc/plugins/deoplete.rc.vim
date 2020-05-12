@@ -55,8 +55,8 @@ call deoplete#custom#var('omni', 'input_patterns', {
 call deoplete#custom#option('min_pattern_length', 1)
 
 call deoplete#custom#option('sources', {
-    \ 'scala': ['buffer', 'dictionary', 'LanguageClient', 'lsp'],
-    \ 'rust': ['buffer', 'dictionary', 'LanguageClient', 'lsp'],
+    \ 'scala': ['buffer', 'dictionary', 'lsp'],
+    \ 'rust': ['buffer', 'dictionary', 'lsp'],
     \})
    
 " 補完の余計な文字を除去する。
