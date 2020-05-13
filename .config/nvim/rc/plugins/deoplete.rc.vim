@@ -63,7 +63,6 @@ call deoplete#custom#option('sources', {
 call deoplete#custom#source('_', 'converters', [
     \ 'converter_remove_paren',
     \ 'converter_remove_overlap',
-    \ 'matcher_length',
     \ 'converter_truncate_abbr',
     \ 'converter_truncate_info',
     \ 'converter_truncate_menu',
