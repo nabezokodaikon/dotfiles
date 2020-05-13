@@ -9,6 +9,9 @@ hook_add = '''
     set signcolumn=yes
 '''
 
+[[plugins]]
+repo = 'haorenW1025/diagnostic-nvim'
+
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
