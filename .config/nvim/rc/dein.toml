@@ -11,6 +11,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'haorenW1025/diagnostic-nvim'
+hook_add = '''
+    lua require'nvim_lsp'.pyls.setup{on_attach=require'diagnostic'.on_attach}
+'''
 
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
