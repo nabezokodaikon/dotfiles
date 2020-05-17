@@ -66,7 +66,7 @@ call deoplete#custom#source('_', 'converters', [
     \ 'converter_truncate_abbr',
     \ 'converter_truncate_info',
     \ 'converter_truncate_menu',
-    \ 'converter_auto_delimiter',
+    \ 'converter_auto_delimiter'
     \])
 
 " 補完候補からスニペットを除外する。
