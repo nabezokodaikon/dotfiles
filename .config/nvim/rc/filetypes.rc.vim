@@ -62,3 +62,10 @@ augroup fileTypeVariableRename
     autocmd BufRead,BufNewFile *.ts nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
     autocmd BufRead,BufNewFile *.tsx nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
 augroup END
+
+augroup fileTypeHover
+    autocmd!
+    autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
+    autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
+    autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
+augroup END
