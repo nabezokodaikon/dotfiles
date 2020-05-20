@@ -20,6 +20,7 @@ augroup fileTypeIndent
     autocmd BufRead,BufNewFile *.jsx setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.markdown setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.md setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile *.py setlocal tabstop=4 shiftwidth=4
     autocmd BufRead,BufNewFile *.rs setlocal tabstop=4 shiftwidth=4
     autocmd BufRead,BufNewFile *.sbt setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.scala setlocal tabstop=2 shiftwidth=2
