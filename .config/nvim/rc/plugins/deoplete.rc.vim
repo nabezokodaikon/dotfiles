@@ -52,7 +52,7 @@ call deoplete#custom#var('omni', 'input_patterns', {
     \ 'rust': '(\.|::|->)\w',
     \})
 
-call deoplete#custom#option('min_pattern_length', 1)
+call deoplete#custom#option('min_pattern_length', 2)
 
 call deoplete#custom#option('sources', {
     \ 'scala': ['buffer', 'dictionary', 'lsp'],
