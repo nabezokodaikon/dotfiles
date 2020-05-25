@@ -9,13 +9,6 @@ hook_add = '''
     set signcolumn=yes
 '''
 
-[[plugins]]
-repo = 'haorenW1025/diagnostic-nvim'
-hook_add = '''
-    lua require'nvim_lsp'.pyls.setup{on_attach=require'diagnostic'.on_attach}
-    let g:diagnostic_enable_virtual_text=1
-'''
-
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
