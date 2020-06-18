@@ -57,6 +57,7 @@ call deoplete#custom#option('min_pattern_length', 2)
 call deoplete#custom#option('sources', {
     \ 'scala': ['buffer', 'dictionary', 'lsp'],
     \ 'rust': ['buffer', 'dictionary', 'lsp'],
+    \ 'python': ['buffer', 'lsp'],
     \})
    
 " 補完の余計な文字を除去する。
