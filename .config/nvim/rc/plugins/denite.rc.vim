@@ -75,3 +75,11 @@ function! s:denite_filter_my_settings() abort
     imap <silent><buffer> jj 
         \ <Plug>(denite_filter_quit)
 endfunction
+
+call denite#custom#option('default', {
+    \ 'split': 'floating',
+    \ 'winwidth': &columns,
+    \ 'wincol': &columns,
+    \ 'winheight': 16,
+    \ 'winrow': &lines,
+    \ })
