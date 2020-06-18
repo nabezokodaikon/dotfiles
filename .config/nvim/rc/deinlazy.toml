@@ -10,7 +10,6 @@ repo = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
 hook_source = '''
     let g:neomru#file_mru_limit = 64
-    let g:neomru#time_format = "%y/%m/%d %H:%M"
 '''
 
 # denite.vimでyankの履歴を表示する。
