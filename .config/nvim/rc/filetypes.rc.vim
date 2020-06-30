@@ -28,6 +28,7 @@ augroup fileTypeIndent
     autocmd BufRead,BufNewFile *.tsx setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.vue setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.xml setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile *.yaml setlocal tabstop=2 shiftwidth=2
 augroup END
 
 augroup fileTypeDictionary
