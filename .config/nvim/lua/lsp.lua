@@ -1,10 +1,12 @@
 --------------------------------
 -- LSP configurations
 --------------------------------
-require'nvim_lsp'.metals.setup{}
+local nvim_lsp = require'nvim_lsp'
+
+nvim_lsp.metals.setup{}
 
 
-require'nvim_lsp'.rust_analyzer.setup{}
+nvim_lsp.rust_analyzer.setup{}
 
 
-require'nvim_lsp'.pyls_ms.setup{}
+nvim_lsp.pyls_ms.setup{}
