@@ -10,7 +10,6 @@ repo = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
 hook_source = '''
     let g:neomru#file_mru_limit = 64
-    let g:neomru#time_format = "%y/%m/%d %H:%M"
 '''
 
 # denite.vimでyankの履歴を表示する。
@@ -31,25 +30,15 @@ on_source = ['deoplete.nvim']
 repo = 'deoplete-plugins/deoplete-tag'	
 on_source = ['deoplete.nvim']
 
-# [[plugins]]
-# repo = 'Shougo/deoplete-lsp'	
-# on_source = ['deoplete.nvim']
+[[plugins]]
+repo = 'Shougo/deoplete-lsp'	
+on_source = ['deoplete.nvim']
 
 # File browser
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
 hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
-
-# [[plugins]]
-# repo = 'neovim/nvim-lsp'	
-# on_source = ['deoplete.nvim']
-# hook_source = '''
-    # if version >= 500
-        # command! Scratch lua require'lsp'.makeScratch()
-        # Scratch
-    # endif
-# '''
 
 # emmet-vim
 [[plugins]]
@@ -121,16 +110,3 @@ hook_source = '''
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
 on_cmd = 'JaEnTranslate'
-
-[[plugins]]	
-repo = 'autozimu/LanguageClient-neovim'	
-rev = 'next'	
-hook_post_update = '''
-    if IsWindows()
-        call system('powershell -executionpolicy bypass -File install.ps1')
-    else
-        call system('bash install.sh')
-    endif
-'''
-on_ft = ['haxe', 'rust', 'scala']
-hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'

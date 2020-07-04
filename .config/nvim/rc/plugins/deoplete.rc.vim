@@ -52,22 +52,22 @@ call deoplete#custom#var('omni', 'input_patterns', {
     \ 'rust': '(\.|::|->)\w',
     \})
 
-call deoplete#custom#option('min_pattern_length', 1)
+call deoplete#custom#option('min_pattern_length', 2)
 
 call deoplete#custom#option('sources', {
-    \ 'scala': ['buffer', 'dictionary', 'LanguageClient', 'lsp'],
-    \ 'rust': ['buffer', 'dictionary', 'LanguageClient', 'lsp'],
+    \ 'scala': ['buffer', 'dictionary', 'lsp'],
+    \ 'rust': ['buffer', 'dictionary', 'lsp'],
+    \ 'python': ['buffer', 'lsp'],
     \})
    
 " 補完の余計な文字を除去する。
 call deoplete#custom#source('_', 'converters', [
     \ 'converter_remove_paren',
     \ 'converter_remove_overlap',
-    \ 'matcher_length',
     \ 'converter_truncate_abbr',
     \ 'converter_truncate_info',
     \ 'converter_truncate_menu',
-    \ 'converter_auto_delimiter',
+    \ 'converter_auto_delimiter'
     \])
 
 " 補完候補からスニペットを除外する。

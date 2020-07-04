@@ -2,6 +2,13 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'neovim/nvim-lsp'	
+hook_add = '''
+    luafile ~/.config/nvim/lua/lsp.lua
+    set signcolumn=yes
+'''
+
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
