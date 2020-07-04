@@ -11,6 +11,7 @@
 tags.lock
 /.vim/.netrwhist
 .metals
+scoop
 
 # vim プラグインディレクトリを対象外にする
 /.vim/bundle/
