@@ -82,9 +82,5 @@ call denite#custom#option('default', {
     \ 'wincol': &columns,
     \ 'winheight': 16,
     \ 'winrow': &lines,
-    \ 'highlight_filter_background': 'Function',
-    \ 'highlight_matched_char': 'Search',
-    \ 'highlight_matched_range': 'Underlined',
-    \ 'highlight_preview_line': 'Search',
-    \ 'highlight_window_background': 'Visual',
+    \ 'highlight_filter_background': 'Function'
     \ })
