@@ -82,5 +82,4 @@ call denite#custom#option('default', {
     \ 'wincol': &columns,
     \ 'winheight': 16,
     \ 'winrow': &lines,
-    \ 'highlight_filter_background': 'Function'
     \ })
