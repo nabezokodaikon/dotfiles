@@ -77,9 +77,10 @@ function! s:denite_filter_my_settings() abort
 endfunction
 
 call denite#custom#option('default', {
+    \ 'highlight_filter_background': 'CursorLine',
+    \ 'source_names': 'short',
     \ 'split': 'floating',
-    \ 'winwidth': &columns,
-    \ 'wincol': &columns,
-    \ 'winheight': 16,
-    \ 'winrow': &lines,
+    \ 'filter_split_direction': 'floating',
+    \ 'vertical_preview': v:true,
+    \ 'floating_preview': v:true,
     \ })
