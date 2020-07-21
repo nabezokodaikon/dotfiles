@@ -9,6 +9,7 @@ export PATH=$HOME/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH        
 export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin/nvim-linux64/bin:$PATH
 
 
 # Linux brew 
@@ -22,6 +23,7 @@ alias ls="ls --color=auto"
 alias vim="env LANG=en_US.UTF-8 vim \"\$@\""
 alias nvim="env LANG=en_US.UTF-8 nvim \"\$@\""
 alias tmux="env LANG=en_US.UTF-8 tmux -2u \"\$@\""
+alias tig="env LANG=en_US.UTF-8 tig \"\$@\""
 alias pip="LC_ALL=C pip"
 alias dl="docker ps -l -q"
 
