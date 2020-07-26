@@ -2,10 +2,13 @@
 " denite.nvim
 "--------------------------------
 " Command option.
-call denite#custom#option('_', 'winheight', 16)
-call denite#custom#option('_', 'highlight_mode_insert', 'Search')
-call denite#custom#option('_', 'previewheight', 100)
-call denite#custom#option('_', 'statusline', v:false)
+call denite#custom#option('default', {
+    \ 'split': 'floating',
+    \ 'auto_resize': v:true,
+    \ 'prompt': '> ',
+    \ 'winrow': 1,
+    \ 'winheight': 16
+    \ })
 
 " Matchers
 " call denite#custom#source('_', 'matchers',
@@ -75,12 +78,3 @@ function! s:denite_filter_my_settings() abort
     imap <silent><buffer> jj 
         \ <Plug>(denite_filter_quit)
 endfunction
-
-call denite#custom#option('default', {
-    \ 'highlight_filter_background': 'CursorLine',
-    \ 'source_names': 'short',
-    \ 'split': 'floating',
-    \ 'filter_split_direction': 'floating',
-    \ 'vertical_preview': v:true,
-    \ 'floating_preview': v:true,
-    \ })
