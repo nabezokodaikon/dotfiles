@@ -129,4 +129,4 @@ let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%= %
 set termguicolors
 
 " 補完などに使われるポップアップメニューを半透明に表示します。
-set pumblend=30
+set pumblend=15

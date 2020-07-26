@@ -4,8 +4,8 @@
 " floating windows
 augroup denite-transparent-windows
   autocmd!
-  autocmd FileType denite set winblend=30
-  autocmd FileType denite-filter set winblend=30
+  autocmd FileType denite set winblend=15
+  autocmd FileType denite-filter set winblend=15
 augroup END
 
 " Command option.
