@@ -1,6 +1,13 @@
 "--------------------------------
 " denite.nvim
 "--------------------------------
+" floating windows
+augroup denite-transparent-windows
+  autocmd!
+  autocmd FileType denite set winblend=30
+  autocmd FileType denite-filter set winblend=30
+augroup END
+
 " Command option.
 call denite#custom#option('default', {
     \ 'split': 'floating',
