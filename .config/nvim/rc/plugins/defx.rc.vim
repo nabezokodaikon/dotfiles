@@ -1,6 +1,24 @@
 "--------------------------------
 " defx.nvim
 "--------------------------------
+call defx#custom#option('_', {
+    \ 'resume': v:true,
+    \ 'show_ignored_files': v:true,
+    \ 'sort': 'extension',
+    \ 'columns': 'mark:indent:git:icon:filename:size:time',
+    \ })
+
+call defx#custom#column('mark', {
+    \ 'readonly_icon': '✗',
+    \ 'selected_icon': '✓',
+    \ })
+
+call defx#custom#column('icon', {
+    \ 'directory_icon': '▸',
+    \ 'opened_icon': '▾',
+    \ 'root_icon': ' ',
+    \ })
+
 autocmd FileType defx call s:defx_my_settings()
 
 function! s:defx_my_settings() abort

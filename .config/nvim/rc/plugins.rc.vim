@@ -60,7 +60,7 @@ nnoremap <silent> <C-p> :<C-u>Denite -resume -cursor-pos=-1 -immediately<CR>
 " defx.nvim
 "--------------------------------
 nnoremap F <Nop>
-nnoremap <silent> F :<C-u>Defx -resume<CR>
+nnoremap <silent> F :<C-u>Defx -search=`expand('%:p')`<CR>
 
 
 "--------------------------------
