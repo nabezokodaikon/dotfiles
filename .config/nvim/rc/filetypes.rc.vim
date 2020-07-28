@@ -51,8 +51,8 @@ augroup fileTypeDeclaration
     autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-    autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
-    autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
+    autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
+    autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
 augroup END
 
 augroup fileTypeVariableRename
@@ -70,4 +70,6 @@ augroup fileTypeHover
     autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
     autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
     autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
+    autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
+    autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
 augroup END
