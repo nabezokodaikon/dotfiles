@@ -4,7 +4,6 @@
 call defx#custom#option('_', {
     \ 'resume': v:true,
     \ 'show_ignored_files': v:true,
-    \ 'sort': 'extension',
     \ 'columns': 'mark:indent:git:icon:filename:size:time',
     \ })
 
