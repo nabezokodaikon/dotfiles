@@ -114,9 +114,3 @@ hook_source = '''
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
 on_cmd = 'JaEnTranslate'
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_ft = 'typescript'
-hook_source = 'source ~/.config/nvim/rc/plugins/coc.rc.vim'
