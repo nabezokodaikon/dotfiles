@@ -12,4 +12,4 @@ nvim_lsp.rust_analyzer.setup{}
 nvim_lsp.pyls_ms.setup{}
 
 
--- nvim_lsp.tsserver.setup{}
+nvim_lsp.tsserver.setup{}
