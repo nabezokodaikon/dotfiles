@@ -94,4 +94,4 @@ inoremap <expr><TAB>  pumvisible() ? deoplete#close_popup() : "<TAB>"
 " call deoplete#enable_logging('DEBUG', 'deoplete.log')
 " call deoplete#custom#source('LanguageClient', 'is_debug_enabled', 1)
 
-call deoplete#enable()
+" call deoplete#enable()
