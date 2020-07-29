@@ -32,39 +32,9 @@ repo = "tpope/vim-fugitive"
 
 # Color scheme
 [[plugins]]
-repo = 'nanotech/jellybeans.vim'
+repo = 'joshdick/onedark.vim'
 hook_add = '''
-    let g:jellybeans_use_gui_italics=0
-    let g:jellybeans_use_term_italics=0
-
-    let g:jellybeans_overrides = {
-    \   'background': {
-    \       '256ctermbg': 'none'
-    \   },
-    \   'CursorLine': {
-    \       '256ctermbg': '236'
-    \   },
-    \   'CursorColumn': {
-    \       '256ctermbg': '236'
-    \   },
-    \   'Visual': {
-    \       '256ctermbg': '238'
-    \   },
-    \   'PmenuSel': {
-    \       'attr': 'bold'
-    \   },
-    \   'TabLineFill': {
-    \       'attr': 'bold'
-    \   },
-    \   'TabLine': {
-    \       'attr': 'bold'
-    \   },
-    \   'TabLineSel': {
-    \       'attr': 'bold'
-    \   }
-    \}
-
-    colorscheme jellybeans
+    colorscheme onedark
 '''
 
 [[plugins]]
@@ -73,5 +43,5 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-    let g:airline_theme = 'angr'
+    let g:airline_theme = 'onedark'
 '''
