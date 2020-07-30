@@ -3,6 +3,13 @@
 "--------------------------------
 
 "--------------------------------
+" nvim-lsp
+"--------------------------------
+luafile ~/.config/nvim/lua/lsp.lua
+set signcolumn=yes
+
+
+"--------------------------------
 " emmet-vim
 "--------------------------------
 let g:user_emmet_leader_key='<C-e>'
@@ -11,6 +18,8 @@ let g:user_emmet_leader_key='<C-e>'
 "--------------------------------
 " nerdcommenter
 "--------------------------------
+" コメントの間にスペースを開ける
+let NERDSpaceDelims = 1
 nnoremap co <Nop>
 vnoremap co <Nop>
 nmap co <Plug>NERDCommenterToggle
@@ -24,6 +33,8 @@ vmap co <Plug>NERDCommenterToggle
 let g:EasyMotion_do_mapping = 0
 " 検索後、Enterでカーソル位置に一番近いマッチした箇所に移動する。
 let g:EasyMotion_enter_jump_first = 1
+" 大文字、小文字を区別しない。
+let g:EasyMotion_smartcase = 1
 " キーワードの入力を2文字まで受け付ける。
 nmap <Leader>m <Plug>(easymotion-overwin-f2)
 
@@ -84,20 +95,18 @@ call submode#map('tab-preview', 'n', '', 'T', 'gT')
 
 
 "--------------------------------
-" nerdcommenter configurations
-"--------------------------------
-" コメントの間にスペースを開ける
-let NERDSpaceDelims = 1
-
-
-"--------------------------------
-" vim-easymotion configurations
-"--------------------------------
-" 大文字、小文字を区別しない。
-let g:EasyMotion_smartcase = 1
-
-
-"--------------------------------
 " Translate script
 "--------------------------------
 vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
+
+
+"--------------------------------
+" onedark.vim
+"--------------------------------
+colorscheme onedark
+
+
+"--------------------------------
+" vim-airline-themes
+"--------------------------------
+let g:airline_theme = 'onedark'
