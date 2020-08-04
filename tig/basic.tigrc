@@ -21,10 +21,12 @@ set wrap-lines = yes
 # generic key binds.
 bind generic G none
 bind generic g none
+bind generic R none
 bind generic <Ctrl-f> move-page-down
 bind generic <Ctrl-b> move-page-up
 bind generic gg move-first-line
 bind generic G move-last-line
+bind generic <Ctrl-r> refresh
 
 # main key binds.
 bind main G none
