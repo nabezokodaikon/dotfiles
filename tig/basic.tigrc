@@ -37,5 +37,5 @@ bind status C !git commit -v
 # diff key binds
 bind diff B !git rebase -i %(commit)
 
-# generic key binds
+# amend key binds
 bind generic + !git commit --amend --allow-empty
