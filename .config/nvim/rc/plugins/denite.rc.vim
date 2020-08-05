@@ -11,7 +11,6 @@ augroup END
 " Command option.
 call denite#custom#option('default', {
     \ 'split': 'floating',
-    \ 'auto_resize': v:true,
     \ 'prompt': '> ',
     \ 'winrow': 1,
     \ 'winheight': 16
