@@ -86,9 +86,6 @@ set completeopt-=preview
 " Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 
-" TABで補完を決定する。
-inoremap <expr><TAB>  pumvisible() ? deoplete#close_popup() : "<TAB>"
-
 " ログ出力(カレントディレクトリに出力される。)
 " call deoplete#custom#option('profile', v:true)
 " call deoplete#enable_logging('DEBUG', 'deoplete.log')
