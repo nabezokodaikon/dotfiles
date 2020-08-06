@@ -1,7 +1,7 @@
 "--------------------------------
 " denite.nvim
 "--------------------------------
-" floating windows
+" Floating windows
 augroup denite-transparent-windows
   autocmd!
   autocmd FileType denite set winblend=15
@@ -16,10 +16,6 @@ call denite#custom#option('default', {
     \ 'winheight': 16
     \ })
 
-" Matchers
-" call denite#custom#source('_', 'matchers',
-    " \ ['matcher/substring', 'matcher/project_files'])
-
 " Sorters
 call denite#custom#source('file/rec', 'sorters',
     \ ['sorter/rank'])
@@ -28,11 +24,9 @@ call denite#custom#source('file/rec', 'sorters',
 call denite#custom#var('file/rec', 'command',
     \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
 
-call denite#custom#source('buffer', 'matchers',
-    \ ['matcher/fuzzy', 'matcher/project_files'])
-
+" Matchers
 call denite#custom#source('file_mru', 'matchers',
-    \ ['matcher/fuzzy', 'matcher/project_files'])
+    \ ['matcher/project_files'])
 
 " Ripgrep command on grep source.
 " Reference 
