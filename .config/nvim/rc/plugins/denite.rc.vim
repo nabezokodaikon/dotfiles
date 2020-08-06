@@ -1,13 +1,6 @@
 "--------------------------------
 " denite.nvim
 "--------------------------------
-" Floating windows
-augroup denite-transparent-windows
-  autocmd!
-  autocmd FileType denite set winblend=15
-  autocmd FileType denite-filter set winblend=15
-augroup END
-
 " Command option.
 call denite#custom#option('default', {
     \ 'split': 'floating',
@@ -78,3 +71,10 @@ function! s:denite_filter_my_settings() abort
     imap <silent><buffer> jj 
         \ <Plug>(denite_filter_quit)
 endfunction
+
+" Floating windows
+augroup denite-transparent-windows
+  autocmd!
+  autocmd FileType denite set winblend=15
+  autocmd FileType denite-filter set winblend=15
+augroup END
