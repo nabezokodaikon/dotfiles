@@ -26,7 +26,7 @@ call denite#custom#var('file/rec', 'command',
 
 " Matchers
 call denite#custom#source('file_mru', 'matchers',
-    \ ['matcher/project_files'])
+    \ ['matcher/fuzzy', 'matcher/project_files'])
 
 " Ripgrep command on grep source.
 " Reference 
