@@ -72,7 +72,7 @@ set mouse=
 set autoread
 
 " クリップボードと連携
-set clipboard+=unnamedplus
+set clipboard^=unnamedplus
 
 " ターミナルで使用するシェルを指定
 if IsWindows()
