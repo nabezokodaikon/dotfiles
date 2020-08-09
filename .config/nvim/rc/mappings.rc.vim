@@ -29,7 +29,15 @@ let mapleader = "\<Space>"
 
 " File reload
 "--------------------------------
-nnoremap <silent> <Leader>\ :e!<CR>
+xnoremap <Nop>
+xnoremap <silent> <Leader>\ :e!<CR>
+
+
+" Paste
+"--------------------------------
+
+noremap <silent> p "0p<CR>
+
 
 
 " split
