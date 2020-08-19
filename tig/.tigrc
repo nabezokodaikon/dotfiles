@@ -4,4 +4,4 @@
 source ~/dotfiles/tig/basic.tigrc
 
 # 色設定
-source ~/dotfiles/tig/colorscheme.tigrc
+# source ~/dotfiles/tig/colorscheme.tigrc
