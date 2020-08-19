@@ -103,12 +103,13 @@ vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
 
 
 "--------------------------------
-" onedark.vim
+" Colorscheme setting
 "--------------------------------
-colorscheme onedark
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='soft'
 
 
 "--------------------------------
 " vim-airline-themes
 "--------------------------------
-let g:airline_theme = 'onedark'
+let g:airline_theme='gruvbox'
