@@ -9,7 +9,6 @@ export PATH=$HOME/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH        
 export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/bin/nvim-linux64/bin:$PATH
 
 
 # Linux brew 
