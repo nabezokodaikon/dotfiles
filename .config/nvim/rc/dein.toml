@@ -28,7 +28,11 @@ repo = "tpope/vim-fugitive"
 
 # Color scheme
 [[plugins]]
-repo = 'morhetz/gruvbox'
+repo = 'lifepillar/vim-solarized8'
+hook_add = '''
+    set background=dark
+    colorscheme solarized8
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'

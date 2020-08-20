@@ -105,11 +105,11 @@ vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
 "--------------------------------
 " Colorscheme setting
 "--------------------------------
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='soft'
+set background=dark
+colorscheme solarized8
 
 
 "--------------------------------
 " vim-airline-themes
 "--------------------------------
-let g:airline_theme='gruvbox'
+let g:airline_theme='solarized'
