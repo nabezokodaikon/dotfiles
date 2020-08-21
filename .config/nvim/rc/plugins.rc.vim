@@ -54,7 +54,7 @@ nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
 nnoremap <silent> <Leader>gg :<C-u>Denite grep<CR>
 " grep for cursor word
 nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
-" buffe
+" buffer
 nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 " File type
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
