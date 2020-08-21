@@ -32,6 +32,9 @@ call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
     \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'])
 
+call denite#custom#source('file_mru,file/rec', 'converters',
+    \ ['converter/prioritize_basename'])
+
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort

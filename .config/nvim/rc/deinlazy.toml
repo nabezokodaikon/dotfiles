@@ -17,6 +17,10 @@ hook_source = '''
 repo = 'Shougo/neoyank.vim'
 on_source = ['denite.nvim']
 
+[[plugins]]
+repo = 'hrsh7th/denite-converter-prioritize-basename'
+on_source = ['denite.nvim']
+
 [[plugins]]	
 repo = 'Shougo/deoplete.nvim'	
 on_event = 'InsertEnter'	
