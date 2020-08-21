@@ -86,6 +86,9 @@ set completeopt-=preview
 " Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 
+" <C-e>でポップアップウィンドウをキャンセルして閉じる。
+inoremap <expr><C-e> deoplete#cancel_popup()
+
 " ログ出力(カレントディレクトリに出力される。)
 " call deoplete#custom#option('profile', v:true)
 " call deoplete#enable_logging('DEBUG', 'deoplete.log')
