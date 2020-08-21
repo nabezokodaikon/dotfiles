@@ -44,6 +44,8 @@ function! s:denite_my_settings() abort
         \ denite#do_map('open_filter_buffer')
     nnoremap <silent><buffer><expr> q
         \ denite#do_map('quit')
+    nnoremap <silent><buffer><expr> <C-c>
+        \ denite#do_map('quit')
     nnoremap <silent><buffer><expr> <C-w>n
         \ denite#do_map('nop')
     nnoremap <silent><buffer><expr> <C-w>N
