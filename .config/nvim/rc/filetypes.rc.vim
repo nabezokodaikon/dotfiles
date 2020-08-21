@@ -41,8 +41,8 @@ augroup fileTypeDeclaration
     autocmd BufRead,BufNewFile *.hs nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
     autocmd BufRead,BufNewFile *.hx nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
     autocmd BufRead,BufNewFile *.hxp nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
-    autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
-    autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
+    autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
+    autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
@@ -54,10 +54,6 @@ augroup fileTypeVariableRename
     autocmd!
     autocmd BufRead,BufNewFile *.hx nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
     autocmd BufRead,BufNewFile *.hxp nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
-    autocmd BufRead,BufNewFile *.rs nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
-    autocmd BufRead,BufNewFile *.scala nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
-    autocmd BufRead,BufNewFile *.ts nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
-    autocmd BufRead,BufNewFile *.tsx nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
 augroup END
 
 augroup fileTypeHover
