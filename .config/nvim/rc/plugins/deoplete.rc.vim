@@ -9,7 +9,13 @@ call deoplete#custom#option('keyword_patterns', {
 call deoplete#custom#option('min_pattern_length', 2)
 
 call deoplete#custom#option('sources', {
+    \ 'css': ['buffer', 'lsp'],
+    \ 'html': ['buffer', 'file', 'lsp'],
+    \ 'javascript': ['buffer', 'lsp'],
+    \ 'javascript.jsx': ['buffer', 'lsp'],
     \ 'scala': ['buffer', 'lsp'],
+    \ 'typescript': ['buffer', 'lsp'],
+    \ 'typescript.tsx': ['buffer', 'lsp'],
     \ 'rust': ['buffer', 'lsp'],
     \ 'python': ['buffer', 'lsp'],
     \})
