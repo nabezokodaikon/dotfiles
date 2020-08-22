@@ -3,7 +3,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'neovim/nvim-lsp'	
+repo = 'neovim/nvim-lsp'
 
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
