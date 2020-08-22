@@ -28,13 +28,14 @@ call denite#custom#source('file_mru', 'converters',
 " Ripgrep command on grep source.
 " Reference 
 " https://github.com/BurntSushi/ripgrep/issues/73
-call denite#custom#var('grep', 'command', ['rg'])
-call denite#custom#var('grep', 'final_opts', [])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
-call denite#custom#var('grep', 'separator', ['--'])
-call denite#custom#var('grep', 'default_opts',
-    \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'])
+call denite#custom#var('grep', {
+    \ 'command': ['rg'],
+    \ 'final_opts': [],
+    \ 'recursive_opts': [],
+    \ 'pattern_opt': ['--regexp'],
+    \ 'separator': ['--'],
+    \ 'default_opts': ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'],
+    \ })
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
