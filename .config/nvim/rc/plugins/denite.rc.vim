@@ -9,17 +9,21 @@ call denite#custom#option('default', {
     \ 'winheight': 16
     \ })
 
-" Sorters
+" file/rec
 call denite#custom#source('file/rec', 'sorters',
     \ ['sorter/rank'])
-
-" Ripgrep command on file/rec source.
+call denite#custom#source('file/rec', 'matchers',
+    \ ['converter/tail_path', 'matcher/fuzzy', 'matcher/project_files'])
 call denite#custom#var('file/rec', 'command',
     \ ['rg', '--hidden', '--glob', '!.git/*', '--files'])
+call denite#custom#source('file/rec', 'converters',
+    \ ['converter/basename_to_top'])
 
-" Matchers
+" file_mru
 call denite#custom#source('file_mru', 'matchers',
-    \ ['matcher/fuzzy', 'matcher/project_files'])
+    \ ['converter/tail_path', 'matcher/fuzzy', 'matcher/project_files'])
+call denite#custom#source('file_mru', 'converters',
+    \ ['converter/basename_to_top'])
 
 " Ripgrep command on grep source.
 " Reference 
@@ -31,9 +35,6 @@ call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
     \ ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'])
-
-call denite#custom#source('file_mru,file/rec', 'converters',
-    \ ['converter/prioritize_basename'])
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()

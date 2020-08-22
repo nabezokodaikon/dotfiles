@@ -18,7 +18,7 @@ repo = 'Shougo/neoyank.vim'
 on_source = ['denite.nvim']
 
 [[plugins]]
-repo = 'hrsh7th/denite-converter-prioritize-basename'
+repo = 'nabezokodaikon/denite-converter-basename_to_top'
 on_source = ['denite.nvim']
 
 [[plugins]]	
