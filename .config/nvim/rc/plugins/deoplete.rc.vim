@@ -31,6 +31,10 @@ call deoplete#custom#source('_', 'converters', [
     \])
 
 " 補完候補からスニペットを除外する。
+call deoplete#custom#source('lsp', 'converters', ['converter_reorder_attr'])
+call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
+    \ 'rust': { 'kind': ['!Snippet'] }
+    \})
 call deoplete#custom#source('LanguageClient', 'converters', ['converter_reorder_attr'])
 call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
     \ 'haxe': {
