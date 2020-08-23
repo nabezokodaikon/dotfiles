@@ -37,11 +37,7 @@ call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
     \})
 call deoplete#custom#source('LanguageClient', 'converters', ['converter_reorder_attr'])
 call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
-    \ 'haxe': {
-    \    'kind': [
-    \      '!Snippet'
-    \    ]
-    \ }
+    \ 'haxe': { 'kind': ['!Snippet'] }
     \})
 
 " プレビューウィンドウを表示しない。
