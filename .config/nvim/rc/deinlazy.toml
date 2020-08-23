@@ -35,7 +35,8 @@ repo = 'deoplete-plugins/deoplete-tag'
 on_source = ['deoplete.nvim']
 
 [[plugins]]
-repo = 'Shougo/deoplete-lsp'
+repo = 'nabezokodaikon/deoplete-lsp'
+rev = 'hotfix-support_for_anonymous_candidates'
 on_source = ['deoplete.nvim']
 
 # File browser
