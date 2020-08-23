@@ -28,7 +28,7 @@ repo = "tpope/vim-fugitive"
 
 # Color scheme
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
+repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
