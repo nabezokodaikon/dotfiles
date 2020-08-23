@@ -105,11 +105,11 @@ vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
 "--------------------------------
 " Colorscheme setting
 "--------------------------------
-syntax on
-colorscheme onedark
+set background=dark
+colorscheme solarized8
 
 
 "--------------------------------
 " vim-airline-themes
 "--------------------------------
-let g:airline_theme='onedark'
+let g:airline_theme='solarized'
