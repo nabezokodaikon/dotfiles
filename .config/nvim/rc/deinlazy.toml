@@ -77,18 +77,17 @@ on_ft = [
 repo = 'mattn/emmet-vim'
 on_ft = [
     'html',
-    'css',
-    'javascript',
-    'javascript.jsx',
+    'javascriptreact',
     'typescript',
-    'typescript.tsx',
     'vue',
 ]
 hook_source = '''
     let g:user_emmet_install_global = 0
     augroup emmet-vim
         autocmd!
-        autocmd FileType html,css,javascript,javascript.jsx,typescript,typescript.tsx,vue EmmetInstall
+        autocmd FileType 
+        \ html,javascriptreact,typescript,vue
+        \ EmmetInstall
     augroup END
 '''
 
