@@ -50,19 +50,16 @@ on_source = ['defx.nvim']
 
 [[plugins]]
 repo = 'neovim/nvim-lsp'
-on_source = ['deoplete.nvim']	
 hook_source = '''
     luafile ~/.config/nvim/lua/lsp.lua
 '''
-# on_ft = [
-    # 'html', 
-    # 'css',
-    # 'javascript',
-    # 'javascript.jsx',
-    # 'rust',
-    # 'typescript',
-    # 'typescript.tsx',
-# ]
+on_ft = [
+    'javascript',
+    'javascript.jsx',
+    'rust',
+    'typescript',
+    'typescript.tsx',
+]
 
 # [[plugins]]
 # repo = 'nvim-lua/completion-nvim'
