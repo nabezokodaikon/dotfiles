@@ -5,6 +5,8 @@ augroup fileTypeRelation
     autocmd!
     autocmd BufRead,BufNewFile *.hxp set filetype=haxe
     autocmd BufRead,BufNewFile *.sbt set filetype=scala
+    autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
 augroup END
 
 augroup fileTypeIndent
