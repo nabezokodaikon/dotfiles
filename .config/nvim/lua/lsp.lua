@@ -1,15 +1,22 @@
 --------------------------------
 -- LSP configurations
 --------------------------------
-local nvim_lsp = require'nvim_lsp'
+local lsp = require "nvim_lsp"
+-- local completion = require "completion"
+-- local diagnostic = require "diagnostic"
 
-nvim_lsp.metals.setup{}
+function on_attach()
+    -- diagnostic.on_attach()
+    -- completion.on_attach()
+end
+
+lsp.metals.setup{}
 
 
-nvim_lsp.rust_analyzer.setup{}
+lsp.rust_analyzer.setup{ on_attach = on_attach }
 
 
-nvim_lsp.pyls_ms.setup{}
+lsp.pyls_ms.setup{}
 
 
-nvim_lsp.tsserver.setup{}
+lsp.tsserver.setup{}
