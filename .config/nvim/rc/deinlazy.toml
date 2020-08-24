@@ -96,11 +96,6 @@ hook_source = '''
 repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
 
-# JSX Syntax
-[[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = 'javascript'
-
 # Syntax Highlighting and Indentation for Haskell and Cabal
 [[plugins]]
 repo = 'neovimhaskell/haskell-vim'
