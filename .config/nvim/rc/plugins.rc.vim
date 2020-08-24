@@ -93,3 +93,15 @@ call submode#map('tab-preview', 'n', '', 'T', 'gT')
 " Translate script
 "--------------------------------
 vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
+
+
+"--------------------------------
+" vim-easymotion
+"--------------------------------
+colorscheme onedark
+
+
+"--------------------------------
+" vim-airline-themes
+"--------------------------------
+let g:airline_theme='onedark'

@@ -26,15 +26,9 @@ repo = "tpope/vim-fugitive"
 # Color scheme
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-hook_add = '''
-    au colorscheme_my_settings VimEnter * nested colorscheme onedark
-'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-    let g:airline_theme='onedark'
-'''

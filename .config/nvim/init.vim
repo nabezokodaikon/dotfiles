@@ -1,12 +1,6 @@
 "--------------------------------
 " Initial configurations
 "--------------------------------
-" reset augroup
-augroup colorscheme_my_settings
-    autocmd!
-augroup END
-
-
 if &compatible
     set nocompatible
 endif
