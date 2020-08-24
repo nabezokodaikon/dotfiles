@@ -118,6 +118,13 @@ on_ft = [
     'typescript'
 ]
 
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = [
+    'javascriptreact',
+    'typescript'
+]
+
 # Vue.js syntax
 [[plugins]]
 repo = 'posva/vim-vue'
