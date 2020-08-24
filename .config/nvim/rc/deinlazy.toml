@@ -125,11 +125,6 @@ on_ft = 'typescript'
 repo = 'posva/vim-vue'
 on_ft = 'vue'
 
-# Provides more syntax highlighting and DOM keywords for TypeScript
-[[plugins]]
-repo = 'HerringtonDarkholme/yats.vim'
-on_ft = 'typescript'
-
 # Vim configuration for Rust.
 [[plugins]]
 repo = 'rust-lang/rust.vim'
