@@ -112,7 +112,11 @@ on_ft = 'toml'
 # TypeScript syntax
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = 'typescript'
+on_ft = [
+    'javascript',
+    'javascriptreact',
+    'typescript'
+]
 
 # Vue.js syntax
 [[plugins]]
