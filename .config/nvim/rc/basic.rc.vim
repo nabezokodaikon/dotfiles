@@ -32,6 +32,9 @@ set number
 " 常にタブラインを表示する。
 set showtabline=2
 
+" 常にsigncolumnを表示する。
+set signcolumn=yes
+
 " vim-airlineを使用するため、現在のモードを非表示にする。
 set noshowmode
 

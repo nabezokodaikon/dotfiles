@@ -53,7 +53,6 @@ repo = 'neovim/nvim-lsp'
 on_source = ['deoplete.nvim']	
 hook_source = '''
     luafile ~/.config/nvim/lua/lsp.lua
-    set signcolumn=yes
 '''
 # on_ft = [
     # 'html', 
