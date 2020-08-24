@@ -48,6 +48,37 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 repo = 'kristijanhusak/defx-git'
 on_source = ['defx.nvim']
 
+[[plugins]]
+repo = 'neovim/nvim-lsp'
+on_source = ['deoplete.nvim']	
+hook_source = '''
+    luafile ~/.config/nvim/lua/lsp.lua
+    set signcolumn=yes
+'''
+# on_ft = [
+    # 'html', 
+    # 'css',
+    # 'javascript',
+    # 'javascript.jsx',
+    # 'rust',
+    # 'typescript',
+    # 'typescript.tsx',
+# ]
+
+# [[plugins]]
+# repo = 'nvim-lua/completion-nvim'
+# on_source = ['nvim-lsp']
+# hook_source = '''
+    # let g:completion_enable_auto_hover = 1
+# '''
+
+# [[plugins]]
+# repo = 'nvim-lua/diagnostic-nvim'
+# on_source = ['nvim-lsp']
+# hook_source = '''
+    # let g:diagnostic_enable_virtual_text = 1
+# '''
+
 # emmet-vim
 [[plugins]]
 repo = 'mattn/emmet-vim'

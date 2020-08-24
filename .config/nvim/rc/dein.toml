@@ -2,9 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'neovim/nvim-lsp'
-
 # テキストを囲ったり、囲いを外したりするプラグイン。
 [[plugins]]
 repo = 'tpope/vim-surround'
