@@ -50,15 +50,12 @@ on_source = ['defx.nvim']
 
 [[plugins]]
 repo = 'neovim/nvim-lsp'
-hook_source = '''
-    luafile ~/.config/nvim/lua/lsp.lua
-'''
+hook_source = 'luafile ~/.config/nvim/lua/lsp.lua'
 on_ft = [
     'javascript',
-    'javascript.jsx',
+    'javascriptreact',
     'rust',
     'typescript',
-    'typescript.tsx',
 ]
 
 # [[plugins]]
