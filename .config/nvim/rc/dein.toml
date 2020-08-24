@@ -26,9 +26,16 @@ repo = "tpope/vim-fugitive"
 # Color scheme
 [[plugins]]
 repo = 'lifepillar/vim-solarized8'
+hook_add = '''
+    set background=dark
+    au colorscheme_my_settings VimEnter * nested colorscheme solarized8
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+    let g:airline_theme='solarized'
+'''

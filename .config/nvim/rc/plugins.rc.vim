@@ -93,16 +93,3 @@ call submode#map('tab-preview', 'n', '', 'T', 'gT')
 " Translate script
 "--------------------------------
 vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
-
-
-"--------------------------------
-" Colorscheme setting
-"--------------------------------
-set background=dark
-colorscheme solarized8
-
-
-"--------------------------------
-" vim-airline-themes
-"--------------------------------
-let g:airline_theme='solarized'
