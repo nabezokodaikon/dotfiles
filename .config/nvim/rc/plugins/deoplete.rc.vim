@@ -6,7 +6,7 @@ call deoplete#custom#option('keyword_patterns', {
    \ 'denite-filter': '',	
    \})	
 
-call deoplete#custom#option('min_pattern_length', 2)
+call deoplete#custom#option('min_pattern_length', 1)
 
 call deoplete#custom#option('sources', {
     \ 'css': ['buffer', 'lsp'],
