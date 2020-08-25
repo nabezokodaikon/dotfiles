@@ -40,6 +40,9 @@ call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
     \ 'haxe': { 'kind': ['!Snippet'] }
     \})
 
+call deoplete#custom#source('lsp', 'dup', v:false)
+call deoplete#custom#source('LC', 'dup', v:false)
+
 " プレビューウィンドウを表示しない。
 set completeopt-=preview
 
