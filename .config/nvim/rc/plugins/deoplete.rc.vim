@@ -43,9 +43,6 @@ call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
 call deoplete#custom#source('lsp', 'dup', v:false)
 call deoplete#custom#source('LC', 'dup', v:false)
 
-" プレビューウィンドウを表示しない。
-set completeopt-=preview
-
 " Enterで補完を決定する。
 inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 

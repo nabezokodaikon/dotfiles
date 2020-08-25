@@ -59,6 +59,9 @@ set laststatus=2
 " ポップアップの行数
 set pumheight=10
 
+" プレビューウィンドウを表示しない。
+set completeopt-=preview
+
 " 自動改行させない
 set textwidth=0
 
