@@ -92,10 +92,10 @@ vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
 "--------------------------------
 " vim-easymotion
 "--------------------------------
-colorscheme onedark
+colorscheme gruvbox
 
 
 "--------------------------------
 " vim-airline-themes
 "--------------------------------
-let g:airline_theme='onedark'
+let g:airline_theme='gruvbox'
