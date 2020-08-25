@@ -18,8 +18,6 @@ endif
 
 let g:LanguageClient_serverCommands = {	
     \ 'haxe': ['node', '~/dotfiles/.config/nvim/haxelsp/server.js'],
-    \ 'rust': ['~/.cargo/bin/rust-analyzer'],	
-    \ 'scala': ['metals-vim']
     \ }	
 
 function! s:restartLanguageClient()		
