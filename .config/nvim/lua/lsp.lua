@@ -5,11 +5,6 @@ local lsp = require'nvim_lsp'
 -- local completion = require "completion"
 -- local diagnostic = require "diagnostic"
 
-function on_attach()
-    -- completion.on_attach()
-    -- diagnostic.on_attach()
-end
-
 local capabilities = {
     textDocument = {
         completion = {
@@ -19,6 +14,11 @@ local capabilities = {
         }
     }
 };
+
+function on_attach()
+    -- completion.on_attach()
+    -- diagnostic.on_attach()
+end
 
 
 lsp.metals.setup{}
@@ -40,6 +40,7 @@ lsp.rust_analyzer.setup {
         }
     },
     capabilities = capabilities,
+    on_attach = on_attach,
 }
 
 
