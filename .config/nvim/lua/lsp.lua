@@ -28,17 +28,17 @@ lsp.pyls_ms.setup{}
 
 
 lsp.rust_analyzer.setup {
-    -- settings = {
-        -- ["rust-analyzer"] = {
-            -- completion = {
-                -- addCallArgumentSnippets = false,
-                -- addCallParenthesis = false,
-                -- postfix = {
-                    -- enable = false,
-                -- }
-            -- }
-        -- }
-    -- },
+    settings = {
+        rust_analyzer = {
+            completion = {
+                addCallArgumentSnippets = false,
+                addCallParenthesis = false,
+                postfix = {
+                    enable = false,
+                }
+            }
+        }
+    },
     capabilities = capabilities,
     on_attach = on_attach,
 }
