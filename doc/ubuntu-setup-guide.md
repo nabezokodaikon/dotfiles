@@ -61,53 +61,29 @@ $ chsh
 # 再起動
 ```
 
-## Install Homebrew on Linux
-### 本体
-[Homebrew-on-Linux](https://docs.brew.sh/Homebrew-on-Linux)
-```
-$ sudo apt install build-essential curl file git
-
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)
-
-$ test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-$ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-$ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-$ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-```
-### rmtree
-```
-$ brew tap beeftornado/rmtree
-$ brew install beeftornado/rmtree/brew-rmtree
-```
-### 開発ツールインストール
-```
-$ brew install tig
-$ brew install tmux
-```
 
 ## dotfileseンストール
 
+
 ## Install neovim
 ### Neovim
+[Release](github.com/neovim/neovim/releases/)
 ```
-$ brew install neovim
+$ ln -s ~/workspace/src/squashfs-root/usr/bin/nvim ~/.local/bin/nvim
 ```
 ### python
 ```
-$ brew install python3
+$ sudo apt install python3-pip
 $ pip3 install pynvim
-
-$ brew install python2
-$ pip2 install pynvim
 ```
 ### node
 ```
-$ brew install node
-$ npm install --global neovim 
+& sudo apt install nodejs
+& sudo apt install npm
 ```
 ### ripgrep
 ```
-$ brew install ripgrep
+$ cargo install ripgrep
 ```
 ### universal-ctags
 [universal-ctagsのUbuntu 18.04 LTS用debパッケージをビルドした](https://hnakamur.github.io/blog/2018/06/08/build-universal-ctags-deb-for-ubuntu-18.04-lts/)
@@ -117,9 +93,9 @@ $ sudo add-apt-repository ppa:hnakamur/universal-ctags
 $ sudo apt update
 $ sudo apt install universal-ctags
 ```
-### Translate
+### Translate-shell
 ```
-$ brew install translate-shell
+$ sudo apt install translate-shell
 ```
 ### rust-analyzer
 ```
@@ -130,6 +106,10 @@ $ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode
 $ sudo apt install apt-transport-https
 $ sudo apt update
 $ sudo apt install code
+$ sudo apt install curl
+$ git clone https://github.com/rust-analyzer/rust-analyzer
+$ cd rust-analyzer
+$ cargo xtask install
 ```
 
 ## Trouble shooting
@@ -137,15 +117,6 @@ $ sudo apt install code
 /var/crashに問題のあったアプリの情報を削除する。
 ```
 $ sudo rm -rf /var/crash/*
-```
-### Homebrewのキャッシュ削除
-```
-$ brew cleanup -s
-```
-### brew upgradeでError: SHA1 mismatchが出た時の対処法
-```
-$ brew cleanup -s
-$ brew update
 ```
 ### apt update が失敗する場合の対処法
 [Ubuntu　E:Read error - read (5 Input/output error), E:The package lists or status file could not be parsed or opened.](http://kurumatorajirou.blogspot.com/2012_09_01_archive.html)
