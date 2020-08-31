@@ -49,31 +49,6 @@ repo = 'kristijanhusak/defx-git'
 on_source = ['defx.nvim']
 
 [[plugins]]
-repo = 'neovim/nvim-lspconfig'
-hook_source = 'luafile ~/.config/nvim/lua/lsp.lua'
-on_ft = [
-    'javascript',
-    'javascriptreact',
-    'rust',
-    'scala',
-    'typescript',
-]
-
-# [[plugins]]
-# repo = 'nvim-lua/completion-nvim'
-# on_source = ['neovim/nvim-lspconfig']
-# hook_source = '''
-    # let g:completion_enable_auto_hover = 1
-# '''
-
-# [[plugins]]
-# repo = 'nvim-lua/diagnostic-nvim'
-# on_source = ['neovim/nvim-lspconfig']
-# hook_source = '''
-    # let g:diagnostic_enable_virtual_text = 1
-# '''
-
-[[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 hook_post_update = '''
