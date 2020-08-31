@@ -90,7 +90,7 @@ vnoremap <silent> <Leader>t :<C-u>JaEnTranslate<CR>
 
 
 "--------------------------------
-" vim-easymotion
+" colorscheme
 "--------------------------------
 colorscheme gruvbox
 
