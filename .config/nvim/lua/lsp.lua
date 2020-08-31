@@ -3,6 +3,7 @@
 --------------------------------
 local lsp = require'nvim_lsp'
 local diagnostic = require'diagnostic'
+-- local completion = require'completion'
 
 local capabilities = {
     textDocument = {
@@ -16,6 +17,7 @@ local capabilities = {
 
 local on_attach = function(client)
     diagnostic.on_attach(client)
+    -- completion.on_attach(client)
 end
 
 
@@ -26,17 +28,17 @@ lsp.pyls_ms.setup {}
 
 
 lsp.rust_analyzer.setup {
-    settings = {
-        ["rust-analyzer"] = {
-            completion = {
-                addCallArgumentSnippets = false,
-                addCallParenthesis = false,
-                postfix = {
-                    enable = false,
-                },
-            },
-        },
-    },
+    -- settings = {
+        -- ["rust-analyzer"] = {
+            -- completion = {
+                -- addCallArgumentSnippets = false,
+                -- addCallParenthesis = false,
+                -- postfix = {
+                    -- enable = false,
+                -- },
+            -- },
+        -- },
+    -- },
     capabilities = capabilities,
     on_attach = on_attach,
 }

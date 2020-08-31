@@ -38,3 +38,6 @@ repo = 'neovim/nvim-lspconfig'
 
 [[plugins]]
 repo = 'nvim-lua/diagnostic-nvim'
+
+# [[plugins]]
+# repo = 'nvim-lua/completion-nvim'
