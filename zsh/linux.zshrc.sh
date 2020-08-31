@@ -5,15 +5,8 @@
 # PATH
 #--------------------------------
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/bin:$PATH
-export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH        
-export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-
-
-# Linux brew 
-#--------------------------------
-umask 002
+export PATH=$HOME/.deno/bin:$PATH
 
 
 # Alias

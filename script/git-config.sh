@@ -3,7 +3,7 @@
 git config --global user.name "nabezokodaikon"
 git config --global user.email "nabezoko.daikon@gmail.com"
 git config --global color.ui.auto
-git config --global core.editor "env LANG=en_US.UTF-8 nvim"
+git config --global core.editor "nvim"
 git config --global credential.helper cache --timeout=36000
 
 # 改行コードを自動変換しない。
