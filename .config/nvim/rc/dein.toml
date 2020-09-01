@@ -35,7 +35,8 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 # repo = 'neovim/nvim-lspconfig'
-repo = '/Users/nabezokodaikon/workspace/src/nvim-lspconfig'
+repo = 'nabezokodaikon/nvim-lspconfig'
+rev = 'hotfix-enable_rust_analyzer_default_settings'
 
 [[plugins]]
 repo = 'nvim-lua/diagnostic-nvim'
