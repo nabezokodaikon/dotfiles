@@ -3,7 +3,6 @@
 --------------------------------
 local lsp = require'nvim_lsp'
 local diagnostic = require'diagnostic'
--- local completion = require'completion'
 
 local capabilities = {
     textDocument = {
@@ -17,7 +16,6 @@ local capabilities = {
 
 local on_attach = function(client)
     diagnostic.on_attach(client)
-    -- completion.on_attach(client)
 end
 
 
