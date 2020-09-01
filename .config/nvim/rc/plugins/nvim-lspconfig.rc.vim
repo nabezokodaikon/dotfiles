@@ -1,7 +1,7 @@
 "--------------------------------
 " LSP configurations
 "--------------------------------
-luafile ~/.config/nvim/lua/lsp.lua
+luafile ~/.config/nvim/lua/nvim-lspconfig.lua
 
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_insert_delay = 1
