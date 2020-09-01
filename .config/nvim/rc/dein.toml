@@ -34,7 +34,8 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'neovim/nvim-lspconfig'
+# repo = 'neovim/nvim-lspconfig'
+repo = '/Users/nabezokodaikon/workspace/src/nvim-lspconfig'
 
 [[plugins]]
 repo = 'nvim-lua/diagnostic-nvim'
