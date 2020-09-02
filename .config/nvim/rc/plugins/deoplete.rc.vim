@@ -27,8 +27,12 @@ call deoplete#custom#source('_', 'converters', [
     \ 'converter_truncate_abbr',
     \ 'converter_truncate_info',
     \ 'converter_truncate_menu',
-    \ 'converter_auto_delimiter'
+    \ 'converter_auto_delimiter',
     \])
+
+" 入力以下の候補を削除する。
+call deoplete#custom#source('_',
+    \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
 " 補完候補からスニペットを除外する。
 call deoplete#custom#source('lsp', 'converters', ['converter_reorder_attr'])
