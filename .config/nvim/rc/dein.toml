@@ -40,6 +40,3 @@ rev = 'hotfix-enable_rust_analyzer_default_settings'
 
 [[plugins]]
 repo = 'nvim-lua/diagnostic-nvim'
-
-# [[plugins]]
-# repo = 'nvim-lua/completion-nvim'
