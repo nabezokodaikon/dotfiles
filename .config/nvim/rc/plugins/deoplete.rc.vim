@@ -16,7 +16,7 @@ call deoplete#custom#option('sources', {
     \ 'scala': ['buffer', 'lsp'],
     \ 'typescript': ['buffer', 'lsp'],
     \ 'typescript.tsx': ['buffer', 'lsp'],
-    \ 'rust': ['lsp'],
+    \ 'rust': ['buffer', 'lsp'],
     \ 'python': ['buffer', 'lsp'],
     \})
    
