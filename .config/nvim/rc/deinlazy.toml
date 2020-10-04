@@ -139,6 +139,10 @@ hook_source = '''
     let g:vaxe_haxe_version = 3
 '''
 
+[[plugins]]
+repo = 'https://github.com/jparise/vim-graphql'
+on_ft = 'graphql'
+
 # Translate Japanese/English
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
