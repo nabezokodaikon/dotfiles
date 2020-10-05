@@ -17,6 +17,9 @@ augroup fileTypeIndent
     autocmd BufRead,BufNewFile *.hs setlocal tabstop=4 shiftwidth=4
     autocmd BufRead,BufNewFile *.hx setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.hxp setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile *.graphql setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile *.graphqls setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile *.gql setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.js setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.json setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.jsx setlocal tabstop=2 shiftwidth=2
