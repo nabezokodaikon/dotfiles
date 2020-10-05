@@ -11,6 +11,7 @@ call deoplete#custom#option('min_pattern_length', 1)
 call deoplete#custom#option('sources', {
     \ 'css': ['buffer', 'lsp'],
     \ 'html': ['buffer', 'file', 'lsp'],
+    \ 'graphql': ['buffer'],
     \ 'javascript': ['buffer', 'lsp'],
     \ 'javascript.jsx': ['buffer', 'lsp'],
     \ 'scala': ['buffer', 'lsp'],
