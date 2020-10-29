@@ -28,13 +28,10 @@ endif
 
 call dein#begin(s:dein_dir, expand('<sfile>'))
 
+call dein#add('nabezokodaikon/nvim-lspconfig', { 'rev': 'hotfix-enable_rust_analyzer_default_settings' })
+call dein#add('nvim-lua/diagnostic-nvim')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/deoplete-lsp')
-call dein#add('lifepillar/vim-solarized8')
-call dein#add('godlygeek/tabular')
-call dein#add('neovim/nvim-lspconfig')
-" call dein#add('nabezokodaikon/nvim-lspconfig', { 'rev': 'hotfix-enable_rust_analyzer_default_settings' })
-" call dein#add('nvim-lua/diagnostic-nvim')
 
 " call dein#load_toml('~/.config/nvim/rc/dein.toml', {'lazy': 0})
 " call dein#load_toml('~/.config/nvim/rc/deinlazy.toml', {'lazy': 1})
@@ -46,16 +43,63 @@ if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 
-let g:deoplete#enable_at_startup = 1
-lua require'nvim_lsp'.cmake.setup{}
-lua require'nvim_lsp'.clangd.setup{}
-
-if (has("termguicolors"))
-    set termguicolors
-endif
-set background=light
-colorscheme solarized8
+lua require'nvim_lsp'.tsserver.setup{on_attach=require'diagnostic'.on_attach}
 
 inoremap jj <ESC>
 
-filetype plugin indent on
+"--------------------------------	
+" deoplete.nvim	
+"--------------------------------	
+" deniteのフィルターの補完を無効にする。
+call deoplete#custom#option('keyword_patterns', {	
+   \ 'denite-filter': '',	
+   \})	
+
+call deoplete#custom#option({
+    \ 'min_pattern_length': 1,
+    \})
+
+call deoplete#custom#option('sources', {
+    \ 'css': ['buffer', 'lsp'],
+    \ 'html': ['buffer', 'file', 'lsp'],
+    \ 'graphql': ['buffer'],
+    \ 'javascript': ['buffer', 'lsp'],
+    \ 'javascript.jsx': ['buffer', 'lsp'],
+    \ 'typescript': ['buffer', 'lsp'],
+    \ 'typescript.tsx': ['buffer', 'lsp'],
+    \})
+   
+" 補完の余計な文字を除去する。
+call deoplete#custom#source('_', 'converters', [
+    \ 'converter_remove_paren',
+    \ 'converter_remove_overlap',
+    \ 'converter_truncate_abbr',
+    \ 'converter_truncate_info',
+    \ 'converter_truncate_menu',
+    \ 'converter_auto_delimiter',
+    \])
+
+" 入力以下の候補を削除する。
+call deoplete#custom#source('_',
+    \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
+
+" 補完候補からスニペットを除外する。
+call deoplete#custom#source('lsp', 'converters', ['converter_reorder_attr'])
+call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
+    \ 'rust': { 'kind': ['!Snippet'] }
+    \})
+call deoplete#custom#source('LanguageClient', 'converters', ['converter_reorder_attr'])
+call deoplete#custom#filter('converter_reorder_attr', 'attrs_order', {
+    \ 'haxe': { 'kind': ['!Snippet'] }
+    \})
+
+call deoplete#custom#source('lsp', 'dup', v:false)
+call deoplete#custom#source('LC', 'dup', v:false)
+
+" Enterで補完を決定する。
+inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
+
+" <C-e>でポップアップウィンドウをキャンセルして閉じる。
+inoremap <expr><C-e> deoplete#cancel_popup()
+
+call deoplete#enable()
