@@ -8,6 +8,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/node@10/bin:$PATH
 export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
+export PATH=/usr/local/opt/llvm/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.deno/bin:$PATH
