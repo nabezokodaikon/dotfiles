@@ -1,7 +1,7 @@
 --------------------------------
 -- LSP configurations
 --------------------------------
-local lsp = require'nvim_lsp'
+local lsp = require'lspconfig'
 local diagnostic = require'diagnostic'
 
 local capabilities = {
