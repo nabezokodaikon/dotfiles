@@ -115,6 +115,7 @@ on_ft = [
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft = [
+    'javascript',
     'javascriptreact',
     'typescript'
 ]
