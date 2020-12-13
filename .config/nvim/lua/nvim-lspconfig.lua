@@ -2,7 +2,7 @@
 -- LSP configurations
 --------------------------------
 local lsp = require'lspconfig'
-local diagnostic = require'diagnostic'
+-- local diagnostic = require'diagnostic'
 
 local capabilities = {
     textDocument = {
@@ -14,10 +14,14 @@ local capabilities = {
     },
 };
 
-local on_attach = function(client)
-    diagnostic.on_attach(client)
-end
-
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        underline = true,
+        virtual_text = true,
+        signs = true,
+        update_in_insert = true,
+    }
+)
 
 lsp.metals.setup {}
 
@@ -128,7 +132,7 @@ lsp.rust_analyzer.setup {
         },
     },
     capabilities = capabilities,
-    on_attach = on_attach,
+    -- on_attach = on_attach,
 }
 
 
