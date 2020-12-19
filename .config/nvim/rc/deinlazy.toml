@@ -48,21 +48,21 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 repo = 'kristijanhusak/defx-git'
 on_source = ['defx.nvim']
 
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-hook_post_update = '''
-    if IsWindows()
-        call system(
-        \ 'powershell -executionpolicy bypass -File install.ps1')
-    else
-        call system('bash install.sh')
-    endif
-'''
-hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
-on_ft = [
-    'haxe',
-]
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# rev = 'next'
+# hook_post_update = '''
+    # if IsWindows()
+        # call system(
+        # \ 'powershell -executionpolicy bypass -File install.ps1')
+    # else
+        # call system('bash install.sh')
+    # endif
+# '''
+# hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
+# on_ft = [
+    # 'haxe',
+# ]
 
 # emmet-vim
 [[plugins]]
