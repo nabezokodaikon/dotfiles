@@ -148,7 +148,7 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'https://github.com/jparise/vim-graphql'
+repo = 'jparise/vim-graphql'
 on_ft = 'graphql'
 
 # Translate Japanese/English
