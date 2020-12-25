@@ -5,7 +5,6 @@ luafile ~/.config/nvim/lua/nvim-lspconfig.lua
 
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
-let g:completion_trigger_keyword_length = 3
 let g:completion_chain_complete_list = [
     \{'complete_items': ['lsp', 'path']},
     \{'mode': '<c-p>'},
