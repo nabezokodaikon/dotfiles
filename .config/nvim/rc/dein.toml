@@ -38,6 +38,3 @@ repo = 'neovim/nvim-lspconfig'
 
 [[plugins]]
 repo = 'nvim-lua/completion-nvim'
-
-[[plugins]]
-repo = 'steelsojka/completion-buffers'
