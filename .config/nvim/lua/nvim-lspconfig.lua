@@ -37,10 +37,10 @@ lsp.tsserver.setup {
 }
 
 
-lsp.metals.setup {}
+-- lsp.metals.setup {}
 
 
-lsp.pyls_ms.setup {}
+-- lsp.pyls_ms.setup {}
 
 
 lsp.rust_analyzer.setup {
