@@ -10,6 +10,7 @@ let g:completion_chain_complete_list = [
     \{'mode': '<c-p>'},
     \{'mode': '<c-n>'}
 \]
+let g:completion_items_duplicate = { 'lsp': 0 }
 
 function! SetLSPHighlights()
     highlight LspDiagnosticsDefaultError guifg=#EB4917 guibg=NONE gui=BOLD
