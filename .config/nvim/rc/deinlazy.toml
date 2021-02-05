@@ -92,12 +92,12 @@ repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
 
 # Syntax Highlighting and Indentation for Haskell and Cabal
-[[plugins]]
-repo = 'neovimhaskell/haskell-vim'
-on_ft = 'haskell'
-hook_source = '''
-    let g:haskell_indent_guard = 4
-'''
+# [[plugins]]
+# repo = 'neovimhaskell/haskell-vim'
+# on_ft = 'haskell'
+# hook_source = '''
+    # let g:haskell_indent_guard = 4
+# '''
 
 # toml syntax
 [[plugins]]
@@ -127,9 +127,9 @@ on_ft = [
 ]
 
 # Vue.js syntax
-[[plugins]]
-repo = 'posva/vim-vue'
-on_ft = 'vue'
+# [[plugins]]
+# repo = 'posva/vim-vue'
+# on_ft = 'vue'
 
 # Vim configuration for Rust.
 [[plugins]]
@@ -140,12 +140,12 @@ hook_source = '''
     let g:rustfmt_autosave = 1 
 '''
 
-[[plugins]]
-repo = 'jdonaldson/vaxe'
-on_ft = 'haxe'
-hook_source = '''
-    let g:vaxe_haxe_version = 3
-'''
+# [[plugins]]
+# repo = 'jdonaldson/vaxe'
+# on_ft = 'haxe'
+# hook_source = '''
+    # let g:vaxe_haxe_version = 3
+# '''
 
 [[plugins]]
 repo = 'jparise/vim-graphql'
