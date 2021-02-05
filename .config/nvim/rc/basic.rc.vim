@@ -121,11 +121,7 @@ set inccommand=split
 "--------------------------------
 " ステータスライン
 "--------------------------------
-"" 改行コード対応表
-" CRLF: dos
-" CR: unix
-" LF: mac
-let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'CR' }
+let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'LF' }
 let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%= %-14.(%l,%c%V%) %P'
 
 
