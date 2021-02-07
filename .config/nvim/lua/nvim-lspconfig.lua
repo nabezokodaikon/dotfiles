@@ -2,7 +2,7 @@
 -- LSP configurations
 --------------------------------
 local lsp = require'lspconfig'
-local completion = require'completion'
+-- local completion = require'completion'
 local util = require'lspconfig/util'
 
 local capabilities = {
@@ -15,9 +15,9 @@ local capabilities = {
     },
 }
 
-local on_attach = function(client)
-    completion.on_attach(client)
-end
+-- local on_attach = function(client)
+    -- completion.on_attach(client)
+-- end
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -30,12 +30,12 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 
 lsp.tsserver.setup {
-    on_attach = on_attach,
+    -- on_attach = on_attach,
     capabilities = capabilities,
 }
 
 lsp.rust_analyzer.setup {
-    on_attach = on_attach,
+    -- on_attach = on_attach,
     capabilities = capabilities,
 }
 
