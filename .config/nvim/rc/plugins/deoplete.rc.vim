@@ -56,8 +56,6 @@ inoremap <expr><CR>  pumvisible() ? deoplete#close_popup() : "<CR>"
 " <C-e>でポップアップウィンドウをキャンセルして閉じる。
 inoremap <expr><C-e> deoplete#cancel_popup()
 
-let g:deoplete#lsp#use_icons_for_candidates = v:false
-
 " ログ出力(カレントディレクトリに出力される。)
 " call deoplete#custom#option('profile', v:true)
 " call deoplete#enable_logging('DEBUG', 'deoplete.log')
