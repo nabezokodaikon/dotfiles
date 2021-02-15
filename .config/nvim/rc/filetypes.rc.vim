@@ -75,6 +75,6 @@ augroup fileTypReferences
     autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
     autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
     autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
-    autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>r <cmd>Denite references<CR>
+    autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
     autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
 augroup END
