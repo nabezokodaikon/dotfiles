@@ -47,8 +47,6 @@ nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
 nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
 " outline
 nnoremap <silent> <Leader>o :<C-u>Denite outline<CR>
-" Resume
-nnoremap <silent> <Leader>r :<C-u>Denite -resume<CR>
 " Move to next/previous line of denite's buffer
 nnoremap <C-n> <Nop>
 nnoremap <C-p> <Nop>
