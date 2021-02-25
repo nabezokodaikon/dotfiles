@@ -22,6 +22,9 @@ call deoplete#custom#option('sources', {
     \ 'rust': ['buffer', 'lsp'],
     \ 'python': ['buffer', 'lsp'],
     \})
+
+" 末尾のセミコロンの後に、補完を表示しない。
+call deoplete#custom#source('lsp', 'input_pattern', '[a-zA-Z_]\w*$')
    
 " 補完の余計な文字を除去する。
 call deoplete#custom#source('_', 'converters', [
