@@ -32,14 +32,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 lsp.tsserver.setup {
     -- on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = {
-        "javascript",
-        "javascriptreact",
-        "javascript.jsx",
-        "typescript",
-        "typescriptreact",
-        "typescript.tsx"
-    },
 }
 
 lsp.rust_analyzer.setup {
