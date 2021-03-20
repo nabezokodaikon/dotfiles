@@ -104,26 +104,24 @@ on_ft = 'scala'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-# TypeScript syntax
+# javascript syntax
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = [
-    'javascript',
-    'javascriptreact',
-    'typescript'
-]
+repo = 'yuezk/vim-js'
+on_source = ['vim-jsx-pretty']
+
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_source = ['vim-jsx-pretty']
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft = [
     'javascript',
     'javascriptreact'
-]
-
-[[plugins]]
-repo = 'peitalin/vim-jsx-typescript'
-on_ft = [
-    'typescriptreact'
+    'javascript.jsx',
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx'
 ]
 
 # Vue.js syntax
