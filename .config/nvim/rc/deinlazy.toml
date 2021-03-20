@@ -4,7 +4,6 @@ repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 hook_source = 'source ~/.config/nvim/rc/plugins/denite.rc.vim'
 
-# denite.nvimでファイル表示履歴を表示する。
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
@@ -12,7 +11,6 @@ hook_source = '''
     let g:neomru#file_mru_limit = 64
 '''
 
-# denite.vimでyankの履歴を表示する。
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
 on_source = ['denite.nvim']
@@ -21,24 +19,17 @@ on_source = ['denite.nvim']
 repo = 'nabezokodaikon/denite-converter-basename_to_top'
 on_source = ['denite.nvim']
 
+# deoplete.nvim
 [[plugins]]	
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = 'source ~/.config/nvim/rc/plugins/deoplete.rc.vim'
 
-# [[plugins]]
-# repo = 'deoplete-plugins/deoplete-dictionary'
-# on_source = ['deoplete.nvim']
-
-# [[plugins]]
-# repo = 'deoplete-plugins/deoplete-tag'
-# on_source = ['deoplete.nvim']
-
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-lsp'
 on_source = ['deoplete.nvim']
 
-# File browser
+# defx.nvim
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
@@ -47,22 +38,6 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
 on_source = ['defx.nvim']
-
-# [[plugins]]
-# repo = 'autozimu/LanguageClient-neovim'
-# rev = 'next'
-# hook_post_update = '''
-    # if IsWindows()
-        # call system(
-        # \ 'powershell -executionpolicy bypass -File install.ps1')
-    # else
-        # call system('bash install.sh')
-    # endif
-# '''
-# hook_source = 'source ~/.config/nvim/rc/plugins/LanguageClient-neovim.rc.vim'
-# on_ft = [
-    # 'haxe',
-# ]
 
 # emmet-vim
 [[plugins]]
@@ -81,23 +56,18 @@ hook_source = '''
     augroup emmet-vim
         autocmd!
         autocmd FileType 
-        \ html,javascript,javascriptreact,typescript,typescriptreact,vue
+        \ html,
+        \ javascript,javascriptreact,'javascript.jsx',
+        \ typescript,typescriptreact,'typescript.tsx',
+        \ vue,
         \ EmmetInstall
     augroup END
 '''
 
-# Scala のシンタックスハイライト
+# scala syntax
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
-
-# Syntax Highlighting and Indentation for Haskell and Cabal
-# [[plugins]]
-# repo = 'neovimhaskell/haskell-vim'
-# on_ft = 'haskell'
-# hook_source = '''
-    # let g:haskell_indent_guard = 4
-# '''
 
 # toml syntax
 [[plugins]]
@@ -124,12 +94,12 @@ on_ft = [
     'typescript.tsx'
 ]
 
-# Vue.js syntax
+# vue.js syntax
 # [[plugins]]
 # repo = 'posva/vim-vue'
 # on_ft = 'vue'
 
-# Vim configuration for Rust.
+# rust configuration
 [[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
@@ -138,18 +108,12 @@ hook_source = '''
     let g:rustfmt_autosave = 1 
 '''
 
-# [[plugins]]
-# repo = 'jdonaldson/vaxe'
-# on_ft = 'haxe'
-# hook_source = '''
-    # let g:vaxe_haxe_version = 3
-# '''
-
+# graphql syntax
 [[plugins]]
 repo = 'jparise/vim-graphql'
 on_ft = 'graphql'
 
-# Translate Japanese/English
+# Translate for Japanese/English
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
 on_cmd = 'JaEnTranslate'
