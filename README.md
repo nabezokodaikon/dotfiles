@@ -57,7 +57,6 @@ $ brew tap beeftornado/rmtree
 ### Clipboard
 * 既存の`pbcopy`と`pbpaste`を使用するため、別途インストールは不要。
 
-
 ### Neovim
 ```
 $ pip2 install neovim
@@ -115,9 +114,6 @@ grepには`ripgrep`を使用する。
 ### tmux
 #### Clipboard
 * `xclip`を使用するため、別途xclipをインストールする。
-### Ctags
-本家の`Ctags`は2009年以降更新が途絶えているため、`Universal Ctags`を使用する。
-* [Universal Ctags](https://github.com/universal-ctags/ctags)
 
 
 ## MEMO
@@ -138,6 +134,3 @@ grepには`ripgrep`を使用する。
 * [zshの設定ファイルの読み込み順序と使い方Tipsまとめ](http://qiita.com/muran001/items/7b104d33f5ea3f75353f)
 ### Color
 * [Bash tips: Colors and formatting](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
-
-## TODO
-LanguageClient-neovim専用のREADMEを作る。
