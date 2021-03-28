@@ -46,8 +46,10 @@ on_ft = [
     'html',
     'javascript',
     'javascriptreact',
+    'javascript.jsx'
     'typescript',
     'typescriptreact',
+    'typescript.tsx'
     'vue',
 ]
 hook_source = '''
