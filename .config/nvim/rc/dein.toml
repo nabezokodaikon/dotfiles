@@ -41,3 +41,6 @@ repo = 'neovim/nvim-lspconfig'
 
 # [[plugins]]
 # repo = 'nvim-lua/lsp-status.nvim'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'

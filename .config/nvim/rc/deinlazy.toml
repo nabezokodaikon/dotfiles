@@ -72,29 +72,29 @@ repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
 
 # toml syntax
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
+# [[plugins]]
+# repo = 'cespare/vim-toml'
+# on_ft = 'toml'
 
 # javascript syntax
-[[plugins]]
-repo = 'yuezk/vim-js'
-on_source = ['vim-jsx-pretty']
+# [[plugins]]
+# repo = 'yuezk/vim-js'
+# on_source = ['vim-jsx-pretty']
 
-[[plugins]]
-repo = 'HerringtonDarkholme/yats.vim'
-on_source = ['vim-jsx-pretty']
+# [[plugins]]
+# repo = 'HerringtonDarkholme/yats.vim'
+# on_source = ['vim-jsx-pretty']
 
-[[plugins]]
-repo = 'maxmellon/vim-jsx-pretty'
-on_ft = [
-    'javascript',
-    'javascriptreact'
-    'javascript.jsx',
-    'typescript',
-    'typescriptreact',
-    'typescript.tsx'
-]
+# [[plugins]]
+# repo = 'maxmellon/vim-jsx-pretty'
+# on_ft = [
+    # 'javascript',
+    # 'javascriptreact'
+    # 'javascript.jsx',
+    # 'typescript',
+    # 'typescriptreact',
+    # 'typescript.tsx'
+# ]
 
 # vue.js syntax
 # [[plugins]]
@@ -111,9 +111,9 @@ hook_source = '''
 '''
 
 # graphql syntax
-[[plugins]]
-repo = 'jparise/vim-graphql'
-on_ft = 'graphql'
+# [[plugins]]
+# repo = 'jparise/vim-graphql'
+# on_ft = 'graphql'
 
 # Translate for Japanese/English
 [[plugins]]

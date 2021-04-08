@@ -63,7 +63,10 @@ source ~/.config/nvim/rc/ctags.rc.vim
 source ~/.config/nvim/rc/hacks.rc.vim
 
 " LSP configurations
-source ~/.config/nvim/rc/plugins/nvim-lspconfig.rc.vim
+source ~/.config/nvim/rc/plugins/treesitter.rc.vim
+
+" LSP configurations
+source ~/.config/nvim/rc/plugins/lsp.rc.vim
 
 " Plugins configurations
 " LSP色設定をカラースキーム設定より前に設定しなければならない。

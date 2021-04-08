@@ -1,7 +1,7 @@
 "--------------------------------
 " LSP configurations
 "--------------------------------
-luafile ~/.config/nvim/lua/nvim-lspconfig.lua
+luafile ~/.config/nvim/lua/lsp.lua
 
 " set completeopt=menuone,noinsert,noselect
 " set shortmess+=c
