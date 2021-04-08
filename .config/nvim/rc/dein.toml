@@ -36,12 +36,6 @@ repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''
-  luafile ~/.config/nvim/lua/nvim-treesitter.lua
-'''
-
 # [[plugins]]
 # repo = 'nvim-lua/completion-nvim'
 
