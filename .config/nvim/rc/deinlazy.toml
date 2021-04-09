@@ -44,26 +44,13 @@ on_source = ['defx.nvim']
 repo = 'mattn/emmet-vim'
 on_ft = [
     'html',
-    'javascript',
-    'javascriptreact',
-    'javascript.jsx'
-    'typescript',
-    'typescriptreact',
-    'typescript.tsx'
-    'vue',
 ]
 hook_source = '''
     let g:user_emmet_install_global = 0
     let g:user_emmet_leader_key='<C-e>'
-    augroup emmet-vim
-        autocmd!
-        autocmd FileType 
-        \ html,
-        \ javascript,javascriptreact,'javascript.jsx',
-        \ typescript,typescriptreact,'typescript.tsx',
-        \ vue,
-        \ EmmetInstall
-    augroup END
+    autocmd FileType 
+    \ html
+    \ EmmetInstall
 '''
 
 [[plugins]]
