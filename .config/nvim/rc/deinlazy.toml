@@ -66,6 +66,22 @@ hook_source = '''
     augroup END
 '''
 
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+on_event = 'BufRead'
+hook_post_update = 'TSUpdate'
+hook_source = '''
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+    disable = { "rust" },
+  },
+}
+EOF
+'''
+
 # scala syntax
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
