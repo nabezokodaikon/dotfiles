@@ -39,43 +39,24 @@ hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
 repo = 'kristijanhusak/defx-git'
 on_source = ['defx.nvim']
 
-# emmet-vim
-# [[plugins]]
-# repo = 'mattn/emmet-vim'
-# on_ft = [
-    # 'html',
-    # 'javascript',
-    # 'javascriptreact',
-    # 'javascript.jsx'
-    # 'typescript',
-    # 'typescriptreact',
-    # 'typescript.tsx'
-    # 'vue',
-# ]
-# hook_source = '''
-    # let g:user_emmet_install_global = 0
-    # let g:user_emmet_leader_key='<C-e>'
-    # augroup my-emmet-vim
-        # autocmd!
-        # autocmd FileType 
-        # \ html,
-        # \ javascriptreact,
-        # \ typescriptreact
-        # \ EmmetInstall
-    # augroup END
-# '''
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = [
     'html',
+    'css',
+    'scss'
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
 ]
 hook_source = '''
     let g:user_emmet_install_global = 0
     let g:user_emmet_leader_key='<C-e>'
-    augroup my-emmet-vim
+    augroup emmet_my_settings
         autocmd!
-        autocmd FileType 
-        \ html
+        autocmd FileType
+        \ html,css,scss,javascript,javascriptreact,typescript,typescriptreact
         \ EmmetInstall
     augroup END
 '''
