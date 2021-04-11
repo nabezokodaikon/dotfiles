@@ -15,10 +15,10 @@ call deoplete#custom#option('sources', {
     \ 'html': ['buffer', 'file', 'lsp'],
     \ 'graphql': ['buffer'],
     \ 'javascript': ['buffer', 'lsp'],
-    \ 'javascript.jsx': ['buffer', 'lsp'],
+    \ 'javascriptreact': ['buffer', 'lsp'],
     \ 'scala': ['buffer', 'lsp'],
     \ 'typescript': ['buffer', 'lsp'],
-    \ 'typescript.tsx': ['buffer', 'lsp'],
+    \ 'typescriptreact': ['buffer', 'lsp'],
     \ 'rust': ['buffer', 'lsp'],
     \ 'python': ['buffer', 'lsp'],
     \})
