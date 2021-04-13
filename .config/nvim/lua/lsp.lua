@@ -2,18 +2,9 @@
 -- LSP configurations
 --------------------------------
 local lsp = require'lspconfig'
--- local completion = require'completion'
+local completion = require'completion'
 local util = require'lspconfig/util'
 
-local capabilities = {
-    textDocument = {
-        completion = {
-            completionItem = {
-                snippetSupport = false
-            },
-        },
-    },
-}
 
 -- local on_attach = function(client)
     -- completion.on_attach(client)
@@ -28,6 +19,13 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+
+lsp.cssls.setup {
+    capabilities = capabilities,
+}
 
 lsp.tsserver.setup {
     -- on_attach = on_attach,

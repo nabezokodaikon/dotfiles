@@ -11,7 +11,7 @@ call deoplete#custom#option({
     \})
 
 call deoplete#custom#option('sources', {
-    \ 'css': ['buffer'],
+    \ 'css': ['buffer', 'lsp'],
     \ 'html': ['buffer', 'file'],
     \ 'graphql': ['buffer'],
     \ 'javascript': ['buffer', 'lsp'],
