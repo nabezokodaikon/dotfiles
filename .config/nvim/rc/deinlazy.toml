@@ -65,17 +65,7 @@ hook_source = '''
 repo = 'nvim-treesitter/nvim-treesitter'
 on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
-hook_source = '''
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  highlight = {
-    enable = true,
-    disable = { "rust" },
-  },
-}
-EOF
-'''
+hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
 
 # scala syntax
 [[plugins]]
