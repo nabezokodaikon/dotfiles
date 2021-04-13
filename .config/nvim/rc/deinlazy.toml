@@ -1,4 +1,3 @@
-# denite.nvim
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
@@ -19,7 +18,6 @@ on_source = ['denite.nvim']
 repo = 'nabezokodaikon/denite-converter-basename_to_top'
 on_source = ['denite.nvim']
 
-# deoplete.nvim
 [[plugins]]	
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
@@ -29,7 +27,6 @@ hook_source = 'source ~/.config/nvim/rc/plugins/deoplete.rc.vim'
 repo = 'deoplete-plugins/deoplete-lsp'
 on_source = ['deoplete.nvim']
 
-# defx.nvim
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
