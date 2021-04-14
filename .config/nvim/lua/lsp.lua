@@ -2,7 +2,7 @@
 -- LSP configurations
 --------------------------------
 local lsp = require'lspconfig'
-local completion = require'completion'
+-- local completion = require'completion'
 local util = require'lspconfig/util'
 
 
