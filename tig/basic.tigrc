@@ -44,3 +44,7 @@ bind generic + !git commit --amend --allow-empty
 
 # revert key bind.
 bind main ! ?git revert %(commit)
+
+# rebase key binds.
+bind main    R !git rebase -i %(commit)
+bind diff    R !git rebase -i %(commit)
