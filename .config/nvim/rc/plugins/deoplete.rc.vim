@@ -23,8 +23,12 @@ call deoplete#custom#option('sources', {
     \ 'python': ['buffer', 'lsp'],
     \})
 
-" 末尾のセミコロンの後に、補完を表示しない。
-call deoplete#custom#source('lsp', 'input_pattern', '[a-zA-Z_]\w*$')
+call deoplete#custom#source('lsp', 'input_patterns', {
+    \ '_': '[a-zA-Z_]\w*$',
+    \ 'rust': '[a-zA-Z_]\w*\.$|[a-zA-Z_]\w*::$',
+    \ 'typescript': '[a-zA-Z_]\w*\.$',
+    \ 'typescriptreact': '[a-zA-Z_]\w*\.$',
+    \ })
    
 " 補完の余計な文字を除去する。
 call deoplete#custom#source('_', 'converters', [
