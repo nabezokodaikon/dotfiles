@@ -19,26 +19,23 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local snippetSupport = vim.lsp.protocol.make_client_capabilities()
+snippetSupport.textDocument.completion.completionItem.snippetSupport = true
 
 
 lsp.cssls.setup {
-    capabilities = capabilities,
+    capabilities = snippetSupport,
 }
 
 lsp.denols.setup{
-    capabilities = capabilities,
 }
 
 lsp.tsserver.setup {
     -- on_attach = on_attach,
-    capabilities = capabilities,
 }
 
 lsp.rust_analyzer.setup {
     -- on_attach = on_attach,
-    capabilities = capabilities,
 }
 
 -- lsp.metals.setup {}
