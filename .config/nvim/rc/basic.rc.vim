@@ -109,7 +109,9 @@ set softtabstop=-1
 " 置換設定
 "--------------------------------
 " 文字列置換をインタラクティブに表示する。
-set inccommand=split
+if (has('nvim'))
+    set inccommand=split
+endif
 
 
 "--------------------------------
@@ -125,4 +127,6 @@ let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%= %
 set termguicolors
 
 " 補完などに使われるポップアップメニューを半透明に表示します。
-set pumblend=15
+if (has('nvim'))
+    set pumblend=15
+endif
