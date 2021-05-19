@@ -9,7 +9,6 @@ unlink ${HOME}/.zlogin
 unlink ${HOME}/.zlogout
 unlink ${HOME}/.tmux.conf
 unlink ${HOME}/.tigrc
-unlink ${HOME}/.ctags.d
 unlink ${HOME}/.vimrc
 unlink ${HOME}/.config/nvim
 unlink ${HOME}/.config/termite

@@ -8,7 +8,6 @@
 .*.swp
 *~
 .*~
-tags.lock
 /.vim/.netrwhist
 .metals
 scoop
@@ -18,11 +17,6 @@ scoop
 
 # neovim プラグインディレクトリを対象外にする
 /nvim/plugins/repos/
-
-# tags ファイル配置ディレクトリのみを対象とする
-/tags/*.tags
-/tags/*/
-!/tags/README
 
 # Neovimのログディレクトリを対象外とする
 /.config/nvim/logs/*

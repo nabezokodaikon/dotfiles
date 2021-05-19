@@ -36,14 +36,9 @@ augroup fileTypeIndent
     autocmd BufRead,BufNewFile *.yaml setlocal tabstop=2 shiftwidth=2
 augroup END
 
-augroup fileTypeDictionary
-    autocmd!
-    autocmd BufRead,BufNewFile *.hs setlocal dictionary=~/.config/nvim/dict/haskell.dict
-augroup END
-
 augroup fileTypeDeclaration
     autocmd!
-    autocmd BufRead,BufNewFile *.hs nnoremap <silent> <Leader>d :<C-u>DeniteCursorWord tag<CR>
+    autocmd BufRead,BufNewFile *.hs nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.hx nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.hxp nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
     autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>

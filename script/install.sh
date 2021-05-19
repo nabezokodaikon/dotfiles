@@ -9,7 +9,6 @@ unlink ${HOME}/.zlogin
 unlink ${HOME}/.zlogout
 unlink ${HOME}/.tmux.conf
 unlink ${HOME}/.tigrc
-unlink ${HOME}/.ctags.d
 unlink ${HOME}/.vimrc
 unlink ${HOME}/.config/nvim
 unlink ${HOME}/.config/termite
@@ -32,7 +31,6 @@ ln -s ${HOME}/dotfiles/zsh/.zlogout ${HOME}/.zlogout
 ln -s ${HOME}/dotfiles/tmux/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${HOME}/dotfiles/tig/.tigrc ${HOME}/.tigrc
 ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc
-ln -s ${HOME}/dotfiles/.ctags.d ${HOME}/.ctags.d
 ln -s ${HOME}/dotfiles/.config/nvim/ ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/.config/termite/ ${HOME}/.config/termite
 

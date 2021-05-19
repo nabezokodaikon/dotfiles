@@ -90,19 +90,6 @@ $ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep
 $ sudo dpkg -i ripgrep_0.8.1_amd64.deb
 ```
 
-### `Universal Ctags`インストール
-```
-$ sudo apt install autoconf
-$ sudo apt install pkg-config
-
-$ git clone https://github.com/universal-ctags/ctags.git
-$ cd ctags
-$ ./autogen.sh 
-$ ./configure
-$ make
-$ sudo make install
-```
-
 ### `tig`インストール
 ```
 $ sudo apt install tig

@@ -39,11 +39,6 @@ $ brew install \
     tree \
     zsh
 ```
-#### Universal Ctags
-```
-$ brew tap universal-ctags/universal-ctags
-$ brew install --HEAD universal-ctags
-```
 #### Font
 ```
 $ brew tap caskroom/fonts 

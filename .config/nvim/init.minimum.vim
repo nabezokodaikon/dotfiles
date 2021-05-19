@@ -56,9 +56,6 @@ source ~/.config/nvim/rc/mappings.rc.vim
 " File type configurations
 source ~/.config/nvim/rc/filetypes.rc.vim
 
-" Ctags command
-source ~/.config/nvim/rc/ctags.rc.vim
-
 " Hacks
 source ~/.config/nvim/rc/hacks.rc.vim
 
