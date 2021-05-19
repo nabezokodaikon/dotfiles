@@ -1,70 +1,32 @@
-"--------------------------------
-" Initial configurations
-"--------------------------------
 if &compatible
     set nocompatible
 endif
 
-
 filetype off
 filetype plugin indent off
 
-
-let s:is_windows = has('win32') || has('win64')
-let s:is_mac = !s:is_windows 
-    \ && !has('win32unix')
-    \ && (has('mac') || has('macunix') || has('gui_macvim') || (!executable('xdg-open') && system('uname') =~? '^darwin'))
-let s:is_linux = !s:is_windows && !s:is_mac && has('unix')
-
-function! IsWindows() abort
-    return s:is_windows
-endfunction
-
-function! IsMac() abort
-    return s:is_mac
-endfunction
-
-function! IsLinux() abort
-    return s:is_linux
-endfunction
-
-
-" Set disable providers
-let g:loaded_ruby_provider = 0
-let g:loaded_python_provider = 0
-let g:loaded_perl_provider = 0
-
-" Set path on providers
-if IsWindows()
-    let g:python3_host_prog = $LOCALAPPDATA . '/Programs/Python/python.exe'
-    " let g:node_host_prog = '/usr/local/bin/neovim-node-host'
-elseif IsMac()
-    let g:python3_host_prog = '/usr/local/bin/python3'
-    let g:node_host_prog = '/usr/local/bin/neovim-node-host'
+let $CACHE = expand('~/.cache')
+if !isdirectory(expand($CACHE))
+    call mkdir(expand($CACHE), 'p')
 endif
-
-
-" プラグイン管理設定
-source ~/.config/nvim/rc/dein.rc.vim
-
-" 基本設定
-source ~/.config/nvim/rc/basic.rc.vim
-
-" Key mapping configurations
-source ~/.config/nvim/rc/mappings.rc.vim
-
-" File type configurations
-source ~/.config/nvim/rc/filetypes.rc.vim
-
-" Hacks
-source ~/.config/nvim/rc/hacks.rc.vim
-
-" LSP configurations
-source ~/.config/nvim/rc/plugins/nvim-lspconfig.rc.vim
-
-" Plugins configurations
-" LSP色設定をカラースキーム設定より前に設定しなければならない。
-source ~/.config/nvim/rc/plugins.rc.vim
-
+let s:dein_dir = expand('$CACHE/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+if &runtimepath !~# '/dein.vim'
+    if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    execute 'set runtimepath^=' . s:dein_repo_dir
+endif
+if !dein#load_state(s:dein_dir)
+    finish
+endif
+call dein#begin(s:dein_dir, expand('<sfile>'))
+call dein#load_toml('~/.config/nvim/rc/dein.toml', {'lazy': 0})
+call dein#load_toml('~/.config/nvim/rc/deinlazy.toml', {'lazy': 1})
+call dein#end()
+call dein#save_state()
+if has('vim_starting') && dein#check_install()
+    call dein#install()
+endif
 
 filetype plugin indent on
