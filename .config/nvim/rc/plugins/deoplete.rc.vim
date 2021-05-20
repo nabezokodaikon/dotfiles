@@ -25,7 +25,7 @@ call deoplete#custom#option('sources', {
 
 call deoplete#custom#source('lsp', 'input_patterns', {
     \ '_': '[a-zA-Z_]\w*$',
-    \ 'rust': '[a-zA-Z_][\w\(\)]*\.$|[a-zA-Z_][\w\)]*::$',
+    \ 'rust': '[a-zA-Z_][\w\)\?]*\.$|[a-zA-Z_][\w\)\?]*::$',
     \ 'typescript': '[a-zA-Z_]\w*\.$',
     \ 'typescriptreact': '[a-zA-Z_]\w*\.$',
     \ })
