@@ -41,8 +41,8 @@ call deoplete#custom#source('_', 'converters', [
     \])
 
 " 入力以下の候補を削除する。
-call deoplete#custom#source('_',
-    \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
+" call deoplete#custom#source('_',
+    " \ 'matchers', ['matcher_fuzzy', 'matcher_length'])
 
 " 補完候補からスニペットを除外する。
 call deoplete#custom#source('lsp', 'converters', ['converter_reorder_attr'])
