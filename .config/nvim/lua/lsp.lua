@@ -34,10 +34,6 @@ lsp.tsserver.setup {
     -- on_attach = on_attach,
 }
 
--- lsp.rls.setup {
-    -- -- on_attach = on_attach,
--- }
-
 lsp.rust_analyzer.setup {
     -- on_attach = on_attach,
 }
