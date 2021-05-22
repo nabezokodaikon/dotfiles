@@ -27,8 +27,8 @@ lsp.cssls.setup {
     capabilities = snippetSupport,
 }
 
-lsp.denols.setup{
-}
+-- lsp.denols.setup{
+-- }
 
 lsp.tsserver.setup {
     -- on_attach = on_attach,
