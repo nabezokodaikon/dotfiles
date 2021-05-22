@@ -21,9 +21,13 @@ if !dein#load_state(s:dein_dir)
     finish
 endif
 call dein#begin(s:dein_dir, expand('<sfile>'))
+
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('~/workspace/src/deoplete-lsp')
 call dein#add('neovim/nvim-lspconfig')
+" call dein#add('nvim-lua/completion-nvim')
+" call dein#add('neoclide/coc.nvim', { 'rev': 'release' })
+
 call dein#end()
 call dein#save_state()
 if has('vim_starting') && dein#check_install()
@@ -32,5 +36,11 @@ endif
 
 filetype plugin indent on
 
-call deoplete#enable()
+
 lua require'lspconfig'.rust_analyzer.setup {}
+lua require'lspconfig'.tsserver.setup{}
+
+call deoplete#enable()
+
+" lua require'lspconfig'.rust_analyzer.setup { on_attach = require'completion'.on_attach }
+" autocmd BufEnter * lua require'completion'.on_attach()
