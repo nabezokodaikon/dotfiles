@@ -24,10 +24,10 @@ call deoplete#custom#option('sources', {
     \})
 
 call deoplete#custom#source('lsp', 'input_patterns', {
-    \ '_': '[a-zA-Z_]\w*$',
-    \ 'rust': '\w[\w\(\)\[\]\?]*(\.|(::))$',
-    \ 'typescript': '[a-zA-Z_]\w*\.$',
-    \ 'typescriptreact': '[a-zA-Z_]\w*\.$',
+    \ '_': '\.\w*$',
+    \ 'rust': '(\.|::)\w*$',
+    \ 'typescript': '(\.|''|\")\w*$',
+    \ 'typescriptreact': '(\.|''|\")\w*$',
     \ })
    
 " 補完の余計な文字を除去する。
