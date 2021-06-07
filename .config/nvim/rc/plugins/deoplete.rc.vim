@@ -39,7 +39,7 @@ call deoplete#custom#option('sources', {
 call deoplete#custom#source('lsp', 'input_patterns', {
     \ '_': '\.\w*$',
     \ 'rust': '(\.|::)\w*$',
-    \ 'typescript': '\W([$_a-zA-Z0-9\u00C0-\uE007F]+)(<.*>)?\(',
+    \ 'typescript': '\.\w*$',
     \ 'typescriptreact': '\W([$_a-zA-Z0-9\u00C0-\uE007F]+)(<.*>)?\(',
     \ })
    
