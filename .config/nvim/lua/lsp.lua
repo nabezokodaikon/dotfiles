@@ -27,12 +27,12 @@ lsp.cssls.setup {
     capabilities = snippetSupport,
 }
 
--- lsp.denols.setup{
--- }
-
-lsp.tsserver.setup {
-    -- on_attach = on_attach,
+lsp.denols.setup{
 }
+
+-- lsp.tsserver.setup {
+    -- -- on_attach = on_attach,
+-- }
 
 lsp.rust_analyzer.setup {
     settings = {
