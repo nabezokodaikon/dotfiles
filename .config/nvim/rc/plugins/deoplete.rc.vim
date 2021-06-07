@@ -30,8 +30,8 @@ call deoplete#custom#option('sources', {
     \ 'javascript': ['buffer', 'lsp'],
     \ 'javascriptreact': ['buffer', 'lsp'],
     \ 'scala': ['buffer', 'lsp'],
-    \ 'typescript': ['buffer', 'lsp'],
-    \ 'typescriptreact': ['buffer', 'lsp'],
+    \ 'typescript': ['buffer', 'file', 'lsp'],
+    \ 'typescriptreact': ['buffer', 'file', 'lsp'],
     \ 'rust': ['buffer', 'lsp'],
     \ 'python': ['buffer', 'lsp'],
     \})
