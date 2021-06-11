@@ -6,6 +6,12 @@ local lsp = require'lspconfig'
 local util = require'lspconfig/util'
 
 
+function file_exists(name)
+    local f = io.open(name, 'r')
+    if f ~= nil then io.close(f) return true else return false end
+end
+
+
 -- local on_attach = function(client)
     -- completion.on_attach(client)
 -- end
@@ -27,12 +33,15 @@ lsp.cssls.setup {
     capabilities = snippetSupport,
 }
 
-lsp.denols.setup{
-}
+if file_exists(os.getenv('PWD')..'/package.json') then
+    lsp.tsserver.setup {
+        -- on_attach = on_attach,
+    }
+else
+    lsp.denols.setup{
+    }
+end
 
--- lsp.tsserver.setup {
-    -- -- on_attach = on_attach,
--- }
 
 lsp.rust_analyzer.setup {
     settings = {
