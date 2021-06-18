@@ -106,8 +106,14 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # <C-r>でfzfのコマンド履歴を表示。
 function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --layout=reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  BUFFER=$(history -n -r 1 | fzf-tmux -p --layout=reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
   CURSOR=$#BUFFER
 }
 zle -N select-history
 bindkey '^f' select-history
+
+# historyに保存するときに余分なスペースを削除する
+setopt hist_reduce_blanks
+
+# ウィンドウ、ペイン間でコマンド履歴を共有する。
+setopt share_history
