@@ -71,17 +71,6 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M vicmd '^h' vi-digit-or-beginning-of-line
 bindkey -M vicmd '^l' vi-end-of-line
 
-# インクリメンタルサーチ
-bindkey '^f' history-incremental-search-forward
-bindkey '^b' history-incremental-search-backward
-bindkey '^g' send-break
-
-autoload -U history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
-
 # <Ctrl> + z で vim と shell を切り替える。
 # 本来なら vim (<Ctrl> + z) > shell (fg<Enter>) > vim
 # http://postd.cc/how-to-boost-your-vim-productivity/
