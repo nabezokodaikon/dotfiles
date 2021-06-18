@@ -106,7 +106,9 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # <C-r>でfzfのコマンド履歴を表示。
 function select-history() {
-  BUFFER=$(history -n -r 1 | fzf-tmux -p --layout=reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  BUFFER=$(history -n -r 1 | \
+      fzf-tmux -w '80' -y '16'  \
+      -p --layout=reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
   CURSOR=$#BUFFER
 }
 zle -N select-history
