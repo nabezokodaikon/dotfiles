@@ -110,4 +110,4 @@ function select-history() {
   CURSOR=$#BUFFER
 }
 zle -N select-history
-bindkey '^h' select-history
+bindkey '^f' select-history
