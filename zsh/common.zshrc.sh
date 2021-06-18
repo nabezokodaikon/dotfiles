@@ -29,9 +29,8 @@ bindkey -v
 autoload -U colors
 colors
 
-# 履歴設定
-setopt hist_ignore_dups
-setopt EXTENDED_HISTORY
+# コマンドの実行をキャンセルする。
+bindkey '^g' send-break
 
 # git の情報を表示
 autoload -U vcs_info
