@@ -32,6 +32,15 @@ colors
 # コマンドの実行をキャンセルする。
 bindkey '^g' send-break
 
+# 簡易コマンド履歴操作。
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+
 # git の情報を表示
 autoload -U vcs_info
 setopt prompt_subst
@@ -101,4 +110,4 @@ function select-history() {
   CURSOR=$#BUFFER
 }
 zle -N select-history
-bindkey '^r' select-history
+bindkey '^h' select-history
