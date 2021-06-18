@@ -108,8 +108,8 @@ bindkey '^Z' fancy-ctrl-z
 # --------------------------------
 function select-history() {
   BUFFER=$(history -n -r 1 | \
-      fzf-tmux -y '0%' -w '80%' -h '25%' \
-      -p --layout=reverse --no-sort +m --query "$LBUFFER" --prompt="cmd > ")
+      fzf-tmux -y '100%' -w '80%' -h '25%' \
+      -p --no-sort +m --query "$LBUFFER" --prompt="cmd > ")
   CURSOR=$#BUFFER
 }
 
@@ -159,8 +159,8 @@ function powered_cd_add_log() {
 function powered_cd() {
   if [ $# = 0 ]; then
     cd $(run_tac_commnad | \
-        fzf-tmux -y '0%' -w '80%' -h '25%' \
-        -p --layout=reverse --no-sort +m --query "$LBUFFER" --prompt="cd > " \
+        fzf-tmux -y '100%' -w '80%' -h '25%' \
+        -p --no-sort +m --query "$LBUFFER" --prompt="cd > " \
     )
     zle reset-prompt
   elif [ $# = 1 ]; then
