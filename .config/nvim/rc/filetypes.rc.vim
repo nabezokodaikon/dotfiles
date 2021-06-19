@@ -7,6 +7,8 @@ augroup fileTypeRelation
     autocmd BufRead,BufNewFile *.sbt set filetype=scala
     autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact
     autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
+    autocmd BufNewFile,BufRead *.gql set filetype=graphql
+    autocmd BufNewFile,BufRead *.graphql set filetype=graphql
 augroup END
 
 augroup fileTypeIndent
