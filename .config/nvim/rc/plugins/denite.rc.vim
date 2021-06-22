@@ -2,7 +2,9 @@
 " denite.nvim
 "--------------------------------
 " Command option.
+highlight! DeniteBackground ctermfg=250 ctermbg=3 guifg=#ACAFAE guibg=#332211
 call denite#custom#option('default', {
+    \ 'highlight_window_background': 'DeniteBackground',
     \ 'split': 'floating',
     \ 'prompt': '> ',
     \ 'winrow': 1,
@@ -82,6 +84,6 @@ endfunction
 " Floating windows
 augroup denite-transparent-windows
   autocmd!
-  autocmd FileType denite set winblend=15
-  autocmd FileType denite-filter set winblend=15
+  autocmd FileType denite set winblend=50
+  autocmd FileType denite-filter set winblend=50
 augroup END
