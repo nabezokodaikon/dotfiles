@@ -75,10 +75,10 @@ function! s:denite_filter_my_settings() abort
         \ denite#do_map('quit')
     nnoremap <silent><buffer><expr> <C-c>
         \ denite#do_map('quit')
-    imap <silent><buffer> <Esc>
-        \ <Plug>(denite_filter_quit)
-    imap <silent><buffer> jj 
-        \ <Plug>(denite_filter_quit)
+    " imap <silent><buffer> <Esc>
+        " \ <Plug>(denite_filter_quit)
+    " imap <silent><buffer> jj 
+        " \ <Plug>(denite_filter_quit)
 endfunction
 
 " Floating windows
