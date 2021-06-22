@@ -35,3 +35,9 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
+
+[[plugins]]
+repo = 'nvim-lua/completion-nvim'
+
+[[plugins]]
+repo = 'hrsh7th/nvim-compe'
