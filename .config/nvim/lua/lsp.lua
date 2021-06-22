@@ -65,6 +65,16 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
+vim.api.nvim_exec([[
+    augroup custom_theme_highlights
+    autocmd!
+        au ColorScheme * hi LspDiagnosticsDefaultError guifg=#EB4917 gui=BOLD
+        au ColorScheme * hi LspDiagnosticsDefaultWarning guifg=#EBA217 gui=BOLD
+        au ColorScheme * hi LspDiagnosticsDefaultInformation guifg=#17D6EB gui=BOLD
+        au ColorScheme * hi LspDiagnosticsDefaultHint guifg=#17EB7A gui=BOLD
+    augroup END
+]], false)
+
 
 -- Each LSP setting.
 --------------------------------

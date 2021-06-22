@@ -60,7 +60,7 @@ source ~/.config/nvim/rc/filetypes.rc.vim
 source ~/.config/nvim/rc/hacks.rc.vim
 
 " LSP configurations
-source ~/.config/nvim/rc/plugins/lsp.rc.vim
+luafile ~/.config/nvim/lua/lsp.lua
 
 " Plugins configurations
 " LSP色設定をカラースキーム設定より前に設定しなければならない。
