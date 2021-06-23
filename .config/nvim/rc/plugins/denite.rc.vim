@@ -70,7 +70,7 @@ endfunction
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
     inoremap <silent><buffer><expr> <C-c>
-        \ denite#do_map('quit')
+        \ <Plug>(denite_filter_quit)
     imap <silent><buffer> <Esc>
         \ <Plug>(denite_filter_quit)
     imap <silent><buffer> jj 
