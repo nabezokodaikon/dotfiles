@@ -2,9 +2,7 @@
 " denite.nvim
 "--------------------------------
 " Command option.
-highlight! DeniteBackground ctermfg=250 ctermbg=3 guifg=#ACAFAE guibg=#332211
 call denite#custom#option('default', {
-    \ 'highlight_window_background': 'DeniteBackground',
     \ 'split': 'floating',
     \ 'prompt': '> ',
     \ 'winrow': 1,
@@ -73,17 +71,54 @@ autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
     inoremap <silent><buffer><expr> <C-c>
         \ denite#do_map('quit')
-    nnoremap <silent><buffer><expr> <C-c>
-        \ denite#do_map('quit')
-    " imap <silent><buffer> <Esc>
-        " \ <Plug>(denite_filter_quit)
-    " imap <silent><buffer> jj 
-        " \ <Plug>(denite_filter_quit)
+    imap <silent><buffer> <Esc>
+        \ <Plug>(denite_filter_quit)
+    imap <silent><buffer> jj 
+        \ <Plug>(denite_filter_quit)
 endfunction
 
 " Floating windows
 augroup denite-transparent-windows
   autocmd!
   autocmd FileType denite set winblend=30
-  autocmd FileType denite-filter set winblend=30
+  autocmd FileType denite_filter set winblend=30
 augroup END
+
+" LSP setting
+function! s:enable_filter_completion()
+lua << EOF
+require'compe'.setup {
+    enabled = true;
+    autocomplete = true;
+    debug = false;
+    min_length = 1;
+    preselect = 'enable';
+    throttle_time = 80;
+    source_timeout = 200;
+    resolve_timeout = 800;
+    incomplete_delay = 400;
+    max_abbr_width = 100;
+    max_kind_width = 100;
+    max_menu_width = 100;
+    documentation = true;
+    source = {
+        path = true;
+        buffer = true;
+        calc = true;
+        nvim_lsp = true;
+        nvim_lua = true;
+        vsnip = true;
+        ultisnips = true;
+    };
+}
+EOF
+endfunction
+
+function! s:disable_filter_completion()
+    lua require'compe'.setup {enabled = false}
+endfunction
+
+autocmd WinEnter,BufEnter *
+    \ if &ft != "denite-filter"
+    \| call s:enable_filter_completion() | else
+    \| call s:disable_filter_completion() | endif
