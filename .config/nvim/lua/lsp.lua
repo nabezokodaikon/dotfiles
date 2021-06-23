@@ -35,6 +35,7 @@ function M.enable_filter_completion()
             path = true;
             buffer = true;
             nvim_lsp = true;
+            vsnip = true;
         };
     }
 end
