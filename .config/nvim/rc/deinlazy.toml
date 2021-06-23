@@ -81,4 +81,8 @@ hook_source = '''
 # Translate for Japanese/English
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
-on_cmd = 'JaEnTranslate'
+on_cmd = 'Ja2EnTranslate'
+on_cmd = [
+    'TranslateJa2En',
+    'TranslateEn2Ja'
+]
