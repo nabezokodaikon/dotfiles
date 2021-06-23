@@ -7,11 +7,45 @@ local o = vim.o
 local lsp = require'lspconfig'
 local util = require'lspconfig/util'
 local completion = require'completion'
+local compe = require'compe'
 
+
+local M = {}
 
 -- Completion setting
 --------------------------------
 o.completeopt="menuone,noinsert,noselect"
+
+function M.enable_filter_completion()
+    compe.setup {
+        enabled = true;
+        autocomplete = true;
+        debug = false;
+        min_length = 1;
+        preselect = 'enable';
+        throttle_time = 80;
+        source_timeout = 200;
+        resolve_timeout = 800;
+        incomplete_delay = 400;
+        max_abbr_width = 100;
+        max_kind_width = 100;
+        max_menu_width = 100;
+        documentation = true;
+        source = {
+            path = true;
+            buffer = true;
+            calc = true;
+            nvim_lsp = true;
+            nvim_lua = true;
+            vsnip = true;
+            ultisnips = true;
+        };
+    }
+end
+
+function M.disable_filter_completion()
+    compe.setup {enabled = false}
+end
 
 
 -- Virtual text setting
@@ -76,3 +110,5 @@ lsp.rust_analyzer.setup {
     },
     on_attach = completion.on_attach,
 }
+
+return M

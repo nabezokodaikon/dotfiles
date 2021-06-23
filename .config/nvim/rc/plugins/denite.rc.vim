@@ -9,6 +9,7 @@ call denite#custom#option('default', {
     \ 'winheight': 16
     \ })
 
+
 " file/rec
 call denite#custom#source('file/rec', 'sorters',
     \ ['sorter/rank'])
@@ -19,11 +20,13 @@ call denite#custom#var('file/rec', 'command',
 call denite#custom#source('file/rec', 'converters',
     \ ['converter/basename_to_top'])
 
+
 " file_mru
 call denite#custom#source('file_mru', 'matchers',
     \ ['converter/tail_path', 'matcher/fuzzy', 'matcher/project_files'])
 call denite#custom#source('file_mru', 'converters',
     \ ['converter/basename_to_top'])
+
 
 " Ripgrep command on grep source.
 " Reference 
@@ -36,6 +39,7 @@ call denite#custom#var('grep', {
     \ 'separator': ['--'],
     \ 'default_opts': ['--vimgrep', '--no-heading', '--hidden', '--glob', '!.git/*'],
     \ })
+
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
@@ -66,6 +70,7 @@ function! s:denite_my_settings() abort
         \ denite#do_map('nop')
 endfunction
 
+
 " Define filter mappings
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
@@ -77,6 +82,7 @@ function! s:denite_filter_my_settings() abort
         \ <Plug>(denite_filter_quit)
 endfunction
 
+
 " Floating windows
 augroup denite-transparent-windows
   autocmd!
@@ -84,38 +90,20 @@ augroup denite-transparent-windows
   autocmd FileType denite_filter set winblend=30
 augroup END
 
-" LSP setting
+
+" denite-filter control settings
 function! s:enable_filter_completion()
 lua << EOF
-require'compe'.setup {
-    enabled = true;
-    autocomplete = true;
-    debug = false;
-    min_length = 1;
-    preselect = 'enable';
-    throttle_time = 80;
-    source_timeout = 200;
-    resolve_timeout = 800;
-    incomplete_delay = 400;
-    max_abbr_width = 100;
-    max_kind_width = 100;
-    max_menu_width = 100;
-    documentation = true;
-    source = {
-        path = true;
-        buffer = true;
-        calc = true;
-        nvim_lsp = true;
-        nvim_lua = true;
-        vsnip = true;
-        ultisnips = true;
-    };
-}
+    package.path = package.path .. "/lua/lsp.lua"
+    require'lsp.lua'.enable_filter_completion()
 EOF
 endfunction
 
 function! s:disable_filter_completion()
-    lua require'compe'.setup {enabled = false}
+lua << EOF
+    package.path = package.path .. "/lua/lsp.lua"
+    require'lsp.lua'.disable_filter_completion()
+EOF
 endfunction
 
 autocmd WinEnter,BufEnter *
