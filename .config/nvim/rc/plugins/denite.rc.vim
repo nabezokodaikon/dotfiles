@@ -101,7 +101,7 @@ endfunction
 
 function! s:disable_filter_completion()
 lua << EOF
-    package.path = package.path .. "/lua/lsp.lua"
+    package.path = "~/.config/nvim/lua/lsp.lua"
     require'lsp.lua'.disable_filter_completion()
 EOF
 endfunction

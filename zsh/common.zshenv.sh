@@ -37,8 +37,3 @@ export GIT_SSL_NO_VERIFY=1
 # Xdg
 #--------------------------------
 export XDG_CONFIG_HOME=$HOME/.config
-
-
-# LUA
-#--------------------------------
-export LUA_PATH=~/.config/nvim
