@@ -77,9 +77,9 @@ function! s:denite_filter_my_settings() abort
     inoremap <silent><buffer><expr> <C-c>
         \ <Plug>(denite_filter_quit)
     imap <silent><buffer> <Esc>
-        \ <Plug>(denite_filter_quit)
+        \ <Plug>(denite_filter_update)
     imap <silent><buffer> jj 
-        \ <Plug>(denite_filter_quit)
+        \ <Plug>(denite_filter_update)
 endfunction
 
 
