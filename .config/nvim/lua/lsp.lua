@@ -34,11 +34,7 @@ function M.enable_filter_completion()
         source = {
             path = true;
             buffer = true;
-            calc = true;
             nvim_lsp = true;
-            nvim_lua = true;
-            vsnip = true;
-            ultisnips = true;
         };
     }
 end
@@ -72,16 +68,7 @@ vim.api.nvim_exec([[
 
 -- Each LSP setting.
 --------------------------------
--- LSP settings for CSS
-local snippetSupport = vim.lsp.protocol.make_client_capabilities()
-snippetSupport.textDocument.completion.completionItem.snippetSupport = true
-
--- local on_attach = function(client)
-    -- completion.on_attach(client)
--- end
-
 lsp.cssls.setup {
-    capabilities = snippetSupport,
     on_attach = completion.on_attach,
 }
 
