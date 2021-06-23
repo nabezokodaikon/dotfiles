@@ -1,10 +1,6 @@
 if &compatible
     set nocompatible
 endif
-
-filetype off
-filetype plugin indent off
-
 let $CACHE = expand('~/.cache')
 if !isdirectory(expand($CACHE))
     call mkdir(expand($CACHE), 'p')
@@ -17,30 +13,40 @@ if &runtimepath !~# '/dein.vim'
     endif
     execute 'set runtimepath^=' . s:dein_repo_dir
 endif
-if !dein#load_state(s:dein_dir)
-    finish
-endif
+
 call dein#begin(s:dein_dir, expand('<sfile>'))
-
-call dein#add('Shougo/deoplete.nvim')
-call dein#add('~/workspace/src/deoplete-lsp')
+call dein#add('Shougo/denite.nvim')
 call dein#add('neovim/nvim-lspconfig')
-" call dein#add('nvim-lua/completion-nvim')
-" call dein#add('neoclide/coc.nvim', { 'rev': 'release' })
-
+call dein#add('nvim-lua/completion-nvim')
+call dein#add('hrsh7th/nvim-compe')
 call dein#end()
 call dein#save_state()
+
 if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 
-filetype plugin indent on
+lua << EOF
+vim.o.completeopt="menuone,noinsert,noselect"
+require'lspconfig'.denols.setup{on_attach = require'completion'.on_attach}
+require'compe'.setup {
+    enabled = true;
+    autocomplete = true;
+    source = {
+        path = true;
+        buffer = true;
+        nvim_lsp = true;
+    };
+}
+EOF
 
-
-lua require'lspconfig'.rust_analyzer.setup {}
-lua require'lspconfig'.tsserver.setup{}
-
-call deoplete#enable()
-
-" lua require'lspconfig'.rust_analyzer.setup { on_attach = require'completion'.on_attach }
-" autocmd BufEnter * lua require'completion'.on_attach()
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+    nnoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
+    nnoremap <silent><buffer><expr> i denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer><expr> q denite#do_map('quit')
+endfunction
+autocmd FileType denite-filter call s:denite_filter_my_settings()
+function! s:denite_filter_my_settings() abort
+    inoremap <silent><buffer><expr> <C-c> denite#do_map('quit')
+endfunction
