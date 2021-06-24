@@ -52,6 +52,7 @@ $ brew tap beeftornado/rmtree
 * git
 * luajit
   * `brew install luajit --HEAD`
+  * [macOs Catalina: Neovim from homebrew fails to start](https://github.com/neovim/neovim/issues/11411)
 * neovim
   * `brew install neovim --HEAD`
 * node
