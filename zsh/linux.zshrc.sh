@@ -34,6 +34,11 @@ if [ $? = 0 ]; then
 fi
 
 
+# fzf
+#--------------------------------
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
 # termite
 #--------------------------------
 if [[ $TERM == xterm-termite ]]; then
