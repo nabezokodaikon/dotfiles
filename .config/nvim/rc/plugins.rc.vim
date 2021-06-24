@@ -85,7 +85,7 @@ call submode#map('tab-preview', 'n', '', 'T', 'gT')
 " Translate script
 "--------------------------------
 vnoremap <silent> <Leader>t :<C-u>TranslateJa2En<CR>
-vnoremap <silent> <Leader>T :<C-u>TranslateEn2Ja<CR>
+vnoremap <silent> <Leader>j :<C-u>TranslateEn2Ja<CR>
 
 
 "--------------------------------
