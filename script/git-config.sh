@@ -4,7 +4,7 @@ git config --global user.name "nabezokodaikon"
 git config --global user.email "nabezoko.daikon@gmail.com"
 git config --global color.ui.auto
 git config --global core.editor "nvim"
-git config --global credential.helper cache --timeout=36000
+git config --global credential.helper cache --timeout=3155692600
 
 # 改行コードを自動変換しない。
 git config --global core.autocrlf false
