@@ -9,8 +9,8 @@
 #### 設定
 以下をインポートする。
 `Googleドライブ/doc/bettertouchtool.bttpreset`
-### Cleaner-App
-App Storeからダウンロードする。
+### AppCleaner 
+[AppCleaner](https://freemacsoft.net/appcleaner/)
 ### 1Password
 App Storeからダウンロードする。
 ### iTerm2
