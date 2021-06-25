@@ -1,4 +1,4 @@
-# Ubuntu setup guide
+# Setup for Ubuntu
 
 ## 更新
 ### 自動更新無効化
