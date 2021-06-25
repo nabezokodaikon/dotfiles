@@ -61,6 +61,8 @@ $ chsh
 # 再起動
 ```
 
+## Git
+[認証情報を永続的にほぞする](https://chaingng.github.io/post/git_save_pw/#credentialhelper%E3%81%AE%E4%BF%9D%E5%AD%98%E3%83%A2%E3%83%BC%E3%83%89)
 
 ## dotfileseンストール
 
