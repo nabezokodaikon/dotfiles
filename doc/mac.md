@@ -50,6 +50,7 @@ $ brew tap beeftornado/rmtree
 * deno
 * fzf
 * git
+  * Mac標準のgitは`osxkeychain helper`が無いため使用しない。
 * luajit
   * `brew install luajit --HEAD`
   * [macOs Catalina: Neovim from homebrew fails to start](https://github.com/neovim/neovim/issues/11411)
