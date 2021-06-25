@@ -11,7 +11,6 @@ unlink ${HOME}/.tmux.conf
 unlink ${HOME}/.tigrc
 unlink ${HOME}/.vimrc
 unlink ${HOME}/.config/nvim
-unlink ${HOME}/.config/termite
 unlink ${HOME}/.xprofile
 unlink ${HOME}/.Xmodmap
 unlink ${HOME}/.Xresources
@@ -32,7 +31,6 @@ ln -s ${HOME}/dotfiles/tmux/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${HOME}/dotfiles/tig/.tigrc ${HOME}/.tigrc
 ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc
 ln -s ${HOME}/dotfiles/.config/nvim/ ${HOME}/.config/nvim
-ln -s ${HOME}/dotfiles/.config/termite/ ${HOME}/.config/termite
 
 if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # For Linux only.
