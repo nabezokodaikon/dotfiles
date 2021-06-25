@@ -3,7 +3,7 @@
 ## 基本設定
 以下を実行する。
 ```bash
-$ ~/dotfiles/script/git-config.sh
+$ sh ~/dotfiles/script/setup-git-config.sh
 ```
 
 ## パスワードを保存する
