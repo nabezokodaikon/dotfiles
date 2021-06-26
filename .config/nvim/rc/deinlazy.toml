@@ -78,6 +78,10 @@ hook_source = '''
     let g:rustfmt_autosave = 1 
 '''
 
+[[plugins]]
+repo = 'lepture/vim-velocity'
+on_ft = 'velocity'
+
 # Translate for Japanese/English
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'

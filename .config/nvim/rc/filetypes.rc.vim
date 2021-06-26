@@ -9,6 +9,7 @@ augroup fileTypeRelation
     autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
     autocmd BufNewFile,BufRead *.gql set filetype=graphql
     autocmd BufNewFile,BufRead *.graphql set filetype=graphql
+    autocmd BufNewFile,BufRead *.vtl set filetype=velocity
 augroup END
 
 augroup fileTypeIndent
