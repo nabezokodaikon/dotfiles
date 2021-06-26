@@ -5,10 +5,10 @@
 ### Google IME
 ### BetterTouchTool
 #### ライセンス
-`Googleドライブ/doc/license.bettertouchtool`
+`マイドライブ/doc/license.bettertouchtool`
 #### 設定
 以下をインポートする。
-`Googleドライブ/doc/bettertouchtool.bttpreset`
+`マイドライブ/doc/bettertouchtool.bttpreset`
 ### AppCleaner 
 [AppCleaner](https://freemacsoft.net/appcleaner/)
 ### 1Password
@@ -16,7 +16,7 @@ App Storeからダウンロードする。
 ### iTerm2
 #### Colors
 以下をインポートする。
-`Googleドライブ/doc/iterm2.itermcolors`
+`マイドライブ/doc/iterm2.itermcolors`
 色は`One Dark`を設定する。
 #### Text
 ##### Font
