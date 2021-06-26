@@ -70,5 +70,17 @@ $ brew tap beeftornado/rmtree
 ### Casks
 * font-myrica
 
-## 音楽
-Googleドライブで同期する。
+## Develop
+### GitHub
+#### Personal access tokens
+`マイドライブ/dev/github/.git-credentials`
+### AWS
+#### アクセスキー (アクセスキー ID とシークレットアクセスキー)
+`マイドライブ/dev/aws/.aws`
+
+## Music
+1. 以降の作業を完了するまで、iTunesを絶対に起動しないこと。
+1. 既存の`~/Music/iTunes`と`~/Music/Music`ディレクトリを退避しておく。
+1. `マイドライブ/music(iTuens)`内のディレクトリのシンボリックリンクを作成する。
+  * `ln -s ~/Google\ ドライブ/music\(iTunes\)/iTunes ~/Music/iTunes`
+  * `ln -s ~/Google\ ドライブ/music\(iTunes\)/Music ~/Music/Music`
