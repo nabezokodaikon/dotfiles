@@ -80,6 +80,10 @@ lsp.denols.setup{
     on_attach = completion.on_attach,
 }
 
+lsp.dockerls.setup{
+    on_attach = completion.on_attach,
+}
+
 -- lsp.tsserver.setup {
     -- on_attach = completion.on_attach,
 -- }
