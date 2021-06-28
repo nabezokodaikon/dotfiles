@@ -91,22 +91,22 @@ augroup denite-transparent-windows
 augroup END
 
 
-" denite-filter control settings
-function! s:enable_filter_completion()
+" denite-filter commit message completion settings
+function! s:enable_completion()
 lua << EOF
     package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.enable_filter_completion()
+    require'lsp.lua'.enable_completion()
 EOF
 endfunction
 
-function! s:disable_filter_completion()
+function! s:disable_completion()
 lua << EOF
     package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.disable_filter_completion()
+    require'lsp.lua'.disable_completion()
 EOF
 endfunction
 
 autocmd WinEnter,BufEnter *
     \ if &ft != "denite-filter"
-    \| call s:enable_filter_completion() | else
-    \| call s:disable_filter_completion() | endif
+    \| call s:enable_completion() | else
+    \| call s:disable_completion() | endif

@@ -51,21 +51,23 @@ function! s:tabpage_label(n)
 endfunction
 
 
-function! s:enable_filter_completion()
+" Git commit message completion settings
+"--------------------------------
+function! s:enable_completion()
 lua << EOF
     package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.enable_filter_completion()
+    require'lsp.lua'.enable_completion()
 EOF
 endfunction
 
-function! s:disable_filter_completion()
+function! s:disable_completion()
 lua << EOF
     package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.disable_filter_completion()
+    require'lsp.lua'.disable_completion()
 EOF
 endfunction
 
 autocmd WinEnter,BufEnter *
     \ if expand("%") != "COMMIT_EDITMSG"
-    \| call s:enable_filter_completion() | else
-    \| call s:disable_filter_completion() | endif
+    \| call s:enable_completion() | else
+    \| call s:disable_completion() | endif

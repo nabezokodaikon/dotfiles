@@ -16,7 +16,7 @@ local M = {}
 --------------------------------
 o.completeopt="menuone,noinsert,noselect"
 
-function M.enable_filter_completion()
+function M.enable_completion()
     compe.setup {
         enabled = true;
         autocomplete = true;
@@ -42,7 +42,7 @@ function M.enable_filter_completion()
     }
 end
 
-function M.disable_filter_completion()
+function M.disable_completion()
     compe.setup {enabled = false}
 end
 
