@@ -34,7 +34,6 @@ function M.enable_filter_completion()
         source = {
             path = true;
             buffer = true;
-            calc = true;
             nvim_lsp = true;
             nvim_lua = true;
             vsnip = true;
