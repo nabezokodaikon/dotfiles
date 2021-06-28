@@ -49,3 +49,23 @@ function! s:tabpage_label(n)
 
     return hi . ' ' . no . mod . sp . bufname . ' ' . '%T%#TabLineFill#'
 endfunction
+
+
+function! s:enable_filter_completion()
+lua << EOF
+    package.path = package.path .. "/lua/lsp.lua"
+    require'lsp.lua'.enable_filter_completion()
+EOF
+endfunction
+
+function! s:disable_filter_completion()
+lua << EOF
+    package.path = package.path .. "/lua/lsp.lua"
+    require'lsp.lua'.disable_filter_completion()
+EOF
+endfunction
+
+autocmd WinEnter,BufEnter *
+    \ if expand("%") != "COMMIT_EDITMSG"
+    \| call s:enable_filter_completion() | else
+    \| call s:disable_filter_completion() | endif
