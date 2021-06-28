@@ -89,24 +89,3 @@ augroup denite-transparent-windows
   autocmd FileType denite set winblend=30
   autocmd FileType denite_filter set winblend=30
 augroup END
-
-
-" denite-filter commit message completion settings
-function! s:enable_completion()
-lua << EOF
-    package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.enable_completion()
-EOF
-endfunction
-
-function! s:disable_completion()
-lua << EOF
-    package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.disable_completion()
-EOF
-endfunction
-
-autocmd WinEnter,BufEnter *
-    \ if &ft != "denite-filter"
-    \| call s:enable_completion() | else
-    \| call s:disable_completion() | endif

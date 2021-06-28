@@ -49,25 +49,3 @@ function! s:tabpage_label(n)
 
     return hi . ' ' . no . mod . sp . bufname . ' ' . '%T%#TabLineFill#'
 endfunction
-
-
-" Git commit message completion settings
-"--------------------------------
-function! s:enable_completion()
-lua << EOF
-    package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.enable_completion()
-EOF
-endfunction
-
-function! s:disable_completion()
-lua << EOF
-    package.path = package.path .. "/lua/lsp.lua"
-    require'lsp.lua'.disable_completion()
-EOF
-endfunction
-
-autocmd WinEnter,BufEnter *
-    \ if expand("%") != "COMMIT_EDITMSG"
-    \| call s:enable_completion() | else
-    \| call s:disable_completion() | endif
