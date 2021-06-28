@@ -16,10 +16,12 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufRead,BufNewFile *.* setlocal tabstop=4 shiftwidth=4
     autocmd BufRead,BufNewFile *.css setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile dockerfile setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.html setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.hs setlocal tabstop=4 shiftwidth=4
     autocmd BufRead,BufNewFile *.hx setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.hxp setlocal tabstop=2 shiftwidth=2
+    autocmd BufRead,BufNewFile gitcommit setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.graphql setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.graphqls setlocal tabstop=2 shiftwidth=2
     autocmd BufRead,BufNewFile *.gql setlocal tabstop=2 shiftwidth=2
