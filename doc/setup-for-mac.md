@@ -41,6 +41,11 @@ Google IMEのみにする。
 最高速度にする。
 
 ## Homebrew
+### Homebrew
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/nabezokodaikon/.zprofile
+```
 ### rmtree
 ```bash
 $ brew tap beeftornado/rmtree
@@ -51,15 +56,13 @@ $ brew tap beeftornado/rmtree
 * fzf
 * git
   * Mac標準のgitは`osxkeychain helper`が無いため使用しない。
-* luajit
-  * `brew install luajit --HEAD`
-  * [macOs Catalina: Neovim from homebrew fails to start](https://github.com/neovim/neovim/issues/11411)
 * neovim
   * `brew install neovim --HEAD`
 * node
 * python@3.9
 * reattach-to-user-namespace
   * [コピー・ペーストをtmux、iTerm2、OS Xで共有する](https://qiita.com/kiyodori/items/02eb88864f583db3e799)
+* ripgrep
 * rust
 * rust-analyzer
 * tig
@@ -68,7 +71,31 @@ $ brew tap beeftornado/rmtree
 * tree
 * zsh
 ### Casks
-* font-myrica
+#### font-myrica
+```
+$ brew tap homebrew/cask-fonts
+$ brew install --cask font-myrica font-myricam
+```
+### Other
+#### JAVA
+```
+$ brew install openjdk
+$ sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+$ echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+$ export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+```
+### Neovim
+```
+$ pip3 install --user pynvim
+$ npm install --global neovim
+```
+Neovimのインストールに失敗した場合は、以下を実行後に再インストールしてみる。
+* [macOs Catalina: Neovim from homebrew fails to start](https://github.com/neovim/neovim/issues/11411)
+* [fix(treesitter): set match limit for query cursors](https://github.com/neovim/neovim/pull/14915)
+```
+$ brew uninstall --ignore-dependencies tree-sitter && brew install tree-sitter --HEAD
+$ brew uninstall --ignore-dependencies luajit --HEAD && brew install luajit --HEAD
+```
 
 ## Develop
 ### GitHub
