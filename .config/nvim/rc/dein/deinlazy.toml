@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-hook_source = 'source ~/.config/nvim/rc/plugins/denite.rc.vim'
+hook_source = 'source ~/.config/nvim/rc/denite.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
@@ -21,7 +21,7 @@ on_source = ['denite.nvim']
 # [[plugins]]	
 # repo = 'Shougo/deoplete.nvim'
 # on_event = 'InsertEnter'
-# hook_source = 'source ~/.config/nvim/rc/plugins/deoplete.rc.vim'
+# hook_source = 'source ~/.config/nvim/rc/deoplete.rc.vim'
 
 # [[plugins]]
 # repo = 'deoplete-plugins/deoplete-lsp'
@@ -30,7 +30,7 @@ on_source = ['denite.nvim']
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
-hook_source = 'source ~/.config/nvim/rc/plugins/defx.rc.vim'
+hook_source = 'source ~/.config/nvim/rc/defx.rc.vim'
 
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
