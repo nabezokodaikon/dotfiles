@@ -45,7 +45,7 @@ endif
 
 
 " プラグイン管理設定
-source ~/.config/nvim/rc/dein.rc.vim
+source ~/.config/nvim/rc/dein/dein.rc.vim
 
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim

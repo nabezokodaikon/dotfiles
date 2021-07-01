@@ -22,8 +22,8 @@ endif
 
 call dein#begin(s:dein_dir, expand('<sfile>'))
 
-call dein#load_toml('~/.config/nvim/rc/dein.toml', {'lazy': 0})
-call dein#load_toml('~/.config/nvim/rc/deinlazy.toml', {'lazy': 1})
+call dein#load_toml('~/.config/nvim/rc/dein/dein.toml', {'lazy': 0})
+call dein#load_toml('~/.config/nvim/rc/dein/deinlazy.toml', {'lazy': 1})
 
 call dein#end()
 call dein#save_state()
