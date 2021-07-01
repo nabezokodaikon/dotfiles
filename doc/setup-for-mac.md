@@ -65,6 +65,7 @@ $ brew tap beeftornado/rmtree
 * ripgrep
 * rust
 * rust-analyzer
+* rustup-init
 * tig
 * tmux
 * translate-shell
