@@ -77,15 +77,17 @@ lsp.cssls.setup {
 
 lsp.denols.setup{
     on_attach = completion.on_attach,
+    root_dir = lsp.util.root_pattern('deps.ts'),
 }
 
 lsp.dockerls.setup{
     on_attach = completion.on_attach,
 }
 
--- lsp.tsserver.setup {
-    -- on_attach = completion.on_attach,
--- }
+lsp.tsserver.setup {
+    on_attach = completion.on_attach,
+    root_dir = lsp.util.root_pattern('package.json')
+}
 
 lsp.rust_analyzer.setup {
     settings = {
