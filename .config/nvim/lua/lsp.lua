@@ -4,10 +4,10 @@
 local o = vim.o
 
 -- LSP setting module.
-local lsp = require'lspconfig'
-local util = require'lspconfig/util'
-local completion = require'completion'
-local compe = require'compe'
+local lsp = require"lspconfig"
+local util = require"lspconfig/util"
+local completion = require"completion"
+local compe = require"compe"
 
 
 local M = {}
@@ -22,7 +22,7 @@ function M.enable_completion()
         autocomplete = true;
         debug = false;
         min_length = 1;
-        preselect = 'enable';
+        preselect = "enable";
         throttle_time = 80;
         source_timeout = 200;
         resolve_timeout = 800;
@@ -77,7 +77,7 @@ lsp.cssls.setup {
 
 lsp.denols.setup{
     on_attach = completion.on_attach,
-    root_dir = lsp.util.root_pattern('deps.ts'),
+    root_dir = lsp.util.root_pattern("deps.ts"),
 }
 
 lsp.dockerls.setup{
@@ -86,7 +86,7 @@ lsp.dockerls.setup{
 
 lsp.tsserver.setup {
     on_attach = completion.on_attach,
-    root_dir = lsp.util.root_pattern('package.json')
+    root_dir = lsp.util.root_pattern("package.json")
 }
 
 lsp.rust_analyzer.setup {
