@@ -8,4 +8,7 @@ treesitter.setup {
             "rust",
         },
     },
+    indent = {
+        enable = true,
+    }
 }
