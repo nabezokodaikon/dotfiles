@@ -85,7 +85,6 @@ on_ft = 'velocity'
 # Translate for Japanese/English
 [[plugins]]
 repo = 'nabezokodaikon/jaen-translate.vim'
-on_cmd = 'Ja2EnTranslate'
 on_cmd = [
     'TranslateJa2En',
     'TranslateEn2Ja'
