@@ -60,6 +60,12 @@ nnoremap <silent> F :<C-u>Defx -search=`expand('%:p')`<CR>
 
 
 "--------------------------------
+" symbols-outline.nvim
+"--------------------------------
+nnoremap <silent> <Leader>o :<C-u>SymbolsOutline<CR>
+
+
+"--------------------------------
 " vim-submode configurations
 "--------------------------------
 " Window resize.
