@@ -72,10 +72,17 @@ $ brew tap beeftornado/rmtree
 * tree
 * zsh
 ### Casks
-#### font-myrica
+#### Font
 ```
 $ brew tap homebrew/cask-fonts
-$ brew install --cask font-myrica font-myricam
+```
+##### font-myrica
+```
+$ brew install font-myrica font-myricam
+```
+##### font-hack-nerd-font (Non-ASCII Font)
+```
+$ brew install font-hack-nerd-font
 ```
 ### Other
 #### JAVA
