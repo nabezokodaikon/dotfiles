@@ -39,7 +39,6 @@ nnoremap <silent> <Leader>b :<C-u>Telescope buffers<CR>
 " defx.nvim
 "--------------------------------
 nnoremap F <Nop>
-nnoremap <silent> F :<C-u>Defx -search=`expand('%:p')`<CR>
 
 
 "--------------------------------
