@@ -60,7 +60,7 @@ source ~/.config/nvim/rc/filetypes.rc.vim
 source ~/.config/nvim/rc/hacks.rc.vim
 
 " LSP configurations
-luafile ~/.config/nvim/lua/lsp.lua
+source ~/.config/nvim/rc/lsp.rc.vim
 
 
 " Plugins configurations

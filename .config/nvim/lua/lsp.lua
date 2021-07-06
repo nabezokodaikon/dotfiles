@@ -1,20 +1,66 @@
 --------------------------------
 -- LSP configurations
 --------------------------------
-local o = vim.o
-
--- LSP setting module.
 local lsp = require"lspconfig"
 local util = require"lspconfig/util"
 local completion = require"completion"
 local compe = require"compe"
 
 
-local M = {}
-
--- Completion setting
+-- Virtual text setting
 --------------------------------
-o.completeopt="menuone,noinsert,noselect"
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        underline = false,
+        virtual_text = true,
+        signs = true,
+        update_in_insert = true,
+    }
+)
+
+
+-- Each LSP setting
+--------------------------------
+lsp.cssls.setup {
+    on_attach = completion.on_attach,
+}
+
+lsp.denols.setup{
+    on_attach = completion.on_attach,
+    root_dir = lsp.util.root_pattern("deps.ts"),
+}
+
+lsp.dockerls.setup{
+    on_attach = completion.on_attach,
+}
+
+lsp.tsserver.setup {
+    on_attach = completion.on_attach,
+    root_dir = lsp.util.root_pattern("package.json")
+}
+
+lsp.rust_analyzer.setup {
+    settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importGranularity = "module",
+                importPrefix = "by_self",
+            },
+            cargo = {
+                loadOutDirsFromCheck = true
+            },
+            procMacro = {
+                enable = true
+            },
+        },
+    },
+    on_attach = completion.on_attach,
+}
+
+
+-- Enable/Disable Completion setting
+--------------------------------
+local M = {}
 
 function M.enable_completion()
     compe.setup {
@@ -55,66 +101,5 @@ end
 function M.disable_completion()
     compe.setup {enabled = false}
 end
-
-
--- Virtual text setting
---------------------------------
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = false,
-        virtual_text = true,
-        signs = true,
-        update_in_insert = true,
-    }
-)
-
-vim.api.nvim_exec([[
-    augroup custom_theme_highlights
-    autocmd!
-        au ColorScheme * hi LspDiagnosticsDefaultError guifg=#EB4917 gui=BOLD
-        au ColorScheme * hi LspDiagnosticsDefaultWarning guifg=#EBA217 gui=BOLD
-        au ColorScheme * hi LspDiagnosticsDefaultInformation guifg=#17D6EB gui=BOLD
-        au ColorScheme * hi LspDiagnosticsDefaultHint guifg=#17EB7A gui=BOLD
-    augroup END
-]], false)
-
-
--- Each LSP setting.
---------------------------------
-lsp.cssls.setup {
-    on_attach = completion.on_attach,
-}
-
-lsp.denols.setup{
-    on_attach = completion.on_attach,
-    root_dir = lsp.util.root_pattern("deps.ts"),
-}
-
-lsp.dockerls.setup{
-    on_attach = completion.on_attach,
-}
-
-lsp.tsserver.setup {
-    on_attach = completion.on_attach,
-    root_dir = lsp.util.root_pattern("package.json")
-}
-
-lsp.rust_analyzer.setup {
-    settings = {
-        ["rust-analyzer"] = {
-            assist = {
-                importGranularity = "module",
-                importPrefix = "by_self",
-            },
-            cargo = {
-                loadOutDirsFromCheck = true
-            },
-            procMacro = {
-                enable = true
-            },
-        },
-    },
-    on_attach = completion.on_attach,
-}
 
 return M
