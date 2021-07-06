@@ -87,6 +87,22 @@ else
     set shell=/bin/sh
 endif
 
+" ファイルフォーマット
+if IsWindows()
+    set fileformat=dos
+elseif IsMac()
+    set fileformat=mac
+elseif IsLinux()
+    set fileformat=unix
+endif
+
+" 改行コードの自動認識
+set fileformats=unix,dos,mac
+
+" 文字コード自動判別
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+
 
 " インデント設定(規定値) 
 "--------------------------------
