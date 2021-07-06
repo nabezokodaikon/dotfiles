@@ -41,4 +41,5 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # LUA
 #--------------------------------
-export LUA_PATH=~/.config/nvim
+export LUA_PATH=$HOME/.config/nvim:$LUA_PATH
+export LUA_PATH=$HOME/.config/nvim/lua:$LUA_PATH
