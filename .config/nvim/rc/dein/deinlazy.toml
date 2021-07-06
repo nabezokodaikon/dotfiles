@@ -1,22 +1,22 @@
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-on_cmd = 'Denite'
-hook_source = 'source ~/.config/nvim/rc/denite.rc.vim'
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# on_cmd = 'Denite'
+# hook_source = 'source ~/.config/nvim/rc/denite.rc.vim'
 
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-on_source = ['denite.nvim']
-hook_source = '''
-    let g:neomru#file_mru_limit = 64
-'''
+# [[plugins]]
+# repo = 'Shougo/neomru.vim'
+# on_source = ['denite.nvim']
+# hook_source = '''
+    # let g:neomru#file_mru_limit = 64
+# '''
 
-[[plugins]]
-repo = 'Shougo/neoyank.vim'
-on_source = ['denite.nvim']
+# [[plugins]]
+# repo = 'Shougo/neoyank.vim'
+# on_source = ['denite.nvim']
 
-[[plugins]]
-repo = 'nabezokodaikon/denite-converter-basename_to_top'
-on_source = ['denite.nvim']
+# [[plugins]]
+# repo = 'nabezokodaikon/denite-converter-basename_to_top'
+# on_source = ['denite.nvim']
 
 # [[plugins]]	
 # repo = 'Shougo/deoplete.nvim'

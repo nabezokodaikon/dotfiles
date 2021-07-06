@@ -27,29 +27,12 @@ nmap <Leader>m <Plug>(easymotion-overwin-f2)
 
 
 "--------------------------------
-" denite.nvim
+" telescope.nvim
 "--------------------------------
-" ファイル一覧
-nnoremap <silent> <Leader>f :<C-u>Denite file/rec<CR>
-" ファイル表示履歴
-nnoremap <silent> <Leader>h :<C-u>Denite file_mru<CR>
-" yank
-nnoremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
-" ファイル内の行検索
-nnoremap <silent> <Leader>l :<C-u>Denite line<CR>
-" grep for empty word
-nnoremap <silent> <Leader>gg :<C-u>Denite grep<CR>
-" grep for cursor word
-nnoremap <silent> <Leader>gw :<C-u>DeniteCursorWord grep<CR>
-" buffer
-nnoremap <silent> <Leader>b :<C-u>Denite buffer<CR>
-" File type
-nnoremap <silent> <Leader>e :<C-u>Denite filetype<CR>
-" Move to next/previous line of denite's buffer
-nnoremap <C-n> <Nop>
-nnoremap <C-p> <Nop>
-nnoremap <silent> <C-n> :<C-u>Denite -resume -cursor-pos=+1 -immediately<CR>
-nnoremap <silent> <C-p> :<C-u>Denite -resume -cursor-pos=-1 -immediately<CR>
+nnoremap <silent> <Leader>f :<C-u>
+    \ Telescope find_files find_command=rg,--hidden,--glob,!.git/*,--files<CR>
+nnoremap <silent> <Leader>gg :<C-u>Telescope live_grep<CR>
+nnoremap <silent> <Leader>b :<C-u>Telescope buffers<CR>
 
 
 "--------------------------------
