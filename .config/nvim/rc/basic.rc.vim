@@ -114,13 +114,6 @@ if (has('nvim'))
 endif
 
 
-"--------------------------------
-" ステータスライン
-"--------------------------------
-let ff_table = {'dos' : 'CR+LF', 'unix' : 'LF', 'mac' : 'LF' }
-let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%= %-14.(%l,%c%V%) %P'
-
-
 " floating windows
 "--------------------------------
 " ターミナルでも True Color を使えるようにする。
