@@ -56,8 +56,8 @@ source ~/.config/nvim/rc/mappings.rc.vim
 " File type configurations
 source ~/.config/nvim/rc/filetypes.rc.vim
 
-" Hacks
-source ~/.config/nvim/rc/hacks.rc.vim
+" Tab configurations
+source ~/.config/nvim/rc/tab.rc.vim
 
 " Plugins configurations
 source ~/.config/nvim/rc/plugins.rc.vim
