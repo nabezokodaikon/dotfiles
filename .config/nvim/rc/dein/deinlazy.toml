@@ -64,15 +64,6 @@ on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
 hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
 
-[[plugins]]
-repo = 'simrat39/symbols-outline.nvim'
-on_cmd = [
-    'SymbolsOutline',
-    'SymbolsOutlineOpen',
-    'SymbolsOutlineClose',
-]
-hook_source = 'luafile ~/.config/nvim/lua/outline.lua'
-
 # scala syntax
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
