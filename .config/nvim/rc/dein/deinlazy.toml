@@ -90,6 +90,11 @@ repo = 'nvim-telescope/telescope.nvim'
 on_cmd = 'Telescope'
 hook_source = 'luafile ~/.config/nvim/lua/search-tool.lua'
 
+[[plugins]]
+repo = 'kyazdani42/nvim-tree.lua'
+on_cmd = 'NvimTreeToggle'
+hook_source = 'luafile ~/.config/nvim/lua/file-explorer.lua'
+
 # scala syntax
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
