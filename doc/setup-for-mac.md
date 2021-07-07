@@ -107,6 +107,12 @@ Neovimのインストールに失敗した場合は、以下を実行後に再�
 $ brew uninstall --ignore-dependencies tree-sitter && brew install tree-sitter --HEAD
 $ brew uninstall --ignore-dependencies luajit --HEAD && brew install luajit --HEAD
 ```
+### Rust
+```
+$ rustup-init
+$ rustup target add wasm32-unknown-unknown
+$ cargo install wasm-bindgen-cli
+```
 
 ## Develop
 ### GitHub
