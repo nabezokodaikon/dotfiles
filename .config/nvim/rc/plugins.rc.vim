@@ -73,18 +73,3 @@ vnoremap <silent> <Leader>j :<C-u>TranslateEn2Ja<CR>
 " colorscheme
 "--------------------------------
 colorscheme gruvbox
-
-
-"--------------------------------
-" vim-airline
-"--------------------------------
-let g:airline#extensions#default#layout = [
-    \ ['a', 'c'],
-    \ ['x', 'y']
-    \ ]
-
-
-"--------------------------------
-" vim-airline-themes
-"--------------------------------
-let g:airline_theme='gruvbox'

@@ -24,7 +24,7 @@ repo = 'easymotion/vim-easymotion'
 repo = 'morhetz/gruvbox'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
+repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'hoob3rt/lualine.nvim'

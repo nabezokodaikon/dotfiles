@@ -62,5 +62,8 @@ source ~/.config/nvim/rc/tab.rc.vim
 " Plugins configurations
 source ~/.config/nvim/rc/plugins.rc.vim
 
+" Status line configurations
+luafile ~/.config/nvim/lua/status-line.lua
+
 
 filetype plugin indent on
