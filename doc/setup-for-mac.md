@@ -70,6 +70,7 @@ $ brew tap beeftornado/rmtree
 * tmux
 * translate-shell
 * tree
+* yarn
 * zsh
   * デフォルトのログインシェルから変更する。
   * システム環境設定 -> ユーザとグループ -> 左下の鍵 -> ユーザを右クリック「詳細オプション」
