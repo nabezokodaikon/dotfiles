@@ -63,7 +63,6 @@ $ brew tap beeftornado/rmtree
 * reattach-to-user-namespace
   * [コピー・ペーストをtmux、iTerm2、OS Xで共有する](https://qiita.com/kiyodori/items/02eb88864f583db3e799)
 * ripgrep
-* rust
 * rust-analyzer
 * rustup-init
 * tig
@@ -71,6 +70,8 @@ $ brew tap beeftornado/rmtree
 * translate-shell
 * tree
 * zsh
+  * デフォルトのログインシェルから変更する。
+  * システム環境設定 -> ユーザとグループ -> 左下の鍵 -> ユーザを右クリック「詳細オプション」
 ### Casks
 #### Font
 ```
@@ -78,7 +79,7 @@ $ brew tap homebrew/cask-fonts
 ```
 ##### font-myrica
 ```
-$ brew install font-myrica font-myricam
+$ brew install font-myricam
 ```
 ##### font-hack-nerd-font (Non-ASCII Font)
 ```
