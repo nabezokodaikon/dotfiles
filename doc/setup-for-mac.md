@@ -59,7 +59,6 @@ $ brew tap beeftornado/rmtree
 * neovim
   * `brew install neovim --HEAD`
 * node
-* python@3.9
 * reattach-to-user-namespace
   * [コピー・ペーストをtmux、iTerm2、OS Xで共有する](https://qiita.com/kiyodori/items/02eb88864f583db3e799)
 * ripgrep
