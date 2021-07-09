@@ -10,12 +10,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
-vim.api.nvim_exec([[
-    augroup custom_theme_highlights
-        autocmd!
-        autocmd ColorScheme * hi LspDiagnosticsDefaultError guifg=#EB4917 gui=BOLD
-        autocmd ColorScheme * hi LspDiagnosticsDefaultWarning guifg=#EBA217 gui=BOLD
-        autocmd ColorScheme * hi LspDiagnosticsDefaultInformation guifg=#17D6EB gui=BOLD
-        autocmd ColorScheme * hi LspDiagnosticsDefaultHint guifg=#17EB7A gui=BOLD
-    augroup END
-]], false)
+vim.fn.sign_define('LspDiagnosticsSignError', { text = "", texthl = "LspDiagnosticsDefaultError" })
+vim.fn.sign_define('LspDiagnosticsSignWarning', { text = "", texthl = "LspDiagnosticsDefaultWarning" })
+vim.fn.sign_define('LspDiagnosticsSignInformation', { text = "", texthl = "LspDiagnosticsDefaultInformation" })
+vim.fn.sign_define('LspDiagnosticsSignHint', { text = "", texthl = "LspDiagnosticsDefaultHint" })
