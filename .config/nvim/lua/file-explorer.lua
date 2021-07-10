@@ -4,7 +4,7 @@ g.nvim_tree_quit_on_open = 1
 g.nvim_tree_width = 40
 
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-vim.g.nvim_tree_bindings = {
+g.nvim_tree_bindings = {
   { key = {"<CR>", "o"}, cb = tree_cb("edit") },
   { key = {"~"},         cb = tree_cb("cd") },
   { key = "<Tab>",       cb = tree_cb("preview") },
@@ -18,4 +18,11 @@ vim.g.nvim_tree_bindings = {
   { key = "y",           cb = tree_cb("copy_name") },
   { key = "Y",           cb = tree_cb("copy_absolute_path") },
   { key = "q",           cb = tree_cb("close") },
+}
+
+g.nvim_tree_icons = {
+  folder = {
+    arrow_open = "",
+    arrow_closed = "",
+  },
 }
