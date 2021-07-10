@@ -9,7 +9,7 @@ APT::Periodic::Unattended-Upgrade "1";
 # 再起動
 ```
 ### Update
-```
+```bash
 $ sudo apt dist-upgrade
 $ sudo apt update
 $ sudo apt upgrade
@@ -25,7 +25,7 @@ XKBOPTIONS="ctrl:nocaps"
 
 ## Install fcitx-mozc
 ### インストール
-```
+```bash
 $ sudo apt install fcitx-mozc
 ```
 ### 設定
@@ -49,19 +49,19 @@ $ sudo apt install fcitx-mozc
 
 
 ## Install Chromium
-```
+```bash
 $ sudo apt install chromium-browser
 ```
 
 ## clipboard
-```
+```bash
 $ sudo apt install xclip
 # 再起動
 ```
 
 ## ログインシェル変更
 brew でインストールすると、ログインシェルに設定できない。
-```
+```bash
 $ sudo apt install zsh
 $ which zsh
 $ chsh
@@ -71,35 +71,40 @@ $ chsh
 ## Git
 [認証情報を永続的にほぞする](https://chaingng.github.io/post/git_save_pw/#credentialhelper%E3%81%AE%E4%BF%9D%E5%AD%98%E3%83%A2%E3%83%BC%E3%83%89)
 
-## dotfileseンストール
-
+## dotfilesインストール
+```bash
+$ cd ~/
+$ git clone https://github.com/nabezokodaikon/dotfiles.git
+$ sh ~/dotfiles/script/install.sh
+$ sh ~/dotfiles/script/setup-git-config.sh
+```
 
 ## Install neovim
 ### Neovim
-[Release](github.com/neovim/neovim/releases/)
-```
-$ ln -s ~/workspace/src/squashfs-root/usr/bin/nvim ~/.local/bin/nvim
-```
-### python
-```
-$ sudo apt install python3-pip
-$ pip3 install pynvim
+```bash
+$ cd ~/.local/src
+$ git clone https://github.com/neovim/neovim.git
+$ cd neovim
+$ rm -rf build
+$ make CMAKE_BUILD_TYPE=Release
+$ sudo make install
+$ ln -s ~/.local/src/neovim/build/bin/nvim ~/.local/bin/nvim
 ```
 ### node
-```
+```bash
 & sudo apt install nodejs
 & sudo apt install npm
 ```
 ### ripgrep
-```
+```bash
 $ cargo install ripgrep
 ```
 ### Translate-shell
-```
+```bash
 $ sudo apt install translate-shell
 ```
 ### rust-analyzer
-```
+```bash
 $ sudo apt install curl
 $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 $ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -112,16 +117,18 @@ $ git clone https://github.com/rust-analyzer/rust-analyzer
 $ cd rust-analyzer
 $ cargo xtask install
 ```
+### terminal color theme
+[Gogh](https://github.com/Mayccoll/Gogh)
 
 ## Trouble shooting
 ### "システムプログラムの問題が見つかりました"ダイアログが表示される場合
 /var/crashに問題のあったアプリの情報を削除する。
-```
+```bash
 $ sudo rm -rf /var/crash/*
 ```
 ### apt update が失敗する場合の対処法
 [Ubuntu　E:Read error - read (5 Input/output error), E:The package lists or status file could not be parsed or opened.](http://kurumatorajirou.blogspot.com/2012_09_01_archive.html)
-```
+```bash
 $ sudo rm /var/lib/dpkg/status
 $ sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
 $ sudo rm -rf /var/lib/apt/lists/*
