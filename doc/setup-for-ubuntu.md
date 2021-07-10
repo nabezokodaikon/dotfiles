@@ -47,7 +47,6 @@ $ sudo apt install fcitx-mozc
 3. 現在のパスワードを入力する。
 4. パスワードを**空白**で設定する。
 
-
 ## Install Chromium
 ```bash
 $ sudo apt install chromium-browser
@@ -60,7 +59,6 @@ $ sudo apt install xclip
 ```
 
 ## ログインシェル変更
-brew でインストールすると、ログインシェルに設定できない。
 ```bash
 $ sudo apt install zsh
 $ which zsh
@@ -69,7 +67,7 @@ $ chsh
 ```
 
 ## Git
-[認証情報を永続的にほぞする](https://chaingng.github.io/post/git_save_pw/#credentialhelper%E3%81%AE%E4%BF%9D%E5%AD%98%E3%83%A2%E3%83%BC%E3%83%89)
+[認証情報を永続的に保存する](https://chaingng.github.io/post/git_save_pw/#credentialhelper%E3%81%AE%E4%BF%9D%E5%AD%98%E3%83%A2%E3%83%BC%E3%83%89)
 
 ## dotfilesインストール
 ```bash
@@ -117,7 +115,18 @@ $ git clone https://github.com/rust-analyzer/rust-analyzer
 $ cd rust-analyzer
 $ cargo xtask install
 ```
-### terminal color theme
+
+## Terminal
+### Font
+* [プログラミング用フォント Myrica](https://myrica.estable.jp/)
+```bash
+$ sudo mkdir /usr/share/fonts/truetype/myrica
+$ sudo cp ./MyricaM.TTC /usr/share/fonts/truetype/myrica/Myrica.TTC
+$ fc-cache -fv
+```
+* [Ubuntu/Bold/complete](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Ubuntu/Bold/complete)
+* [Ubuntu/Regular/complete/](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Ubuntu/Regular/complete)
+### Color theme
 [Gogh](https://github.com/Mayccoll/Gogh)
 
 ## Trouble shooting
