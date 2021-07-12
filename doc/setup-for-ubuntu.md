@@ -21,18 +21,22 @@ sudo apt install -y unattended-upgrades
 `/etc/defalt/keyboard`ファイルを以下のように書き変える。
 ```
 XKBOPTIONS="ctrl:nocaps"
-# 再起動
 ```
 
-## 入力メソッド
-`入力メソッドのオンオフ`に`Ctrl+Space`を設定する。
+## clipboard
+```bash
+sudo apt install xclip
+```
 
-### ログインキーリング
-[【Ubuntu18.04】ログインキーリングのパスワードを入力してください](https://ub.workdesign.jp/install/data1286.html)
-1. **パスワードと鍵**アプリケーションを起動する。
-2. **ログイン 項目**を右クリックし、**パスワードを変更**を選択する。
-3. 現在のパスワードを入力する。
-4. パスワードを**空白**で設定する。
+## ログインシェル変更
+```bash
+sudo apt install zsh
+which zsh
+chsh
+```
+
+## Mozcプロパティ
+IMEの切り替えに`Ctrl+Space`を設定する。
 
 ## Install Google Chrome
 ### パッケージリストに追加
@@ -47,69 +51,80 @@ sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo a
 ```bash
 sudo apt update
 ```
-
-## clipboard
+### インストール
 ```bash
-$ sudo apt install xclip
-# 再起動
+sudo apt-get install google-chrome-stable
 ```
 
-## ログインシェル変更
+### ログインキーリング
+[【Ubuntu18.04】ログインキーリングのパスワードを入力してください](https://ub.workdesign.jp/install/data1286.html)
+1. **パスワードと鍵**アプリケーションを起動する。
+2. **ログイン 項目**を右クリックし、**パスワードを変更**を選択する。
+3. 現在のパスワードを入力する。
+4. パスワードを**空白**で設定する。
+
+## Install dotfiles
 ```bash
-$ sudo apt install zsh
-$ which zsh
-$ chsh
-# 再起動
+cd ~/
+git clone https://github.com/nabezokodaikon/dotfiles.git
+sh ~/dotfiles/script/install.sh
+sh ~/dotfiles/script/setup-git-config.sh
 ```
 
 ## Git
 [認証情報を永続的に保存する](https://chaingng.github.io/post/git_save_pw/#credentialhelper%E3%81%AE%E4%BF%9D%E5%AD%98%E3%83%A2%E3%83%BC%E3%83%89)
+1. 適当なgitリポジトリに移動する。`cd ~/dotfiles`
+2. 一度pushして、認証情報を入力する。`git push origin master`
+3. `~/.git-credentials`に認証情報を保存する。 `git config --global credential.helper store`
+4. 次回ターミナル起動時から、認証情報を入力せずにgitの操作が行える。
 
-## dotfilesインストール
+## Install tmux
+[Installing](https://github.com/tmux/tmux/wiki/Installing)
 ```bash
-$ cd ~/
-$ git clone https://github.com/nabezokodaikon/dotfiles.git
-$ sh ~/dotfiles/script/install.sh
-$ sh ~/dotfiles/script/setup-git-config.sh
+cd ~/.local/src
+git clone https://github.com/tmux/tmux.git
+cd tmux
+./autogen.sh
+./configure
+make
+sudo make install
+ln -s ~/.local/src/tmux ~/.local/bin/tmux
 ```
 
-## Install neovim
-### Neovim
+## Install Neovim
+* [Build prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#ubuntu--debian)
+* [Install from source](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source)
 ```bash
-$ cd ~/.local/src
-$ git clone https://github.com/neovim/neovim.git
-$ cd neovim
-$ rm -rf build
-$ make CMAKE_BUILD_TYPE=Release
-$ sudo make install
-$ ln -s ~/.local/src/neovim/build/bin/nvim ~/.local/bin/nvim
+cd ~/.local/src
+git clone https://github.com/neovim/neovim.git
+cd neovim
+rm -rf build
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+ln -s ~/.local/src/neovim/build/bin/nvim ~/.local/bin/nvim
 ```
-### node
+
+## Rust
+[get-started](https://www.rust-lang.org/ja/learn/get-started)
 ```bash
-& sudo apt install nodejs
-& sudo apt install npm
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ### ripgrep
 ```bash
 $ cargo install ripgrep
 ```
-### Translate-shell
-```bash
-$ sudo apt install translate-shell
-```
 ### rust-analyzer
+[Building From Source](https://rust-analyzer.github.io/manual.html#building-from-source)
 ```bash
-$ sudo apt install curl
-$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-$ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-$ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-$ sudo apt install apt-transport-https
-$ sudo apt update
-$ sudo apt install code
-$ sudo apt install curl
-$ git clone https://github.com/rust-analyzer/rust-analyzer
-$ cd rust-analyzer
-$ cargo xtask install
+cd ~/.local/src
+git clone https://github.com/rust-analyzer/rust-analyzer.git
+cd rust-analyzer
+cargo xtask install
+```
+
+## Translate-shell
+```bash
+sudo apt install translate-shell
 ```
 
 ## Terminal
