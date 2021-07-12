@@ -88,7 +88,7 @@ cd tmux
 ./configure
 make
 sudo make install
-ln -s ~/.local/src/tmux ~/.local/bin/tmux
+ln -s ~/.local/src/tmux/tmux ~/.local/bin/tmux
 ```
 
 ## Install Neovim
