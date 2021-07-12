@@ -5,6 +5,11 @@
 LANG=C xdg-user-dirs-gtk-update
 ```
 
+## Dockにゴミ箱を表示する
+```bash
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true 
+```
+
 ## 更新
 ### 自動更新無効化
 `/etc/apt/apt.conf.d/20auto-upgrades`ファイルの以下の値を`0`にする。
