@@ -10,21 +10,12 @@ LANG=C xdg-user-dirs-gtk-update
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true 
 ```
 
-## 更新
-### 自動更新無効化
-`/etc/apt/apt.conf.d/20auto-upgrades`ファイルの以下の値を`0`にする。
-```
-APT::Periodic::Update-Package-Lists "1";
-APT::Periodic::Unattended-Upgrade "1";
-# 再起動
-```
-### Update
+## 自動更新無効化
 ```bash
-$ sudo apt dist-upgrade
-$ sudo apt update
-$ sudo apt upgrade
-# 再起動
+sudo dpkg-reconfigure -p low unattended-upgrades
+sudo apt install -y unattended-upgrades
 ```
+上記コマンドで表示される画面で**いいえ**を選択する。
 
 ## caps to ctrl
 `/etc/defalt/keyboard`ファイルを以下のように書き変える。
