@@ -132,9 +132,9 @@ sudo apt install translate-shell
 ### Font
 * [プログラミング用フォント Myrica](https://myrica.estable.jp/)
 ```bash
-$ sudo mkdir -p /usr/share/fonts/truetype/myrica
-$ sudo cp ./MyricaM.TTC /usr/share/fonts/truetype/myrica/Myrica.TTC
-$ fc-cache -fv
+sudo mkdir -p /usr/share/fonts/truetype/myrica
+sudo cp ./MyricaM.TTC /usr/share/fonts/truetype/myrica/
+fc-cache -fv
 ```
 * [Ubuntu/Bold/complete](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Ubuntu/Bold/complete)
 * [Ubuntu/Regular/complete/](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Ubuntu/Regular/complete)
