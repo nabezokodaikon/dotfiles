@@ -47,10 +47,6 @@ sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo a
 sudo apt update
 ```
 
-```bash
-$ sudo apt install chromium-browser
-```
-
 ## clipboard
 ```bash
 $ sudo apt install xclip
