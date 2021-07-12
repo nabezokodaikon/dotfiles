@@ -23,22 +23,8 @@ XKBOPTIONS="ctrl:nocaps"
 # 再起動
 ```
 
-## Install fcitx-mozc
-### インストール
-```bash
-$ sudo apt install fcitx-mozc
-```
-### 設定
-1. `地域と言語`の設定から、`インストールされている言語の管理`を選択。
-1. `キーボード入力に使うIMシステム`を、`fcitx`に変更。
-1. 再起動。
-#### 入力メソッド
-1. 右上のキーボードアイコンから`設定`を起動する。
-1. 上から順に以下のようにする。
-  1. キーボード-英語(US)
-  1. Mozc
-#### 全体の設定
-1. `入力メソッドのオンオフ`に`Ctrl+Space`を設定する。
+## 入力メソッド
+`入力メソッドのオンオフ`に`Ctrl+Space`を設定する。
 
 ### ログインキーリング
 [【Ubuntu18.04】ログインキーリングのパスワードを入力してください](https://ub.workdesign.jp/install/data1286.html)
@@ -47,7 +33,20 @@ $ sudo apt install fcitx-mozc
 3. 現在のパスワードを入力する。
 4. パスワードを**空白**で設定する。
 
-## Install Chromium
+## Install Google Chrome
+### パッケージリストに追加
+```bash
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+```
+### 公開鍵を登録
+```bash
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+```
+### パッケージリストを更新
+```bash
+sudo apt update
+```
+
 ```bash
 $ sudo apt install chromium-browser
 ```
