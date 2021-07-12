@@ -116,6 +116,7 @@ $ cargo install ripgrep
 ### rust-analyzer
 [Building From Source](https://rust-analyzer.github.io/manual.html#building-from-source)
 ```bash
+sudo apt install npm
 cd ~/.local/src
 git clone https://github.com/rust-analyzer/rust-analyzer.git
 cd rust-analyzer
