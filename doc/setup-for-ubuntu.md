@@ -139,31 +139,32 @@ fc-cache -fv
 * [Ubuntu/Bold/complete](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Ubuntu/Bold/complete)
 * [Ubuntu/Regular/complete/](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Ubuntu/Regular/complete)
 ### Color theme
-[Gogh](https://github.com/Mayccoll/Gogh)
+1. Terminalのプロファイル名を**英字**にする。
+2. [Gogh](https://github.com/Mayccoll/Gogh)
 
 ## Trouble shooting
 ### "システムプログラムの問題が見つかりました"ダイアログが表示される場合
 /var/crashに問題のあったアプリの情報を削除する。
 ```bash
-$ sudo rm -rf /var/crash/*
+sudo rm -rf /var/crash/*
 ```
 ### apt update が失敗する場合の対処法
 [Ubuntu　E:Read error - read (5 Input/output error), E:The package lists or status file could not be parsed or opened.](http://kurumatorajirou.blogspot.com/2012_09_01_archive.html)
 ```bash
-$ sudo rm /var/lib/dpkg/status
-$ sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
-$ sudo rm -rf /var/lib/apt/lists/*
-$ sudo dpkg --configure -a
-$ sudo aptitude update
-$ sudo aptitude upgrade
-$ sudo aptitude install -f
+sudo rm /var/lib/dpkg/status
+sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
+sudo rm -rf /var/lib/apt/lists/*
+sudo dpkg --configure -a
+sudo aptitude update
+sudo aptitude upgrade
+sudo aptitude install -f
 
 # 上記で上手くいかないなら、下記を実行する。
-$ sudo rm /var/lib/dpkg/status
-$ sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
-$ sudo rm -rf /var/lib/apt/lists/*
-$ sudo dpkg --configure -a
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ sudo apt-get -f install
+sudo rm /var/lib/dpkg/status
+sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status
+sudo rm -rf /var/lib/apt/lists/*
+sudo dpkg --configure -a
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get -f install
 ```
