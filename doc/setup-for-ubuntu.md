@@ -79,7 +79,7 @@ sh ~/dotfiles/script/setup-git-config.sh
 4. 次回ターミナル起動時から、認証情報を入力せずにgitの操作が行える。
 
 ## Install tmux
-[Installing](https://github.com/tmux/tmux/wiki/Installing)
+[From source tarball](https://github.com/tmux/tmux/wiki/Installing#from-source-tarball)
 ```bash
 cd ~/.local/src
 git clone https://github.com/tmux/tmux.git
@@ -104,7 +104,7 @@ sudo make install
 ln -s ~/.local/src/neovim/build/bin/nvim ~/.local/bin/nvim
 ```
 
-## Rust
+## Install Rust
 [get-started](https://www.rust-lang.org/ja/learn/get-started)
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -122,12 +122,12 @@ cd rust-analyzer
 cargo xtask install
 ```
 
-## Translate-shell
+## Install Translate-shell
 ```bash
 sudo apt install translate-shell
 ```
 
-## Terminal
+## Customize Terminal
 ### Font
 * [プログラミング用フォント Myrica](https://myrica.estable.jp/)
 ```bash
