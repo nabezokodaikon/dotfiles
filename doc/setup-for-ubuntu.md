@@ -1,5 +1,10 @@
 # Setup for Ubuntu
 
+## フォルダ名を英語に変更する
+```bash
+LANG=C xdg-user-dirs-gtk-update
+```
+
 ## 更新
 ### 自動更新無効化
 `/etc/apt/apt.conf.d/20auto-upgrades`ファイルの以下の値を`0`にする。
