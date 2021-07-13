@@ -81,6 +81,12 @@ sh ~/dotfiles/script/setup-git-config.sh
 ## Install tmux
 [From source tarball](https://github.com/tmux/tmux/wiki/Installing#from-source-tarball)
 ```bash
+sudo apt install automake
+sudo apt install make
+sudo apt install gcc
+sudo apt install libevent-dev
+sudo apt install ncurses-dev
+sudo apt install byacc
 cd ~/.local/src
 git clone https://github.com/tmux/tmux.git
 cd tmux
