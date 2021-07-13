@@ -127,7 +127,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ### ripgrep
 ```bash
-$ cargo install ripgrep
+cargo install ripgrep
 ```
 ### rust-analyzer
 [Building From Source](https://rust-analyzer.github.io/manual.html#building-from-source)
