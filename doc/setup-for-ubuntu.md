@@ -139,17 +139,12 @@ sudo apt install translate-shell
 
 ## Customize Terminal
 ### Font
-#### [プログラミング用フォント Myrica](https://myrica.estable.jp/)
+`Googleドライブ/tool/myrica`をダウンロード
 ```bash
-sudo mkdir -p /usr/share/fonts/truetype/myrica
-sudo cp ./MyricaM.TTC /usr/share/fonts/truetype/myrica/
+sudo mv myrica /usr/share/fonts/truetype/
 fc-cache -fv
 ```
-#### [nerd-fonts](https://github.com/ryanoasis/nerd-fonts?utm_source=pocket_mylist#option-6-ad-hoc-curl-download)
-```
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
-```
+`MyricaM M Book`を選択する。
 ### Color theme
 1. Terminalのプロファイル名を**英字**にする。
 2. [Gogh](https://github.com/Mayccoll/Gogh)
