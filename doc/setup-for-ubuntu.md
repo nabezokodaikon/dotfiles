@@ -146,7 +146,7 @@ sudo apt install translate-shell
 
 ## デュアルブート時のLinuxとWindowsの時刻ズレを解消する
 ```bash
-sudo hwclock -D --systohc --localtime
+sudo timedatectl set-local-rtc true
 ```
 
 ## Windowsを自動選択でブートさせる方法
