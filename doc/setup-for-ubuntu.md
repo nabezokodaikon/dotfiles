@@ -144,6 +144,11 @@ cargo xtask install
 sudo apt install translate-shell
 ```
 
+## デュアルブート時のLinuxとWindowsの時刻ズレを解消する
+```bash
+sudo hwclock -D --systohc --localtime
+```
+
 ## Customize Terminal
 ### Font
 `Googleドライブ/tool/myrica`をダウンロード
