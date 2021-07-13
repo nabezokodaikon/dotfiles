@@ -19,10 +19,3 @@ g.nvim_tree_bindings = {
   { key = "Y",           cb = tree_cb("copy_absolute_path") },
   { key = "q",           cb = tree_cb("close") },
 }
-
-g.nvim_tree_icons = {
-  folder = {
-    arrow_open = "",
-    arrow_closed = "",
-  },
-}
