@@ -173,8 +173,14 @@ sudo update-grub
 
 ## Customize Terminal
 ### Font
-`Googleドライブ/tool/myrica`をダウンロード
 ```bash
+cd ~/.local/src
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+```
+`Googleドライブ/tool/myrica`をダウンロード
+```
 sudo mv myrica /usr/share/fonts/truetype/
 fc-cache -fv
 ```
