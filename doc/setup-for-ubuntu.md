@@ -91,6 +91,15 @@ sudo make install
 ln -s ~/.local/src/tmux/tmux ~/.local/bin/tmux
 ```
 
+## Install fzf
+```bash
+cd ~/.local/src
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+cd ~/fzf
+./install
+ln -s ~/.local/src/fzf/bin/fzf ~/.local/bin/fzf
+```
+
 ## Install Neovim
 * [Build prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#ubuntu--debian)
 * [Install from source](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source)
