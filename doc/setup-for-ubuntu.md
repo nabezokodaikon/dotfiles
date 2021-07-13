@@ -149,6 +149,28 @@ sudo apt install translate-shell
 sudo hwclock -D --systohc --localtime
 ```
 
+## Windowsを自動選択でブートさせる方法
+```bash
+sudo vim /etc/default/grub
+```
+```
+# If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+
+GRUB_DEFAULT=2 # <- 0 から 2 に変更する。
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+```
+設定を反映させる。
+```
+sudo update-grub
+```
+
 ## Customize Terminal
 ### Font
 `Googleドライブ/tool/myrica`をダウンロード
