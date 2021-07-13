@@ -100,11 +100,12 @@ ln -s ~/.local/src/tmux/tmux ~/.local/bin/tmux
 ## Install fzf
 ```bash
 cd ~/.local/src
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git
 cd ~/fzf
 ./install
 ln -s ~/.local/src/fzf/bin/fzf ~/.local/bin/fzf
 ```
+tmuxを再起動すると、fzf-tmuxが使えるようになる。
 
 ## Install Neovim
 * [Build prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#ubuntu--debian)
