@@ -54,6 +54,9 @@ telescope.setup{
             ["<C-b>"] = actions.preview_scrolling_up,
         }
     },
+    path_display = {
+      "tail"
+    },
   },
   pickers = {
       -- buffers = {
