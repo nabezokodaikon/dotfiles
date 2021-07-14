@@ -29,7 +29,8 @@ nmap <Leader>m <Plug>(easymotion-overwin-f2)
 "--------------------------------
 " telescope.nvim
 "--------------------------------
-nnoremap <silent> <Leader>f :<C-u>Telescope find_files<CR>
+nnoremap <silent> <Leader>f :<C-u>
+    \ Telescope find_files find_command=rg,--hidden,--glob,!.git/*,--files<CR>
 nnoremap <silent> <Leader>gg :<C-u>Telescope live_grep<CR>
 nnoremap <silent> <Leader>b :<C-u>Telescope buffers<CR>
 nnoremap <silent> <Leader>t :<C-u>Telescope filetypes<CR>
