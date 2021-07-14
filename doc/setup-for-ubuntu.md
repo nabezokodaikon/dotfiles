@@ -144,6 +144,10 @@ git clone https://github.com/rust-analyzer/rust-analyzer.git
 cd rust-analyzer
 cargo xtask install
 ```
+### tree-sitter
+```bash
+cargo install tree-sitter-cli --git https://github.com/tree-sitter/tree-sitter.git --tag v0.20.0
+```
 
 ## Install Translate-shell
 ```bash
