@@ -36,3 +36,7 @@ compe.setup {
     luasnip = true;
   };
 }
+
+local keymap = vim.api.nvim_set_keymap
+keymap('i', '<C-d>', 'compe#close("<C-d>")', {silent = true, expr = true})
+keymap('i', '<CR>', 'compe#confirm("<CR>")', {silent = true, expr = true})

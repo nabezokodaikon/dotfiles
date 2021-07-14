@@ -1,5 +1,12 @@
 # VirtualBox setup guid
 
+## VirtualBox Guest Additions
+インストール前に、以下のパッケージをインストールすること。
+※これをやらないと、**ゲストOSの画面を自動リサイズ**が出来ない。
+```bash
+sudo apt install gcc make perl
+```
+
 ## ゲスト側の設定
 ### SSH接続
 #### ポートフォワーディング

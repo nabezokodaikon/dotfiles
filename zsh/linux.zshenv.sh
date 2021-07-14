@@ -32,3 +32,8 @@ export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
 # pkg-config
 export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
+
+
+# Terminal
+#--------------------------------
+export TERMINAL=gnome-terminal
