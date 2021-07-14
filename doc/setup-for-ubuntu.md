@@ -149,6 +149,14 @@ cargo xtask install
 cargo install tree-sitter-cli --git https://github.com/tree-sitter/tree-sitter.git --tag v0.20.0
 ```
 
+## Install Node.js
+```bash
+sudo apt install -y nodejs npm
+sudo npm install n -g
+sudo n stable
+sudo apt purge -y nodejs npm
+```
+
 ## Install Translate-shell
 ```bash
 sudo apt install translate-shell
