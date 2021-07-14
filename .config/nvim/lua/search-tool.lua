@@ -14,6 +14,7 @@ telescope.setup{
       '--hidden',
       '--glob',
       '!.git/*',
+      '--files',
     },
     prompt_prefix = "> ",
     selection_caret = "> ",
