@@ -34,6 +34,7 @@ nnoremap <silent> <Leader>f :<C-u>
 nnoremap <silent> <Leader>gg :<C-u>Telescope live_grep<CR>
 nnoremap <silent> <Leader>b :<C-u>Telescope buffers<CR>
 nnoremap <silent> <Leader>t :<C-u>Telescope filetypes<CR>
+nnoremap <silent> <Leader>h :<C-u>Telescope oldfiles cwd_only=v:true<CR>
 
 
 "--------------------------------
