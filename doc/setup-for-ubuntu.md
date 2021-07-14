@@ -1,5 +1,11 @@
 # Setup for Ubuntu
 
+## Bluetooth
+```bash
+sudo apt-get install blueman
+sudo blueman-manager
+```
+
 ## フォルダ名を英語に変更する
 ```bash
 LANG=C xdg-user-dirs-gtk-update
