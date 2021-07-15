@@ -91,7 +91,7 @@ on_cmd = 'Telescope'
 hook_source = 'luafile ~/.config/nvim/lua/search-tool.lua'
 hook_add = '''
     nnoremap <silent> <Leader>f :<C-u>
-        \ Telescope find_files find_command=rg,--hidden,--glob,!.git/*<CR>
+        \ Telescope find_files find_command=rg,--files,--hidden,--glob,!.git/*<CR>
     nnoremap <silent> <Leader>gg :<C-u>Telescope live_grep<CR>
     nnoremap <silent> <Leader>b :<C-u>Telescope buffers<CR>
     nnoremap <silent> <Leader>t :<C-u>Telescope filetypes<CR>
