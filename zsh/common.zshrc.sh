@@ -57,21 +57,23 @@ setopt share_history
 
 # プロンプトを2行表示し、現在のモードを表示する。
 # --------------------------------
-function zle-line-init zle-keymap-select {
-  case $KEYMAP in
-    vicmd)
-    PROMPT="%{${fg[blue]}%}[%n@%m] %~%{${reset_color}%}
-[NOR]$ "
-    ;;
-    main|viins)
-    PROMPT="%{${fg[blue]}%}[%n@%m] %~%{${reset_color}%}
-[INS]$ "
-    ;;
-  esac
-  zle reset-prompt
+function zle-line-init zle-line-pre-redraw() {
+  local new="$RPS1"
+  if [[ $KEYMAP != vicmd ]]; then
+    new="INS"
+  elif (( REGION_ACTIVE )); then
+    new="VIS"
+  else
+    new="NOR"
+  fi
+  if [[ $new != $RPS1 ]]; then
+   PROMPT="%{${fg[blue]}%}[%n@%m] %~%{${reset_color}%}
+["$new"]$ "
+   zle reset-prompt
+  fi
 }
 zle -N zle-line-init
-zle -N zle-keymap-select
+zle -N zle-line-pre-redraw
 
 
 # git の情報を表示
