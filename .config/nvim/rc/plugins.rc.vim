@@ -38,7 +38,7 @@ nnoremap <silent> <Leader>h :<C-u>Telescope oldfiles cwd_only=v:true<CR>
 
 
 "--------------------------------
-" defx.nvim
+" nvim-tree.lua
 "--------------------------------
 nnoremap F <Nop>
 nnoremap <silent> F :<C-u>NvimTreeToggle<CR>
