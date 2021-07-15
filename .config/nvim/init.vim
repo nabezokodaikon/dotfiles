@@ -45,10 +45,6 @@ let g:loaded_ruby_provider = 0
     " let g:node_host_prog = '/opt/homebrew/bin/neovim-node-host'
 " endif
 
-
-" プラグイン管理設定
-source ~/.config/nvim/rc/dein/dein.rc.vim
-
 " 基本設定
 source ~/.config/nvim/rc/basic.rc.vim
 
@@ -61,11 +57,8 @@ source ~/.config/nvim/rc/filetypes.rc.vim
 " Tab configurations
 source ~/.config/nvim/rc/tab.rc.vim
 
-" Plugins configurations
-source ~/.config/nvim/rc/plugins.rc.vim
-
-" Status line configurations
-luafile ~/.config/nvim/lua/status-line.lua
+" プラグイン管理設定
+source ~/.config/nvim/rc/dein/dein.rc.vim
 
 
 filetype plugin indent on

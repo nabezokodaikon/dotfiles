@@ -89,11 +89,23 @@ on_source = 'telescope.nvim'
 repo = 'nvim-telescope/telescope.nvim'
 on_cmd = 'Telescope'
 hook_source = 'luafile ~/.config/nvim/lua/search-tool.lua'
+hook_add = '''
+    nnoremap <silent> <Leader>f :<C-u>
+        \ Telescope find_files find_command=rg,--hidden,--glob,!.git/*,--files<CR>
+    nnoremap <silent> <Leader>gg :<C-u>Telescope live_grep<CR>
+    nnoremap <silent> <Leader>b :<C-u>Telescope buffers<CR>
+    nnoremap <silent> <Leader>t :<C-u>Telescope filetypes<CR>
+    nnoremap <silent> <Leader>h :<C-u>Telescope oldfiles cwd_only=v:true<CR>
+'''
 
 [[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
 on_cmd = 'NvimTreeToggle'
 hook_source = 'luafile ~/.config/nvim/lua/file-explorer.lua'
+hook_add = '''
+    nnoremap F <Nop>
+    nnoremap <silent> F :<C-u>NvimTreeToggle<CR>
+'''
 
 # scala syntax
 [[plugins]]
@@ -120,3 +132,7 @@ on_cmd = [
     'TranslateJa2En',
     'TranslateEn2Ja'
 ]
+hook_add = '''
+    vnoremap <silent> <Leader>t :<C-u>TranslateJa2En<CR>
+    vnoremap <silent> <Leader>j :<C-u>TranslateEn2Ja<CR>
+'''
