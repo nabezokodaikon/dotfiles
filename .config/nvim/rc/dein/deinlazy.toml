@@ -99,6 +99,17 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'simrat39/symbols-outline.nvim'
+on_cmd = [
+    'SymbolsOutline',
+]
+hook_source = 'luafile ~/.config/nvim/lua/out-line.lua'
+hook_add = '''
+    nnoremap <silent> <Leader>o :<C-u>SymbolsOutline<CR>
+'''
+
+
+[[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
 on_cmd = 'NvimTreeToggle'
 hook_source = 'luafile ~/.config/nvim/lua/file-explorer.lua'
