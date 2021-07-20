@@ -142,7 +142,7 @@ function select-history() {
 }
 
 zle -N select-history
-bindkey '^f' select-history
+bindkey '^h' select-history
 
 # fzfのコマンド履歴から重複を除外する。
 export HISTFILE=~/.zsh_history
