@@ -34,6 +34,7 @@ compe.setup {
     vsnip = true;
     ultisnips = true;
     luasnip = true;
+    tabnine = true;
   };
 }
 

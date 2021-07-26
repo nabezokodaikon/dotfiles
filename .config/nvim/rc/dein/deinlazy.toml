@@ -72,6 +72,15 @@ on_event = 'InsertEnter'
 hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
 
 [[plugins]]
+repo = 'tzachar/compe-tabnine'
+depends = 'nvim-compe'
+hook_post_update = '''
+    if IsMac() || IsLinux()
+        call system('bash install.sh')
+    endif
+'''
+
+[[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
