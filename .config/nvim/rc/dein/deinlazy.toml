@@ -91,14 +91,16 @@ hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
 
 [[plugins]]
 repo = 'nvim-lua/popup.nvim'
-on_source = 'telescope.nvim'
 
 [[plugins]]
 repo = 'nvim-lua/plenary.nvim'
-on_source = 'telescope.nvim'
 
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
+depends = [
+    'popup.nvim',
+    'plenary.nvim',
+]
 on_cmd = 'Telescope'
 hook_source = 'luafile ~/.config/nvim/lua/search-tool.lua'
 hook_add = '''
