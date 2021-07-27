@@ -55,7 +55,7 @@ telescope.setup{
         }
     },
     path_display = {
-      "tail"
+      "absolute"
     },
   },
   pickers = {
