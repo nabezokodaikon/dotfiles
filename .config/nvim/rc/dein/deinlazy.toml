@@ -71,19 +71,19 @@ repo = 'hrsh7th/nvim-compe'
 on_event = 'InsertEnter'
 hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
 
-[[plugins]]
-repo = 'tzachar/compe-tabnine'
-on_event = 'BufRead'
-hook_post_update = '''
-    if IsMac() || IsLinux()
-        call system('bash install.sh')
-    endif
-'''
-hook_post_source = '''
-    if IsMac() || IsLinux()
-       let g:compe.source.tabnine = v:true
-    endif
-'''
+# [[plugins]]
+# repo = 'tzachar/compe-tabnine'
+# on_event = 'BufRead'
+# hook_post_update = '''
+    # if IsMac() || IsLinux()
+        # call system('bash install.sh')
+    # endif
+# '''
+# hook_post_source = '''
+    # if IsMac() || IsLinux()
+       # let g:compe.source.tabnine = v:true
+    # endif
+# '''
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
