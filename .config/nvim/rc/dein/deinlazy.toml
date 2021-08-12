@@ -85,11 +85,11 @@ hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
     # endif
 # '''
 
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-on_event = 'BufRead'
-hook_post_update = 'TSUpdate'
-hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
+#[[plugins]]
+#repo = 'nvim-treesitter/nvim-treesitter'
+#on_event = 'BufRead'
+#hook_post_update = 'TSUpdate'
+#hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
 
 [[plugins]]
 repo = 'nvim-lua/popup.nvim'
