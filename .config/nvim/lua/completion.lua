@@ -1,8 +1,11 @@
 local o = vim.o
 local compe = require"compe"
 
+-- Set completeopt.
 o.completeopt="menuone,noinsert,noselect"
 
+
+-- Base config.
 compe.setup {
   enabled = true;
   autocomplete = true;
@@ -38,6 +41,8 @@ compe.setup {
   };
 }
 
+
+-- Key mappings.
 local keymap = vim.api.nvim_set_keymap
 keymap('i', '<C-d>', 'compe#close("<C-d>")', {silent = true, expr = true})
 keymap('i', '<CR>', 'compe#confirm("<CR>")', {silent = true, expr = true})
