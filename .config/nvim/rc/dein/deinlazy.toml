@@ -57,10 +57,10 @@ hook_source = '''
     luafile ~/.config/nvim/lua/virtual-text.lua
 '''
 
-# [[plugins]]
-# repo = 'hrsh7th/nvim-compe'
-# on_event = 'InsertEnter'
-# hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
+[[plugins]]
+repo = 'hrsh7th/nvim-compe'
+on_event = 'InsertEnter'
+hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
 
 # [[plugins]]
 # repo = 'tzachar/compe-tabnine'
