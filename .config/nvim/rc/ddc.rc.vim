@@ -8,16 +8,16 @@ call ddc#custom#patch_global(
     \ ])
 
 call ddc#custom#patch_global('sourceOptions', {
-      \ '_': {
-      \   'matchers': ['matcher_head'],
-      \   'sorters': ['sorter_rank']},
-      \ })
+    \ '_': {
+    \   'matchers': ['matcher_head'],
+    \   'sorters': ['sorter_rank']},
+    \ })
 
 call ddc#custom#patch_global('sourceOptions', {
-      \ '_': {'minAutoCompleteLength': 1},
-      \ 'around': {'mark': 'buf'},
-      \ 'nvimlsp': {'mark': 'lsp'},
-      \ })
+    \ '_': {'minAutoCompleteLength': 1},
+    \ 'around': {'mark': 'buf'},
+    \ 'nvimlsp': {'mark': 'lsp'},
+    \ })
 
 " <TAB>: completion.
 inoremap <silent><expr> <TAB>
