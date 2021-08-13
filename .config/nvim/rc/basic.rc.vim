@@ -56,15 +56,6 @@ set cursorcolumn
 " ステータスラインを常に表示する
 set laststatus=2
 
-" ポップアップの行数
-set pumheight=10
-
-" Set the behavior at the time of complementation
-set completeopt=menuone,noinsert,noselect
-
-" プレビューウィンドウを表示しない。
-set completeopt-=preview
-
 " 自動改行させない
 set textwidth=0
 

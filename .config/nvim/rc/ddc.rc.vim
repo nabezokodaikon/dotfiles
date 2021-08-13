@@ -28,6 +28,16 @@ inoremap <silent><expr> <TAB>
 " <S-TAB>: completion back.
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" Confirm the completion and close the pop-up.
+" If you want to cancel the completion, it defaults to <C-e>.
+inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
+
+" Number of pop-up lines.
+set pumheight=10
+
+" Pop-up behavior.
+set completeopt=menuone
+
 " Make the pop-up menu translucent.
 set pumblend=15
 
