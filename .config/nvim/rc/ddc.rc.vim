@@ -26,6 +26,6 @@ inoremap <silent><expr> <TAB>
 \ "\<TAB>" : ddc#manual_complete()
 
 " <S-TAB>: completion back.
-inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 call ddc#enable()
