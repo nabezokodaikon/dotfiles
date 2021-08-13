@@ -145,7 +145,6 @@ hook_add = '''
     nnoremap <silent> <Leader>o :<C-u>SymbolsOutline<CR>
 '''
 
-
 [[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
 on_cmd = 'NvimTreeToggle'
