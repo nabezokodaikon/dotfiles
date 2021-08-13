@@ -121,8 +121,3 @@ endif
 "--------------------------------
 " ターミナルでも True Color を使えるようにする。
 set termguicolors
-
-" 補完などに使われるポップアップメニューを半透明に表示します。
-if (has('nvim'))
-    set pumblend=15
-endif

@@ -28,4 +28,7 @@ inoremap <silent><expr> <TAB>
 " <S-TAB>: completion back.
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" Make the pop-up menu translucent.
+set pumblend=15
+
 call ddc#enable()
