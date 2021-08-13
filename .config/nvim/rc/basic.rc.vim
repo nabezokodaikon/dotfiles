@@ -109,3 +109,15 @@ set softtabstop=-1
 if (has('nvim'))
     set inccommand=split
 endif
+
+
+" Complete settings
+"--------------------------------
+" Number of pop-up lines.
+set pumheight=10
+
+" Pop-up behavior.
+set completeopt=menuone
+
+" Make the pop-up menu translucent.
+set pumblend=15
