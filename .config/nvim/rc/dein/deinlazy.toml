@@ -37,6 +37,17 @@ hook_source = 'source ~/.config/nvim/rc/ddc.rc.vim'
 repo = 'Shougo/ddc-around'
 on_source = 'ddc.vim'
 
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-nvim-lsp'
+on_source = 'ddc.vim'
 
 # [[plugins]]
 # repo = 'deoplete-plugins/deoplete-lsp'
