@@ -14,6 +14,7 @@ call ddc#custom#patch_global('sourceOptions', {
       \ })
 
 call ddc#custom#patch_global('sourceOptions', {
+      \ '_': {'minAutoCompleteLength': 2},
       \ 'around': {'mark': 'buf'},
       \ 'nvimlsp': {'mark': 'lsp'},
       \ })
