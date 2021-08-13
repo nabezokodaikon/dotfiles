@@ -90,6 +90,9 @@ else
     set shell=/bin/sh
 endif
 
+" Make True Color available in the terminal as well.
+set termguicolors
+
 
 " インデント設定(規定値) 
 "--------------------------------
@@ -115,9 +118,3 @@ set softtabstop=-1
 if (has('nvim'))
     set inccommand=split
 endif
-
-
-" floating windows
-"--------------------------------
-" ターミナルでも True Color を使えるようにする。
-set termguicolors
