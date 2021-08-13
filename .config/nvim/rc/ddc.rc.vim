@@ -28,14 +28,3 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<C-h>"
 
 call ddc#enable()
-
-"autocmd WinEnter,BufEnter *
-    "\ if expand("%") != "TelescopePrompt"
-    "\| call ddc#enable() | else
-    "\| call ddc#disable() | endif
-
-" augroup ddc_enable-disable
-    " autocmd!
-    " "autocmd BufRead,BufNewFile * call ddc#enable()<CR>
-    " "autocmd BufRead,BufNewFile TelescopePrompt call ddc#disable()<CR>
-" augroup END
