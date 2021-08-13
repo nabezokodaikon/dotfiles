@@ -1,9 +1,4 @@
-local o = vim.o
 local compe = require"compe"
-
--- Set completeopt.
-o.completeopt="menuone,noinsert,noselect"
-
 
 -- Base config.
 compe.setup {

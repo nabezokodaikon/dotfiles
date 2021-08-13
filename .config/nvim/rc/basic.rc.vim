@@ -59,6 +59,9 @@ set laststatus=2
 " ポップアップの行数
 set pumheight=10
 
+" Set the behavior at the time of complementation
+set completeopt=menuone,noinsert,noselect
+
 " プレビューウィンドウを表示しない。
 set completeopt-=preview
 
