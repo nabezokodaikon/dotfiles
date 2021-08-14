@@ -131,6 +131,14 @@ ln -s ~/.local/src/neovim/build/bin/nvim ~/.local/bin/nvim
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+### Update tool
+```bash
+cargo install cargo-update
+```
+以降は以下で、cargo installしたtoolを一括アップデートできる。
+```bash
+cargo install-update --all
+```
 ### ripgrep
 ```bash
 cargo install ripgrep
