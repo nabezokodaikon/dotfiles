@@ -117,7 +117,7 @@ endif
 set pumheight=10
 
 " Pop-up behavior.
-set completeopt=menuone
+set completeopt=menuone,noselect
 
 " Make the pop-up menu translucent.
 set pumblend=15
