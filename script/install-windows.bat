@@ -1,7 +1,7 @@
 REM Uninstall
 rmdir /s /q %LOCALAPPDATA%\nvim
 rmdir %USERPROFILE%\.config
-del .tigrc
+del %USERPROFILE%\.tigrc
 
 REM Install
 mkdir %LOCALAPPDATA%\nvim
