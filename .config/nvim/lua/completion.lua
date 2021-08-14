@@ -26,12 +26,12 @@ compe.setup {
   source = {
     path = true;
     buffer = true;
-    calc = true;
+    calc = false;
     nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = true;
-    luasnip = true;
+    nvim_lua = false;
+    vsnip = false;
+    ultisnips = false;
+    luasnip = false;
     -- tabnine = true;
   };
 }
