@@ -61,6 +61,7 @@ repo = 'nvim-lua/plenary.nvim'
 
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
+rev = 'f1a27baf279976845eb43c65e99a71d7f0f92d02'
 depends = [
     'popup.nvim',
     'plenary.nvim',
