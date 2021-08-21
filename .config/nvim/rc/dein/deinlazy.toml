@@ -85,7 +85,7 @@ hook_add = '''
 [[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
 on_cmd = 'NvimTreeToggle'
-hook_source = 'luafile ~/.config/nvim/lua/file-explorer.lua'
+hook_source = 'luafile ~/.config/nvim/lua/tree.lua'
 hook_add = '''
     nnoremap <silent> <leader>e :<C-u>NvimTreeToggle<CR>
 '''
