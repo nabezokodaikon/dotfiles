@@ -29,6 +29,23 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'hrsh7th/nvim-cmp'
+on_event = 'InsertEnter'
+hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-buffer'
+on_source = 'nvim-cmp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-path'
+on_source = 'nvim-cmp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp'
+on_source = 'nvim-cmp'
+
+[[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
