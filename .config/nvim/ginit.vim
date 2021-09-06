@@ -1,3 +1,3 @@
-Guifont! mplus\ NF:h11
+Guifont! mplus\ NF:h13
 GuiTabline 0
 GuiPopupmenu 0
