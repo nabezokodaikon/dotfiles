@@ -93,6 +93,9 @@ set autoindent
 " 新しい行の高度な自動インデントを有効化。
 set smartindent
 
+" C言語の文法に基づいてインデントを行います。
+set cindent
+
 " タブ入力を空白入力に置き換える。
 set expandtab
 
