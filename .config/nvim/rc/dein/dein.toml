@@ -11,7 +11,7 @@ repo = 'tpope/vim-surround'
 repo = 'scrooloose/nerdcommenter'
 hook_add = '''
     " コメントの間にスペースを開ける
-    let g:NERDSpaceDelims = 1
+    let NERDSpaceDelims = 1
     nnoremap co <Nop>
     vnoremap co <Nop>
     nmap co <Plug>NERDCommenterToggle
