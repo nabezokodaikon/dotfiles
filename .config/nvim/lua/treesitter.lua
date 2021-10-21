@@ -10,8 +10,5 @@ treesitter.setup {
         disable = {
             "rust",
         },
-    },
-    indent = {
-        enable = true,
     }
 }
