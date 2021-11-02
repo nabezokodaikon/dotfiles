@@ -67,3 +67,6 @@ repo = 'kyazdani42/nvim-web-devicons'
 [[plugins]]
 repo = 'hoob3rt/lualine.nvim'
 hook_add = 'luafile ~/.config/nvim/lua/status-line.lua'
+
+[[plugins]]
+repo = 'github/copilot.vim'
