@@ -18,4 +18,6 @@ cmp.setup {
     { name = 'buffer' },
   },
 
+  documentation = false,
+
 }
