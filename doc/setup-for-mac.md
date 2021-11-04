@@ -55,6 +55,7 @@ $ brew tap beeftornado/rmtree
 ### Formulae
 * awscli
 * deno
+* fd
 * fzf
 * git
   * Mac標準のgitは`osxkeychain helper`が無いため使用しない。
