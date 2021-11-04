@@ -11,6 +11,8 @@
 `マイドライブ/doc/bettertouchtool.bttpreset`
 ### AppCleaner 
 [AppCleaner](https://freemacsoft.net/appcleaner/)
+### Tenorshare iCareFone
+[Tenorshare iCareFone](https://www.tenorshare.jp/products/icarefone.html)
 ### 1Password
 App Storeからダウンロードする。
 ### iTerm2
