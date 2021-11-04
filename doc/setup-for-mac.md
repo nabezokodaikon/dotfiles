@@ -97,10 +97,6 @@ $ echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
 $ export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 ```
 ### Neovim
-```
-$ pip3 install --user pynvim
-$ npm install --global neovim
-```
 Neovimのインストールに失敗した場合は、以下を実行後に再インストールしてみる。
 * [macOs Catalina: Neovim from homebrew fails to start](https://github.com/neovim/neovim/issues/11411)
 * [fix(treesitter): set match limit for query cursors](https://github.com/neovim/neovim/pull/14915)
