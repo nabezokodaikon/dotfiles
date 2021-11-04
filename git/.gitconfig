@@ -1,0 +1,21 @@
+[user]
+	name = nabezokodaikon
+	email = nabezoko.daikon@gmail.com
+[core]
+	editor = nvim
+    ; 改行コードを自動変換しない。
+	autocrlf = false
+    ; Gitで日本語ファイル名を表示する。
+	quotepath = false
+[push]
+    ; upstreamが設定されていて、それが同名のブランチ名であるときのみpushする。
+	default = simple
+[http]
+    ; リモートリポジトリが自己証明書であっても接続する。
+	sslVerify = false
+[diff]
+    ; diffの前後行数を変更。
+	context = 8
+[credential]
+    ; 認証ファイルを指定。
+    helper = store --file /Users/nabezokodaikon/.git-credentials

@@ -14,6 +14,7 @@ unlink ${HOME}/.config/nvim
 unlink ${HOME}/.xprofile
 unlink ${HOME}/.Xmodmap
 unlink ${HOME}/.Xresources
+unlink ${HOME}/.gitconfig
 
 
 # Install
@@ -31,6 +32,7 @@ ln -s ${HOME}/dotfiles/tmux/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${HOME}/dotfiles/tig/.tigrc ${HOME}/.tigrc
 ln -s ${HOME}/dotfiles/vim/.vimrc ${HOME}/.vimrc
 ln -s ${HOME}/dotfiles/.config/nvim/ ${HOME}/.config/nvim
+ln -s ${HOME}/dotfiles/git/.gitconfig ${HOME}/.gitconfig
 
 if [ $(echo ${OSTYPE} | grep -e 'linux*') ]; then
     # For Linux only.
