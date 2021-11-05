@@ -57,7 +57,7 @@ telescope.setup{
         }
     },
     path_display = {
-      "absolute"
+      truncate = 3,
     },
   },
   pickers = {
