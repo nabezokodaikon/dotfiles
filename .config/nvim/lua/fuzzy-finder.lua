@@ -72,6 +72,10 @@ telescope.setup{
       live_grep = {
           theme = "dropdown",
           previewer = false,
+      },
+      oldfiles = {
+          theme = "dropdown",
+          previewer = false,
       }
   }
 }
