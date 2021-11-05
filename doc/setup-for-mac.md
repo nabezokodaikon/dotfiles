@@ -55,7 +55,6 @@ $ brew tap beeftornado/rmtree
 ### Formulae
 * awscli
 * deno
-* fd
 * fzf
 * git
   * Mac標準のgitは`osxkeychain helper`が無いため使用しない。
@@ -64,10 +63,7 @@ $ brew tap beeftornado/rmtree
 * node
 * reattach-to-user-namespace
   * [コピー・ペーストをtmux、iTerm2、OS Xで共有する](https://qiita.com/kiyodori/items/02eb88864f583db3e799)
-* ripgrep
-* rust
 * rust-analyzer
-* rustup-init
 * tig
 * tmux
 * translate-shell
@@ -106,10 +102,10 @@ $ brew uninstall --ignore-dependencies tree-sitter && brew install tree-sitter -
 $ brew uninstall --ignore-dependencies luajit --HEAD && brew install luajit --HEAD
 ```
 ### Rust
+[Rustをインストール](https://www.rust-lang.org/ja/tools/install)
 ```
-$ rustup-init
-$ rustup target add wasm32-unknown-unknown
-$ cargo install wasm-bindgen-cli
+$ cargo install ripgrep
+$ cargo install fd-find
 ```
 
 ## Develop
