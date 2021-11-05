@@ -60,22 +60,4 @@ telescope.setup{
       truncate = 3,
     },
   },
-  pickers = {
-      buffers = {
-          theme = "dropdown",
-          previewer = false,
-      },
-      find_files = {
-          theme = "dropdown",
-          previewer = false,
-      },
-      live_grep = {
-          theme = "dropdown",
-          previewer = false,
-      },
-      oldfiles = {
-          theme = "dropdown",
-          previewer = false,
-      }
-  }
 }
