@@ -3,7 +3,7 @@ local lualine = require'lualine'
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
+    theme = 'gruvbox_dark',
     component_separators = {'', ''},
     section_separators = {'', ''},
     disabled_filetypes = {},
