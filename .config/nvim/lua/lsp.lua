@@ -9,8 +9,10 @@ lsp.cssls.setup {
   capabilities = capabilities,
 }
 
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
 lsp.denols.setup{
-    root_dir = lsp.util.root_pattern("deps.ts"),
 }
 
 lsp.dockerls.setup{
