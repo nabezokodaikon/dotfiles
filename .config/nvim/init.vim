@@ -46,7 +46,8 @@ let g:loaded_ruby_provider = 0
 " endif
 
 " 基本設定
-source ~/.config/nvim/rc/basic.rc.vim
+" source ~/.config/nvim/rc/basic.rc.vim
+luafile ~/.config/nvim/lua/basic.lua
 
 " Key mapping configurations
 source ~/.config/nvim/rc/mappings.rc.vim
