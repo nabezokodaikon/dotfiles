@@ -50,7 +50,8 @@ let g:loaded_ruby_provider = 0
 luafile ~/.config/nvim/lua/basic.lua
 
 " Key mapping configurations
-source ~/.config/nvim/rc/mappings.rc.vim
+" source ~/.config/nvim/rc/mappings.rc.vim
+luafile ~/.config/nvim/lua/mappings.lua
 
 " File type configurations
 source ~/.config/nvim/rc/filetypes.rc.vim
