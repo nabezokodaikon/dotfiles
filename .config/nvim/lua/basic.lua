@@ -20,10 +20,8 @@ function SetOptions()
     cursorline = true,
     -- タブ入力を空白入力に置き換える。
     expandtab = true,
-    -- カーソルをブロックにする。
-    guicursor = vim.o.guicursor..',a:block',    
     -- カーソルを点滅させない。
-    guicursor = vim.o.guicursor..',a:blinkon0',    
+    guicursor = "a:blinkon0",
     -- 保存されていないファイルがあるときでも別のファイルを開く。
     hidden = true,
     -- 検索結果をハイライトする。
