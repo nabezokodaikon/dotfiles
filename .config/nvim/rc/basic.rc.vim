@@ -96,14 +96,6 @@ set smarttab
 set softtabstop=-1
 
 
-" 置換設定
-"--------------------------------
-" 文字列置換をインタラクティブに表示する。
-if (has('nvim'))
-    set inccommand=split
-endif
-
-
 " Complete settings
 "--------------------------------
 " Number of pop-up lines.
@@ -111,8 +103,3 @@ set pumheight=10
 
 " Pop-up behavior.
 set completeopt=menuone,noselect
-
-if (has('nvim'))
-" Make the pop-up menu translucent.
-    set pumblend=15
-endif
