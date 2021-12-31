@@ -54,7 +54,8 @@ luafile ~/.config/nvim/lua/basic.lua
 luafile ~/.config/nvim/lua/mappings.lua
 
 " File type configurations
-source ~/.config/nvim/rc/filetypes.rc.vim
+" source ~/.config/nvim/rc/filetypes.rc.vim
+source ~/.config/nvim/lua/filetypes.lua
 
 " Tab configurations
 source ~/.config/nvim/rc/tab.rc.vim
