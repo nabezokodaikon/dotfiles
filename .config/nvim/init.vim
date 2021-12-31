@@ -31,14 +31,6 @@ let g:loaded_python_provider = 0
 let g:loaded_python3_provider = 0
 let g:loaded_ruby_provider = 0
 
-" Set path on providers
-" if IsWindows()
-    " let g:python3_host_prog = $LOCALAPPDATA . '/Programs/Python/python.exe'
-    " let g:node_host_prog = '/usr/local/bin/neovim-node-host'
-" elseif IsMac()
-    " let g:python3_host_prog = '/opt/homebrew/bin/python3'
-    " let g:node_host_prog = '/opt/homebrew/bin/neovim-node-host'
-" endif
 
 " Basic settings
 luafile ~/.config/nvim/lua/basic.lua
