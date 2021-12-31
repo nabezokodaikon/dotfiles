@@ -56,9 +56,13 @@ hook_add = '''
 
 # Color scheme
 [[plugins]]
-repo = 'morhetz/gruvbox'
+repo = 'rktjmp/lush.nvim'
+
+[[plugins]]
+repo = 'ellisonleao/gruvbox.nvim'
 hook_add = '''
-    colorscheme gruvbox
+    lua vim.o.background = "dark"
+    lua vim.cmd([[colorscheme gruvbox]])
 '''
 
 [[plugins]]
