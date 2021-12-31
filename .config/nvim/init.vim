@@ -5,6 +5,10 @@ filetype off
 filetype plugin indent off
 
 
+" OS判定。
+" https://github.com/glepnir/nvim/blob/master/lua/core/global.lua
+
+
 " Set disable providers
 let g:loaded_node_provider = 0
 let g:loaded_perl_provider = 0
