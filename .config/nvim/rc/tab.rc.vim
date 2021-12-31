@@ -1,8 +1,5 @@
 "--------------------------------
-" Hacks
-"--------------------------------
-
-" Customize tabline.
+" Tabline settings
 "--------------------------------
 set tabline=%!MakeTabLine()
 
