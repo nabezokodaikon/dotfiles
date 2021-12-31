@@ -112,5 +112,7 @@ set pumheight=10
 " Pop-up behavior.
 set completeopt=menuone,noselect
 
+if (has('nvim'))
 " Make the pop-up menu translucent.
-set pumblend=15
+    set pumblend=15
+endif
