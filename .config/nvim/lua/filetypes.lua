@@ -4,6 +4,7 @@
 vim.cmd [[
   augroup fileTypeRelation
       autocmd!
+      autocmd BufNewFile,BufRead *.sbt set filetype=scala
       autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact
       autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
       autocmd BufNewFile,BufRead *.gql set filetype=graphql
