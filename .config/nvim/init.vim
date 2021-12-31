@@ -45,19 +45,16 @@ let g:loaded_ruby_provider = 0
     " let g:node_host_prog = '/opt/homebrew/bin/neovim-node-host'
 " endif
 
-" 基本設定
-" source ~/.config/nvim/rc/basic.rc.vim
+" Basic settings
 luafile ~/.config/nvim/lua/basic.lua
 
-" Key mapping configurations
-" source ~/.config/nvim/rc/mappings.rc.vim
+" Key mappings
 luafile ~/.config/nvim/lua/mappings.lua
 
-" File type configurations
-" source ~/.config/nvim/rc/filetypes.rc.vim
-source ~/.config/nvim/lua/filetypes.lua
+" File type settings
+luafile ~/.config/nvim/lua/filetypes.lua
 
-" Tab configurations
+" Tab settings
 source ~/.config/nvim/rc/tab.rc.vim
 
 " プラグイン管理設定
