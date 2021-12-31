@@ -4,8 +4,6 @@
 vim.cmd [[
   augroup fileTypeRelation
       autocmd!
-      autocmd BufRead,BufNewFile *.hxp set filetype=haxe
-      autocmd BufRead,BufNewFile *.sbt set filetype=scala
       autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact
       autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
       autocmd BufNewFile,BufRead *.gql set filetype=graphql
@@ -24,8 +22,6 @@ vim.cmd [[
       autocmd BufRead,BufNewFile *.gql setlocal tabstop=2 shiftwidth=2
       autocmd BufRead,BufNewFile *.html setlocal tabstop=2 shiftwidth=2
       autocmd BufRead,BufNewFile *.hs setlocal tabstop=4 shiftwidth=4
-      autocmd BufRead,BufNewFile *.hx setlocal tabstop=2 shiftwidth=2
-      autocmd BufRead,BufNewFile *.hxp setlocal tabstop=2 shiftwidth=2
       autocmd BufRead,BufNewFile *.js setlocal tabstop=2 shiftwidth=2
       autocmd BufRead,BufNewFile *.json setlocal tabstop=2 shiftwidth=2
       autocmd BufRead,BufNewFile *.jsx setlocal tabstop=2 shiftwidth=2
@@ -46,8 +42,6 @@ vim.cmd [[
   augroup fileTypeDeclaration
       autocmd!
       autocmd BufRead,BufNewFile *.hs nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.hx nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.hxp nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
       autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
       autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
       autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
