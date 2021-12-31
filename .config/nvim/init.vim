@@ -1,11 +1,6 @@
 "--------------------------------
 " Initial configurations
 "--------------------------------
-if &compatible
-    set nocompatible
-endif
-
-
 filetype off
 filetype plugin indent off
 
