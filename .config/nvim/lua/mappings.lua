@@ -13,6 +13,8 @@ api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true })
 -- Jump to the line head and tail.
 api.nvim_set_keymap('n', '<C-h>', '0', { noremap = true })
 api.nvim_set_keymap('n', '<C-l>', '$', { noremap = true })
+api.nvim_set_keymap('v', '<C-h>', '0', { noremap = true })
+api.nvim_set_keymap('v', '<C-l>', '$', { noremap = true })
 
 -- Disable completion.
 api.nvim_set_keymap('i', '<C-n>', '<Nop>', { noremap = true })
