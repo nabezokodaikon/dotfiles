@@ -1,5 +1,5 @@
 --------------------------------
--- LSP configurations
+-- LSP settings
 --------------------------------
 local lsp = require"lspconfig"
 
