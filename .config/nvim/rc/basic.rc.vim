@@ -74,13 +74,6 @@ set autoread
 " クリップボードと連携
 set clipboard^=unnamedplus
 
-" ターミナルで使用するシェルを指定
-if IsWindows()
-    " set shell=/bin/sh
-else
-    set shell=/bin/sh
-endif
-
 " Make True Color available in the terminal as well.
 set termguicolors
 
