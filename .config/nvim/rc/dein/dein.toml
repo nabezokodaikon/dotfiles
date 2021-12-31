@@ -73,6 +73,13 @@ repo = 'hoob3rt/lualine.nvim'
 hook_add = 'luafile ~/.config/nvim/lua/status-line.lua'
 
 [[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+hook_add = 'luafile ~/.config/nvim/lua/fuzzy-finder.lua'
+
+[[plugins]]
 repo = 'github/copilot.vim'
 hook_add = '''
     imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")

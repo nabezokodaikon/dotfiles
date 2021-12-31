@@ -52,25 +52,6 @@ hook_post_update = 'TSUpdate'
 hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
 
 [[plugins]]
-repo = 'nvim-lua/plenary.nvim'
-
-[[plugins]]
-repo = 'nvim-telescope/telescope.nvim'
-depends = [
-    'plenary.nvim',
-]
-on_cmd = 'Telescope'
-hook_source = 'luafile ~/.config/nvim/lua/fuzzy-finder.lua'
-hook_add = '''
-    nnoremap <silent> <Leader>f :<C-u>
-        \ Telescope find_files previewer=false find_command=rg,--files,--hidden,--glob,!.git/*<CR>
-    nnoremap <silent> <Leader>g :<C-u>Telescope live_grep previewer=false<CR>
-    nnoremap <silent> <Leader>b :<C-u>Telescope buffers previewer=false<CR>
-    nnoremap <silent> <Leader>t :<C-u>Telescope filetypes previewer=false<CR>
-    nnoremap <silent> <Leader>h :<C-u>Telescope oldfiles previewer=false cwd_only=v:true<CR>
-'''
-
-[[plugins]]
 repo = 'simrat39/symbols-outline.nvim'
 on_cmd = [
     'SymbolsOutline',

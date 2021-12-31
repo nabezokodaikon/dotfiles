@@ -1,3 +1,5 @@
+local api = vim.api
+local opts = { noremap = true, silent = true }
 local telescope = require('telescope');
 local actions = require('telescope.actions');
 
@@ -61,3 +63,25 @@ telescope.setup{
     },
   },
 }
+
+
+api.nvim_set_keymap('n',
+  '<Leader>f',
+  [[<cmd>lua require('telescope.builtin').find_files({ previewer = false, find_command = {'rg', '--files', '--hidden', '--glob', '!.git/*' }, })<CR>]],
+  opts)
+api.nvim_set_keymap('n',
+  '<Leader>g',
+  [[<cmd>lua require('telescope.builtin').live_grep({ previewer = false })<CR>]],
+  opts)
+api.nvim_set_keymap('n',
+  '<Leader>b',
+  [[<cmd>lua require('telescope.builtin').buffers({ previewer = false })<CR>]],
+  opts)
+api.nvim_set_keymap('n',
+  '<Leader>t',
+  [[<cmd>lua require('telescope.builtin').filetypes({ previewer = false })<CR>]],
+  opts)
+api.nvim_set_keymap('n',
+  '<Leader>h',
+  [[<cmd>lua require('telescope.builtin').oldfiles({ previewer = false, only_cwd = true })<CR>]],
+  opts)
