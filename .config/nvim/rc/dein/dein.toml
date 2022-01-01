@@ -65,8 +65,8 @@ hook_add = '''
     lua vim.cmd([[colorscheme gruvbox]])
 '''
 
-[[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
+# [[plugins]]
+# repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
 repo = 'hoob3rt/lualine.nvim'

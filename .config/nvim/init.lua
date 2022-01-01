@@ -26,6 +26,9 @@ require('mappings')
 -- File type settings
 require('filetypes')
 
+-- Plugins settings
+require('plugin_manager')
+
 -- Tab settings
 vim.cmd [[source ~/.config/nvim/rc/tab.rc.vim]]
 
