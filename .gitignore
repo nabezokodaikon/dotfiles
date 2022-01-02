@@ -20,3 +20,6 @@ scoop
 
 # Neovimのログディレクトリを対象外とする
 /.config/nvim/logs/*
+
+# packerの出力ファイルを対象外にする
+/.config/nvim/plugin/*
