@@ -32,9 +32,6 @@ require('virtual-text')
 -- Plugins settings.
 require('plugins')
 
--- Tab settings.
-vim.cmd [[source ~/.config/nvim/rc/tab.rc.vim]]
-
 
 vim.cmd('filetype plugin indent on')
 vim.cmd('syntax on')
