@@ -176,12 +176,14 @@ return require('packer').startup(function()
     ft = { 'velocity' }
   }
 
+  -- 日本語、英語の相互翻訳。
   use {
     'nabezokodaikon/jaen-translate.vim',
     opt = true,
     cmd = { 'TranslateJa2En', 'TranslateEn2Ja' },
   }
 
+  -- タブラインをカスタマイズ。
   use {
     'nabezokodaikon/tabline.vim',
     opt = true,
