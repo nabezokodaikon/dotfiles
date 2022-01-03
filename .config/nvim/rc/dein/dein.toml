@@ -1,6 +1,6 @@
 # プラグイン管理
-[[plugins]]
-repo = 'Shougo/dein.vim'
+# [[plugins]]
+# repo = 'Shougo/dein.vim'
 
 # テキストを囲ったり、囲いを外したりするプラグイン。
 # [[plugins]]

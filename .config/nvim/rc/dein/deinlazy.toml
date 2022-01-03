@@ -1,100 +1,100 @@
-[[plugins]]
-repo = 'mattn/emmet-vim'
-on_ft = [
-    'html',
-    'css',
-    'scss'
-    'javascript',
-    'javascriptreact',
-    'typescript',
-    'typescriptreact',
-]
-hook_source = '''
-    let g:user_emmet_install_global = 0
-    let g:user_emmet_leader_key='<C-e>'
-    augroup emmet_my_settings
-        autocmd!
-        autocmd FileType
-        \ html,css,scss,javascript,javascriptreact,typescript,typescriptreact
-        \ EmmetInstall
-    augroup END
-'''
+# [[plugins]]
+# repo = 'mattn/emmet-vim'
+# on_ft = [
+    # 'html',
+    # 'css',
+    # 'scss'
+    # 'javascript',
+    # 'javascriptreact',
+    # 'typescript',
+    # 'typescriptreact',
+# ]
+# hook_source = '''
+    # let g:user_emmet_install_global = 0
+    # let g:user_emmet_leader_key='<C-e>'
+    # augroup emmet_my_settings
+        # autocmd!
+        # autocmd FileType
+        # \ html,css,scss,javascript,javascriptreact,typescript,typescriptreact
+        # \ EmmetInstall
+    # augroup END
+# '''
 
-[[plugins]]
-repo = 'neovim/nvim-lspconfig'
-on_event = 'BufRead'
-hook_source = '''
-    luafile ~/.config/nvim/lua/lsp.lua
-    luafile ~/.config/nvim/lua/virtual-text.lua
-'''
+# [[plugins]]
+# repo = 'neovim/nvim-lspconfig'
+# on_event = 'BufRead'
+# hook_source = '''
+    # luafile ~/.config/nvim/lua/lsp.lua
+    # luafile ~/.config/nvim/lua/virtual-text.lua
+# '''
 
-[[plugins]]
-repo = 'hrsh7th/nvim-cmp'
-on_event = 'InsertEnter'
-hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
+# [[plugins]]
+# repo = 'hrsh7th/nvim-cmp'
+# on_event = 'InsertEnter'
+# hook_source = 'luafile ~/.config/nvim/lua/completion.lua'
 
-[[plugins]]
-repo = 'hrsh7th/cmp-buffer'
-on_source = 'nvim-cmp'
+# [[plugins]]
+# repo = 'hrsh7th/cmp-buffer'
+# on_source = 'nvim-cmp'
 
-[[plugins]]
-repo = 'hrsh7th/cmp-path'
-on_source = 'nvim-cmp'
+# [[plugins]]
+# repo = 'hrsh7th/cmp-path'
+# on_source = 'nvim-cmp'
 
-[[plugins]]
-repo = 'hrsh7th/cmp-nvim-lsp'
-on_source = 'nvim-cmp'
+# [[plugins]]
+# repo = 'hrsh7th/cmp-nvim-lsp'
+# on_source = 'nvim-cmp'
 
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-on_event = 'BufRead'
-hook_post_update = 'TSUpdate'
-hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
+# [[plugins]]
+# repo = 'nvim-treesitter/nvim-treesitter'
+# on_event = 'BufRead'
+# hook_post_update = 'TSUpdate'
+# hook_source = 'luafile ~/.config/nvim/lua/treesitter.lua'
 
-[[plugins]]
-repo = 'simrat39/symbols-outline.nvim'
-on_cmd = [
-    'SymbolsOutline',
-]
-hook_source = 'luafile ~/.config/nvim/lua/out-line.lua'
-hook_add = '''
-    nnoremap <silent> <Leader>o :<C-u>SymbolsOutline<CR>
-'''
+# [[plugins]]
+# repo = 'simrat39/symbols-outline.nvim'
+# on_cmd = [
+#     'SymbolsOutline',
+# ]
+# hook_source = 'luafile ~/.config/nvim/lua/out-line.lua'
+# hook_add = '''
+#     nnoremap <silent> <Leader>o :<C-u>SymbolsOutline<CR>
+# '''
 
-[[plugins]]
-repo = 'kyazdani42/nvim-tree.lua'
-on_cmd = 'NvimTreeToggle'
-hook_source = 'luafile ~/.config/nvim/lua/tree.lua'
-hook_add = '''
-    nnoremap <silent> <leader>e :<C-u>NvimTreeToggle<CR>
-'''
+# [[plugins]]
+# repo = 'kyazdani42/nvim-tree.lua'
+# on_cmd = 'NvimTreeToggle'
+# hook_source = 'luafile ~/.config/nvim/lua/tree.lua'
+# hook_add = '''
+    # nnoremap <silent> <leader>e :<C-u>NvimTreeToggle<CR>
+# '''
 
 # scala syntax
-[[plugins]]
-repo = 'derekwyatt/vim-scala'
-on_ft = 'scala'
+# [[plugins]]
+# repo = 'derekwyatt/vim-scala'
+# on_ft = 'scala'
 
 # rust configuration
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-hook_source = '''
-    let g:rustfmt_command = 'rustfmt'
-    let g:rustfmt_autosave = 1 
-'''
+# [[plugins]]
+# repo = 'rust-lang/rust.vim'
+# on_ft = 'rust'
+# hook_source = '''
+    # let g:rustfmt_command = 'rustfmt'
+    # let g:rustfmt_autosave = 1 
+# '''
 
-[[plugins]]
-repo = 'lepture/vim-velocity'
-on_ft = 'velocity'
+# [[plugins]]
+# repo = 'lepture/vim-velocity'
+# on_ft = 'velocity'
 
 # Translate for Japanese/English
-[[plugins]]
-repo = 'nabezokodaikon/jaen-translate.vim'
-on_cmd = [
-    'TranslateJa2En',
-    'TranslateEn2Ja'
-]
-hook_add = '''
-    vnoremap <silent> <Leader>t :<C-u>TranslateJa2En<CR>
-    vnoremap <silent> <Leader>j :<C-u>TranslateEn2Ja<CR>
-'''
+# [[plugins]]
+# repo = 'nabezokodaikon/jaen-translate.vim'
+# on_cmd = [
+    # 'TranslateJa2En',
+    # 'TranslateEn2Ja'
+# ]
+# hook_add = '''
+    # vnoremap <silent> <Leader>t :<C-u>TranslateJa2En<CR>
+    # vnoremap <silent> <Leader>j :<C-u>TranslateEn2Ja<CR>
+# '''

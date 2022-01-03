@@ -69,18 +69,22 @@ api.nvim_set_keymap('n',
   '<Leader>f',
   [[<cmd>lua require('telescope.builtin').find_files({ previewer = false, find_command = {'rg', '--files', '--hidden', '--glob', '!.git/*' }, })<CR>]],
   opts)
+
 api.nvim_set_keymap('n',
   '<Leader>g',
-  [[<cmd>lua require('telescope.builtin').live_grep({ previewer = false })<CR>]],
+  [[<cmd>Telescope live_grep previewer=false<CR>]],
   opts)
+
 api.nvim_set_keymap('n',
   '<Leader>b',
   [[<cmd>lua require('telescope.builtin').buffers({ previewer = false })<CR>]],
   opts)
+
 api.nvim_set_keymap('n',
   '<Leader>t',
-  [[<cmd>lua require('telescope.builtin').filetypes({ previewer = false })<CR>]],
+  [[<cmd>Telescope filetypes previewer=false cwd_only=v:true<CR>]],
   opts)
+
 api.nvim_set_keymap('n',
   '<Leader>h',
   [[<cmd>lua require('telescope.builtin').oldfiles({ previewer = false, only_cwd = true })<CR>]],

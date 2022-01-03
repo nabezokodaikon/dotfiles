@@ -27,13 +27,10 @@ require('mappings')
 require('filetypes')
 
 -- Plugins settings
-require('plugin_manager')
+require('plugin-manager')
 
 -- Tab settings
 vim.cmd [[source ~/.config/nvim/rc/tab.rc.vim]]
-
--- プラグイン管理設定
-vim.cmd [[source ~/.config/nvim/rc/dein/dein.rc.vim]]
 
 
 vim.cmd('filetype plugin indent on')
