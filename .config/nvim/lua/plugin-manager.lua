@@ -27,8 +27,6 @@ return require('packer').startup(function()
     'scrooloose/nerdcommenter',
     config = function()
       vim.g.NERDSpaceDelims = 1
-      vim.api.nvim_set_keymap('n', 'co', '<Plug>NERDCommenterToggle', { noremap = false }) 
-      vim.api.nvim_set_keymap('v', 'co', '<Plug>NERDCommenterToggle', { noremap = false }) 
     end
   }
 
@@ -67,19 +65,14 @@ return require('packer').startup(function()
       -- 大文字、小文字を区別しない。
       vim.g.EasyMotion_smartcase = 1
       -- キーワードの入力を2文字まで受け付ける。
-      vim.api.nvim_set_keymap('n', '<Leader>m', '<Plug>(easymotion-overwin-f2)', { noremap = false }) 
     end
   }
 
   -- AIによる補完候補を表示。
+
   use {
     'github/copilot.vim',
     config = function()
-      vim.api.nvim_set_keymap(
-        'i',
-        '<C-J>',
-        [[copilot#Accept("\<CR>")]],
-        { silent = true, script = true, expr = true }) 
       vim.g.copilot_no_tab_map = true
     end
   }
@@ -153,7 +146,6 @@ return require('packer').startup(function()
     run = ':TSUpdate',
   }
 
-  vim.api.nvim_set_keymap('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', { noremap = true, silent = true }) 
  use {
    'simrat39/symbols-outline.nvim',
    opt = true,
@@ -161,7 +153,6 @@ return require('packer').startup(function()
    setup = function() require('out-line') end
  }
 
-  vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true }) 
   use {
     'kyazdani42/nvim-tree.lua',
     require = { 'kyazdani42/nvim-web-devicons' },
@@ -190,8 +181,6 @@ return require('packer').startup(function()
     ft = { 'velocity' }
   }
 
-    vim.api.nvim_set_keymap('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', { noremap = true, silent = true })
   use {
     'nabezokodaikon/jaen-translate.vim',
     opt = true,
