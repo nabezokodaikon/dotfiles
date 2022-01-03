@@ -19,10 +19,10 @@ return require('packer').startup(function()
   -- テキストを囲ったり、囲いを外したりする。
   use { 'tpope/vim-surround' }
 
-  -- アイコン。
+  -- Icon
   use { 'kyazdani42/nvim-web-devicons' }
 
-  -- コメントアウト。
+  -- Comment out
   use {
     'scrooloose/nerdcommenter',
     config = function() require('plugins.nerdcommenter') end
@@ -41,7 +41,6 @@ return require('packer').startup(function()
   }
 
   -- AIによる補完候補を表示。
-
   use {
     'github/copilot.vim',
     config = function() require('plugins.copilot') end
@@ -75,6 +74,7 @@ return require('packer').startup(function()
     config = function() require('plugins.emmet-vim') end
   }
 
+  -- Completion
   use {
     'neovim/nvim-lspconfig',
     config = function() require('plugins.nvim-lspconfig') end,
@@ -85,9 +85,20 @@ return require('packer').startup(function()
     config = function() require('plugins.nvim-cmp') end,
   }
 
-  use { 'hrsh7th/cmp-buffer', requires = { 'hrsh7th/nvim-cmp', 'neovim/nvim-lspconfig' } }
-  use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp', }
-  use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp', }
+  use {
+    'hrsh7th/cmp-buffer',
+    requires = { 'hrsh7th/nvim-cmp', 'neovim/nvim-lspconfig' }
+  }
+
+  use {
+    'hrsh7th/cmp-path',
+    requires = 'hrsh7th/nvim-cmp',
+  }
+
+  use {
+    'hrsh7th/cmp-nvim-lsp',
+    requires = 'hrsh7th/nvim-cmp',
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -101,6 +112,7 @@ return require('packer').startup(function()
     setup = function() require('plugins.symbols-outline') end,
   }
 
+  -- Syntax
   use {
     'kyazdani42/nvim-tree.lua',
     require = { 'kyazdani42/nvim-web-devicons' },
@@ -121,18 +133,19 @@ return require('packer').startup(function()
     config = function() require('plugins.rust') end,
   }
 
+  -- VTL syntax
   use {
     'lepture/vim-velocity',
     ft = { 'velocity' }
   }
 
-  -- 日本語、英語の相互翻訳。
+  -- Translate
   use {
     'nabezokodaikon/jaen-translate.vim',
     cmd = { 'TranslateJa2En', 'TranslateEn2Ja' },
   }
 
-  -- タブラインをカスタマイズ。
+  -- Tab line
   use {
     'nabezokodaikon/tabline.vim',
     event = { 'BufEnter' },
