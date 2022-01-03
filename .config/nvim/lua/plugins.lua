@@ -25,56 +25,26 @@ return require('packer').startup(function()
   -- コメントアウト。
   use {
     'scrooloose/nerdcommenter',
-    config = function()
-      vim.g.NERDSpaceDelims = 1
-    end
+    config = function() require('plugins.nerdcommenter') end
   }
 
   -- ユーザが自由にサブモードを定義できる。
   use {
     'kana/vim-submode',
-    config = function()
-      vim.cmd [[
-        " Window resize.
-        call submode#enter_with('window-resize', 'n', '', '<C-w>>', '<C-w>>')
-        call submode#enter_with('window-resize', 'n', '', '<C-w><', '<C-w><')
-        call submode#enter_with('window-resize', 'n', '', '<C-w>+', '<C-w>+')
-        call submode#enter_with('window-resize', 'n', '', '<C-w>-', '<C-w>-')
-        call submode#map('window-resize', 'n', '', '>', '<C-w>>')
-        call submode#map('window-resize', 'n', '', '<', '<C-w><')
-        call submode#map('window-resize', 'n', '', '+', '<C-w>+')
-        call submode#map('window-resize', 'n', '', '-', '<C-w>-')
-
-        " Tab change.
-        call submode#enter_with('tab-next', 'n', '', 'gt', 'gt')
-        call submode#map('tab-next', 'n', '', 't', 'gt')
-        call submode#enter_with('tab-preview', 'n', '', 'gT', 'gT')
-        call submode#map('tab-preview', 'n', '', 'T', 'gT')
-      ]]
-    end
+    config = function() require('plugins.vim-submode') end
   }
 
   -- カーソル移動を便利にする。
   use {
     'easymotion/vim-easymotion',
-    config = function()
-      -- デフォルトのキーマッピングを無効化。
-      vim.g.EasyMotion_do_mapping = 0
-      -- 検索後、Enterでカーソル位置に一番近いマッチした箇所に移動する。
-      vim.g.EasyMotion_enter_jump_first = 1
-      -- 大文字、小文字を区別しない。
-      vim.g.EasyMotion_smartcase = 1
-      -- キーワードの入力を2文字まで受け付ける。
-    end
+    config = function() require('plugins.vim-easymotion') end
   }
 
   -- AIによる補完候補を表示。
 
   use {
     'github/copilot.vim',
-    config = function()
-      vim.g.copilot_no_tab_map = true
-    end
+    config = function() require('plugins.copilot') end
   }
 
   -- Color scheme
@@ -83,10 +53,7 @@ return require('packer').startup(function()
   use {
     'ellisonleao/gruvbox.nvim',
     requires = 'rktjmp/lush.nvim',
-    config = function()
-      vim.o.background = 'dark'
-      vim.cmd [[colorscheme gruvbox]]
-    end
+    config = function() require('plugins.gruvbox') end
   }
 
   -- Status line
@@ -98,26 +65,14 @@ return require('packer').startup(function()
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} },
+    requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('plugins.telescope') end
   }
 
   -- Emmet
   use {
     'mattn/emmet-vim',
-    ft = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', },
-    config = function()
-      vim.g.user_emmet_install_global = 0
-      vim.g.user_emmet_leader_key = '<C-e>'
-      vim.cmd [[
-        augroup emmet_my_settings
-            autocmd!
-            autocmd FileType
-            \ html,css,scss,javascript,javascriptreact,typescript,typescriptreact
-            \ EmmetInstall
-        augroup END
-      ]]
-    end
+    config = function() require('plugins.emmet-vim') end
   }
 
   use {
@@ -142,14 +97,12 @@ return require('packer').startup(function()
 
   use {
     'simrat39/symbols-outline.nvim',
-    opt = true,
     cmd = 'SymbolsOutline',
     setup = function() require('plugins.symbols-outline') end,
   }
 
   use {
     'kyazdani42/nvim-tree.lua',
-    opt = true,
     require = { 'kyazdani42/nvim-web-devicons' },
     cmd = 'NvimTreeToggle',
     config = function() require('plugins.nvim-tree') end,
@@ -165,10 +118,7 @@ return require('packer').startup(function()
   use {
     'rust-lang/rust.vim',
     ft = { 'rust' },
-    config = function()
-      vim.g.rustfmt_command = 'rustfmt'
-      vim.g.rustfmt_autosave = 1
-    end,
+    config = function() require('plugins.rust') end,
   }
 
   use {
@@ -179,16 +129,14 @@ return require('packer').startup(function()
   -- 日本語、英語の相互翻訳。
   use {
     'nabezokodaikon/jaen-translate.vim',
-    opt = true,
     cmd = { 'TranslateJa2En', 'TranslateEn2Ja' },
   }
 
   -- タブラインをカスタマイズ。
   use {
     'nabezokodaikon/tabline.vim',
-    opt = true,
     event = { 'BufEnter' },
-    config = function() vim.cmd [[TablineMake]] end
+    config = function() require('plugins.tabline') end,
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
