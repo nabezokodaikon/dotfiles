@@ -22,4 +22,3 @@ require'nvim-tree'.setup {
     },
   },
 }
-

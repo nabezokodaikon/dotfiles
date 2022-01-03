@@ -17,19 +17,22 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 
 
--- Basic settings
+-- Basic settings.
 require('basic')
 
--- Key mappings
-require('mappings')
+-- Key mappings.
+require('keymap')
 
--- File type settings
+-- File type settings.
 require('filetypes')
 
--- Plugins settings
-require('plugin-manager')
+-- Virtual text settings.
+require('virtual-text')
 
--- Tab settings
+-- Plugins settings.
+require('plugins')
+
+-- Tab settings.
 vim.cmd [[source ~/.config/nvim/rc/tab.rc.vim]]
 
 

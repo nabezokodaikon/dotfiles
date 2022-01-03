@@ -93,7 +93,7 @@ return require('packer').startup(function()
   use {
     'hoob3rt/lualine.nvim',
     config = function()
-      require'status-line'
+      require('plugins.lualine')
     end
   }
 
@@ -102,7 +102,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} },
     config = function()
-      require'fuzzy-finder'
+      require('plugins.telescope')
     end
   }
 
@@ -127,37 +127,38 @@ return require('packer').startup(function()
   use {
     'neovim/nvim-lspconfig',
     config = function()
-      require('lsp')
-      require('virtual-text')
+      require('plugins.nvim-lspconfig')
     end
   }
 
   use {
     'hrsh7th/nvim-cmp',
-    config = function() require('completion') end,
+    config = function() require('plugins.nvim-cmp') end,
   }
 
-  use { 'hrsh7th/cmp-buffer', opt = true, requires = { 'hrsh7th/nvim-cmp', 'neovim/nvim-lspconfig' } }
-  use { 'hrsh7th/cmp-path', opt = true, requires = 'hrsh7th/nvim-cmp', }
-  use { 'hrsh7th/cmp-nvim-lsp', opt = true, equires = 'hrsh7th/nvim-cmp', }
+  use { 'hrsh7th/cmp-buffer', requires = { 'hrsh7th/nvim-cmp', 'neovim/nvim-lspconfig' } }
+  use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp', }
+  use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp', }
 
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
+    config = function() require('plugins.nvim-treesitter') end,
   }
 
- use {
-   'simrat39/symbols-outline.nvim',
-   opt = true,
-   cmd = 'SymbolsOutline',
-   setup = function() require('out-line') end
- }
+  use {
+    'simrat39/symbols-outline.nvim',
+    opt = true,
+    cmd = 'SymbolsOutline',
+    setup = function() require('plugins.symbols-outline') end,
+  }
 
   use {
     'kyazdani42/nvim-tree.lua',
+    opt = true,
     require = { 'kyazdani42/nvim-web-devicons' },
     cmd = 'NvimTreeToggle',
-    config = function() require('tree') end,
+    config = function() require('plugins.nvim-tree') end,
   }
 
   -- Scala syntax
