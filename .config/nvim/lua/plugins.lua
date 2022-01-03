@@ -14,10 +14,10 @@ end
 return require('packer').startup(function()
 
   -- Plugin manager
-  use 'wbthomason/packer.nvim'
+  use { 'wbthomason/packer.nvim' }
 
   -- テキストを囲ったり、囲いを外したりする。
-  use 'tpope/vim-surround'
+  use { 'tpope/vim-surround' }
 
   -- アイコン。
   use { 'kyazdani42/nvim-web-devicons' }
@@ -92,18 +92,14 @@ return require('packer').startup(function()
   -- Status line
   use {
     'hoob3rt/lualine.nvim',
-    config = function()
-      require('plugins.lualine')
-    end
+    config = function() require('plugins.lualine') end
   }
 
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} },
-    config = function()
-      require('plugins.telescope')
-    end
+    config = function() require('plugins.telescope') end
   }
 
   -- Emmet
@@ -126,9 +122,7 @@ return require('packer').startup(function()
 
   use {
     'neovim/nvim-lspconfig',
-    config = function()
-      require('plugins.nvim-lspconfig')
-    end
+    config = function() require('plugins.nvim-lspconfig') end,
   }
 
   use {
