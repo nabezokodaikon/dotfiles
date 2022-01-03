@@ -182,6 +182,13 @@ return require('packer').startup(function()
     cmd = { 'TranslateJa2En', 'TranslateEn2Ja' },
   }
 
+  use {
+    'nabezokodaikon/tabline.vim',
+    opt = true,
+    event = { 'BufEnter' },
+    config = function() vim.cmd [[TablineMake]] end
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
