@@ -1,0 +1,44 @@
+# Plugins manager
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# テキストを囲ったり、囲いを外したりする。
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# Comment out
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+hook_add = '''lua require('plugins.nerdcommenter')'''
+
+# ユーザが自由にサブモードを定義できる。
+[[plugins]]
+repo = 'kana/vim-submode'
+hook_add = '''lua require('plugins.vim-submode')'''
+
+# カーソル移動を便利にする。
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''lua require('plugins.vim-easymotion')'''
+
+# AIによる補完候補を表示。
+[[plugins]]
+repo = 'github/copilot.vim'
+hook_add = '''lua require('plugins.copilot')'''
+
+# Color scheme
+[[plugins]]
+repo = 'rktjmp/lush.nvim'
+
+[[plugins]]
+repo = 'ellisonleao/gruvbox.nvim'
+hook_add = '''lua require('plugins.gruvbox')'''
+
+# Status line
+[[plugins]]
+repo = 'hoob3rt/lualine.nvim'
+hook_add = '''lua require('plugins.lualine')'''
+
+# Tab line
+[[plugins]]
+repo = 'nabezokodaikon/tabline.vim'
