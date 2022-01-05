@@ -32,6 +32,8 @@ require('virtual-text')
 -- Plugins settings.
 require('plugins.dein')
 
+vim.cmd('source ~/.config/nvim/ddu.rc.vim')
+
 
 vim.cmd('filetype plugin indent on')
 vim.cmd('syntax on')

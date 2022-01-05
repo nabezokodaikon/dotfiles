@@ -42,3 +42,9 @@ hook_add = '''lua require('plugins.lualine')'''
 # Tab line
 [[plugins]]
 repo = 'nabezokodaikon/tabline.vim'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu.vim'
