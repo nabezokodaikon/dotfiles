@@ -30,7 +30,7 @@ require('filetypes')
 require('virtual-text')
 
 -- Plugins settings.
-vim.cmd('source ~/.config/nvim/dein/dein.rc.vim')
+require('plugins.dein')
 
 
 vim.cmd('filetype plugin indent on')
