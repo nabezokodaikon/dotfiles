@@ -22,8 +22,8 @@ local dein_toml_lazy = dein_toml_dir .. '/deinlazy.toml'
 
 vim.call('dein#begin', dein_dir, { vim.fn.expand('<sfile>'), dein_toml, dein_toml_lazy })
 
-vim.call('dein#load_toml', dein_toml, {lazy = 0})
-vim.call('dein#load_toml', dein_toml_lazy, {lazy = 1})
+vim.call('dein#load_toml', dein_toml, { lazy = 0 })
+vim.call('dein#load_toml', dein_toml_lazy, { lazy = 1 })
 
 vim.call('dein#end')
 vim.call('dein#save_state')
