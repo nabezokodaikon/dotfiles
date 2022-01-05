@@ -39,8 +39,6 @@ function SetOptions()
     pumblend = 15,
     -- ポップアップの行数。
     pumheight = 10,
-    -- ターミナルで使用するシェルを指定。
-    shell = '/bin/bash',
     -- vim-airlineを使用するため、現在のモードを非表示にする。
     showmode = false,
     -- 常にタブラインを表示する。
