@@ -42,9 +42,8 @@ vim.cmd [[
 
   augroup fileTypeDeclaration
       autocmd!
-      autocmd BufRead,BufNewFile *.hs nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d :<C-u>lua vim.lsp.buf.definition()<CR>
+      autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
+      autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
       autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
       autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
       autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
