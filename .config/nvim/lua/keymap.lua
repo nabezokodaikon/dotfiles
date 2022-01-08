@@ -4,6 +4,9 @@
 -- Change of the leader key.
 vim.g.mapleader = ' '
 
+-- Paste configuration.
+vim.keymap.set('v', '\\', '"0p')
+
 -- Disable the Ex mode.
 vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
