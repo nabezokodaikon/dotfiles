@@ -11,11 +11,6 @@ repo = 'tpope/vim-surround'
 repo = 'scrooloose/nerdcommenter'
 hook_add = '''lua require('plugins.nerdcommenter')'''
 
-# ユーザが自由にサブモードを定義できる。
-[[plugins]]
-repo = 'kana/vim-submode'
-hook_add = '''lua require('plugins.vim-submode')'''
-
 # カーソル移動を便利にする。
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
