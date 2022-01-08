@@ -1,6 +1,9 @@
 --------------------------------
 -- Key mappings
 --------------------------------
+-- Change of the leader key.
+vim.g.mapleader = ' '
+
 -- Disable the Ex mode.
 vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
@@ -15,9 +18,6 @@ vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
 -- Disable completion.
 vim.keymap.set('i', '<C-n>', '<Nop>', { noremap = true })
 vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
-
--- Change of the leader key.
-vim.g.mapleader = ' '
 
 -- File reload.
 vim.keymap.set('n', '<Leader>\\', ':e!<CR>', { noremap = true, silent = true })
