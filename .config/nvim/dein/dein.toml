@@ -37,3 +37,7 @@ hook_add = '''lua require('plugins.lualine')'''
 # Tab line
 [[plugins]]
 repo = 'nabezokodaikon/tabline.vim'
+
+# Easy resizing of windwos
+[[plugins]]
+repo = 'simeji/winresizer'
