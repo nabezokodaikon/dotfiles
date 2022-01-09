@@ -14,23 +14,6 @@ vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
--- Jump to the line head and tail.
-vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', { noremap = true })
-vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
-
--- Disable completion.
-vim.keymap.set('i', '<C-n>', '<Nop>', { noremap = true })
-vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
-
--- File reload.
-vim.keymap.set('n', '<Leader>\\', ':e!<CR>', { noremap = true, silent = true })
-
--- Split
-vim.keymap.set('n', '<C-w>s', ':vsplit<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>S', ':split<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>n', ':vnew<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>N', ':new<CR>', { noremap = true, silent = true })
-
 -- Tab
 vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
 vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })

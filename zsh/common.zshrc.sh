@@ -44,10 +44,6 @@ bindkey "^n" history-beginning-search-forward-end
 # ノーマルモードに移行するキーを変更する。
 bindkey -M viins 'jj' vi-cmd-mode
 
-# 行頭、行末移動
-bindkey -M vicmd '^h' vi-digit-or-beginning-of-line
-bindkey -M vicmd '^l' vi-end-of-line
-
 # historyに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
