@@ -43,7 +43,7 @@ repo = 'vim-denops/denops.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu.vim'
-=======
+
 # Easy resizing of windwos
 [[plugins]]
 repo = 'simeji/winresizer'
