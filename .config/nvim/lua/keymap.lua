@@ -18,10 +18,6 @@ vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
 
--- Disable completion.
-vim.keymap.set('i', '<C-n>', '<Nop>', { noremap = true })
-vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
-
 -- Tab
 vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
 vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })
