@@ -14,10 +14,6 @@ vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
--- Jump to the line head and tail.
-vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', { noremap = true })
-vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
-
 -- Tab
 vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
 vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })
