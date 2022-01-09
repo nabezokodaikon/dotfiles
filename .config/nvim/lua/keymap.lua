@@ -25,12 +25,6 @@ vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
 -- File reload.
 vim.keymap.set('n', '<Leader>\\', ':e!<CR>', { noremap = true, silent = true })
 
--- Split
-vim.keymap.set('n', '<C-w>s', ':vsplit<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>S', ':split<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>n', ':vnew<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>N', ':new<CR>', { noremap = true, silent = true })
-
 -- Tab
 vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
 vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })
