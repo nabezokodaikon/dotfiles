@@ -41,3 +41,4 @@ repo = 'nabezokodaikon/tabline.vim'
 # Easy resizing of windwos
 [[plugins]]
 repo = 'simeji/winresizer'
+hook_add = '''lua require('plugins.winresizer')'''
