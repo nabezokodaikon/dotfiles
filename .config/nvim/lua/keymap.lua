@@ -22,9 +22,6 @@ vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
 vim.keymap.set('i', '<C-n>', '<Nop>', { noremap = true })
 vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
 
--- File reload.
-vim.keymap.set('n', '<Leader>\\', ':e!<CR>', { noremap = true, silent = true })
-
 -- Tab
 vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
 vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })
