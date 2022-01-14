@@ -14,6 +14,10 @@ vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
+-- Cursol movement.
+vim.keymap.set('n', '<C-h>', '0', { noremap = true })
+vim.keymap.set('n', '<C-l>', '$', { noremap = true })
+
 -- Window
 vim.keymap.set('n', '<C-w>n', '<cmd>vnew<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', { noremap = true, silent = true })
