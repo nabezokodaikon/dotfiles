@@ -39,33 +39,4 @@ vim.cmd [[
       autocmd BufRead,BufNewFile *.xml setlocal tabstop=2 shiftwidth=2
       autocmd BufRead,BufNewFile *.yml setlocal tabstop=2 shiftwidth=2
   augroup END
-
-  augroup fileTypeDeclaration
-      autocmd!
-      autocmd BufRead,BufNewFile *.js nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.jsx nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-      autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<CR>
-  augroup END
-
-  augroup fileTypeHover
-      autocmd!
-      autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
-      autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
-      autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
-      autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
-      autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>k <cmd>lua vim.lsp.buf.hover()<CR>
-  augroup END
-
-  augroup fileTypReferences
-      autocmd!
-      autocmd BufRead,BufNewFile *.py nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
-      autocmd BufRead,BufNewFile *.rs nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
-      autocmd BufRead,BufNewFile *.scala nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
-      autocmd BufRead,BufNewFile *.ts nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
-      autocmd BufRead,BufNewFile *.tsx nnoremap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
-  augroup END
 ]]
