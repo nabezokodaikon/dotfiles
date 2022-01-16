@@ -2,16 +2,6 @@
 -- File type settings
 --------------------------------
 vim.cmd [[
-  augroup fileTypeRelation
-      autocmd!
-      autocmd BufNewFile,BufRead *.sbt set filetype=scala
-      autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact
-      autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
-      autocmd BufNewFile,BufRead *.gql set filetype=graphql
-      autocmd BufNewFile,BufRead *.graphql set filetype=graphql
-      autocmd BufNewFile,BufRead *.vtl set filetype=velocity
-  augroup END
-
   augroup fileTypeIndent
       autocmd!
       autocmd BufRead,BufNewFile *.* setlocal tabstop=4 shiftwidth=4

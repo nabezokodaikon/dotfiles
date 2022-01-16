@@ -6,6 +6,10 @@ vim.cmd('filetype plugin indent off')
 vim.cmd('syntax off')
 
 
+vim.g.did_load_filetypes = 0
+vim.g.do_filetype_lua = 1
+
+
 -- TODO: OS判定。
 -- https://github.com/glepnir/nvim/blob/master/lua/core/global.lua
 
