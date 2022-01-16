@@ -2,6 +2,7 @@
 -- Initial settings
 --------------------------------
 vim.cmd('filetype off')
+vim.cmd('filetype plugin indent off')
 vim.cmd('syntax off')
 
 
@@ -33,5 +34,5 @@ require('virtual-text')
 require('plugins.dein')
 
 
-vim.cmd('filetype plugin indent on')
 vim.cmd('syntax on')
+vim.cmd('filetype plugin indent on')
