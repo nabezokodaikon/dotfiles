@@ -28,9 +28,6 @@ require('basic')
 -- Key mappings.
 require('keymap')
 
--- File type settings.
-require('filetypes')
-
 -- Virtual text settings.
 require('virtual-text')
 
