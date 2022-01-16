@@ -14,6 +14,9 @@ vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
+-- Paste the string of the yank register.
+vim.keymap.set({ 'n', 'v' }, '<Leader>p', '"0p', { noremap = true })
+
 -- Cursol movement.
 vim.keymap.set('n', '<C-h>', '0', { noremap = true })
 vim.keymap.set('n', '<C-l>', '$', { noremap = true })
