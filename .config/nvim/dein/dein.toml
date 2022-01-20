@@ -36,4 +36,5 @@ hook_add = '''lua require('plugins.lualine')'''
 
 # Tab line
 [[plugins]]
-repo = 'nabezokodaikon/tabline.vim'
+repo = 'crispgm/nvim-tabline'
+hook_add = '''lua require('plugins.nvim-tabline')'''
