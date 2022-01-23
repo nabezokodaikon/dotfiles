@@ -41,6 +41,3 @@ hook_add = '''lua require('plugins.nvim-tabline')'''
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
-
-[[plugins]]
-repo = 'Shougo/ddu.vim'
