@@ -89,11 +89,11 @@ repo = 'lepture/vim-velocity'
 on_ft = 'velocity'
 
 # Treesitter
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-on_event = 'BufRead'
-hook_post_update = 'TSUpdate'
-hook_source = '''lua require('plugins.nvim-treesitter')'''
+# [[plugins]]
+# repo = 'nvim-treesitter/nvim-treesitter'
+# on_event = 'BufRead'
+# hook_post_update = 'TSUpdate'
+# hook_source = '''lua require('plugins.nvim-treesitter')'''
 
 # Translate
 [[plugins]]
