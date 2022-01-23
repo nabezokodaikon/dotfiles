@@ -19,5 +19,10 @@ cmp.setup {
   },
 
   documentation = false,
-
 }
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})

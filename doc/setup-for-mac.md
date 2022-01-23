@@ -55,6 +55,7 @@ $ brew tap beeftornado/rmtree
 ### Formulae
 * awscli
 * deno
+* fd
 * fzf
 * git
   * Mac標準のgitは`osxkeychain helper`が無いため使用しない。
@@ -63,6 +64,7 @@ $ brew tap beeftornado/rmtree
 * node
 * reattach-to-user-namespace
   * [コピー・ペーストをtmux、iTerm2、OS Xで共有する](https://qiita.com/kiyodori/items/02eb88864f583db3e799)
+* rg
 * rust-analyzer
 * tig
 * tmux

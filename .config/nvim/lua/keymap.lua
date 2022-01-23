@@ -14,6 +14,13 @@ vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
+-- Paste the string of the yank register.
+vim.keymap.set({ 'n', 'v' }, '<Leader>p', '"0p', { noremap = true })
+
+-- Cursol movement.
+vim.keymap.set('n', '<C-h>', '0', { noremap = true })
+vim.keymap.set('n', '<C-l>', '$', { noremap = true })
+
 -- Window
 vim.keymap.set('n', '<C-w>n', '<cmd>vnew<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', { noremap = true, silent = true })
@@ -21,6 +28,11 @@ vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', { noremap = true, silent = true })
 -- Tab
 vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
 vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })
+
+-- LSP
+vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true }) 
+vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true }) 
+vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', { noremap = true, silent = true }) 
 
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 

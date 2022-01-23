@@ -2,7 +2,12 @@
 -- Initial settings
 --------------------------------
 vim.cmd('filetype off')
+vim.cmd('filetype plugin indent off')
 vim.cmd('syntax off')
+
+
+vim.g.did_load_filetypes = 0
+vim.g.do_filetype_lua = 1
 
 
 -- TODO: OS判定。
@@ -23,9 +28,6 @@ require('basic')
 -- Key mappings.
 require('keymap')
 
--- File type settings.
-require('filetypes')
-
 -- Virtual text settings.
 require('virtual-text')
 
@@ -35,5 +37,5 @@ require('plugins.dein')
 vim.cmd('source ~/.config/nvim/ddu.rc.vim')
 
 
-vim.cmd('filetype plugin indent on')
 vim.cmd('syntax on')
+vim.cmd('filetype plugin indent on')
