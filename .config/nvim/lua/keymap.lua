@@ -18,8 +18,8 @@ vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<Leader>p', '"0p', { noremap = true })
 
 -- Cursol movement.
-vim.keymap.set('n', '<C-h>', '0', { noremap = true })
-vim.keymap.set('n', '<C-l>', '$', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
 
 -- Window
 vim.keymap.set('n', '<C-w>n', '<cmd>vnew<CR>', { noremap = true, silent = true })
