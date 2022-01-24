@@ -105,8 +105,11 @@ on_cmd = [
 
 # Fuzzy finder
 [[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
 repo = 'Shougo/ddu.vim'
-depends = 'denops.vim'
+on_source = 'denops.vim'
 hook_source = 'source ~/.config/nvim/ddu.rc.vim'
 
 [[plugins]]

@@ -38,6 +38,3 @@ hook_add = '''lua require('plugins.lualine')'''
 [[plugins]]
 repo = 'crispgm/nvim-tabline'
 hook_add = '''lua require('plugins.nvim-tabline')'''
-
-[[plugins]]
-repo = 'vim-denops/denops.vim'
