@@ -134,5 +134,9 @@ repo = 'Shougo/ddu-source-file_rec'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = 'Shougo/ddu-source-line'
+repo = 'shun/ddu-source-buffer'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'shun/ddu-source-rg'
 on_source = 'ddu.vim'
