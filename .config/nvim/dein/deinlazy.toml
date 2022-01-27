@@ -121,8 +121,11 @@ on_cmd = 'Ddu'
 repo = 'Shougo/ddu-ui-std'
 on_source = 'ddu.vim'
 
+# [[plugins]]
+# repo = 'Shougo/ddu-filter-matcher_substring'
+# on_source = 'ddu.vim'
 [[plugins]]
-repo = 'Shougo/ddu-filter-matcher_substring'
+repo = 'yuki-yano/ddu-filter-fzf'
 on_source = 'ddu.vim'
 
 [[plugins]]
@@ -133,10 +136,16 @@ on_source = 'ddu.vim'
 repo = 'Shougo/ddu-source-file_rec'
 on_source = 'ddu.vim'
 
+# [[plugins]]
+# repo = 'shun/ddu-source-buffer'
+# on_source = 'ddu.vim'
 [[plugins]]
-repo = 'shun/ddu-source-buffer'
+repo = '~/ws/dev/ddu-source-buffer'
 on_source = 'ddu.vim'
 
+# [[plugins]]
+# repo = 'shun/ddu-source-rg'
+# on_source = 'ddu.vim'
 [[plugins]]
-repo = 'shun/ddu-source-rg'
+repo = '~/ws/dev/ddu-source-rg'
 on_source = 'ddu.vim'

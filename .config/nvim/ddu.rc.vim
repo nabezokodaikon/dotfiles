@@ -5,7 +5,7 @@ call ddu#custom#patch_global({
 call ddu#custom#patch_global({
     \   'sourceOptions': {
     \     '_': {
-    \       'matchers': ['matcher_substring'],
+    \       'matchers': ['matcher_fzf'],
     \     },
     \   }
     \ })
