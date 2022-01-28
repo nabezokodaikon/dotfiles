@@ -10,6 +10,14 @@ call ddu#custom#patch_global({
     \   }
     \ })
 
+call ddu#custom#patch_global({
+\   'sourceParams' : {
+\     'rg' : {
+\       'args': ['--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'],
+\     },
+\   },
+\ })
+
 autocmd FileType ddu-std call s:ddu_my_settings()
 function! s:ddu_my_settings() abort
   nnoremap <buffer><silent> <CR>
