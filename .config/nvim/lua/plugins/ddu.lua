@@ -4,8 +4,11 @@ vim.call('ddu#custom#patch_global',
   'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
 vim.call('ddu#custom#patch_global',
   'sourceParams', {rg = {args = {'--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'}}})
+
+local winWidth = math.floor(vim.o.columns * 0.8)
+local winCol = math.floor((vim.o.columns - winWidth) / 2)
 vim.call('ddu#custom#patch_global',
-  'uiParams', {std = {split = 'floating', winHeight = 16, winRow = vim.o.lines, winWidth = vim.o.columns}})
+  'uiParams', {std = {filterSplitDirection = 'floating', split = 'floating', winWidth = winWidth, winCol = winCol}})
 
 local opt = { noremap = true, buffer = true, silent = true}
 
