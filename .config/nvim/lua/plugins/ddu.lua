@@ -1,11 +1,11 @@
 vim.call('ddu#custom#patch_global',
-        'ui', 'std')
+  'ui', {'std'})
 vim.call('ddu#custom#patch_global',
-        'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
+  'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
 vim.call('ddu#custom#patch_global',
-        'sourceParams', {rg = {args = {'--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'}}})
+  'sourceParams', {rg = {args = {'--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'}}})
 vim.call('ddu#custom#patch_global',
-        'uiParams', {std = {split = 'floating', winHeight = 16, winRow = vim.o.lines, winWidth = vim.o.columns}})
+  'uiParams', {std = {split = 'floating', winHeight = 16, winRow = vim.o.lines, winWidth = vim.o.columns}})
 
 local opt = { noremap = true, buffer = true, silent = true}
 
