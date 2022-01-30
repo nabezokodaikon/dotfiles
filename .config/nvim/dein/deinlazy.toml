@@ -128,11 +128,7 @@ on_source = 'ddu.vim'
 [[plugins]]
 repo = 'lambdalisue/mr.vim'
 
-# [[plugins]]
-# repo = 'kuuote/ddu-source-mr'
-# depends = 'mr.vim'
-# on_source = 'ddu.vim'
 [[plugins]]
-repo = '~/ws/dev/ddu-source-mr'
+repo = 'kuuote/ddu-source-mr'
 depends = 'mr.vim'
 on_source = 'ddu.vim'
