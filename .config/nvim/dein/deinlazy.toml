@@ -56,22 +56,6 @@ on_source = 'nvim-cmp'
 repo = 'hrsh7th/cmp-cmdline'
 on_source = 'nvim-cmp'
 
-# Fuzzy finder
-[[plugins]]
-repo = 'nvim-lua/popup.nvim'
-
-[[plugins]]
-repo = 'nvim-lua/plenary.nvim'
-
-[[plugins]]
-repo = 'nvim-telescope/telescope.nvim'
-depends = [
-    'popup.nvim',
-    'plenary.nvim',
-]
-on_cmd = 'Telescope'
-hook_source = '''lua require('plugins.telescope')'''
-
 # Rust configuration
 [[plugins]]
 repo = 'rust-lang/rust.vim'
