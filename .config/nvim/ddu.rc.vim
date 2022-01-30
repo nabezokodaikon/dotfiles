@@ -7,22 +7,20 @@ vim.call('ddu#custom#patch_global',
         'sourceParams', {rg = {args = {'--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'}}})
 vim.call('ddu#custom#patch_global',
         'uiParams', {std = {split = 'floating', winHeight = 16, winRow = vim.o.lines, winWidth = vim.o.columns}})
+
+local opt = { noremap = true, buffer = true, silent = true}
+
+function ddu_my_settings()
+  vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#std#do_action('itemAction')<CR>", opt)
+  vim.keymap.set('n', 'i', "<Cmd>call ddu#ui#std#do_action('openFilterWindow')<CR>", opt)
+  vim.keymap.set('n', 'q', "<Cmd>call ddu#ui#std#do_action('quit')<CR>", opt)
+end
+
+function ddu_filter_my_settings()
+  vim.keymap.set('i', '<CR>', "<ESC><Cmd>close<CR>", opt)
+  vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
+end
+
+vim.cmd('autocmd FileType ddu-std lua ddu_my_settings()')
+vim.cmd('autocmd FileType ddu-std-filter lua ddu_filter_my_settings()')
 EOF
-
-autocmd FileType ddu-std call s:ddu_my_settings()
-function! s:ddu_my_settings() abort
-  nnoremap <buffer><silent> <CR>
-  \ <Cmd>call ddu#ui#std#do_action('itemAction')<CR>
-  nnoremap <buffer><silent> i
-  \ <Cmd>call ddu#ui#std#do_action('openFilterWindow')<CR>
-  nnoremap <buffer><silent> q
-  \ <Cmd>call ddu#ui#std#do_action('quit')<CR>
-endfunction
-
-autocmd FileType ddu-std-filter call s:ddu_filter_my_settings()
-function! s:ddu_filter_my_settings() abort
-  inoremap <buffer><silent> <CR>
-  \ <Esc><Cmd>close<CR>
-  nnoremap <buffer><silent> <CR>
-  \ <Cmd>close<CR>
-endfunction
