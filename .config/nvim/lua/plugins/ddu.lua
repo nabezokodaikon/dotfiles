@@ -1,4 +1,3 @@
-lua << EOF
 vim.call('ddu#custom#patch_global',
         'ui', 'std')
 vim.call('ddu#custom#patch_global',
@@ -23,4 +22,3 @@ end
 
 vim.cmd('autocmd FileType ddu-std lua ddu_my_settings()')
 vim.cmd('autocmd FileType ddu-std-filter lua ddu_filter_my_settings()')
-EOF

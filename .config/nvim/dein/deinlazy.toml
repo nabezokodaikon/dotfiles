@@ -110,7 +110,7 @@ repo = 'vim-denops/denops.vim'
 [[plugins]]
 repo = 'Shougo/ddu.vim'
 depends = 'denops.vim'
-hook_source = 'source ~/.config/nvim/ddu.rc.vim'
+hook_source = '''lua require('plugins.ddu')'''
 
 [[plugins]]
 repo = 'Shougo/ddu-commands.vim'
