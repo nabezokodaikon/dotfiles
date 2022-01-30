@@ -43,7 +43,7 @@ vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', { noremap = true, si
 vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>m', '<Plug>(easymotion-overwin-f2)', { noremap = false }) 
 vim.keymap.set('n', '<Leader>t', '<cmd>Telescope filetypes previewer=false<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>h', '<cmd>Telescope oldfiles previewer=false only_cwd=true<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>f', '<cmd>Ddu file_rec<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>h', '<cmd>Ddu mr<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>b', '<cmd>Ddu buffer<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>g', '<cmd>DduRg<CR>', { noremap = true, silent = true })
