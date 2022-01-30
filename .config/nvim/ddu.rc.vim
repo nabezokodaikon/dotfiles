@@ -1,6 +1,6 @@
 lua << EOF
 vim.call('ddu#custom#patch_global',
-        'ui', 'std', 'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
+        'ui', 'std')
 vim.call('ddu#custom#patch_global',
         'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
 vim.call('ddu#custom#patch_global',
