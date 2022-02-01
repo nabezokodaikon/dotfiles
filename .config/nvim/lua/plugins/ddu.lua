@@ -8,7 +8,7 @@ vim.call('ddu#custom#patch_global',
 local winWidth = math.floor(vim.o.columns * 0.8)
 local winCol = math.floor((vim.o.columns - winWidth) / 2)
 vim.call('ddu#custom#patch_global',
-  'uiParams', {std = {filterSplitDirection = 'floating', split = 'floating', winWidth = winWidth, winCol = winCol}})
+  'uiParams', {std = {filterPosition = 'top', split = 'floating', winWidth = winWidth, winCol = winCol}})
 
 local opt = { noremap = true, buffer = true, silent = true}
 
