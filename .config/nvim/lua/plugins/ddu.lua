@@ -23,5 +23,7 @@ function ddu_filter_my_settings()
   vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
 end
 
-vim.cmd('autocmd FileType ddu-std lua ddu_my_settings()')
-vim.cmd('autocmd FileType ddu-std-filter lua ddu_filter_my_settings()')
+vim.cmd[[
+autocmd FileType ddu-std lua ddu_my_settings()
+autocmd FileType ddu-std-filter lua ddu_filter_my_settings()
+]]
