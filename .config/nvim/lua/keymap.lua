@@ -4,9 +4,6 @@
 -- Change of the leader key.
 vim.g.mapleader = ' '
 
--- Paste configuration.
-vim.keymap.set('v', '\\', '"0p')
-
 -- Disable the Ex mode.
 vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
@@ -18,8 +15,8 @@ vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
--- Paste the string of the yank register.
-vim.keymap.set({ 'n', 'v' }, '<Leader>p', '"0p', { noremap = true })
+-- Paste configuration.
+vim.keymap.set('v', '<Leader>p', '<Plug>(operator-replace)')
 
 -- Cursol movement.
 vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', { noremap = true })

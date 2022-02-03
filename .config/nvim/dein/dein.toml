@@ -38,3 +38,10 @@ hook_add = '''lua require('plugins.lualine')'''
 [[plugins]]
 repo = 'crispgm/nvim-tabline'
 hook_add = '''lua require('plugins.nvim-tabline')'''
+
+# 同じテキストをペーストする
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
