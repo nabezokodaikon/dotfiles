@@ -21,6 +21,7 @@ end
 function ddu_filter_my_settings()
   vim.keymap.set('i', '<CR>', "<ESC><Cmd>close<CR>", opt)
   vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
+  vim.keymap.set('n', 'q', "<Cmd>close<CR>", opt)
 end
 
 vim.cmd[[
