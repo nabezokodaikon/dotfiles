@@ -7,7 +7,6 @@ cmp.setup {
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-d>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
       select = true,
     }),
   },
