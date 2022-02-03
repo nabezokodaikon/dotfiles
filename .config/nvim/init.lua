@@ -1,13 +1,9 @@
 --------------------------------
 -- Initial settings
 --------------------------------
+vim.cmd('syntax off')
 vim.cmd('filetype off')
 vim.cmd('filetype plugin indent off')
-vim.cmd('syntax off')
-
-
-vim.g.did_load_filetypes = 0
-vim.g.do_filetype_lua = 0
 
 
 -- TODO: OS判定。
@@ -36,4 +32,5 @@ require('plugins.dein')
 
 
 vim.cmd('syntax on')
+vim.cmd('filetype on')
 vim.cmd('filetype plugin indent on')
