@@ -86,3 +86,7 @@ on_cmd = [
     'TranslateJa2En',
     'TranslateEn2Ja'
 ]
+
+# Using Deno on plugin
+[[plugins]]
+repo = 'vim-denops/denops.vim'
