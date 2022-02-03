@@ -11,6 +11,10 @@ vim.keymap.set('v', '\\', '"0p')
 vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
 
+-- Disable default completion.
+vim.keymap.set('i', '<C-n>', '<Nop>', { noremap = true })
+vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
+
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
 
