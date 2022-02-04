@@ -3,6 +3,8 @@ vim.call('ddu#custom#patch_global',
 vim.call('ddu#custom#patch_global',
   'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
 vim.call('ddu#custom#patch_global',
+  'kindOptions', {_ = {defaultAction = {'open'}}})
+vim.call('ddu#custom#patch_global',
   'sourceParams', {rg = {args = {'--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'}}})
 
 local winWidth = math.floor(vim.o.columns * 0.8)
