@@ -14,6 +14,10 @@ function SetOptions()
     clipboard = 'unnamedplus',
     -- ポップアップの動作。
     completeopt = 'menuone,noselect',
+    -- 現在の列を強調する。
+    cursorcolumn = true,
+    -- 現在の行を強調する。
+    cursorline = true,
     -- タブ入力を空白入力に置き換える。
     expandtab = true,
     -- カーソルを点滅させない。
