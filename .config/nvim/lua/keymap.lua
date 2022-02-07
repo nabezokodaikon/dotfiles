@@ -37,12 +37,12 @@ vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', { norem
 
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 
+vim.keymap.set('n', 'F', '<cmd>FuzzyMotion<CR>', { noremap = true, silent = true })
 vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', { noremap = false }) 
 vim.keymap.set('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', { noremap = true, silent = true })
 vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>m', '<Plug>(easymotion-overwin-f2)', { noremap = false }) 
 vim.keymap.set('n', '<Leader>f', '<cmd>Ddu file_rec_from_rg<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>h', '<cmd>Ddu mr -source-param-current=v:true<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>b', '<cmd>Ddu buffer<CR>', { noremap = true, silent = true })
