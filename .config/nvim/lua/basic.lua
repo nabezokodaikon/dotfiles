@@ -44,7 +44,7 @@ function SetOptions()
     -- 常にタブラインを表示する。
     showtabline = 2,
     -- 常にsigncolumnを表示する。
-    signcolumn = 'number',
+    signcolumn = 'yes',
     -- 新しい行の高度な自動インデントを有効化。
     smartindent = true,
     -- shiftwidthの設定を有効化。
