@@ -5,12 +5,28 @@ vim.call('ddu#custom#patch_global',
 vim.call('ddu#custom#patch_global',
   'kindOptions', {_ = {defaultAction = {'open'}}})
 vim.call('ddu#custom#patch_global',
-  'sourceParams', {rg = {args = {'--column', '--no-heading', '--color', 'never', '--hidden', '--glob', '!.git/*'}}})
+  'sourceParams', {rg = {
+    args = {
+      '--column',
+      '--no-heading',
+      '--color',
+      'never',
+      '--hidden',
+      '--glob',
+      '!.git/*'
+    }}})
 
 local winWidth = math.floor(vim.o.columns * 0.8)
 local winCol = math.floor((vim.o.columns - winWidth) / 2)
 vim.call('ddu#custom#patch_global',
-  'uiParams', {std = {filterFloatingPosition = 'top', prompt = '>', split = 'floating', winCol = winCol, winRow = 1, winWidth = winWidth}})
+  'uiParams', {std = {
+    filterFloatingPosition = 'top',
+    prompt = '>',
+    split ='floating',
+    winCol = winCol,
+    winRow = 1,
+    winWidth = winWidth
+  }})
 
 local opt = { noremap = true, buffer = true, silent = true}
 
