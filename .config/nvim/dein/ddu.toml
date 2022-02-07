@@ -9,7 +9,7 @@ depends = 'ddu.vim'
 on_cmd = 'Ddu'
 
 [[plugins]]
-repo = 'Shougo/ddu-ui-std'
+repo = 'Shougo/ddu-ui-ff'
 on_source = 'ddu.vim'
 
 [[plugins]]
