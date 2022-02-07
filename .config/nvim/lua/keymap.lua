@@ -38,11 +38,11 @@ vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', { norem
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 
 vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', { noremap = false }) 
+vim.keymap.set('n', 'F', '<Plug>(easymotion-overwin-f2)', { noremap = false }) 
 vim.keymap.set('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', { noremap = true, silent = true })
 vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>m', '<Plug>(easymotion-overwin-f2)', { noremap = false }) 
 vim.keymap.set('n', '<Leader>f', '<cmd>Telescope find_files previewer=false find_command=rg,--files,--hidden,--glob,!.git/*<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>g', '<cmd>Telescope live_grep previewer=false<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>b', '<cmd>Telescope buffers previewer=false<CR>', { noremap = true, silent = true })
