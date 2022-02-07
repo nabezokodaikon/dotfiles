@@ -25,3 +25,13 @@ cmp.setup.cmdline('/', {
     { name = 'buffer' }
   }
 })
+
+-- Disable completion on ddu.vim
+-- https://github.com/hrsh7th/nvim-cmp/issues/106#issuecomment-908289674
+vim.cmd[[
+autocmd FileType ddu-std-filter lua require'cmp'.setup.buffer {
+\   completion = {
+\     autocomplete = false
+\   }
+\ }
+]]
