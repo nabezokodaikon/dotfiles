@@ -35,8 +35,6 @@ function SetOptions()
     mouse = '',
     -- 行番号を表示する。
     number = true,
-    -- ポップアップの透過度。
-    pumblend = 15,
     -- ポップアップの行数。
     pumheight = 10,
     -- vim-airlineを使用するため、現在のモードを非表示にする。
