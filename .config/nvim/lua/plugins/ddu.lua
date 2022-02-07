@@ -41,7 +41,6 @@ function ddu_filter_my_settings()
   vim.keymap.set('i', '<ESC>', "<ESC><Cmd>close<CR>", opt)
   vim.keymap.set('i', 'jj', "<ESC><Cmd>close<CR>", opt)
   vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
-  vim.keymap.set('n', 'q', "<Cmd>close<CR>", opt)
 end
 
 vim.cmd[[
