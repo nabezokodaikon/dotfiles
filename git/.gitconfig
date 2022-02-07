@@ -21,4 +21,4 @@
     helper = store --file /Users/nabezokodaikon/.git-credentials
 [init]
     ; デフォルトのブランチ名。
-	defaultBranch = main
+    defaultBranch = main
