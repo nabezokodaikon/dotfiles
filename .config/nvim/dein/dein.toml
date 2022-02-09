@@ -40,3 +40,7 @@ repo = 'kana/vim-operator-user'
 
 [[plugins]]
 repo = 'kana/vim-operator-replace'
+
+# Using Deno on plugin
+[[plugins]]
+repo = 'vim-denops/denops.vim'
