@@ -87,6 +87,10 @@ on_cmd = [
     'TranslateEn2Ja'
 ]
 
+# Using Deno on plugin
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
 # カーソル移動を便利にする。
 [[plugins]]
 repo = 'yuki-yano/fuzzy-motion.vim'
