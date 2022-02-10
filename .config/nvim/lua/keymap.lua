@@ -43,7 +43,7 @@ vim.keymap.set('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', { noremap = true, si
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', { noremap = true, silent = true })
 vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>f', '<cmd>Ddu file_rec_from_rg<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>f', '<cmd>Ddu file_external<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>h', '<cmd>Ddu mr -source-param-current=v:true<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>b', '<cmd>Ddu buffer<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>g', '<cmd>DduRg<CR>', { noremap = true, silent = true })
