@@ -9,14 +9,9 @@ vim.call('ddu#custom#patch_global',
     cmd = {
       'rg',
       '--files',
-      '--column',
-      '--no-heading',
-      '--color',
-      'never',
       '--hidden',
       '--glob',
       "!.git/*",
-      './'
     }}})
 vim.call('ddu#custom#patch_global',
   'sourceParams', {rg = {
