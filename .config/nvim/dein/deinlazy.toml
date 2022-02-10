@@ -16,7 +16,7 @@ hook_source = '''lua require('plugins.emmet-vim')'''
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
-# Tree
+# File Explorer
 [[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
 on_source = 'nvim-web-devicons'
