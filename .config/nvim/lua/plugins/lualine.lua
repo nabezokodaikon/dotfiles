@@ -6,17 +6,12 @@ lualine.setup {
     theme = 'gruvbox_dark',
     component_separators = {'', ''},
     section_separators = {'', ''},
-    disabled_filetypes = {},
+    always_divide_middle = true,
   },
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {
-      {
-        'filename',
-        path = 2,
-      }
-    },
+    lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'},
@@ -29,6 +24,4 @@ lualine.setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
-  extensions = {}
 }
