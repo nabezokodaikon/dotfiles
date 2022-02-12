@@ -1,49 +1,51 @@
 --------------------------------
 -- Key mappings
 --------------------------------
+local opt = { noremap = true, silent = true }
+
 -- Change of the leader key.
 vim.g.mapleader = ' '
 
 -- Disable the Ex mode.
-vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
-vim.keymap.set('n', 'gQ', '<Nop>', { noremap = true })
+vim.keymap.set('n', 'Q', '<Nop>', opt)
+vim.keymap.set('n', 'gQ', '<Nop>', opt)
 
 -- Disable default completion.
-vim.keymap.set('i', '<C-n>', '<Nop>', { noremap = true })
-vim.keymap.set('i', '<C-p>', '<Nop>', { noremap = true })
+vim.keymap.set('i', '<C-n>', '<Nop>', opt)
+vim.keymap.set('i', '<C-p>', '<Nop>', opt)
 
 -- Switch to the normal mode.
-vim.keymap.set('i', 'jj', '<ESC>', { noremap = true })
+vim.keymap.set('i', 'jj', '<ESC>', opt)
 
 -- Paste configuration.
-vim.keymap.set('v', '<Leader>p', '<Plug>(operator-replace)')
+vim.keymap.set('v', '<Leader>p', '<Plug>(operator-replace)', opt)
 
 -- Cursol movement.
-vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', { noremap = true })
-vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, '<C-h>', '0', opt)
+vim.keymap.set({ 'n', 'v' }, '<C-l>', '$', opt)
 
 -- Window
-vim.keymap.set('n', '<C-w>n', '<cmd>vnew<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>n', '<cmd>vnew<CR>', opt)
+vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', opt)
 
 -- Tab
-vim.keymap.set('n', 'gn', ':tabnew<CR>', { noremap = true })
-vim.keymap.set('n', 'gc', ':tabclose<CR>', { noremap = true })
+vim.keymap.set('n', 'gn', ':tabnew<CR>', opt)
+vim.keymap.set('n', 'gc', ':tabclose<CR>', opt)
 
 -- LSP
-vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true }) 
-vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true }) 
-vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', { noremap = true, silent = true }) 
+vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt) 
+vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', opt) 
 
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 
-vim.keymap.set('n', 'F', '<cmd>FuzzyMotion<CR>', { noremap = true, silent = true })
-vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', { noremap = false }) 
-vim.keymap.set('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', { noremap = true, silent = true }) 
-vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true }) 
-vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', { noremap = true, silent = true })
-vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>f', '<cmd>Ddu file_external<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>h', '<cmd>Ddu mr -source-param-current=v:true<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>b', '<cmd>Ddu buffer<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>g', '<cmd>DduRg<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'F', '<cmd>HopChar1<CR>', opt)
+vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', opt) 
+vim.keymap.set('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', opt) 
+vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', opt) 
+vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', opt)
+vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', opt)
+vim.keymap.set('n', '<Leader>f', '<cmd>Ddu file_external<CR>', opt)
+vim.keymap.set('n', '<Leader>h', '<cmd>Ddu mr -source-param-current=v:true<CR>', opt)
+vim.keymap.set('n', '<Leader>b', '<cmd>Ddu buffer<CR>', opt)
+vim.keymap.set('n', '<Leader>g', '<cmd>DduRg<CR>', opt)

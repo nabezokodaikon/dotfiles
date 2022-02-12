@@ -87,12 +87,12 @@ on_cmd = [
     'TranslateEn2Ja'
 ]
 
+# カーソル移動を便利にする。
+[[plugins]]
+repo = 'phaazon/hop.nvim'
+on_cmd = 'HopWord'
+hook_source = '''lua require('plugins.hop')'''
+
 # Using Deno on plugin
 [[plugins]]
 repo = 'vim-denops/denops.vim'
-
-# カーソル移動を便利にする。
-[[plugins]]
-repo = 'yuki-yano/fuzzy-motion.vim'
-depends = 'denops.vim'
-on_cmd = 'FuzzyMotion'
