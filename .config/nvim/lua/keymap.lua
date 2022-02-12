@@ -37,7 +37,7 @@ vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', { norem
 
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 
-vim.keymap.set('n', 'F', '<cmd>FuzzyMotion<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'F', '<cmd>HopChar1<CR>', { noremap = true, silent = true })
 vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', { noremap = false }) 
 vim.keymap.set('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true }) 
