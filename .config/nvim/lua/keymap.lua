@@ -33,9 +33,9 @@ vim.keymap.set('n', 'gn', ':tabnew<CR>', opt)
 vim.keymap.set('n', 'gc', ':tabclose<CR>', opt)
 
 -- LSP
-vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
-vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt) 
-vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references(<CR>', opt) 
+vim.api.nvim_set_keymap('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+vim.api.nvim_set_keymap('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
+vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
 
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 
