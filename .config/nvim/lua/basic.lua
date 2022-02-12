@@ -68,6 +68,3 @@ function SetOptions()
 end
 
 SetOptions()
-
--- シンタックスハイライトを有効。
-vim.cmd('syntax on')
