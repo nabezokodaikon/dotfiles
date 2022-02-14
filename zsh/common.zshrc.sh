@@ -55,67 +55,6 @@ setopt hist_reduce_blanks
 setopt share_history
 
 
-# プロンプトを2行表示し、現在のモードを表示する。
-# --------------------------------
-PROMPT_INS="%{${fg[blue]}%}[%n@%m] %~%{${reset_color}%}
-[INS]$ "
-PROMPT_NOR="%{${fg[blue]}%}[%n@%m] %~%{${reset_color}%}
-[NOR]$ "
-PROMPT_VIS="%{${fg[blue]}%}[%n@%m] %~%{${reset_color}%}
-[VIS]$ "
-
-PROMPT=$PROMPT_INS
-
-function zle-line-pre-redraw {
-    if [[ $REGION_ACTIVE -ne 0 ]]; then
-        NEW_PROMPT=$PROMPT_VIS
-    elif [[ $KEYMAP = vicmd ]]; then
-        NEW_PROMPT=$PROMPT_NOR
-    elif [[ $KEYMAP = main ]]; then
-        NEW_PROMPT=$PROMPT_INS
-    fi
-
-    if [[ $PROMPT = $NEW_PROMPT ]]; then
-        return
-    fi
-
-    PROMPT=$NEW_PROMPT
-
-    zle reset-prompt
-}
-
-function zle-keymap-select zle-line-init {
-    case $KEYMAP in
-        vicmd)
-            PROMPT=$PROMPT_NOR
-            ;;
-        main|viins)
-            PROMPT=$PROMPT_INS
-            ;;
-    esac
-
-    zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-zle -N zle-line-pre-redraw
-
-
-# git の情報を表示
-# --------------------------------
-autoload -U vcs_info
-setopt prompt_subst
-zstyle ":vcs_info:*" enable git
-zstyle ":vcs_info:git:*" check-for-changes true
-zstyle ":vcs_info:git:*" stagedstr '%F{yellow}!'
-zstyle ":vcs_info:git:*" unstagedstr '%F{red}+'
-zstyle ":vcs_info:*" formats '%F{green}%c%u[%b:%r]%f'
-zstyle ":vcs_info:*" actionformats '[%b:%r|%a]'
-precmd () { vcs_info }
-RPROMPT='${vcs_info_msg_0_}'
-
-
 # アプリとシェルを切り替える。
 # --------------------------------
 fancy-ctrl-z () {
@@ -132,24 +71,16 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 
+# プロンプト表示設定
+# --------------------------------
+source ~/dotfiles/zsh/extension/prompt.sh
+
+
 # fzfでコマンド実行履歴を表示する。
 # --------------------------------
-function select-history() {
-  BUFFER=$(history -n -r 1 | \
-      fzf-tmux -w '80%' \
-      -p --no-sort +m --query "$LBUFFER" --prompt="cmd > ")
-  CURSOR=$#BUFFER
-}
+source ~/dotfiles/zsh/extension/fzf-commnad-history.sh
 
-zle -N select-history
-bindkey '^f' select-history
 
-# fzfのコマンド履歴から重複を除外する。
-export HISTFILE=~/.zsh_history
-export HISTFILESIZE=1000000000
-export HISTSIZE=1000000000
-setopt INC_APPEND_HISTORY
-export HISTTIMEFORMAT="[%F %T] "
-setopt EXTENDED_HISTORY
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
+# fzfでディレクトリ移動履歴を表示する。
+# --------------------------------
+source ~/dotfiles/zsh/extension/fzf-directory-history.sh
