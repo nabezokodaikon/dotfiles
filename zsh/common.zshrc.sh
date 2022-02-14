@@ -76,6 +76,11 @@ bindkey '^Z' fancy-ctrl-z
 source ~/dotfiles/zsh/extension/prompt.sh
 
 
+# gitの情報を表示
+# --------------------------------
+source ~/dotfiles/zsh/extension/git-info.sh
+
+
 # fzfでコマンド実行履歴を表示する。
 # --------------------------------
 source ~/dotfiles/zsh/extension/fzf-commnad-history.sh
