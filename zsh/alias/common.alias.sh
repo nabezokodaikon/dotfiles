@@ -1,8 +1,8 @@
 #--------------------------------
 # Alias for common
 #--------------------------------
-alias ls="ls --color=auto"
-alias lsn="ls -ahlF --color=auto"
+alias ls="ls -F --color=auto"
+alias lsn="ls -ahl --color=auto"
 alias lss="ls -hlrS"
 alias lst="ls -hlrt"
 
