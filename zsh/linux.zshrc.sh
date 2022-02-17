@@ -11,13 +11,8 @@ export PATH=$HOME/.deno/bin:$PATH
 
 # Alias
 #--------------------------------
-alias ls="ls --color=auto"
-alias vim="env LANG=en_US.UTF-8 vim \"\$@\""
-alias nvim="env LANG=en_US.UTF-8 nvim \"\$@\""
-alias tmux="env LANG=en_US.UTF-8 tmux -2u \"\$@\""
-alias tig="env LANG=en_US.UTF-8 tig \"\$@\""
-alias pip="LC_ALL=C pip"
-alias dl="docker ps -l -q"
+source $HOME/dotfiles/zsh/alias/common.alias.sh
+source $HOME/dotfiles/zsh/alias/linux.alias.sh
 
 
 # dircolors

@@ -84,8 +84,3 @@ source ~/dotfiles/zsh/extension/git-info.sh
 # fzfでコマンド実行履歴を表示する。
 # --------------------------------
 source ~/dotfiles/zsh/extension/fzf-commnad-history.sh
-
-
-# fzfでディレクトリ移動履歴を表示する。
-# --------------------------------
-source ~/dotfiles/zsh/extension/fzf-directory-history.sh
