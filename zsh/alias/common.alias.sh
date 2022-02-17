@@ -2,7 +2,7 @@
 # Alias for common
 #--------------------------------
 alias ls="ls -F --color=auto"
-alias lsn="ls -ahl --color=auto"
+alias lsn="ls -ahl"
 alias lss="ls -hlrS"
 alias lst="ls -hlrt"
 
