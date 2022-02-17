@@ -3,8 +3,8 @@
 #--------------------------------
 alias ls="ls -F --color=auto"
 alias lsn="ls -ahl"
-alias lss="ls -hlrS"
-alias lst="ls -hlrt"
+alias lss="lsn -rS"
+alias lst="lsn -rt"
 
 alias nvim="env LANG=en_US.UTF-8 nvim \"\$@\""
 alias tmux="env LANG=en_US.UTF-8 tmux -2u \"\$@\""
