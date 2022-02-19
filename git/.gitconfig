@@ -18,7 +18,7 @@
     context = 8
 [credential]
     ; 認証ファイルを指定。
-    helper = store --file /Users/nabezokodaikon/.git-credentials
+    helper = store --file ~/.git-credentials
 [init]
     ; デフォルトのブランチ名。
     defaultBranch = main
