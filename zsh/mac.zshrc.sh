@@ -11,8 +11,8 @@ export PATH=$HOME/.cargo/bin:$PATH
 
 # Alias
 #--------------------------------
-source $HOME/dotfiles/zsh/alias/common.alias.sh
 source $HOME/dotfiles/zsh/alias/mac.alias.sh
+source $HOME/dotfiles/zsh/alias/common.alias.sh
 
 # nvm lazy loading
 #--------------------------------
