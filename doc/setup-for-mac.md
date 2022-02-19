@@ -70,6 +70,7 @@ $ brew tap beeftornado/rmtree
 * tmux
 * translate-shell
 * tree
+* coreutils
 * yarn
 * zsh
   * デフォルトのログインシェルから変更する。

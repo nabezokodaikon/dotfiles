@@ -11,8 +11,8 @@ export PATH=$HOME/.deno/bin:$PATH
 
 # Alias
 #--------------------------------
-source $HOME/dotfiles/zsh/alias/common.alias.sh
 source $HOME/dotfiles/zsh/alias/linux.alias.sh
+source $HOME/dotfiles/zsh/alias/common.alias.sh
 
 
 # dircolors
