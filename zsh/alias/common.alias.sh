@@ -12,4 +12,3 @@ alias tig="env LANG=en_US.UTF-8 tig \"\$@\""
 
 alias pip="LC_ALL=C pip"
 alias dl="docker ps -l -q"
-
