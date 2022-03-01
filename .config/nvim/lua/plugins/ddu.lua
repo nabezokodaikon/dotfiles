@@ -16,9 +16,10 @@ vim.call('ddu#custom#patch_global',
 vim.call('ddu#custom#patch_global',
   'sourceParams', {rg = {
     args = {
-      '--hidden',
-      '--glob',
-      '!.git/*'
+      '--column',
+      '--no-heading',
+      '--color',
+      'never',
     }}})
 
 local winWidth = math.floor(vim.o.columns * 0.8)
