@@ -50,7 +50,10 @@ function ddu_filter_my_settings()
   vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
 end
 
-vim.cmd[[
-autocmd FileType ddu-ff lua ddu_my_settings()
-autocmd FileType ddu-ff-filter lua ddu_filter_my_settings()
-]]
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'ddu-ff', callback = ddu_my_settings
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'ddu-ff-filter', callback = ddu_filter_my_settings
+})
