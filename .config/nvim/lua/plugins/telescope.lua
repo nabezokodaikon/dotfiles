@@ -15,4 +15,23 @@ telescope.setup{
         }
     },
   },
+  pickers = {
+    find_files = {
+      previewer = false,
+      find_command = { 'rg', '--files', '--hidden', '--glob', '!.git/*' },
+    },
+    live_grep = {
+      previewer = false,
+      additional_args = function(opts)
+        return { '--hidden' }
+      end,
+    },
+    buffers = {
+      previewer = false,
+    },
+    oldfiles = {
+      previewer = false,
+      only_cwd = true,
+    },
+  },
 }
