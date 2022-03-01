@@ -17,6 +17,7 @@ vim.call('ddu#custom#patch_global',
   'sourceParams', {rg = {
     args = {
       '--column',
+      '--hidden',
       '--no-heading',
       '--color',
       'never',
