@@ -52,10 +52,18 @@ function ddu_filter_my_settings()
   vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
 end
 
+local ddu_ff_groupname = 'ddu-ff-group'
+vim.api.nvim_create_augroup(ddu_ff_groupname, { clear = true })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'ddu-ff', callback = ddu_my_settings
+  group = ddu_ff_groupname,
+  pattern = 'ddu-ff',
+  callback = ddu_my_settings
 })
 
+local ddu_ff_filter_groupname = 'ddu-ff-filter-group'
+vim.api.nvim_create_augroup(ddu_ff_filter_groupname, { clear = true })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'ddu-ff-filter', callback = ddu_filter_my_settings
+  group = ddu_ff_filter_groupname,
+  pattern = 'ddu-ff-filter',
+  callback = ddu_filter_my_settings
 })
