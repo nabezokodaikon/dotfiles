@@ -23,7 +23,7 @@ telescope.setup{
     live_grep = {
       previewer = false,
       additional_args = function(opts)
-        return { '--hidden' }
+        return { '--hidden', '--glob', '!.git/*' }
       end,
     },
     buffers = {
