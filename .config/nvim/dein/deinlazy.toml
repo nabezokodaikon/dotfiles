@@ -23,12 +23,6 @@ on_source = 'nvim-web-devicons'
 on_cmd = 'NvimTreeToggle'
 hook_source = '''lua require('plugins.nvim-tree')'''
 
-# Outline
-[[plugins]]
-repo = 'simrat39/symbols-outline.nvim'
-on_cmd = 'SymbolsOutline',
-hook_source = '''lua require('plugins.symbols-outline')'''
-
 # Completion
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
