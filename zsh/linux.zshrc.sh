@@ -40,27 +40,3 @@ if [[ $TERM == xterm-termite ]]; then
   source /etc/profile.d/vte.sh
   __vte_prompt_command
 fi
-
-
-# nvm lazy loading
-#--------------------------------
-# if [ -s "${HOME}/.config/nvm.sh" ]; then
-    # export NVM_DIR="$HOME/.config"
-    # nvm() {
-        # unset -f nvm
-        # [ -s "${HOME}/.config/nvm.sh" ] && source "${HOME}/.config/nvm.sh" 
-        # nvm "$@"
-    # }
-
-    # node() {
-        # unset -f node
-        # [ -s "${HOME}/.config/nvm.sh" ] && source "${HOME}/.config/nvm.sh" 
-        # node "$@"
-    # }
-
-    # npm() {
-        # unset -f npm
-        # [ -s "${HOME}/.config/nvm.sh" ] && source "${HOME}/.config/nvm.sh" 
-        # npm "$@"
-    # }
-# fi
