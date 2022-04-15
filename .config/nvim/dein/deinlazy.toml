@@ -23,36 +23,11 @@ on_source = 'nvim-web-devicons'
 on_cmd = 'NvimTreeToggle'
 hook_source = '''lua require('plugins.nvim-tree')'''
 
-# Completion
+# LSP
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 on_event = 'BufRead'
 hook_source = '''lua require('plugins.nvim-lspconfig')'''
-
-[[plugins]]
-repo = 'hrsh7th/nvim-cmp'
-on_event = 'VimEnter'
-hook_source = '''lua require('plugins.nvim-cmp')'''
-
-[[plugins]]
-repo = 'hrsh7th/cmp-buffer'
-on_source = 'nvim-cmp'
-
-[[plugins]]
-repo = 'hrsh7th/cmp-path'
-on_source = 'nvim-cmp'
-
-[[plugins]]
-repo = 'hrsh7th/cmp-nvim-lsp'
-on_source = 'nvim-cmp'
-
-[[plugins]]
-repo = 'hrsh7th/cmp-cmdline'
-on_source = 'nvim-cmp'
-
-[[plugins]]
-repo = 'hrsh7th/cmp-copilot'
-on_source = 'nvim-cmp'
 
 # Fuzzy finder
 [[plugins]]
