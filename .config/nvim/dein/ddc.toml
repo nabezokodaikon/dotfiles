@@ -1,0 +1,21 @@
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+depends = 'denops.vim'
+hook_source = '''lua require('plugins.ddc')'''
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-nvim-lsp'
+on_source = ['ddc.vim', 'nvim-lspconfig']
