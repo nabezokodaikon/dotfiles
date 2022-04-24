@@ -23,7 +23,7 @@ local dein_toml_ddc = dein_toml_dir .. '/ddc.toml'
 local dein_toml_ddu = dein_toml_dir .. '/ddu.toml'
 -- local dein_toml_nvim_cmp = dein_toml_dir .. '/nvim-cmp.toml'
 
-vim.call('dein#begin', dein_dir, { vim.fn.expand('<sfile>'), dein_toml, dein_toml_lazy })
+vim.call('dein#begin', dein_dir)
 
 vim.call('dein#load_toml', dein_toml, { lazy = 0 })
 vim.call('dein#load_toml', dein_toml_lazy, { lazy = 1 })
