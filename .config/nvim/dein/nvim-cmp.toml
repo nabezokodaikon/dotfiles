@@ -18,7 +18,3 @@ on_source = 'nvim-cmp'
 [[plugins]]
 repo = 'hrsh7th/cmp-cmdline'
 on_source = 'nvim-cmp'
-
-[[plugins]]
-repo = 'hrsh7th/cmp-copilot'
-on_source = 'nvim-cmp'
