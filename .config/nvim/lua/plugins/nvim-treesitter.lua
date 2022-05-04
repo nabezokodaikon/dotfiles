@@ -4,9 +4,24 @@
 local treesitter = require"nvim-treesitter.configs"
 
 treesitter.setup {
-    ensure_installed = "all",
+    ensure_installed = {
+      "bash",
+      "css",
+      "dockerfile",
+      "graphql",
+      "help",
+      "html",
+      "javascript",
+      "json",
+      "lua",
+      "markdown",
+      "rust",
+      "toml",
+      "typescript",
+      "vim",
+      "yaml",
+    },
     sync_install = false,
-    ignore_install = { "phpdoc", "rust" },
     highlight = {
         enable = true,
     }
