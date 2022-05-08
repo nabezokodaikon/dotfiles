@@ -6,8 +6,8 @@ lsp.cssls.setup {
   capabilities = capabilities,
 }
 
-lsp.denols.setup{
-}
+-- lsp.denols.setup{
+-- }
 
 lsp.dockerls.setup{
 }
