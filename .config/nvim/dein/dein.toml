@@ -48,7 +48,7 @@ repo = 'nvim-treesitter/nvim-treesitter'
 hook_add = '''lua require('plugins.nvim-treesitter')'''
 
 [[plugins]]
-repo = 'Shougo/ddc.vim'
+repo = '~/ws/dev/ddc.vim'
 hook_add = '''lua require('plugins.ddc')'''
 
 [[plugins]]
