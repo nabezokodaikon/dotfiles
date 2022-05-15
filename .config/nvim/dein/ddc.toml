@@ -17,8 +17,8 @@ repo = 'Shougo/ddc-around'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'Shougo/ddc-nvim-lsp'
-on_source = ['ddc.vim', 'nvim-lspconfig']
+repo = 'nabezokodaikon/ddc-nvim-lsp_by-treesitter'
+on_source = ['ddc.vim', 'nvim-lspconfig', 'nvim-treesitter']
 
 [[plugins]]
 repo = 'LumaKernel/ddc-file'
