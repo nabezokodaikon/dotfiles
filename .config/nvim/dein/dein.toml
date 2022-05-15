@@ -12,9 +12,9 @@ repo = 'scrooloose/nerdcommenter'
 hook_add = '''lua require('plugins.nerdcommenter')'''
 
 # AIによる補完候補を表示。
-[[plugins]]
-repo = 'github/copilot.vim'
-hook_add = '''lua require('plugins.copilot')'''
+# [[plugins]]
+# repo = 'github/copilot.vim'
+# hook_add = '''lua require('plugins.copilot')'''
 
 # Color scheme
 [[plugins]]

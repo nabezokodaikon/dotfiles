@@ -1,5 +1,7 @@
+-- vim.call('ddc#custom#patch_global',
+  -- 'sources', {'nvim-lsp', 'file', 'around'})
 vim.call('ddc#custom#patch_global',
-  'sources', {'nvim-lsp', 'file', 'around'})
+  'sources', {'nvim-lsp'})
 
 vim.call('ddc#custom#patch_global',
   'sourceOptions', {_ = {matchers = {'matcher_head'}}})
