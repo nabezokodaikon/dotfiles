@@ -12,9 +12,9 @@ repo = 'scrooloose/nerdcommenter'
 hook_add = '''lua require('plugins.nerdcommenter')'''
 
 # AIによる補完候補を表示。
-# [[plugins]]
-# repo = 'github/copilot.vim'
-# hook_add = '''lua require('plugins.copilot')'''
+[[plugins]]
+repo = 'github/copilot.vim'
+hook_add = '''lua require('plugins.copilot')'''
 
 # Color scheme
 [[plugins]]
@@ -40,28 +40,3 @@ repo = 'kana/vim-operator-user'
 
 [[plugins]]
 repo = 'kana/vim-operator-replace'
-
-
-
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''lua require('plugins.nvim-treesitter')'''
-
-[[plugins]]
-repo = '~/ws/dev/ddc.vim'
-hook_add = '''lua require('plugins.ddc')'''
-
-[[plugins]]
-repo = 'Shougo/ddc-matcher_head'
-
-[[plugins]]
-repo = 'Shougo/ddc-sorter_rank'
-
-[[plugins]]
-repo = 'Shougo/ddc-around'
-
-[[plugins]]
-repo = '~/ws/dev/ddc-nvim-lsp'
-
-[[plugins]]
-repo = 'LumaKernel/ddc-file'
