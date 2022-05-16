@@ -9,9 +9,9 @@ lsp.cssls.setup {
   capabilities = capabilities,
 }
 
-lsp.html.setup {
-  capabilities = capabilities,
-}
+-- lsp.html.setup {
+  -- capabilities = capabilities,
+-- }
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
