@@ -49,22 +49,22 @@ lsp.dockerls.setup{
 }
 
 lsp.rust_analyzer.setup {
-    settings = {
-        ["rust-analyzer"] = {
-            assist = {
-                importGranularity = "module",
-                importPrefix = "by_self",
-            },
-            cargo = {
-                loadOutDirsFromCheck = true
-            },
-            procMacro = {
-                enable = true
-            },
-        },
+  settings = {
+    ["rust-analyzer"] = {
+      assist = {
+        importGranularity = "module",
+        importPrefix = "by_self",
+      },
+      cargo = {
+        loadOutDirsFromCheck = true
+      },
+      procMacro = {
+        enable = true
+      },
     },
+  },
 }
 
 lsp.tsserver.setup {
-    root_dir = lsp.util.root_pattern("package.json"),
+  root_dir = lsp.util.root_pattern("package.json"),
 }
