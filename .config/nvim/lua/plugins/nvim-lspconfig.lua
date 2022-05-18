@@ -1,7 +1,7 @@
 local lsp = require"lspconfig"
 
-lsp.bashls.setup{
-}
+-- lsp.bashls.setup{
+-- }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -13,11 +13,11 @@ lsp.cssls.setup {
   -- capabilities = capabilities,
 -- }
 
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-lsp.sumneko_lua.setup {
-}
+-- local runtime_path = vim.split(package.path, ';')
+-- table.insert(runtime_path, "lua/?.lua")
+-- table.insert(runtime_path, "lua/?/init.lua")
+-- lsp.sumneko_lua.setup {
+-- }
 
 lsp.denols.setup{
 }
