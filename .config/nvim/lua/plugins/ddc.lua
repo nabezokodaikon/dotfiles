@@ -9,13 +9,13 @@ vim.call('ddc#custom#patch_global',
   'sourceOptions', {_ = {minAutoCompleteLength = {1}}})
 
 vim.call('ddc#custom#patch_global',
-  'sourceOptions', {['around'] = {mark = {'Buf'}}})
+  'sourceOptions', {['around'] = {mark = {'[Buf]'}}})
 
 vim.call('ddc#custom#patch_global',
-  'sourceOptions', {['nvim-lsp'] = {mark = {'LSP'}}})
+  'sourceOptions', {['nvim-lsp'] = {mark = {'[LSP]'}}})
 
 vim.call('ddc#custom#patch_global',
-  'sourceOptions', {['file'] = {mark = {'File'}}})
+  'sourceOptions', {['file'] = {mark = {'[File]'}}})
 vim.call('ddc#custom#patch_global',
   'sourceOptions', {['file'] = {isVolatile = {true}}})
 vim.call('ddc#custom#patch_global',
