@@ -41,6 +41,7 @@ repo = 'nvim-telescope/telescope.nvim'
 depends = [
     'popup.nvim',
     'plenary.nvim',
+    'nvim-web-devicons',
 ]
 on_cmd = 'Telescope'
 hook_source = '''lua require('plugins.telescope')'''
