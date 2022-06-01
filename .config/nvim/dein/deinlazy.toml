@@ -19,7 +19,7 @@ repo = 'kyazdani42/nvim-web-devicons'
 # File Explorer
 [[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
-on_source = 'nvim-web-devicons'
+depends = 'nvim-web-devicons'
 on_cmd = 'NvimTreeToggle'
 hook_source = '''lua require('plugins.nvim-tree')'''
 
