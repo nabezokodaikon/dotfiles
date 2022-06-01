@@ -4,8 +4,8 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'gruvbox_dark',
-    component_separators = {'', ''},
-    section_separators = {'', ''},
+    component_separators = { left = '|', right = '|'},
+    section_separators = { left = '', right = ''},
     always_divide_middle = true,
   },
   sections = {
