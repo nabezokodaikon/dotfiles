@@ -14,3 +14,7 @@ on_source = 'nvim-cmp'
 [[plugins]]
 repo = 'hrsh7th/cmp-nvim-lsp'
 on_source = 'nvim-cmp'
+
+[[plugins]]
+repo = 'L3MON4D3/LuaSnip'
+on_source = 'nvim-cmp'

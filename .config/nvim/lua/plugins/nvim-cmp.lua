@@ -2,6 +2,12 @@ local cmp = require('cmp')
 
 cmp.setup {
 
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+
   window = {
     completion = cmp.config.window.bordered(),
     documentation = false,
@@ -16,9 +22,9 @@ cmp.setup {
     }),
   },
 
-  sources = {
+  sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'buffer' },
-  },
+  }),
 }
