@@ -21,7 +21,14 @@ lualine.setup {
     },
     lualine_x = {
       'encoding',
-      {'fileformat', symbols = { unix = 'unix', dos = 'dos', mac = 'mac'}},
+      {
+        'fileformat',
+        symbols = {
+          unix = 'unix',
+          dos = 'dos',
+          mac = 'mac',
+        }
+      },
       'filetype'
     },
     lualine_y = {'progress'},
