@@ -24,6 +24,10 @@ vim.call('ddu#custom#patch_global',
       '--glob',
       "!.git/*",
     }}})
+vim.call('ddu#custom#patch_global',
+  'uiOptions', {filer = {
+    toggle = true,
+  }})
 
 local winWidth = math.floor(vim.o.columns * 0.8)
 local winCol = math.floor((vim.o.columns - winWidth) / 2)
@@ -36,7 +40,11 @@ vim.call('ddu#custom#patch_global',
     winRow = 1,
     winWidth = winWidth
   }})
-
+vim.call('ddu#custom#patch_global',
+  'uiParams', {filer = {
+    split ='no',
+    toggle = true,
+  }})
 local opt = { noremap = true, buffer = true, silent = true}
 
 function ddu_my_settings()
@@ -50,6 +58,16 @@ function ddu_filter_my_settings()
   vim.keymap.set('i', '<ESC>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('i', 'jj', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#close()<CR>", opt)
+end
+
+function ddu_filer_my_settings()
+  vim.keymap.set('n', 'o', function()
+    if vim.api.nvim_eval('ddu#ui#filer#is_directory()') then
+      return "<Cmd>call ddu#ui#filer#do_action('expandItem', {'mode': 'toggle'})<CR>"
+    else
+      return "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
+    end
+  end, { buffer = true, expr = true })
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
@@ -66,4 +84,12 @@ vim.api.nvim_create_autocmd('FileType', {
   group = ddu_ff_filter_groupname,
   pattern = 'ddu-ff-filter',
   callback = ddu_filter_my_settings
+})
+
+local ddu_filer_groupname = 'ddu-filer-group'
+vim.api.nvim_create_augroup(ddu_filer_groupname, { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+  group = ddu_filer_groupname,
+  pattern = 'ddu-filer',
+  callback = ddu_filer_my_settings
 })
