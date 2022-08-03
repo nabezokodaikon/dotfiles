@@ -29,21 +29,26 @@ vim.call('ddu#custom#patch_global',
     toggle = true,
   }})
 
-local winWidth = math.floor(vim.o.columns * 0.8)
-local winCol = math.floor((vim.o.columns - winWidth) / 2)
+local ff_win_width = math.floor(vim.o.columns * 0.8)
+local ff_win_col = math.floor((vim.o.columns - ff_win_width) / 2)
 vim.call('ddu#custom#patch_global',
   'uiParams', {ff = {
     filterFloatingPosition = 'top',
     prompt = '>',
     split ='floating',
-    winCol = winCol,
+    winCol = ff_win_col,
     winRow = 1,
-    winWidth = winWidth
+    winWidth = ff_win_width
   }})
+
+local filer_win_width = math.floor(vim.o.columns * 0.25)
 vim.call('ddu#custom#patch_global',
   'uiParams', {filer = {
-    split ='no',
-    toggle = true,
+    split ='floating',
+    winCol = 1,
+    winRow = 1,
+    winWidth = filer_win_width,
+    winHeight = vim.o.lines,
   }})
 
 function ddu_my_settings()
@@ -51,6 +56,7 @@ function ddu_my_settings()
   vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#do_action('itemAction')<CR>", opt)
   vim.keymap.set('n', 'i', "<Cmd>call ddu#ui#ff#do_action('openFilterWindow')<CR>", opt)
   vim.keymap.set('n', 'q', "<Cmd>call ddu#ui#ff#do_action('quit')<CR>", opt)
+  vim.opt.winblend = 20
 end
 
 function ddu_filter_my_settings()
@@ -59,6 +65,7 @@ function ddu_filter_my_settings()
   vim.keymap.set('i', '<ESC>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('i', 'jj', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#close()<CR>", opt)
+  vim.opt.winblend = 20
 end
 
 function ddu_filer_my_settings()
@@ -85,6 +92,8 @@ function ddu_filer_my_settings()
   vim.keymap.set('n', 'N', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", opt)
   vim.keymap.set('n', 'D', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'trash'})<CR>", opt)
   vim.keymap.set('n', 'y', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'yank'})<CR>", opt)
+
+  vim.opt.winblend = 20
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
