@@ -52,6 +52,10 @@ function ddu_filter_my_settings()
   vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
 end
 
+function ddu_filer_my_settings()
+  vim.keymap.set('n', 'n', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", { noremap = true, buffer = true })
+end
+
 local ddu_ff_groupname = 'ddu-ff-group'
 vim.api.nvim_create_augroup(ddu_ff_groupname, { clear = true })
 vim.api.nvim_create_autocmd('FileType', {
