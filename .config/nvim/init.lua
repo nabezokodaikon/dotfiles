@@ -21,7 +21,7 @@ vim.call('dein#begin', dein_dir)
 
 vim.call('dein#add', 'vim-denops/denops.vim')
 vim.call('dein#add', 'Shougo/ddu.vim')
-vim.call('dein#add', 'Shougo/ddu-command.vim')
+vim.call('dein#add', 'Shougo/ddu-commands.vim')
 vim.call('dein#add', 'Shougo/ddu-ui-filer')
 vim.call('dein#add', 'Shougo/ddu-kind-file')
 vim.call('dein#add', 'Shougo/ddu-source-file')
@@ -42,13 +42,7 @@ vim.call('ddu#custom#patch_global',
   }})
 
 function ddu_filer_my_settings()
-  vim.keymap.set('n', 'o', function()
-    if vim.api.nvim_eval('ddu#ui#filer#is_directory()') then
-      return "<Cmd>call ddu#ui#filer#do_action('expandItem', {'mode': 'toggle'})<CR>"
-    else
-      return "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
-    end
-  end, { buffer = true, expr = true })
+  vim.keymap.set('n', 'n', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", { noremap = true, buffer = true })
 end
 
 local ddu_filer_groupname = 'ddu-filer-group'
