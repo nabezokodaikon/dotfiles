@@ -84,6 +84,7 @@ function ddu_filer_my_settings()
   vim.keymap.set('n', 'r', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'rename'})<CR>", opt)
   vim.keymap.set('n', 'N', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", opt)
   vim.keymap.set('n', 'D', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'trash'})<CR>", opt)
+  vim.keymap.set('n', 'y', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'yank'})<CR>", opt)
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
