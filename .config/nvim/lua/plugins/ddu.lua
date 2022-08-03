@@ -46,10 +46,10 @@ function ddu_my_settings()
 end
 
 function ddu_filter_my_settings()
-  vim.keymap.set('i', '<CR>', "<ESC><Cmd>close<CR>", opt)
-  vim.keymap.set('i', '<ESC>', "<ESC><Cmd>close<CR>", opt)
-  vim.keymap.set('i', 'jj', "<ESC><Cmd>close<CR>", opt)
-  vim.keymap.set('n', '<CR>', "<Cmd>close<CR>", opt)
+  vim.keymap.set('i', '<CR>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
+  vim.keymap.set('i', '<ESC>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
+  vim.keymap.set('i', 'jj', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
+  vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#close()<CR>", opt)
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
