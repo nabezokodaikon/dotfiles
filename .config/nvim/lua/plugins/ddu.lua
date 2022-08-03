@@ -62,13 +62,16 @@ function ddu_filter_my_settings()
 end
 
 function ddu_filer_my_settings()
-  vim.keymap.set('n', 'o', function()
+  local openFunc = function()
     if vim.api.nvim_eval('ddu#ui#filer#is_directory()') then
       return "<Cmd>call ddu#ui#filer#do_action('expandItem', {'mode': 'toggle'})<CR>"
     else
       return "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
     end
-  end, { noremap = true, buffer = true, expr = true })
+  end
+  local openOpt = { noremap = true, buffer = true, expr = true }
+  vim.keymap.set('n', '<CR>', openFunc, openOpt)
+  vim.keymap.set('n', 'o', openFunc, openOpt)
 
   local opt = { noremap = true, buffer = true }
   vim.keymap.set('n', 'q', "<Cmd>call ddu#ui#filer#do_action('quit')<CR>", opt)
