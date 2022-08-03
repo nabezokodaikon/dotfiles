@@ -12,17 +12,6 @@ on_ft = [
 ]
 hook_source = '''lua require('plugins.emmet-vim')'''
 
-# Icon
-[[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
-
-# File Explorer
-[[plugins]]
-repo = 'kyazdani42/nvim-tree.lua'
-depends = 'nvim-web-devicons'
-on_cmd = 'NvimTreeToggle'
-hook_source = '''lua require('plugins.nvim-tree')'''
-
 # LSP
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
