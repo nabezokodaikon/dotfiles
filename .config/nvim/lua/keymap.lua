@@ -38,7 +38,7 @@ vim.api.nvim_set_keymap('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', op
 vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
 
 -- Plugins
-vim.keymap.set('n', 'F', '<cmd>HopChar1<CR>', opt)
+vim.keymap.set('n', 'F', '<cmd>HopChar2<CR>', opt)
 vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', opt) 
 vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', opt)
 vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', opt)
