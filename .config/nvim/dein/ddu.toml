@@ -13,11 +13,19 @@ repo = 'Shougo/ddu-ui-ff'
 on_source = 'ddu.vim'
 
 [[plugins]]
+repo = 'Shougo/ddu-ui-filer'
+on_source = 'ddu.vim'
+
+[[plugins]]
 repo = 'yuki-yano/ddu-filter-fzf'
 on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-kind-file'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file'
 on_source = 'ddu.vim'
 
 [[plugins]]
@@ -38,4 +46,8 @@ repo = 'lambdalisue/mr.vim'
 [[plugins]]
 repo = 'kuuote/ddu-source-mr'
 depends = 'mr.vim'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-column-filename'
 on_source = 'ddu.vim'
