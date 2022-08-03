@@ -45,15 +45,16 @@ vim.call('ddu#custom#patch_global',
     split ='no',
     toggle = true,
   }})
-local opt = { noremap = true, buffer = true, silent = true}
 
 function ddu_my_settings()
+  local opt = { noremap = true, buffer = true, silent = true }
   vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#do_action('itemAction')<CR>", opt)
   vim.keymap.set('n', 'i', "<Cmd>call ddu#ui#ff#do_action('openFilterWindow')<CR>", opt)
   vim.keymap.set('n', 'q', "<Cmd>call ddu#ui#ff#do_action('quit')<CR>", opt)
 end
 
 function ddu_filter_my_settings()
+  local opt = { noremap = true, buffer = true, silent = true }
   vim.keymap.set('i', '<CR>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('i', '<ESC>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('i', 'jj', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
@@ -67,7 +68,19 @@ function ddu_filer_my_settings()
     else
       return "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
     end
-  end, { buffer = true, expr = true })
+  end, { noremap = true, buffer = true, expr = true })
+
+  local opt = { noremap = true, buffer = true }
+  vim.keymap.set('n', 'q', "<Cmd>call ddu#ui#filer#do_action('quit')<CR>", opt)
+  vim.keymap.set('n', '<C-l>', "<Cmd>call ddu#ui#filer#do_action('checkItems')<CR>", opt)
+  vim.keymap.set('n', 'l', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'narrow'})<CR>", opt)
+  vim.keymap.set('n', 'h', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'narrow', 'params': {'path': '..'}})<CR>", opt)
+  vim.keymap.set('n', 'c', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'copy'})<CR>", opt)
+  vim.keymap.set('n', 'm', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'move'})<CR>", opt)
+  vim.keymap.set('n', 'p', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'paste'})<CR>", opt)
+  vim.keymap.set('n', 'r', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'rename'})<CR>", opt)
+  vim.keymap.set('n', 'N', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", opt)
+  vim.keymap.set('n', 'D', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'trash'})<CR>", opt)
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
