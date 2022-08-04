@@ -23,5 +23,8 @@ vim.call('ddc#custom#patch_global',
 
 vim.call('ddc#custom#patch_filetype', 'rust',
   'sourceOptions', {['nvim-lsp'] = {forceCompletionPattern = [[\.\w*|::\w*]]}})
+vim.call('ddc#custom#patch_filetype', 'typescript',
+  'sourceOptions', {['nvim-lsp'] = {forceCompletionPattern = [[\.\w*]]}})
+
 
 vim.call('ddc#enable')
