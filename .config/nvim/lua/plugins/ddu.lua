@@ -29,6 +29,15 @@ vim.call('ddu#custom#patch_global',
     toggle = true,
   }})
 
+vim.api.nvim_create_user_command('DduRgCWord', function()
+  vim.call('ddu#start', {
+    sources = {{
+      name = 'rg',
+      params = {input = vim.call('expand', '<cword>')}
+    }}
+  })
+end, {nargs = 0})
+
 local ff_win_width = math.floor(vim.o.columns * 0.8)
 local ff_win_col = math.floor((vim.o.columns - ff_win_width) / 2)
 vim.call('ddu#custom#patch_global',
