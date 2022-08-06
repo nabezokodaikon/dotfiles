@@ -47,4 +47,4 @@ vim.keymap.set('n', '<Leader>h', '<cmd>Ddu mr -source-param-current=v:true<CR>',
 vim.keymap.set('n', '<Leader>b', '<cmd>Ddu buffer<CR>', opt)
 vim.keymap.set('n', '<Leader>gg', '<cmd>DduRg<CR>', opt)
 vim.keymap.set('n', '<Leader>gw', '<cmd>DduRgCWord<CR>', opt)
-vim.keymap.set('n', '<Leader>e', '<cmd>Ddu -name=filer -ui=filer -resume -source-option-columns=filename file<CR>', opt)
+vim.keymap.set('n', '<Leader>e', '<cmd>Ddu -name=filer -ui=filer -resume -source-option-path=`getcwd()` -source-option-columns=filename file<CR>', opt)
