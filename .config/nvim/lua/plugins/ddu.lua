@@ -1,9 +1,9 @@
 vim.call('ddu#custom#patch_global',
   'ui', {'ff'})
 vim.call('ddu#custom#patch_global',
-  'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
-vim.call('ddu#custom#patch_global',
   'kindOptions', {_ = {defaultAction = {'open'}}})
+vim.call('ddu#custom#patch_global',
+  'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
 vim.call('ddu#custom#patch_global',
   'sourceParams', {file_external = {
     cmd = {
