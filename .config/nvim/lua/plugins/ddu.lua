@@ -65,7 +65,6 @@ function ddu_my_settings()
   vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#do_action('itemAction')<CR>", opt)
   vim.keymap.set('n', 'i', "<Cmd>call ddu#ui#ff#do_action('openFilterWindow')<CR>", opt)
   vim.keymap.set('n', 'q', "<Cmd>call ddu#ui#ff#do_action('quit')<CR>", opt)
-  vim.opt.winblend = 20
 end
 
 function ddu_filter_my_settings()
@@ -74,7 +73,6 @@ function ddu_filter_my_settings()
   vim.keymap.set('i', '<ESC>', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('i', 'jj', "<ESC><Cmd>call ddu#ui#ff#close()<CR>", opt)
   vim.keymap.set('n', '<CR>', "<Cmd>call ddu#ui#ff#close()<CR>", opt)
-  vim.opt.winblend = 20
 end
 
 function ddu_filer_my_settings()
@@ -101,8 +99,6 @@ function ddu_filer_my_settings()
   vim.keymap.set('n', 'N', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", opt)
   vim.keymap.set('n', 'D', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'trash'})<CR>", opt)
   vim.keymap.set('n', 'y', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'yank'})<CR>", opt)
-
-  vim.opt.winblend = 20
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
