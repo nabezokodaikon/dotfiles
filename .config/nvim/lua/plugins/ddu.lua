@@ -42,6 +42,7 @@ local ff_win_width = math.floor(vim.o.columns * 0.8)
 local ff_win_col = math.floor((vim.o.columns - ff_win_width) / 2)
 vim.call('ddu#custom#patch_global',
   'uiParams', {ff = {
+    startFilter = true,
     filterFloatingPosition = 'top',
     prompt = '>',
     split ='floating',
