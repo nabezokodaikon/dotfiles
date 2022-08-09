@@ -30,30 +30,23 @@ vim.call('dein#add', 'Shougo/ddu-column-filename')
 vim.call('dein#end')
 vim.call('dein#save_state')
 
-vim.call('ddu#custom#patch_global',
-  'uiOptions', {filer = {
-    toggle = true,
-  }})
+vim.cmd([[
+call ddu#custom#patch_local('tree', {
+      \   'ui': 'filer',
+      \   'resume': v:true,
+      \   'sources': [
+      \     {'name': 'file'}
+      \   ],
+      \   'sourceOptions': {
+      \     '_': {
+      \       'columns': 'filename',
+      \     }
+      \   },
+      \ })
+]])
 
-vim.call('ddu#custom#patch_global',
-  'uiParams', {filer = {
-    split ='no',
-    toggle = true,
-  }})
-
-function ddu_filer_my_settings()
-  vim.keymap.set('n', 'n', "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'newFile'})<CR>", { noremap = true, buffer = true })
-end
-
-local ddu_filer_groupname = 'ddu-filer-group'
-vim.api.nvim_create_augroup(ddu_filer_groupname, { clear = true })
-vim.api.nvim_create_autocmd('FileType', {
-  group = ddu_filer_groupname,
-  pattern = 'ddu-filer',
-  callback = ddu_filer_my_settings
-})
-
-vim.keymap.set('n', 'e', '<cmd>Ddu -ui=filer -source-option-columns=filename file<CR>', {})
+local opt = { noremap = true, silent = true }
+vim.keymap.set('n', 'e', '<cmd>Ddu -name=tree<CR>', opt)
 
 vim.cmd('syntax on')
 vim.cmd('filetype on')
