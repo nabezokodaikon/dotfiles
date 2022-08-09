@@ -19,8 +19,9 @@ lsp.cssls.setup {
 -- lsp.sumneko_lua.setup {
 -- }
 
-lsp.denols.setup{
-}
+-- lsp.denols.setup{
+  -- root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc")
+-- }
 
 lsp.dockerls.setup{
 }
