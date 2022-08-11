@@ -39,7 +39,7 @@ vim.call('ddu#custom#patch_local', 'tree',
 vim.call('ddu#custom#patch_local', 'tree',
   'sources', {{name = 'file'}})
 vim.call('ddu#custom#patch_local', 'tree',
-  'sourceOptions', {_ = {columns = {'filename'}, path = vim.fn.getcwd()}})
+  'sourceOptions', {_ = {columns = {{'filename'}}, path = vim.fn.getcwd()}})
 
 vim.api.nvim_create_user_command('DduRgInput', function()
   vim.call('ddu#start', {
