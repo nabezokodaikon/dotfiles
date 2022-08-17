@@ -38,12 +38,14 @@ vim.call('ddu#custom#patch_local', 'tree',
   'ui', 'filer')
 vim.call('ddu#custom#patch_local', 'tree',
   'sources', {{name = 'file'}})
+vim.call('ddu#custom#patch_local', 'tree',
+  'sourceOptions', {_ = {columns = {{'filename'}}, path = vim.fn.getcwd()}})
 
 vim.api.nvim_create_user_command('DduRgInput', function()
   vim.call('ddu#start', {
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
-    sources = {{name = 'rg', params = {input = vim.call('input', 'search word: ')}}},
+    sources = {{name = 'rg', params = {input = vim.fn.input('search word: ')}}},
     sourceOptions = {_ = {matchers = {'matcher_fzf'}}},
     sourceParams = {rg = {
       args = {
@@ -62,7 +64,7 @@ vim.api.nvim_create_user_command('DduRgWord', function()
   vim.call('ddu#start', {
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
-    sources = {{name = 'rg', params = {input = vim.call('expand', '<cword>')}}},
+    sources = {{name = 'rg', params = {input = vim.fn.expand('<cword>')}}},
     sourceOptions = {_ = {matchers = {'matcher_fzf'}}},
     sourceParams = {rg = {
       args = {
