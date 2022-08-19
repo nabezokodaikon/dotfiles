@@ -9,11 +9,12 @@ vim.call('ddu#custom#patch_local', 'files',
 vim.call('ddu#custom#patch_local', 'files',
   'sourceParams', {file_external = {
     cmd = {
-      'rg',
-      '--files',
+      'fd',
+      '--type',
+      'file',
       '--hidden',
-      '--glob',
-      "!.git/*",
+      '--exclude',
+      '.git',
     }}})
 
 vim.call('ddu#custom#patch_local', 'history-files',
