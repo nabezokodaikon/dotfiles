@@ -40,6 +40,8 @@ vim.call('ddu#custom#patch_local', 'tree',
 vim.call('ddu#custom#patch_local', 'tree',
   'resume', true)
 vim.call('ddu#custom#patch_local', 'tree',
+  'sync', true)
+vim.call('ddu#custom#patch_local', 'tree',
   'sources', {{name = 'file'}})
 vim.call('ddu#custom#patch_local', 'tree',
   'sourceOptions', {_ = {columns = {{'filename'}}, path = vim.fn.getcwd()}})
