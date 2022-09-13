@@ -14,44 +14,12 @@ lua_source = '''
 require('plugins.emmet-vim')
 '''
 
-# Icon
-[[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
-
-# File Explorer
-[[plugins]]
-repo = 'kyazdani42/nvim-tree.lua'
-depends = 'nvim-web-devicons'
-on_cmd = 'NvimTreeToggle'
-lua_source = '''
-require('plugins.nvim-tree')
-'''
-
 # LSP
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 on_event = 'BufRead'
 lua_source = '''
 require('plugins.nvim-lspconfig')
-'''
-
-# Fuzzy finder
-[[plugins]]
-repo = 'nvim-lua/popup.nvim'
-
-[[plugins]]
-repo = 'nvim-lua/plenary.nvim'
-
-[[plugins]]
-repo = 'nvim-telescope/telescope.nvim'
-depends = [
-    'popup.nvim',
-    'plenary.nvim',
-    'nvim-web-devicons',
-]
-on_cmd = 'Telescope'
-lua_source = '''
-require('plugins.telescope')
 '''
 
 # Rust configuration
