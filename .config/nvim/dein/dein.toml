@@ -9,7 +9,9 @@ repo = 'tpope/vim-surround'
 # Comment out
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
-hook_add = '''lua require('plugins.nerdcommenter')'''
+lua_add = '''
+require('plugins.nerdcommenter')
+'''
 
 # Copy paste
 [[plugins]]
@@ -24,14 +26,20 @@ repo = 'rktjmp/lush.nvim'
 
 [[plugins]]
 repo = 'ellisonleao/gruvbox.nvim'
-hook_add = '''lua require('plugins.gruvbox')'''
+lua_add = '''
+require('plugins.gruvbox')
+'''
 
 # Status line
 [[plugins]]
 repo = 'hoob3rt/lualine.nvim'
-hook_add = '''lua require('plugins.lualine')'''
+lua_add = '''
+require('plugins.lualine')
+'''
 
 # Tab line
 [[plugins]]
 repo = 'crispgm/nvim-tabline'
-hook_add = '''lua require('plugins.nvim-tabline')'''
+lua_add = '''
+require('plugins.nvim-tabline')
+'''
