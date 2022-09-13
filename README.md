@@ -37,7 +37,8 @@ $ brew install \
     tig \
     tmux \
     tree \
-    zsh
+    zsh \
+    desktop-file-utils
 ```
 #### Font
 ```
