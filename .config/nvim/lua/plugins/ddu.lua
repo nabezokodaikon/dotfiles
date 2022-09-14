@@ -35,17 +35,6 @@ vim.call('ddu#custom#patch_local', 'buffers',
 vim.call('ddu#custom#patch_local', 'buffers',
   'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
 
-vim.call('ddu#custom#patch_local', 'tree',
-  'ui', 'filer')
-vim.call('ddu#custom#patch_local', 'tree',
-  'resume', true)
-vim.call('ddu#custom#patch_local', 'tree',
-  'sync', true)
-vim.call('ddu#custom#patch_local', 'tree',
-  'sources', {{name = 'file'}})
-vim.call('ddu#custom#patch_local', 'tree',
-  'sourceOptions', {_ = {columns = {{'filename'}}, path = vim.fn.getcwd()}})
-
 vim.api.nvim_create_user_command('DduRgInput', function()
   vim.call('ddu#start', {
     ui = 'ff',
@@ -81,6 +70,17 @@ vim.api.nvim_create_user_command('DduRgWord', function()
         '--glob',
         "!.git/*",
       }}}
+  })
+end, {nargs = 0})
+
+vim.api.nvim_create_user_command('DduFiler', function()
+  vim.call('ddu#start', {
+    ui = 'filer',
+    resume = true,
+    sync = true,
+    sources = {{name = 'file'}},
+    sourceOptions = {_ = {columns = {{'filename'}}, path = vim.fn.getcwd()}},
+    uiParams = {filer = {search = vim.fn.expand('%:p')}},
   })
 end, {nargs = 0})
 
