@@ -1,3 +1,5 @@
+vim.call('ddc#custom#patch_global', 'ui', 'native')
+
 vim.call('ddc#custom#patch_global',
   'sources', {'nvim-lsp', 'file', 'around'})
 
