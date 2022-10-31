@@ -56,3 +56,5 @@ vim.o.textwidth = 0
 vim.o.ttimeoutlen = 0
 -- 行頭、行末の回り込みを許可。
 vim.o.whichwrap= 'b,s,h,l,<,>,[,]'
+-- 補完候補が無い場合のメッセージを抑制する。
+vim.opt.shortmess = vim.opt.shortmess + 'c'
