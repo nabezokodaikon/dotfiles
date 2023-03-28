@@ -124,7 +124,7 @@ end
 
 function ddu_filer_my_settings()
   local openFunc = function()
-    if vim.api.nvim_eval('ddu#ui#filer#is_tree()') then
+    if vim.call('ddu#ui#get_item').isTree then
       return "<Cmd>call ddu#ui#filer#do_action('expandItem', {'mode': 'toggle'})<CR>"
     else
       return "<Cmd>call ddu#ui#filer#do_action('itemAction', {'name': 'open'})<CR>"
