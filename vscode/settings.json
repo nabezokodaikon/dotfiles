@@ -1,0 +1,24 @@
+{
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+          "before": ["<C-i>"],
+          "after": ["<Tab>"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+    ],
+    "vim.useSystemClipboard": true,
+    "editor.fontFamily": "Consolas, Myrica M",
+    "editor.detectIndentation": false,
+    "editor.fontSize": 18,
+    "security.workspace.trust.untrustedFiles": "open",
+    "vim.statusBarColors.visualblock": "",
+    "Lua.addonManager.enable": false,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true
+}
