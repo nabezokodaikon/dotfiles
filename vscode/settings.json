@@ -19,6 +19,16 @@
           "after": ["$"]
         }
     ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["<C-h>"],
+          "after": ["0"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["$"]
+        }
+    ],
     "editor.fontFamily": "Consolas, Myrica M",
     "editor.detectIndentation": false,
     "editor.fontSize": 18,
