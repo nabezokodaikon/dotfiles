@@ -41,4 +41,6 @@
     "vim.useSystemClipboard": true,
     "vim.statusBarColors.visualblock": "",
     "vim.whichwrap": "h,l,<,>,[,]",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/dotfiles/vscode/.vimrc"
 }
