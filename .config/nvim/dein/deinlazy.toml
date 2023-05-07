@@ -67,6 +67,11 @@ require('plugins.rust')
 repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
 
+# Svelte syntax
+[[plugins]]
+repo = 'evanleck/vim-svelte'
+on_ft = 'svelte'
+
 # VTL syntax
 [[plugins]]
 repo = 'lepture/vim-velocity'
