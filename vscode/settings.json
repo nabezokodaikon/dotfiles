@@ -1,0 +1,46 @@
+{
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+          "before": ["<C-i>"],
+          "after": ["<Tab>"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+          "before": ["<C-h>"],
+          "after": ["0"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["$"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["<C-h>"],
+          "after": ["0"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["$"]
+        }
+    ],
+    "editor.fontFamily": "Consolas, Myrica M",
+    "editor.detectIndentation": false,
+    "editor.fontSize": 18,
+    "editor.wrappingIndent": "same",
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "git.openRepositoryInParentFolders": "never",
+    "Lua.addonManager.enable": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColors.visualblock": "",
+    "vim.whichwrap": "h,l,<,>,[,]",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/dotfiles/vscode/.vimrc"
+}

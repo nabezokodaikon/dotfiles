@@ -1,0 +1,1 @@
+xnoremap p "_dP
