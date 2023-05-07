@@ -40,6 +40,8 @@ vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>
 -- Plugins
 vim.keymap.set('i', '<C-j>', [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true }) 
 vim.keymap.set('n', 'F', '<cmd>HopChar1<CR>', opt)
+vim.keymap.set('n', 'co', '<Plug>(comment_toggle_linewise_current)')
+vim.keymap.set('v', 'co', '<Plug>(comment_toggle_linewise_visual)')
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', opt) 
 vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', opt)
 vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', opt)
