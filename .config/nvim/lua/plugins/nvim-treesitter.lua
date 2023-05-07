@@ -16,6 +16,7 @@ treesitter.setup {
       "lua",
       "markdown",
       "rust",
+      "svelte",
       "toml",
       "typescript",
       "vim",
