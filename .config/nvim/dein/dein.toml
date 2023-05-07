@@ -6,13 +6,6 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-# Comment out
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
-lua_add = '''
-require('plugins.nerdcommenter')
-'''
-
 # Copy paste
 [[plugins]]
 repo = 'kana/vim-operator-user'
