@@ -4,11 +4,12 @@ repo = 'mattn/emmet-vim'
 on_ft = [
     'html',
     'css',
-    'scss'
+    'scss',
     'javascript',
     'javascriptreact',
     'typescript',
     'typescriptreact',
+    'svelte',
 ]
 lua_source = '''
 require('plugins.emmet-vim')
@@ -34,6 +35,11 @@ require('plugins.rust')
 [[plugins]]
 repo = 'derekwyatt/vim-scala'
 on_ft = 'scala'
+
+# Svelte syntax
+[[plugins]]
+repo = 'evanleck/vim-svelte'
+on_ft = 'svelte'
 
 # VTL syntax
 [[plugins]]
