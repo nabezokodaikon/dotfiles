@@ -63,11 +63,6 @@ lua_source = '''
 require('plugins.rust')
 '''
 
-# Scala syntax
-[[plugins]]
-repo = 'derekwyatt/vim-scala'
-on_ft = 'scala'
-
 # Svelte syntax
 [[plugins]]
 repo = 'evanleck/vim-svelte'
