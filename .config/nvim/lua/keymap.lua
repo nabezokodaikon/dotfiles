@@ -32,6 +32,9 @@ vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', opt)
 vim.keymap.set('n', 'gn', ':tabnew<CR>', opt)
 vim.keymap.set('n', 'gc', ':tabclose<CR>', opt)
 
+-- Yank
+vim.keymap.set('v', 'p', '"_dP', opt)
+
 -- LSP
 vim.api.nvim_set_keymap('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
 vim.api.nvim_set_keymap('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
