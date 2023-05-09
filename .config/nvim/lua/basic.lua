@@ -39,7 +39,7 @@ vim.o.showtabline = 2
 -- 常にsigncolumnを表示する。
 vim.o.signcolumn = 'yes'
 -- 新しい行の高度な自動インデントを有効化。
-vim.o.cindent = true
+-- vim.o.cindent = true
 -- shiftwidthの設定を有効化。
 vim.o.smarttab = true
 -- タブ入力で挿入される空白の長さをshiftwidthと同じにする。

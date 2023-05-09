@@ -28,6 +28,9 @@ treesitter.setup {
   context_commentstring = {
     enable = true,
   },
+  indent = {
+    enable = true,
+  },
 }
 
 require('Comment').setup({
