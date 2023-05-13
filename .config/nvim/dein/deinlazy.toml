@@ -9,6 +9,7 @@ on_ft = [
     'javascriptreact',
     'typescript',
     'typescriptreact',
+    'svelte',
 ]
 lua_source = '''
 require('plugins.emmet-vim')
@@ -62,11 +63,6 @@ lua_source = '''
 require('plugins.rust')
 '''
 
-# Scala syntax
-[[plugins]]
-repo = 'derekwyatt/vim-scala'
-on_ft = 'scala'
-
 # VTL syntax
 [[plugins]]
 repo = 'lepture/vim-velocity'
@@ -77,9 +73,19 @@ on_ft = 'velocity'
 repo = 'nvim-treesitter/nvim-treesitter'
 on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
+depends = [
+    'Comment.nvim',
+    'nvim-ts-context-commentstring',
+]
 lua_source = '''
 require('plugins.nvim-treesitter')
 '''
+
+[[plugins]]
+repo = 'numToStr/Comment.nvim'
+
+[[plugins]]
+repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
 # Translate
 [[plugins]]

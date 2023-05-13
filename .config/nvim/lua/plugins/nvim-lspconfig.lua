@@ -46,3 +46,7 @@ lsp.rust_analyzer.setup {
 lsp.tsserver.setup {
   root_dir = lsp.util.root_pattern("package.json"),
 }
+
+lsp.svelte.setup {
+
+}

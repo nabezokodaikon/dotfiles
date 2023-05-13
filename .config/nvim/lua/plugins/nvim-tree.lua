@@ -7,7 +7,7 @@ require'nvim-tree'.setup {
         { key = {"~"},         action = "cd" },
         { key = "<Tab>",       action = "preview" },
         { key = "R",           action = "refresh" },
-        { key = "<C-n>",       action = "create" },
+        { key = "N",       action = "create" },
         { key = "D",           action = "remove" },
         { key = "r",           action = "rename" },
         { key = "m",           action = "cut" },

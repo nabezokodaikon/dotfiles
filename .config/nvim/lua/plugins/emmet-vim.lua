@@ -12,7 +12,8 @@ vim.api.nvim_create_autocmd('FileType', {
     'javascript',
     'javascriptreact',
     'typescript',
-    'typescriptreact'
+    'typescriptreact',
+    'svelte',
   },
   callback = function()
     vim.cmd('EmmetInstall')
