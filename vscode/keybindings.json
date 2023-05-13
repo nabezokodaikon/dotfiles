@@ -1,12 +1,30 @@
 // 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
     {
-        "key": "ctrl-I",
+        "key": "ctrl-i",
         "command": "tab",
         "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
     },
     {
-        "key": "ctrl-H",
-        "command": "-deleteLeft",
+        "key": "shift+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     },
+    {
+        "key": "ctrl+space",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "command": "workbench.action.navigateEditorGroups",
+        "key": "ctrl+w j"
+    },
+    {
+        "command": "workbench.action.splitEditor",
+        "key": "ctrl+w v"
+    },
+    {
+        "command": "workbench.action.splitEditorDown",
+        "key": "ctrl+w shift+v"
+    }
 ]

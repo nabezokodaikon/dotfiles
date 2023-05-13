@@ -1,34 +1,4 @@
 {
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        },
-        {
-          "before": ["<C-i>"],
-          "after": ["<Tab>"]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-          "before": ["<C-h>"],
-          "after": ["0"]
-        },
-        {
-          "before": ["<C-l>"],
-          "after": ["$"]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-          "before": ["<C-h>"],
-          "after": ["0"]
-        },
-        {
-          "before": ["<C-l>"],
-          "after": ["$"]
-        }
-    ],
     "editor.fontFamily": "Consolas, Myrica M",
     "editor.detectIndentation": false,
     "editor.fontSize": 18,
@@ -42,5 +12,10 @@
     "vim.statusBarColors.visualblock": "",
     "vim.whichwrap": "h,l,<,>,[,]",
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "~/dotfiles/vscode/.vimrc"
+    "vim.vimrc.path": "~/dotfiles/vscode/.vimrc",
+    "workbench.editor.untitled.hint": "hidden",
+    "omnisharp.enableRoslynAnalyzers": true,
+    "editor.codeLens": false,
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never",
 }
