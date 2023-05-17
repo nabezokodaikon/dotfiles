@@ -88,9 +88,6 @@ repo = 'numToStr/Comment.nvim'
 repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
 # Translate
-# [[plugins]]
-# repo = 'nabezokodaikon/translate.nvim'
-# on_cmd = 'Translate'
 [[plugins]]
 repo = '~/ws/dev/translate.nvim'
 on_cmd = 'Translate'
