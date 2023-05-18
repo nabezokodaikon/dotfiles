@@ -89,7 +89,7 @@ repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
 # Translate
 [[plugins]]
-repo = '~/ws/dev/translate.nvim'
+repo = 'nabezokodaikon/translate.nvim'
 on_cmd = 'Translate'
 
 # カーソル移動を便利にする。
