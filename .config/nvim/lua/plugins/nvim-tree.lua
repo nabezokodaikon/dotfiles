@@ -20,7 +20,8 @@ local function my_on_attach(bufnr)
 
 end
 
-require("nvim-tree").setup {
+require("nvim-tree").setup({
+  filters = { custom = { "^.git$" } },
   on_attach = my_on_attach,
-}
+})
 
