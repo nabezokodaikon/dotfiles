@@ -6,6 +6,7 @@ local function my_on_attach(bufnr)
   end
 
   vim.keymap.set('n', 'o',     api.node.open.edit,           opts('Open'))
+  vim.keymap.set('n', '<CR>',  api.node.open.edit,           opts('Open'))
   vim.keymap.set('n', '~',     api.tree.change_root_to_node, opts('CD'))
   vim.keymap.set('n', '<Tab>', api.node.open.preview,        opts('Open Preview'))
   vim.keymap.set('n', 'R',     api.tree.reload,              opts('Refresh'))
