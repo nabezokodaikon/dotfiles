@@ -1,6 +1,6 @@
 vim.filetype.add({
   extension = {
-    nue = 'html'
+    nue = 'nue'
   },
 })
 

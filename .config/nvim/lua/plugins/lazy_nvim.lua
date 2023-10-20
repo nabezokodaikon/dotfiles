@@ -48,6 +48,7 @@ require("lazy").setup({
       'scss',
       'javascript',
       'javascriptreact',
+      'nue',
       'typescript',
       'typescriptreact',
       'svelte',
