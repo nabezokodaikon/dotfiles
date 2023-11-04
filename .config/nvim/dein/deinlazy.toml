@@ -67,10 +67,9 @@ repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
 # Translate
 [[plugins]]
-repo = 'nabezokodaikon/jaen-translate.vim'
+repo = 'nabezokodaikon/translate.nvim'
 on_cmd = [
-    'TranslateJa2En',
-    'TranslateEn2Ja'
+    'Translate'
 ]
 
 # カーソル移動を便利にする。

@@ -40,8 +40,8 @@ vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>
 -- Plugins
 vim.keymap.set('n', 'F', '<cmd>HopChar2<CR>', opt)
 vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', opt) 
-vim.keymap.set('v', '<Leader>t', '<cmd>TranslateJa2En<CR>', opt)
-vim.keymap.set('v', '<Leader>j', '<cmd>TranslateEn2Ja<CR>', opt)
+vim.keymap.set('v', '<Leader>t', '<cmd>Translate ja en<CR>', opt)
+vim.keymap.set('v', '<Leader>j', '<cmd>Translate en ja<CR>', opt)
 vim.keymap.set('n', '<Leader>f', '<cmd>Ddu -name=files<CR>', opt)
 vim.keymap.set('n', '<Leader>h', '<cmd>Ddu -name=history-files<CR>', opt)
 vim.keymap.set('n', '<Leader>b', '<cmd>Ddu -name=buffers<CR>', opt)
