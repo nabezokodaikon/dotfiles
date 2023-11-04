@@ -7,7 +7,7 @@ require('plugins.ddu')
 
 [[plugins]]
 repo = 'Shougo/ddu-commands.vim'
-depends = 'ddu.vim'
+on_source = 'ddu.vim'
 on_cmd = 'Ddu'
 
 [[plugins]]
@@ -20,6 +20,10 @@ on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'yuki-yano/ddu-filter-fzf'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-matcher_relative'
 on_source = 'ddu.vim'
 
 [[plugins]]
@@ -43,14 +47,10 @@ repo = 'shun/ddu-source-rg'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = 'lambdalisue/mr.vim'
-rev = 'main'
-
-[[plugins]]
-repo = 'kuuote/ddu-source-mr'
-depends = 'mr.vim'
+repo = 'Shougo/ddu-source-file_old'
 on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-column-filename'
 on_source = 'ddu.vim'
+

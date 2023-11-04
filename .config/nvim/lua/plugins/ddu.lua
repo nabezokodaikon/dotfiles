@@ -22,9 +22,9 @@ vim.call('ddu#custom#patch_local', 'history-files',
 vim.call('ddu#custom#patch_local', 'history-files',
   'kindOptions', {file = {defaultAction = {'open'}}})
 vim.call('ddu#custom#patch_local', 'history-files',
-  'sources', {{name = {'mr'}, params = {current = true}}})
+  'sources', {{name = {'file_old'}}})
 vim.call('ddu#custom#patch_local', 'history-files',
-  'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
+  'sourceOptions', {_ = {matchers = {'matcher_relative', 'matcher_fzf'}}})
 
 vim.call('ddu#custom#patch_local', 'buffers',
   'ui', 'ff')
