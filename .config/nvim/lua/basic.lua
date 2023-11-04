@@ -20,7 +20,7 @@ vim.o.guicursor = "a:blinkon0"
 -- 保存されていないファイルがあるときでも別のファイルを開く。
 vim.o.hidden = true
 -- 検索結果をハイライトする。
-vim.o.lsearch = true
+vim.o.hlsearch = true
 -- 文字列置換をインタラクティブに表示する。
 vim.o.inccommand = 'split'
 -- インクリメンタル検索有効。
