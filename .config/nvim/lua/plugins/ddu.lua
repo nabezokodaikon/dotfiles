@@ -76,11 +76,11 @@ end, {nargs = 0})
 vim.api.nvim_create_user_command('DduFiler', function()
   vim.call('ddu#start', {
     ui = 'filer',
-    resume = false,
+    resume = true,
     sync = true,
     sources = {{name = 'file'}},
-    sourceOptions = {_ = {columns = {{'filename'}}, path = vim.fn.getcwd()}},
-    uiParams = {filer = {search = vim.fn.expand('%:p')}},
+    sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd()}},
+    uiParams = {filer = {displayRoot = false}},
   })
 end, {nargs = 0})
 
