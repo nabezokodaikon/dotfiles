@@ -19,9 +19,8 @@ lsp.cssls.setup {
 -- lsp.sumneko_lua.setup {
 -- }
 
--- lsp.denols.setup{
-  -- root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc")
--- }
+lsp.denols.setup{
+}
 
 lsp.dockerls.setup{
 }
@@ -43,9 +42,9 @@ lsp.rust_analyzer.setup {
   },
 }
 
-lsp.tsserver.setup {
-  root_dir = lsp.util.root_pattern("package.json"),
-}
+-- lsp.tsserver.setup {
+  -- root_dir = lsp.util.root_pattern("package.json"),
+-- }
 
 lsp.svelte.setup {
 
