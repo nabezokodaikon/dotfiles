@@ -80,7 +80,6 @@ vim.api.nvim_create_user_command('DduFiler', function()
     sync = true,
     sources = {{name = 'file'}},
     sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd()}},
-    uiParams = {filer = {displayRoot = false}},
   })
 end, {nargs = 0})
 
