@@ -49,11 +49,21 @@ on_ft = 'velocity'
 # Treesitter
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
+depends = [
+    'Comment.nvim',
+    'nvim-ts-context-commentstring'
+]
 on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
 lua_source = '''
 require('plugins.nvim-treesitter')
 '''
+
+[[plugins]]
+repo = 'numToStr/Comment.nvim'
+
+[[plugins]]
+repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
 # Translate
 [[plugins]]
