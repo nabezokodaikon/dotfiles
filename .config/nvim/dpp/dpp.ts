@@ -21,7 +21,7 @@ export class Config extends BaseConfig {
     type Toml = {
       hooks_file?: string;
       ftplugins?: Record<string, string>;
-      plugins?: Plugin[];
+      plugins: Plugin[];
     };
 
     type LazyMakeStateResult = {
@@ -36,22 +36,29 @@ export class Config extends BaseConfig {
     const [context, options] = await args.contextBuilder.get(args.denops);
 
     const tomls: Toml[] = [];
-    tomls.push(
-      await args.dpp.extAction(
-        args.denops,
-        context,
-        options,
-        "toml",
-        "load",
-        {
-          path: await fn.expand(args.denops, '~/.config/nvim/dpp/dpp.toml'),
-          options: {
-            lazy: false,
-          },
-        },
-      ) as Toml,
-    );
 
+    async function pushToml(tomlFile: string, isLazy: boolean) {
+      tomls.push(
+        await args.dpp.extAction(
+          args.denops,
+          context,
+          options,
+          "toml",
+          "load",
+          {
+            path: await fn.expand(args.denops, `~/.config/nvim/dpp/${tomlFile}`),
+            options: {
+              lazy: isLazy,
+            },
+          },
+        ) as Toml,
+      );
+    }
+
+    await pushToml('dpp.toml', false);
+    await pushToml('dpplazy.toml', true);
+    await pushToml('ddc.toml', true);
+    await pushToml('ddu.toml', true);
 
     const recordPlugins: Record<string, Plugin> = {};
     const ftplugins: Record<string, string> = {};
