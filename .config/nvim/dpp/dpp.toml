@@ -1,0 +1,30 @@
+# テキストを囲ったり、囲いを外したりする。
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# Comment out
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+# Copy paste
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+
+# Color scheme
+[[plugins]]
+repo = 'rktjmp/lush.nvim'
+
+[[plugins]]
+repo = 'ellisonleao/gruvbox.nvim'
+
+# Status line
+[[plugins]]
+repo = 'hoob3rt/lualine.nvim'
+
+# Tab line
+[[plugins]]
+repo = 'crispgm/nvim-tabline'
+
