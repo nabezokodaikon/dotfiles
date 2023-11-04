@@ -5,7 +5,7 @@ hook_source = "lua require('plugins.ddu')"
 
 [[plugins]]
 repo = 'Shougo/ddu-commands.vim'
-on_source = 'ddu.vim'
+depends = 'ddu.vim'
 on_cmd = 'Ddu'
 
 [[plugins]]

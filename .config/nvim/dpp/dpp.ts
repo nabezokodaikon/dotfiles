@@ -1,11 +1,12 @@
 import {
   BaseConfig,
-  ConfigReturn,
   ContextBuilder,
   Dpp,
   Plugin,
 } from "https://deno.land/x/dpp_vim@v0.0.7/types.ts";
-import { Denops, fn } from "https://deno.land/x/dpp_vim@v0.0.7/deps.ts";
+import {
+  Denops,
+} from "https://deno.land/x/dpp_vim@v0.0.7/deps.ts";
 
 export class Config extends BaseConfig {
   override async config(args: {
@@ -46,7 +47,7 @@ export class Config extends BaseConfig {
           "toml",
           "load",
           {
-            path: await fn.expand(args.denops, `~/.config/nvim/dpp/${tomlFile}`),
+            path: `~/.config/nvim/dpp/${tomlFile}`,
             options: {
               lazy: isLazy,
             },
@@ -102,3 +103,4 @@ export class Config extends BaseConfig {
     };
   }
 }
+
