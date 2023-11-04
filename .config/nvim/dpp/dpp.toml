@@ -1,3 +1,5 @@
+# TODO: Plugins manager
+
 # テキストを囲ったり、囲いを外したりする。
 [[plugins]]
 repo = 'tpope/vim-surround'
@@ -5,6 +7,7 @@ repo = 'tpope/vim-surround'
 # Comment out
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
+hook_add = "lua require('plugins.nerdcommenter')"
 
 # Copy paste
 [[plugins]]
@@ -19,12 +22,15 @@ repo = 'rktjmp/lush.nvim'
 
 [[plugins]]
 repo = 'ellisonleao/gruvbox.nvim'
+hook_add = "lua require('plugins.gruvbox')"
 
 # Status line
 [[plugins]]
 repo = 'hoob3rt/lualine.nvim'
+hook_add = "lua require('plugins.lualine')"
 
 # Tab line
 [[plugins]]
 repo = 'crispgm/nvim-tabline'
+hook_add = "lua require('plugins.nvim-tabline')"
 
