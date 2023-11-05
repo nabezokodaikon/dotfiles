@@ -79,7 +79,7 @@ vim.api.nvim_create_user_command('DduFiler', function()
     resume = true,
     sync = true,
     sources = {{name = 'file'}},
-    sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd()}},
+    sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd(), sorters = {'sorter_alpha'}}},
   })
 end, {nargs = 0})
 
