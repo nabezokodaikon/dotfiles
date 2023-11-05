@@ -2,6 +2,7 @@
 repo = 'Shougo/ddu.vim'
 depends = 'denops.vim'
 hook_source = "lua require('plugins.ddu')"
+on_cmd = ['DduRgInput', 'DduRgWord', 'DduFiler']
 
 [[plugins]]
 repo = 'Shougo/ddu-commands.vim'
