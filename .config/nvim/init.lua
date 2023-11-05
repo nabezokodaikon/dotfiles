@@ -28,7 +28,7 @@ require('keymap')
 require('virtual-text')
 
 -- Plugins settings.
-require('plugins.dpp')
+require('plugins.lazy_nvim')
 
 
 vim.cmd('syntax on')
