@@ -1,36 +1,18 @@
-# TODO: Plugins manager
-
-# テキストを囲ったり、囲いを外したりする。
 [[plugins]]
-repo = 'tpope/vim-surround'
-
-# Comment out
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
-hook_add = "lua require('plugins.nerdcommenter')"
-
-# Copy paste
-[[plugins]]
-repo = 'kana/vim-operator-user'
+repo = 'Shougo/dpp.vim'
 
 [[plugins]]
-repo = 'kana/vim-operator-replace'
-
-# Color scheme
-[[plugins]]
-repo = 'rktjmp/lush.nvim'
+repo = 'Shougo/dpp-ext-installer'
 
 [[plugins]]
-repo = 'ellisonleao/gruvbox.nvim'
-hook_add = "lua require('plugins.gruvbox')"
+repo = 'Shougo/dpp-ext-local'
 
-# Status line
 [[plugins]]
-repo = 'hoob3rt/lualine.nvim'
-hook_add = "lua require('plugins.lualine')"
+repo = 'Shougo/dpp-ext-lazy'
 
-# Tab line
 [[plugins]]
-repo = 'crispgm/nvim-tabline'
-hook_add = "lua require('plugins.nvim-tabline')"
+repo = 'Shougo/dpp-ext-toml'
+
+[[plugins]]
+repo = 'Shougo/dpp-protocol-git'
 

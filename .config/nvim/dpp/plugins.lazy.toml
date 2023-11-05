@@ -70,6 +70,3 @@ repo = 'phaazon/hop.nvim'
 on_cmd = 'HopWord'
 hook_source = "lua require('plugins.hop')"
 
-# Using Deno on plugin
-[[plugins]]
-repo = 'vim-denops/denops.vim'

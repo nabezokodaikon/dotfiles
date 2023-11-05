@@ -57,7 +57,8 @@ export class Config extends BaseConfig {
     }
 
     await pushToml('dpp.toml', false);
-    await pushToml('dpplazy.toml', true);
+    await pushToml('plugins.toml', false);
+    await pushToml('plugins.lazy.toml', true);
     await pushToml('ddc.toml', true);
     await pushToml('ddu.toml', true);
 
