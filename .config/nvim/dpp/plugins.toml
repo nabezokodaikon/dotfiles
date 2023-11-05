@@ -7,13 +7,6 @@ repo = 'tpope/vim-surround'
 repo = 'scrooloose/nerdcommenter'
 hook_add = "lua require('plugins.nerdcommenter')"
 
-# Copy paste
-[[plugins]]
-repo = 'kana/vim-operator-user'
-
-[[plugins]]
-repo = 'kana/vim-operator-replace'
-
 # Color scheme
 [[plugins]]
 repo = 'rktjmp/lush.nvim'

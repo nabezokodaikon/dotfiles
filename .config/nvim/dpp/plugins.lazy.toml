@@ -25,16 +25,6 @@ repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 hook_source = "lua require('plugins.rust')"
 
-# Scala syntax
-[[plugins]]
-repo = 'derekwyatt/vim-scala'
-on_ft = 'scala'
-
-# Svelte syntax
-[[plugins]]
-repo = 'evanleck/vim-svelte'
-on_ft = 'svelte'
-
 # VTL syntax
 [[plugins]]
 repo = 'lepture/vim-velocity'
@@ -69,4 +59,12 @@ on_cmd = [
 repo = 'phaazon/hop.nvim'
 on_cmd = 'HopWord'
 hook_source = "lua require('plugins.hop')"
+
+# Copy paste
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+depends = 'vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
 
