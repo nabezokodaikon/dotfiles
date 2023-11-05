@@ -20,8 +20,6 @@ export class Config extends BaseConfig {
   }> {
 
     type Toml = {
-      hooks_file?: string;
-      ftplugins?: Record<string, string>;
       plugins: Plugin[];
     };
 
@@ -63,27 +61,10 @@ export class Config extends BaseConfig {
     await pushToml('ddu.toml', true);
 
     const recordPlugins: Record<string, Plugin> = {};
-    const ftplugins: Record<string, string> = {};
-    const hooksFiles: string[] = [];
 
     tomls.forEach((toml) => {
-
       for (const plugin of toml.plugins) {
         recordPlugins[plugin.name] = plugin;
-      }
-
-      if (toml.ftplugins) {
-        for (const filetype of Object.keys(toml.ftplugins)) {
-          if (ftplugins[filetype]) {
-            ftplugins[filetype] += `\n${toml.ftplugins[filetype]}`;
-          } else {
-            ftplugins[filetype] = toml.ftplugins[filetype];
-          }
-        }
-      }
-
-      if (toml.hooks_file) {
-        hooksFiles.push(toml.hooks_file);
       }
     });
 
