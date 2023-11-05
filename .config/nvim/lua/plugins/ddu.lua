@@ -8,7 +8,7 @@ vim.call('ddu#custom#patch_local', 'files',
 vim.call('ddu#custom#patch_local', 'files',
   'sources', {{name = {'file_external'}}})
 vim.call('ddu#custom#patch_local', 'files',
-  'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
+  'sourceOptions', {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}})
 vim.call('ddu#custom#patch_local', 'files',
   'sourceParams', {file_external = {
     cmd = {
@@ -27,7 +27,7 @@ vim.call('ddu#custom#patch_local', 'history-files',
 vim.call('ddu#custom#patch_local', 'history-files',
   'sources', {{name = {'file_old'}}})
 vim.call('ddu#custom#patch_local', 'history-files',
-  'sourceOptions', {_ = {matchers = {'matcher_relative', 'matcher_fzf'}}})
+  'sourceOptions', {_ = {matchers = {'matcher_relative', 'matcher_fzf'}, sorters = {'sorter_fzf'}}})
 
 vim.call('ddu#custom#patch_local', 'buffers',
   'ui', 'ff')
@@ -36,14 +36,14 @@ vim.call('ddu#custom#patch_local', 'buffers',
 vim.call('ddu#custom#patch_local', 'buffers',
   'sources', {{name = {'buffer'}, params = {current = true}}})
 vim.call('ddu#custom#patch_local', 'buffers',
-  'sourceOptions', {_ = {matchers = {'matcher_fzf'}}})
+  'sourceOptions', {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}})
 
 vim.api.nvim_create_user_command('DduRgInput', function()
   vim.call('ddu#start', {
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
     sources = {{name = 'rg', params = {input = vim.fn.input('search word: ')}}},
-    sourceOptions = {_ = {matchers = {'matcher_fzf'}}},
+    sourceOptions = {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}},
     sourceParams = {rg = {
       args = {
         '--column',
@@ -62,7 +62,7 @@ vim.api.nvim_create_user_command('DduRgWord', function()
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
     sources = {{name = 'rg', params = {input = vim.fn.expand('<cword>')}}},
-    sourceOptions = {_ = {matchers = {'matcher_fzf'}}},
+    sourceOptions = {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}},
     sourceParams = {rg = {
       args = {
         '--column',
