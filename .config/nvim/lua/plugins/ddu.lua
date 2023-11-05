@@ -1,3 +1,6 @@
+vim.call('ddu#custom#patch_global',
+  'filterParams', {matcher_fzf = {highlightMatched = 'Search'}})
+
 vim.call('ddu#custom#patch_local', 'files',
   'ui', 'ff')
 vim.call('ddu#custom#patch_local', 'files',
