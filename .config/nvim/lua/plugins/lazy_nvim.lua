@@ -21,17 +21,11 @@ require("lazy").setup({
     config = function() require("plugins.nerdcommenter") end,
   },
   {
-    "kana/vim-operator-replace",
-    dependencies = {
-      "kana/vim-operator-user",
-    },
-  },
-  {
-    "rktjmp/lush.nvim",
-  },
-  {
     "ellisonleao/gruvbox.nvim",
     config = function() require("plugins.gruvbox") end,
+    dependencies = {
+      "rktjmp/lush.nvim",
+    },
   },
   {
     "hoob3rt/lualine.nvim",
@@ -42,7 +36,10 @@ require("lazy").setup({
     config = function() require("plugins.nvim-tabline") end,
   },
   {
-    "vim-denops/denops.vim",
+    "kana/vim-operator-replace",
+    dependencies = {
+      "kana/vim-operator-user",
+    },
   },
   {
     "mattn/emmet-vim",
@@ -72,18 +69,6 @@ require("lazy").setup({
     }
   },
   {
-    "derekwyatt/vim-scala",
-    ft = {
-      "scala",
-    }
-  },
-  {
-    "evanleck/vim-svelte",
-    ft = {
-      "svelte",
-    }
-  },
-  {
     "lepture/vim-velocity",
     ft = {
       "velocity",
@@ -91,84 +76,69 @@ require("lazy").setup({
   },
   {
     "nvim-treesitter/nvim-treesitter",
-  },
-  {
-    "numToStr/Comment.nvim",
-  },
-  {
-    "JoosepAlviste/nvim-ts-context-commentstring",
+    dependencies = {
+      "numToStr/Comment.nvim",
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
   },
   {
     "nabezokodaikon/translate.nvim",
+    cmd = {
+      'Translate',
+    },
   },
   {
     "phaazon/hop.nvim",
+    config = function() require("plugins.hop") end,
+    cmd = {
+      'HopWord',
+    },
   },
-
   {
     "Shougo/ddc.vim",
     config = function() require("plugins.ddc") end,
+    event = 'InsertEnter',
+    dependencies = {
+      "vim-denops/denops.vim",
+      "Shougo/ddc-ui-native",
+      "Shougo/ddc-matcher_head",
+      "Shougo/ddc-sorter_rank",
+      "Shougo/ddc-around",
+      "Shougo/ddc-nvim-lsp",
+      "LumaKernel/ddc-file",
+    },
   },
-  {
-    "Shougo/ddc-ui-native",
-  },
-  {
-    "Shougo/ddc-matcher_head",
-  },
-  {
-    "Shougo/ddc-sorter_rank",
-  },
-  {
-    "Shougo/ddc-around",
-  },
-  {
-    "Shougo/ddc-nvim-lsp",
-  },
-  {
-    "LumaKernel/ddc-file",
-  },
-
   {
     "Shougo/ddu.vim",
     config = function() require("plugins.ddu") end,
+    cmd = {
+      'DduRgInput',
+      'DduRgWord',
+      'DduFiler',
+    },
+    dependencies = {
+      "vim-denops/denops.vim",
+      "Shougo/ddu-ui-ff",
+      "Shougo/ddu-ui-filer",
+      "yuki-yano/ddu-filter-fzf",
+      "Shougo/ddu-filter-matcher_relative",
+      "Shougo/ddu-kind-file",
+      "Shougo/ddu-source-file",
+      "matsui54/ddu-source-file_external",
+      "shun/ddu-source-buffer",
+      "shun/ddu-source-rg",
+      "Shougo/ddu-source-file_old",
+      "Shougo/ddu-column-filename",
+      "Shougo/ddu-filter-sorter_alpha",
+    },
   },
   {
     "Shougo/ddu-commands.vim",
-  },
-  {
-    "Shougo/ddu-ui-ff",
-  },
-  {
-    "Shougo/ddu-ui-filer",
-  },
-  {
-    "yuki-yano/ddu-filter-fzf",
-  },
-  {
-    "Shougo/ddu-filter-matcher_relative",
-  },
-  {
-    "Shougo/ddu-kind-file",
-  },
-  {
-    "Shougo/ddu-source-file",
-  },
-  {
-    "matsui54/ddu-source-file_external",
-  },
-  {
-    "shun/ddu-source-buffer",
-  },
-  {
-    "shun/ddu-source-rg",
-  },
-  {
-    "Shougo/ddu-source-file_old",
-  },
-  {
-    "Shougo/ddu-column-filename",
-  },
-  {
-    "Shougo/ddu-filter-sorter_alpha",
+    cmd = {
+      'Ddu',
+    },
+    dependencies = {
+      "Shougo/ddu.vim",
+    },
   },
 })
