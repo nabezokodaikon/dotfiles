@@ -14,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    "folke/lazy.nvim",
+  },
+  {
     -- テキストを囲ったり、囲いを外したりする。
     "tpope/vim-surround",
   },
