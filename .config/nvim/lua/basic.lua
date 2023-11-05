@@ -1,8 +1,6 @@
 --------------------------------
 -- Basic settings
 --------------------------------
--- 新しい行の自動インデントを有効化。
-vim.o.autoindent = true
 -- 外部で変更のあったファイルを自動的に読みなおす。
 vim.o.autoread = true
 -- バックアップファイルを作成しない。
@@ -41,7 +39,7 @@ vim.o.showtabline = 2
 -- 常にsigncolumnを表示する。
 vim.o.signcolumn = 'yes'
 -- 新しい行の高度な自動インデントを有効化。
-vim.o.smartindent = true
+-- vim.o.cindent = true
 -- shiftwidthの設定を有効化。
 vim.o.smarttab = true
 -- タブ入力で挿入される空白の長さをshiftwidthと同じにする。
@@ -56,5 +54,3 @@ vim.o.textwidth = 0
 vim.o.ttimeoutlen = 0
 -- 行頭、行末の回り込みを許可。
 vim.o.whichwrap= 'b,s,h,l,<,>,[,]'
--- 補完候補が無い場合のメッセージを抑制する。
-vim.opt.shortmess = vim.opt.shortmess + 'c'
