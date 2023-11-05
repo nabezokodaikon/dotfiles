@@ -2,6 +2,11 @@
 # Zsh .zshenv for Mac
 #--------------------------------
 
+# Homebrew
+#--------------------------------
+export HOMEBREW_NO_ANALYTICS=1
+
+
 # Java
 # $ brew cask install caskroom/versions/adoptopenjdk8
 #--------------------------------
