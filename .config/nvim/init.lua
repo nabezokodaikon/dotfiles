@@ -2,51 +2,50 @@ vim.cmd('syntax off')
 vim.cmd('filetype off')
 vim.cmd('filetype plugin indent off')
 
-local cache_dir = vim.env.HOME .. '/.cache'
-local dein_dir = cache_dir .. '/dein'
-local dein_repo_dir = dein_dir .. '/repos/github.com/Shougo/dein.vim'
 
-if not string.match(vim.o.runtimepath, '/dein.vim') then
-	if vim.fn.isdirectory(dein_repo_dir) ~= 1 then
-		os.execute('git clone https://github.com/Shougo/dein.vim ' .. dein_repo_dir)
-	end
-	vim.o.runtimepath = dein_repo_dir .. ',' .. vim.o.runtimepath 
+local dpp_base = vim.env.HOME .. '/.cache/dpp'
+local dpp_repo = dpp_base .. '/repos'
+
+local dpp_src = dpp_repo .. '/github.com/Shougo/dpp.vim'
+local denops_src = dpp_repo .. '/github.com/vim-denops/denops.vim'
+
+vim.opt.runtimepath:prepend(dpp_src)
+
+if vim.fn.isdirectory(dpp_src) ~= 1 then
+  os.execute('git clone https://github.com/Shougo/dpp.vim ' .. dpp_src)
 end
 
-if vim.call('dein#min#load_state', dein_dir) ~= 1 then
-    return
+if vim.fn.isdirectory(denops_src) ~= 1 then
+  os.execute('git clone https://github.com/vim-denops/denops.vim ' .. denops_src)
 end
 
-vim.call('dein#begin', dein_dir)
+local plugins = {
+  'Shougo/dpp-ext-installer',
+  'Shougo/dpp-ext-local',
+  'Shougo/dpp-ext-lazy',
+  'Shougo/dpp-ext-toml',
+  'Shougo/dpp-protocol-git',
+}
 
-vim.call('dein#add', 'vim-denops/denops.vim')
-vim.call('dein#add', 'Shougo/ddu.vim')
-vim.call('dein#add', 'Shougo/ddu-commands.vim')
-vim.call('dein#add', 'Shougo/ddu-ui-filer')
-vim.call('dein#add', 'Shougo/ddu-kind-file')
-vim.call('dein#add', 'Shougo/ddu-source-file')
-vim.call('dein#add', 'Shougo/ddu-column-filename')
+for k, v in pairs(plugins) do
+  local url = 'https://github.com/' .. v
+  local repo = dpp_repo .. '/github.com/' .. v 
+  vim.opt.runtimepath:append(repo)
+  if vim.fn.isdirectory(repo) ~= 1 then
+    os.execute('git clone ' .. url .. ' ' .. repo)
+  end
+end
 
-vim.call('dein#end')
-vim.call('dein#save_state')
+if vim.call('dpp#min#load_state', dpp_base) then
+  vim.opt.runtimepath:prepend(denops_src)
+  vim.api.nvim_create_autocmd('User', {
+    pattern = 'DenopsReady',
+    callback = function()
+      vim.call('dpp#make_state', dpp_base, '~/.config/nvim/dpp/dpp.ts')
+    end,
+  })
+end
 
-vim.cmd([[
-call ddu#custom#patch_local('tree', {
-      \   'ui': 'filer',
-      \   'resume': v:true,
-      \   'sources': [
-      \     {'name': 'file'}
-      \   ],
-      \   'sourceOptions': {
-      \     '_': {
-      \       'columns': 'filename',
-      \     }
-      \   },
-      \ })
-]])
-
-local opt = { noremap = true, silent = true }
-vim.keymap.set('n', 'e', '<cmd>Ddu -name=tree<CR>', opt)
 
 vim.cmd('syntax on')
 vim.cmd('filetype on')
