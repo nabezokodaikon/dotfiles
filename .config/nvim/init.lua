@@ -41,7 +41,7 @@ if vim.call('dpp#min#load_state', dpp_base) then
   vim.api.nvim_create_autocmd('User', {
     pattern = 'DenopsReady',
     callback = function()
-      vim.call('dpp#make_state', dpp_base, '~/.config/nvim/dpp/dpp.ts')
+      vim.call('dpp#make_state', dpp_base, '~/.config/nvim/dpp.ts')
     end,
   })
 end
@@ -50,3 +50,4 @@ end
 vim.cmd('syntax on')
 vim.cmd('filetype on')
 vim.cmd('filetype plugin indent on')
+

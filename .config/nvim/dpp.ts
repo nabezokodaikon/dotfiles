@@ -36,25 +36,21 @@ export class Config extends BaseConfig {
 
     const tomls: Toml[] = [];
 
-    async function pushToml(tomlFile: string, isLazy: boolean) {
-      tomls.push(
-        await args.dpp.extAction(
-          args.denops,
-          context,
-          options,
-          "toml",
-          "load",
-          {
-            path: `~/.config/nvim/dpp/${tomlFile}`,
-            options: {
-              lazy: isLazy,
-            },
+    tomls.push(
+      await args.dpp.extAction(
+        args.denops,
+        context,
+        options,
+        "toml",
+        "load",
+        {
+          path: `~/.config/nvim/dpp.toml`,
+          options: {
+            lazy: false,
           },
-        ) as Toml,
-      );
-    }
-
-    await pushToml('dpp.toml', false);
+        },
+      ) as Toml,
+    );
 
     const recordPlugins: Record<string, Plugin> = {};
 
