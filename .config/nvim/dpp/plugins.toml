@@ -9,9 +9,6 @@ hook_add = "lua require('plugins.nerdcommenter')"
 
 # Color scheme
 [[plugins]]
-repo = 'rktjmp/lush.nvim'
-
-[[plugins]]
 repo = 'ellisonleao/gruvbox.nvim'
 hook_add = "lua require('plugins.gruvbox')"
 
