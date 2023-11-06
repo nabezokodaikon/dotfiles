@@ -1,42 +1,32 @@
--- Set dpp base path (required)
 local dpp_base = vim.env.HOME .. '/.cache/dpp'
 local dpp_repo = dpp_base .. '/repos'
 
--- Set dpp source path (required)
-local dpp_src = dpp_repo .. '/github.com/Shougo/dpp.vim'
-local denops_src = dpp_repo .. '/github.com/vim-denops/denops.vim'
-
--- Set dpp runtime path (required)
-vim.opt.runtimepath:prepend(dpp_src)
-
-if vim.fn.isdirectory(dpp_src) ~= 1 then
-  os.execute('git clone https://github.com/Shougo/dpp.vim ' .. dpp_src)
-end
-
-if vim.fn.isdirectory(denops_src) ~= 1 then
-  os.execute('git clone https://github.com/vim-denops/denops.vim ' .. denops_src)
-end
-
-local plugins = {
-  'Shougo/dpp-ext-installer',
-  'Shougo/dpp-ext-local',
-  'Shougo/dpp-ext-lazy',
-  'Shougo/dpp-ext-toml',
-  'Shougo/dpp-protocol-git',
-}
-
-for k, v in pairs(plugins) do
-  local url = 'https://github.com/' .. v
-  local repo = dpp_repo .. '/github.com/' .. v 
-  vim.opt.runtimepath:append(repo)
-  if vim.fn.isdirectory(repo) ~= 1 then
-    os.execute('git clone ' .. url .. ' ' .. repo)
+function init_plugin(plugin)
+  local dir = dpp_repo .. '/github.com/' .. plugin
+  if vim.fn.isdirectory(dir) ~= 1 then
+    local url = 'https://github.com/' .. plugin
+    os.execute('git clone ' .. url .. ' ' .. dir)
   end
+  vim.opt.runtimepath:prepend(dir)
 end
+
+init_plugin('Shougo/dpp.vim')
+init_plugin('Shougo/dpp-ext-lazy')
 
 if vim.call('dpp#min#load_state', dpp_base) then
-  -- Set dpp runtime path (required)
-  vim.opt.runtimepath:prepend(denops_src)
+
+  local plugins = {
+    'Shougo/dpp-ext-installer',
+    'Shougo/dpp-ext-local',
+    'Shougo/dpp-ext-toml',
+    'Shougo/dpp-protocol-git',
+    'vim-denops/denops.vim',
+  }
+
+  for k, v in pairs(plugins) do
+    init_plugin(v)
+  end
+
   vim.api.nvim_create_autocmd('User', {
     pattern = 'DenopsReady',
     callback = function()
