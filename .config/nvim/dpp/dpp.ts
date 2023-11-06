@@ -29,6 +29,11 @@ export class Config extends BaseConfig {
     };
 
     args.contextBuilder.setGlobal({
+      extParams: {
+        installer: {
+          maxProcesses: 10
+        }
+      },
       protocols: ["git"],
     });
 
