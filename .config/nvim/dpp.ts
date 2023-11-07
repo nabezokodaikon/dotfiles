@@ -33,7 +33,6 @@ export class Config extends BaseConfig {
     });
 
     const [context, options] = await args.contextBuilder.get(args.denops);
-
     const tomls: Toml[] = [];
 
     tomls.push(
