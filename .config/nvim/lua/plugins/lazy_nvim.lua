@@ -80,7 +80,6 @@ require("lazy").setup({
   {
     "neovim/nvim-lspconfig",
     config = function() require("plugins.nvim-lspconfig") end,
-    event = "BufRead",
   },
   {
     "hrsh7th/nvim-cmp",
