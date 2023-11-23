@@ -30,9 +30,11 @@ lsp.dockerls.setup{
 lsp.rust_analyzer.setup {
   settings = {
     ["rust-analyzer"] = {
-      assist = {
-        importGranularity = "module",
-        importPrefix = "by_self",
+      imports = {
+          granularity = {
+              group = "module",
+          },
+          prefix = "self",
       },
       cargo = {
         loadOutDirsFromCheck = true
