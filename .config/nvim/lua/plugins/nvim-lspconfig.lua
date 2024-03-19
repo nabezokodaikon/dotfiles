@@ -1,10 +1,11 @@
 local lsp = require"lspconfig"
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- lsp.bashls.setup{
 -- }
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
 lsp.cssls.setup {
   capabilities = capabilities,
 }
@@ -29,9 +30,11 @@ lsp.dockerls.setup{
 lsp.rust_analyzer.setup {
   settings = {
     ["rust-analyzer"] = {
-      assist = {
-        importGranularity = "module",
-        importPrefix = "by_self",
+      imports = {
+          granularity = {
+              group = "module",
+          },
+          prefix = "self",
       },
       cargo = {
         loadOutDirsFromCheck = true

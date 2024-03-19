@@ -25,9 +25,6 @@ treesitter.setup {
   highlight = {
       enable = true,
   },
-  context_commentstring = {
-    enable = true,
-  },
   indent = {
     enable = true,
   },
@@ -36,3 +33,6 @@ treesitter.setup {
 require('Comment').setup({
   pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
 })
+
+vim.treesitter.language.register('html', 'nue') 
+
