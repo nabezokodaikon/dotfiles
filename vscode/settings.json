@@ -1,7 +1,6 @@
 {
     "editor.fontFamily": "Consolas, Myrica M",
     "editor.detectIndentation": false,
-    "editor.fontSize": 18,
     "editor.wrappingIndent": "same",
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
@@ -13,9 +12,12 @@
     "vim.whichwrap": "h,l,<,>,[,]",
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/dotfiles/vscode/.vimrc",
-    "workbench.editor.untitled.hint": "hidden",
     "omnisharp.enableRoslynAnalyzers": true,
     "editor.codeLens": false,
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingBrackets": "never",
+    "workbench.editor.empty.hint": "hidden",
+    "svelte.enable-ts-plugin": true,
+    "editor.tabSize": 2,
+    "editor.fontSize": 16,
 }
