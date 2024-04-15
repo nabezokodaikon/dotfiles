@@ -11,6 +11,7 @@
 /.vim/.netrwhist
 .metals
 scoop
+.git-credentials
 
 # vim プラグインディレクトリを対象外にする
 /.vim/bundle/
