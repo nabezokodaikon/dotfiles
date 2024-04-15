@@ -11,8 +11,8 @@
     ; upstreamが設定されていて、それが同名のブランチ名であるときのみpushする。
     default = simple
 [http]
-    ; リモートリポジトリが自己証明書であっても接続する。
-    sslVerify = false
+    ; リモートリポジトリが自己証明書の場合は接続しない。
+    sslVerify = true
 [diff]
     ; diffの前後行数を変更。
     context = 8
