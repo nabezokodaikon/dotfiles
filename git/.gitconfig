@@ -2,7 +2,7 @@
     name = nabezokodaikon
     email = nabezoko.daikon@gmail.com
 [core]
-    editor = nvim
+	  editor = "code" --wait
     ; 改行コードを自動変換しない。
     autocrlf = false
     ; Gitで日本語ファイル名を表示する。
@@ -22,3 +22,5 @@
 [init]
     ; デフォルトのブランチ名。
     defaultBranch = main
+[safe]
+    directory = *
