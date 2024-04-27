@@ -27,7 +27,6 @@ $ sudo apt install -y \
   fontconfig \
   fzf \
   ripgrep \
-  tig \
   tmux \
   tree \
   zsh
