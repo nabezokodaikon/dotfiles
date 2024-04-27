@@ -10,6 +10,7 @@
 4. MicrosoftStoreからUbuntuをインストールする。
 5. Ubuntuを起動する。
 6. Ubuntuのユーザー名とパスワードを設定する。
+
 ### Ubuntuの設定
 1. アップデートし、再起動する。
 ```bash
@@ -41,7 +42,50 @@ $ which zsh
 $ chsh -s /usr/bin/zsh
 ```
 
-4. neovimをインストールする。
+4. クリップボードを連携する。
+```bash
+$ cd ~/.local/bin
+$ wget https://github.com/equalsraf/win32yank/releases/download/v0.1.1/win32yank-x64.zip
+$ unzip win32yank-x64.zip
+$ rm win32yank-x64.zip
+```
+
+5. フォントをインストールする。(WSL)
+```bash
+# NerdFonts
+$ git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git ~/.local/src/nerd-fonts
+$ cd ~/.local/src/nerd-fonts
+$ ./install.sh Hack
+
+# HackGen_NF 
+$ cd ~/.local/src
+$ wget https://github.com/yuru7/HackGen/releases/download/v2.9.0/HackGen_NF_v2.9.0.zip
+$ unzip HackGen_NF_v2.9.0.zip
+$ sudo mkdir /usr/share/fonts/truetype/hack_gen_console_nf
+$ sudo mv HackGenConsoleNF-Regular.ttf /usr/share/fonts/truetype/hack_gen_console_nf/
+
+# システムが認識しているフォント一覧を更新。
+$ sudo fc-cache -fv
+```
+
+6. フォントをインストールする。(Windows)
+* [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip)
+* [HackGen](https://github.com/yuru7/HackGen/releases)
+* フォントのインストール後WSLのフォントを変更しておく。
+
+7. tigをインストールする。
+`sudo apt install -y tig`だと日本語が文字化けしてしまうため、ソースコードからインストールする。
+```bash
+$ git clone https://github.com/jonas/tig.git ~/.local/src/tig
+$ cd ~/.local/src/tig 
+$ make configure
+$ ./configure
+$ make
+$ make install
+$ ln -s ${HOME}/.local/src/tig/src/tig ${HOME}/.local/bin/tig
+```
+
+8. neovimをインストールする。
 ```bash
 $ sudo apt install -y ninja-build gettext cmake unzip curl build-essential
 $ git clone https://github.com/neovim/neovim ~/.local/src/neovim
@@ -51,29 +95,15 @@ $ make install
 $ ln -s ${HOME}/.local/build/neovim/bin/nvim ${HOME}/.local/bin/nvim
 ```
 
-5. フォントをインストールする。(WSL)
-```bash
-$ git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git ~/.local/src/nerd-fonts
-$ cd ~/.local/src/nerd-fonts
-$ ./install.sh Hack
-$ sudo fc-cache -f -v
-```
-
-6. フォントをインストールする。(Windows)
-* [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip)
-* WSLのフォントも変更しておく。
-
-7. dotfilesをインストールする。
+9. dotfilesをインストールする。
 ```bash
 $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles/script
 $ ./install.sh
 $ ./git-config.sh
 ```
+設定を有効化するためにログアウト->ログインする。
 
-8. 設定を有効化するためにログアウト->ログインする。
-
-9. クリップボードを連携する。
 
 10. 日本語化
 ```bash
@@ -92,3 +122,4 @@ $ sudo dpkg-reconfigure tzdata
 # 日本語マニュアルのインストール
 $ sudo apt -y install manpages-ja manpages-ja-dev
 ```
+
