@@ -1,0 +1,26 @@
+{
+    "editor.fontFamily": "Hackgen Console NF",
+    "editor.detectIndentation": false,
+    "editor.wrappingIndent": "same",
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "git.openRepositoryInParentFolders": "never",
+    "Lua.addonManager.enable": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColors.visualblock": "",
+    "vim.whichwrap": "h,l,<,>,[,]",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/dotfiles/vscode/.vimrc",
+    "omnisharp.enableRoslynAnalyzers": true,
+    "editor.codeLens": false,
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never",
+    "workbench.editor.empty.hint": "hidden",
+    "svelte.enable-ts-plugin": true,
+    "editor.tabSize": 2,
+    "security.allowedUNCHosts": [
+      "wsl.localhost"
+    ],
+    "editor.fontSize": 16,
+}
