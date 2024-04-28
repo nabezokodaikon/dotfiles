@@ -41,13 +41,8 @@ $ which zsh
 $ chsh -s /usr/bin/zsh
 ```
 
-4. クリップボードを連携する。
-```bash
-$ cd ~/.local/bin
-$ wget https://github.com/equalsraf/win32yank/releases/download/v0.1.1/win32yank-x64.zip
-$ unzip win32yank-x64.zip
-$ rm win32yank-x64.zip
-```
+4. クリップボードの設定をする。
+Windows Terminalで、`Ctrl-v`によるペーストショートカットを削除する。
 
 5. フォントをインストールする。(WSL)
 ```bash
