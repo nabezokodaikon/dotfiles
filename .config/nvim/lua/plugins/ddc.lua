@@ -1,7 +1,7 @@
 vim.call('ddc#custom#patch_global', 'ui', 'native')
 
 vim.call('ddc#custom#patch_global',
-  'sources', {'nvim-lsp', 'file', 'around'})
+  'sources', {'lsp', 'file', 'around'})
 
 vim.call('ddc#custom#patch_global',
   'sourceOptions', {_ = {matchers = {'matcher_head'}}})
@@ -14,7 +14,7 @@ vim.call('ddc#custom#patch_global',
   'sourceOptions', {['around'] = {mark = '[Buf]'}})
 
 vim.call('ddc#custom#patch_global',
-  'sourceOptions', {['nvim-lsp'] = {mark = '[LSP]'}})
+  'sourceOptions', {['lsp'] = {mark = '[LSP]'}})
 
 vim.call('ddc#custom#patch_global',
   'sourceOptions', {['file'] = {mark = '[File]'}})
@@ -24,9 +24,9 @@ vim.call('ddc#custom#patch_global',
   'sourceOptions', {['file'] = {forceCompletionPattern = [[\S/\S*]]}})
 
 vim.call('ddc#custom#patch_filetype', 'rust',
-  'sourceOptions', {['nvim-lsp'] = {forceCompletionPattern = [[\.\w*|::\w*]]}})
+  'sourceOptions', {['lsp'] = {forceCompletionPattern = [[\.\w*|::\w*]]}})
 vim.call('ddc#custom#patch_filetype', 'typescript',
-  'sourceOptions', {['nvim-lsp'] = {forceCompletionPattern = [[\.\w*]]}})
+  'sourceOptions', {['lsp'] = {forceCompletionPattern = [[\.\w*]]}})
 
 
 vim.call('ddc#enable')
