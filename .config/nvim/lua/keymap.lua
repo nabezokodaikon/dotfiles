@@ -40,6 +40,9 @@ vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
 vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
 vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
 
+-- skkeleton
+vim.keymap.set('i', '<C-j>', '<Plug>(skkeleton-toggle)', opt)
+
 -- Plugins
 vim.keymap.set('n', 'F', '<cmd>HopChar1<CR>', opt)
 vim.keymap.set('n', 'co', '<Plug>(comment_toggle_linewise_current)')

@@ -83,11 +83,18 @@ require("lazy").setup({
   },
   {
     "hrsh7th/nvim-cmp",
-    config = function() require("plugins.nvim-cmp") end,
+    config = function()
+      require("plugins.nvim-cmp")
+      require("plugins.skkeleton")
+    end,
     dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp",
+      "rinx/cmp-skkeleton",
+      "vim-skk/skkeleton",
+      "vim-denops/denops.vim",
+      "delphinus/skkeleton_indicator.nvim",
     },
     event = "InsertEnter",
   },
