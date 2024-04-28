@@ -80,7 +80,14 @@ $ make install
 $ ln -s ${HOME}/.local/src/tig/src/tig ${HOME}/.local/bin/tig
 ```
 
-8. neovimをインストールする。
+8. SKK辞書をインストールする。
+```bash
+$ cd ~/.local/src/skk
+$ wget http://openlab.jp/skk/dic/SKK-JISYO.L.gz
+$ gzip -d SKK-JISYO.L.gz
+```
+
+9. neovimをインストールする。
 ```bash
 $ sudo apt install -y ninja-build gettext cmake unzip curl build-essential
 $ git clone https://github.com/neovim/neovim ~/.local/src/neovim
@@ -90,7 +97,7 @@ $ make install
 $ ln -s ${HOME}/.local/build/neovim/bin/nvim ${HOME}/.local/bin/nvim
 ```
 
-9. dotfilesをインストールする。
+10. dotfilesをインストールする。
 ```bash
 $ git clone https://github.com/nabezokodaikon/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles/script
@@ -100,7 +107,7 @@ $ ./git-config.sh
 設定を有効化するためにログアウト->ログインする。
 
 
-10. 日本語化
+11. 日本語化
 ```bash
 # 日本語言語パックのインストール
 $ sudo apt -y install language-pack-ja
