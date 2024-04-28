@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Consolas, Myrica M",
+    "editor.fontFamily": "Hackgen Console NF",
     "editor.detectIndentation": false,
     "editor.wrappingIndent": "same",
     "editor.minimap.enabled": false,
@@ -19,5 +19,8 @@
     "workbench.editor.empty.hint": "hidden",
     "svelte.enable-ts-plugin": true,
     "editor.tabSize": 2,
+    "security.allowedUNCHosts": [
+      "wsl.localhost"
+    ],
     "editor.fontSize": 16,
 }
