@@ -13,7 +13,9 @@ end
 init_plugin('Shougo/dpp.vim')
 init_plugin('Shougo/dpp-ext-lazy')
 
-if vim.call('dpp#min#load_state', dpp_base) then
+local dpp = require('dpp')
+
+if dpp.load_state(dpp_base) then
 
   local plugins = {
     'Shougo/dpp-ext-installer',
