@@ -42,6 +42,7 @@ $ chsh -s /usr/bin/zsh
 ```
 
 4. クリップボードの設定をする。
+
 Windows Terminalで、`Ctrl-v`によるペーストショートカットを削除する。
 
 5. フォントをインストールする。(WSL)
