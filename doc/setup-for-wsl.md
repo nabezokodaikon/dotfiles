@@ -74,9 +74,8 @@ $ sudo fc-cache -fv
 $ git clone https://github.com/jonas/tig.git ~/.local/src/tig
 $ cd ~/.local/src/tig 
 $ make configure
-$ ./configure
+$ ./configure --without-ncurses
 $ make
-$ make install
 $ ln -s ${HOME}/.local/src/tig/src/tig ${HOME}/.local/bin/tig
 ```
 
