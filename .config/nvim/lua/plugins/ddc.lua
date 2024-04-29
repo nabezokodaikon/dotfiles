@@ -1,7 +1,7 @@
 vim.call('ddc#custom#patch_global', 'ui', 'native')
 
 vim.call('ddc#custom#patch_global',
-  'sources', {'lsp', 'file', 'around'})
+  'sources', {'around', 'file', 'lsp', 'skkeleton'})
 
 vim.call('ddc#custom#patch_global',
   'sourceOptions', {_ = {matchers = {'matcher_head'}}})
@@ -23,10 +23,16 @@ vim.call('ddc#custom#patch_global',
 vim.call('ddc#custom#patch_global',
   'sourceOptions', {['file'] = {forceCompletionPattern = [[\S/\S*]]}})
 
-vim.call('ddc#custom#patch_filetype', 'rust',
-  'sourceOptions', {['lsp'] = {forceCompletionPattern = [[\.\w*|::\w*]]}})
-vim.call('ddc#custom#patch_filetype', 'typescript',
-  'sourceOptions', {['lsp'] = {forceCompletionPattern = [[\.\w*]]}})
-
+vim.call('ddc#custom#patch_global',
+  'sourceOptions', {['skkeleton'] = {mark = '[SKK]'}})
+vim.call('ddc#custom#patch_global',
+  'sourceOptions', {['skkeleton'] = {matchers = {}}})
+vim.call('ddc#custom#patch_global',
+  'sourceOptions', {['skkeleton'] = {sorters = {}}})
+vim.call('ddc#custom#patch_global',
+  'sourceOptions', {['skkeleton'] = {converters = {}}})
+vim.call('ddc#custom#patch_global',
+  'sourceOptions', {['skkeleton'] = {isVolatile = {true}}})
 
 vim.call('ddc#enable')
+

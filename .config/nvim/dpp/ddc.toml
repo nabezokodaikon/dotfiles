@@ -31,3 +31,12 @@ on_source = 'ddc-source-lsp'
 [[plugins]]
 repo = 'LumaKernel/ddc-file'
 on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'vim-skk/skkeleton'
+on_source = 'ddc.vim'
+hook_source = "lua require('plugins.skkeleton')"
+
+[[plugins]]
+repo = 'delphinus/skkeleton_indicator.nvim'
+on_source = ['ddc.vim', 'skkeleton']

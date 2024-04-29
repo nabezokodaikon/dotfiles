@@ -37,6 +37,9 @@ vim.api.nvim_set_keymap('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>
 vim.api.nvim_set_keymap('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
 vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
 
+-- skkeleton
+vim.keymap.set('i', '<C-j>', '<Plug>(skkeleton-toggle)', opt)
+
 -- Plugins
 vim.keymap.set('n', 'F', '<cmd>HopChar2<CR>', opt)
 vim.keymap.set({ 'n', 'v' }, 'co', '<Plug>NERDCommenterToggle', opt) 
