@@ -13,6 +13,18 @@ $ ./install.sh
 $ ./git-config.sh
 ```
 
+## SKK
+### データベース
+```
+~/.cache/skkeleton.db
+```
+### 辞書
+```
+~/.local/src/skk/SKK-JISYO.L
+```
+
+
+
 ## Windows
 ### Terminal
 [wsl-terminal](https://goreliu.github.io/wsl-terminal/)
