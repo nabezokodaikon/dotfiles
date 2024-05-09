@@ -123,22 +123,25 @@ vim.fn['ddu#custom#patch_global'] {
       filterFloatingPosition = 'top',
       prompt = '>',
       split ='floating',
+      floatingBorder = "rounded",
       winCol = ff_win_col,
-      winRow = 1,
+      winRow = 3,
       winWidth = ff_win_width
     }
   }
 }
 
 local filer_win_width = math.floor(vim.o.columns * 0.25)
+local filer_win_height = math.floor(vim.o.lines * 0.9)
 vim.fn['ddu#custom#patch_global'] {
   uiParams = {
     filer = {
       split ='floating',
+      floatingBorder = "rounded",
       winCol = 1,
       winRow = 1,
       winWidth = filer_win_width,
-      winHeight = vim.o.lines,
+      winHeight = filer_win_height,
     }
   },
 }
