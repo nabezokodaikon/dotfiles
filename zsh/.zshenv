@@ -13,3 +13,4 @@ case "$OSTYPE" in
         source $HOME/dotfiles/zsh/common.zshenv.sh
         ;;
 esac
+. "$HOME/.cargo/env"
