@@ -1,45 +1,73 @@
-vim.call('ddu#custom#patch_global',
-  'filterParams', {matcher_fzf = {highlightMatched = 'Search'}})
+vim.fn['ddu#custom#patch_global'] {
+  filterParams = {
+    matcher_fzf = {
+      highlightMatched = 'Search'
+    }
+  }
+}
 
-vim.call('ddu#custom#patch_local', 'files',
-  'ui', 'ff')
-vim.call('ddu#custom#patch_local', 'files',
-  'kindOptions', {file = {defaultAction = {'open'}}})
-vim.call('ddu#custom#patch_local', 'files',
-  'sources', {{name = {'file_external'}}})
-vim.call('ddu#custom#patch_local', 'files',
-  'sourceOptions', {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}})
-vim.call('ddu#custom#patch_local', 'files',
-  'sourceParams', {file_external = {
-    cmd = {
-      'fd',
-      '--type',
-      'file',
-      '--hidden',
-      '--exclude',
-      '.git',
-    }}})
+vim.fn['ddu#custom#patch_local']('files', {
+  ui = 'ff',
+  kindOptions = {file = {defaultAction = {'open'}}},
+  sources = {
+    {name = {'file_external'}}
+  },
+  sourceOptions = {
+    _ = {
+      matchers = {'matcher_fzf'},
+      sorters = {'sorter_fzf'},
+    }
+  },
+  sourceParams = {
+    file_external = {
+      cmd = {
+        'fd',
+        '--type',
+        'file',
+        '--hidden',
+        '--exclude',
+        '.git',
+      }
+    }
+  }
+})
 
-vim.call('ddu#custom#patch_local', 'history-files',
-  'ui', 'ff')
-vim.call('ddu#custom#patch_local', 'history-files',
-  'kindOptions', {file = {defaultAction = {'open'}}})
-vim.call('ddu#custom#patch_local', 'history-files',
-  'sources', {{name = {'file_old'}}})
-vim.call('ddu#custom#patch_local', 'history-files',
-  'sourceOptions', {_ = {matchers = {'matcher_relative', 'matcher_fzf'}, sorters = {'sorter_fzf'}}})
+vim.fn['ddu#custom#patch_local']('history-files', {
+  ui = 'ff',
+  kindOptions = {file = {defaultAction = {'open'}}},
+  sources = {
+    {
+      name = {'file_old'}
+    }
+  },
+  sourceOptions = {
+    _ = {
+      matchers = {'matcher_fzf'},
+      sorters = {'sorter_fzf'},
+    }
+  },
+})
 
-vim.call('ddu#custom#patch_local', 'buffers',
-  'ui', 'ff')
-vim.call('ddu#custom#patch_local', 'buffers',
-  'kindOptions', {file = {defaultAction = {'open'}}})
-vim.call('ddu#custom#patch_local', 'buffers',
-  'sources', {{name = {'buffer'}, params = {current = true}}})
-vim.call('ddu#custom#patch_local', 'buffers',
-  'sourceOptions', {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}})
+
+vim.fn['ddu#custom#patch_local']('buffers', {
+  ui = 'ff',
+  kindOptions = {file = {defaultAction = {'open'}}},
+  sources = {
+    {
+      name = {'buffer'},
+      params = {current = true}
+    },
+  },
+  sourceOptions = {
+    _ = {
+      matchers = {'matcher_fzf'},
+      sorters = {'sorter_fzf'},
+    }
+  },
+})
 
 vim.api.nvim_create_user_command('DduRgInput', function()
-  vim.call('ddu#start', {
+  vim.fn['ddu#start'] {
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
     sources = {{name = 'rg', params = {input = vim.fn.input('search word: ')}}},
@@ -54,11 +82,11 @@ vim.api.nvim_create_user_command('DduRgInput', function()
         '--glob',
         "!.git/*",
       }}}
-  })
+  }
 end, {nargs = 0})
 
 vim.api.nvim_create_user_command('DduRgWord', function()
-  vim.call('ddu#start', {
+  vim.fn['ddu#start'] {
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
     sources = {{name = 'rg', params = {input = vim.fn.expand('<cword>')}}},
@@ -73,41 +101,47 @@ vim.api.nvim_create_user_command('DduRgWord', function()
         '--glob',
         "!.git/*",
       }}}
-  })
+  }
 end, {nargs = 0})
 
 vim.api.nvim_create_user_command('DduFiler', function()
-  vim.call('ddu#start', {
+  vim.fn['ddu#start'] {
     ui = 'filer',
     resume = true,
     sync = true,
     sources = {{name = 'file'}},
     sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd(), sorters = {'sorter_alpha'}}},
-  })
+  }
 end, {nargs = 0})
 
 local ff_win_width = math.floor(vim.o.columns * 0.8)
 local ff_win_col = math.floor((vim.o.columns - ff_win_width) / 2)
-vim.call('ddu#custom#patch_global',
-  'uiParams', {ff = {
-    startFilter = false,
-    filterFloatingPosition = 'top',
-    prompt = '>',
-    split ='floating',
-    winCol = ff_win_col,
-    winRow = 1,
-    winWidth = ff_win_width
-  }})
+vim.fn['ddu#custom#patch_global'] {
+  uiParams = {
+    ff = {
+      startFilter = false,
+      filterFloatingPosition = 'top',
+      prompt = '>',
+      split ='floating',
+      winCol = ff_win_col,
+      winRow = 1,
+      winWidth = ff_win_width
+    }
+  }
+}
 
 local filer_win_width = math.floor(vim.o.columns * 0.25)
-vim.call('ddu#custom#patch_global',
-  'uiParams', {filer = {
-    split ='floating',
-    winCol = 1,
-    winRow = 1,
-    winWidth = filer_win_width,
-    winHeight = vim.o.lines,
-  }})
+vim.fn['ddu#custom#patch_global'] {
+  uiParams = {
+    filer = {
+      split ='floating',
+      winCol = 1,
+      winRow = 1,
+      winWidth = filer_win_width,
+      winHeight = vim.o.lines,
+    }
+  },
+}
 
 function ddu_my_settings()
   local opt = { noremap = true, buffer = true, silent = true }
@@ -137,17 +171,17 @@ function ddu_filer_my_settings()
   vim.keymap.set('n', 'o', openFunc, openOpt)
 
   local opt = { noremap = true, buffer = true }
-  vim.keymap.set('n', 'q', [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
+  vim.keymap.set('n', 'q',     [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
   vim.keymap.set('n', '<C-l>', [[<Cmd>call ddu#ui#do_action('checkItems')<CR>]], opt)
-  vim.keymap.set('n', 'l', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow'})<CR>]], opt)
-  vim.keymap.set('n', 'h', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow', 'params': {'path': '..'}})<CR>]], opt)
-  vim.keymap.set('n', 'c', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'copy'})<CR>]], opt)
-  vim.keymap.set('n', 'm', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'move'})<CR>]], opt)
-  vim.keymap.set('n', 'p', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'paste'})<CR>]], opt)
-  vim.keymap.set('n', 'r', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'rename'})<CR>]], opt)
-  vim.keymap.set('n', 'N', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'newFile'})<CR>]], opt)
-  vim.keymap.set('n', 'D', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'delete'})<CR>]], opt)
-  vim.keymap.set('n', 'y', [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'yank'})<CR>]], opt)
+  vim.keymap.set('n', 'l',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow'})<CR>]], opt)
+  vim.keymap.set('n', 'h',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow', 'params': {'path': '..'}})<CR>]], opt)
+  vim.keymap.set('n', 'c',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'copy'})<CR>]], opt)
+  vim.keymap.set('n', 'm',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'move'})<CR>]], opt)
+  vim.keymap.set('n', 'p',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'paste'})<CR>]], opt)
+  vim.keymap.set('n', 'r',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'rename'})<CR>]], opt)
+  vim.keymap.set('n', 'N',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'newFile'})<CR>]], opt)
+  vim.keymap.set('n', 'D',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'delete'})<CR>]], opt)
+  vim.keymap.set('n', 'y',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'yank'})<CR>]], opt)
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
