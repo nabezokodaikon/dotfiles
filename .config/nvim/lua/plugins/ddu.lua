@@ -146,16 +146,16 @@ vim.fn['ddu#custom#patch_global'] {
 function ddu_my_settings()
   local opt = { noremap = true, buffer = true, silent = true }
   vim.keymap.set('n', '<CR>', [[<Cmd>call ddu#ui#do_action('itemAction')<CR>]], opt)
-  vim.keymap.set('n', 'i', [[<Cmd>call ddu#ui#do_action('openFilterWindow')<CR>]], opt)
-  vim.keymap.set('n', 'q', [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
+  vim.keymap.set('n', 'i',    [[<Cmd>call ddu#ui#do_action('openFilterWindow')<CR>]], opt)
+  vim.keymap.set('n', 'q',    [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
 end
 
 function ddu_filter_my_settings()
   local opt = { noremap = true, buffer = true, silent = true }
-  vim.keymap.set('i', '<CR>', [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
+  vim.keymap.set('i', '<CR>',  [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
   vim.keymap.set('i', '<ESC>', [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
-  vim.keymap.set('i', 'jj', [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
-  vim.keymap.set('n', '<CR>', [[<Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
+  vim.keymap.set('i', 'jj',    [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
+  vim.keymap.set('n', '<CR>',  [[<Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
 end
 
 function ddu_filer_my_settings()
