@@ -5,7 +5,12 @@ hook_source = "lua require('plugins.ddc')"
 on_event = 'InsertEnter'
 
 [[plugins]]
-repo = 'Shougo/ddc-ui-native'
+repo = 'Shougo/pum.vim'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-ui-pum'
+denops = 'pum.vim'
 on_source = 'ddc.vim'
 
 [[plugins]]
