@@ -39,8 +39,6 @@ vim.fn['ddc#custom#patch_global'] {
 }
 
 local opt = { noremap = true, silent = true }
-vim.keymap.set('i', '<C-n>',   function() vim.fn['pum#map#select_relative'](1) end, opt)
-vim.keymap.set('i', '<C-p>',   function() vim.fn['pum#map#select_relative'](-1) end, opt)
 vim.keymap.set('i', '<C-y>',   function() vim.fn['pum#map#confirm']() end  , opt)
 vim.keymap.set('i', '<C-e>',   function() vim.fn['pum#map#cancel']() end  , opt)
 vim.keymap.set('i', '<TAB>',   function() tab_complete() end, opt)
