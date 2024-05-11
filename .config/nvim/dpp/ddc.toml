@@ -46,11 +46,3 @@ hook_source = "lua require('plugins.skkeleton')"
 repo = 'delphinus/skkeleton_indicator.nvim'
 on_source = ['ddc.vim', 'skkeleton']
 
-[[plugins]]
-repo = 'Shougo/ddc-source-cmdline'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-source-cmdline-history'
-on_source = 'ddc.vim'
-
