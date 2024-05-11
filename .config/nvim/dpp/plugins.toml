@@ -2,11 +2,6 @@
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-# Comment out
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
-hook_add = "lua require('plugins.nerdcommenter')"
-
 # Color scheme
 [[plugins]]
 repo = 'ellisonleao/gruvbox.nvim'
