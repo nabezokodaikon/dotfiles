@@ -1,6 +1,15 @@
 vim.fn['ddu#custom#patch_global'] {
+  sourceOptions = {
+    _ = {
+      sorters = {'sorter_alpha'},
+      matchers = {
+        'matcher_relative',
+        'matcher_substring'
+      },
+    },
+  },
   filterParams = {
-    matcher_fzf = {
+    matcher_substring = {
       highlightMatched = 'Search'
     }
   }
@@ -11,12 +20,6 @@ vim.fn['ddu#custom#patch_local']('files', {
   kindOptions = {file = {defaultAction = {'open'}}},
   sources = {
     {name = {'file_external'}}
-  },
-  sourceOptions = {
-    _ = {
-      matchers = {'matcher_fzf'},
-      sorters = {'sorter_fzf'},
-    }
   },
   sourceParams = {
     file_external = {
@@ -40,12 +43,6 @@ vim.fn['ddu#custom#patch_local']('history-files', {
       name = {'file_old'}
     }
   },
-  sourceOptions = {
-    _ = {
-      matchers = {'matcher_fzf'},
-      sorters = {'sorter_fzf'},
-    }
-  },
 })
 
 
@@ -58,12 +55,6 @@ vim.fn['ddu#custom#patch_local']('buffers', {
       params = {current = true}
     },
   },
-  sourceOptions = {
-    _ = {
-      matchers = {'matcher_fzf'},
-      sorters = {'sorter_fzf'},
-    }
-  },
 })
 
 vim.api.nvim_create_user_command('DduRgInput', function()
@@ -71,7 +62,6 @@ vim.api.nvim_create_user_command('DduRgInput', function()
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
     sources = {{name = 'rg', params = {input = vim.fn.input('search word: ')}}},
-    sourceOptions = {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}},
     sourceParams = {rg = {
       args = {
         '--column',
@@ -90,7 +80,6 @@ vim.api.nvim_create_user_command('DduRgWord', function()
     ui = 'ff',
     kindOptions = {file = {defaultAction = {'open'}}},
     sources = {{name = 'rg', params = {input = vim.fn.expand('<cword>')}}},
-    sourceOptions = {_ = {matchers = {'matcher_fzf'}, sorters = {'sorter_fzf'}}},
     sourceParams = {rg = {
       args = {
         '--column',
@@ -110,7 +99,7 @@ vim.api.nvim_create_user_command('DduFiler', function()
     resume = true,
     sync = true,
     sources = {{name = 'file'}},
-    sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd(), sorters = {'sorter_alpha'}}},
+    sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd()}},
   }
 end, {nargs = 0})
 

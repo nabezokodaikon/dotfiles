@@ -18,11 +18,15 @@ repo = 'Shougo/ddu-ui-filer'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = 'yuki-yano/ddu-filter-fzf'
+repo = 'Shougo/ddu-filter-matcher_substring'
 on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-filter-matcher_relative'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-sorter_alpha'
 on_source = 'ddu.vim'
 
 [[plugins]]
@@ -51,9 +55,5 @@ on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-column-filename'
-on_source = 'ddu.vim'
-
-[[plugins]]
-repo = 'Shougo/ddu-filter-sorter_alpha'
 on_source = 'ddu.vim'
 
