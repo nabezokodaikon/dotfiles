@@ -3,13 +3,13 @@ vim.fn['ddu#custom#patch_global'] {
     _ = {
       matchers = {
         'matcher_relative',
-        'matcher_substring'
+        'matcher_matchfuzzy',
       },
     },
   },
   filterParams = {
-    matcher_substring = {
-      highlightMatched = 'Search'
+    matcher_matchfuzzy = {
+      highlightMatched = 'Search',
     }
   }
 }
