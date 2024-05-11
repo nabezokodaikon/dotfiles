@@ -51,3 +51,4 @@ vim.keymap.set('n', '<Leader>b', '<cmd>Ddu -name=buffers<CR>', opt)
 vim.keymap.set('n', '<Leader>gg', '<cmd>DduRgInput<CR>', opt)
 vim.keymap.set('n', '<Leader>gw', '<cmd>DduRgWord<CR>', opt)
 vim.keymap.set('n', '<Leader>e', '<cmd>DduFiler<CR>', opt)
+
