@@ -1,7 +1,6 @@
 vim.fn['ddu#custom#patch_global'] {
   sourceOptions = {
     _ = {
-      sorters = {'sorter_alpha'},
       matchers = {
         'matcher_relative',
         'matcher_substring'
@@ -69,6 +68,8 @@ vim.api.nvim_create_user_command('DduRgInput', function()
         '--no-heading',
         '--color',
         'never',
+        '--sort',
+        'path',
         '--glob',
         "!.git/*",
       }}}
@@ -87,6 +88,8 @@ vim.api.nvim_create_user_command('DduRgWord', function()
         '--no-heading',
         '--color',
         'never',
+        '--sort',
+        'path',
         '--glob',
         "!.git/*",
       }}}
@@ -99,7 +102,13 @@ vim.api.nvim_create_user_command('DduFiler', function()
     resume = true,
     sync = true,
     sources = {{name = 'file'}},
-    sourceOptions = {file = {columns = {'filename'}, path = vim.fn.getcwd()}},
+    sourceOptions = {
+      file = {
+        columns = { 'filename' },
+        path = vim.fn.getcwd(),
+        sorters = { 'sorter_alpha' },
+      },
+    },
   }
 end, {nargs = 0})
 
