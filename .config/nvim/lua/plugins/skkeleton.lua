@@ -1,5 +1,3 @@
-require('skkeleton_indicator').setup {}
-
 vim.fn['skkeleton#config'] {
   databasePath = 
     '~/.cache/skk/skkeleton.db'
@@ -12,4 +10,13 @@ vim.fn['skkeleton#config'] {
 vim.fn['skkeleton#register_kanatable']('rom', {
     ['jj'] = 'escape',
 })
+
+require('skkeleton_indicator').setup {
+  eijiHlName = "LineNr",
+  hiraHlName = "String",
+  kataHlName = "Todo",
+  hankataHlName = "Special",
+  zenkakuHlName = "LineNr",
+  abbrevHlName = "Error",
+}
 
