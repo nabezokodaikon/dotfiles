@@ -26,6 +26,7 @@ vim.fn['ddc#custom#patch_global'] {
       mark = '[File]',
       isVolatile = true,
       forceCompletionPattern = [[\S/\S*]],
+      minAutoCompleteLength = 1,
     },
     ['skkeleton'] = {
       mark = '[SKK]',
