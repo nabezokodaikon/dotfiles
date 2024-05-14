@@ -88,6 +88,19 @@ export class Config extends BaseConfig {
       },
     ) as Plugin[] | undefined;
 
+    if (localPlugins) {
+      for (const plugin of localPlugins) {
+        if (plugin.name in recordPlugins) {
+          recordPlugins[plugin.name] = Object.assign(
+            recordPlugins[plugin.name],
+            plugin,
+          );
+        } else {
+          recordPlugins[plugin.name] = plugin;
+        }
+      }
+    }
+
     const lazyResult = await args.dpp.extAction(
       args.denops,
       context,
