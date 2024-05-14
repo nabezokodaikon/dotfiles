@@ -174,8 +174,6 @@ function ddu_filer_my_settings()
   local opt = { noremap = true, buffer = true }
   vim.keymap.set('n', 'q',     [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
   vim.keymap.set('n', '<C-l>', [[<Cmd>call ddu#ui#do_action('redraw')<CR>]], opt)
-  vim.keymap.set('n', 'l',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow'})<CR>]], opt)
-  vim.keymap.set('n', 'h',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow', 'params': {'path': '..'}})<CR>]], opt)
   vim.keymap.set('n', 'c',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'copy'})<CR>]], opt)
   vim.keymap.set('n', 'm',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'move'})<CR>]], opt)
   vim.keymap.set('n', 'p',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'paste'})<CR>]], opt)
