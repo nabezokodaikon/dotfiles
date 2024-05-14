@@ -104,7 +104,7 @@ vim.api.nvim_create_user_command('DduFiler', function()
     sources = {{name = 'file'}},
     sourceOptions = {
       file = {
-        columns = { 'filename' },
+        columns = { 'filename', 'gitstatus' },
         path = vim.fn.getcwd(),
         sorters = { 'sorter_alpha' },
       },

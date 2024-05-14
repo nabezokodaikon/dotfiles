@@ -57,3 +57,7 @@ on_source = 'ddu.vim'
 repo = 'Shougo/ddu-column-filename'
 on_source = 'ddu.vim'
 
+[[plugins]]
+repo = 'nabezokodaikon/ddu-column-gitstatus'
+on_source = 'ddu.vim'
+
