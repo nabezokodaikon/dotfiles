@@ -73,6 +73,21 @@ export class Config extends BaseConfig {
       }
     });
 
+    const localPlugins = await args.dpp.extAction(
+      args.denops,
+      context,
+      options,
+      "local",
+      "local",
+      {
+        directory: "~/ws",
+        options: {
+          frozen: true,
+          merged: false,
+        },
+      },
+    ) as Plugin[] | undefined;
+
     const lazyResult = await args.dpp.extAction(
       args.denops,
       context,
@@ -82,7 +97,7 @@ export class Config extends BaseConfig {
       {
         plugins: Object.values(recordPlugins),
       },
-    ) as LazyMakeStateResult;
+    ) as LazyMakeStateResult | undefined;
 
     return {
       plugins: lazyResult.plugins,
