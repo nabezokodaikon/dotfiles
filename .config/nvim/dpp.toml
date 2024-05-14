@@ -1,9 +1,15 @@
 [[plugins]]
-repo = 'ellisonleao/gruvbox.nvim'
-hook_add = '''
-lua << EOF
-vim.o.background = 'dark'
-vim.cmd('colorscheme gruvbox')
-EOF
-'''
+repo = 'Shougo/ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-ui-filer'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file'
+
+[[plugins]]
+repo = 'Shougo/ddu-column-filename'
+
+[[plugins]]
+repo = 'Shougo/ddu-kind-file'
 
