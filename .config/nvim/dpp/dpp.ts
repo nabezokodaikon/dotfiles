@@ -73,34 +73,6 @@ export class Config extends BaseConfig {
       }
     });
 
-    const localPlugins = await args.dpp.extAction(
-      args.denops,
-      context,
-      options,
-      "local",
-      "local",
-      {
-        directory: "~/ws",
-        options: {
-          frozen: true,
-          merged: false,
-        },
-      },
-    ) as Plugin[] | undefined;
-
-    if (localPlugins) {
-      for (const plugin of localPlugins) {
-        if (plugin.name in recordPlugins) {
-          recordPlugins[plugin.name] = Object.assign(
-            recordPlugins[plugin.name],
-            plugin,
-          );
-        } else {
-          recordPlugins[plugin.name] = plugin;
-        }
-      }
-    }
-
     const lazyResult = await args.dpp.extAction(
       args.denops,
       context,
