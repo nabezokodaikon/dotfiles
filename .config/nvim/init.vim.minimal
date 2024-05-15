@@ -1,0 +1,32 @@
+set rtp+=~/.cache/dpp/repos/github.com/vim-denops/denops.vim
+set rtp+=~/.cache/dpp/repos/github.com/Shougo/ddu.vim
+set rtp+=~/.cache/dpp/repos/github.com/Shougo/ddu-ui-filer
+set rtp+=~/.cache/dpp/repos/github.com/Shougo/ddu-source-file
+set rtp+=~/.cache/dpp/repos/github.com/Shougo/ddu-column-filename
+set rtp+=~/.cache/dpp/repos/github.com/Shougo/ddu-kind-file
+
+autocmd FileType ddu-filer call s:ddu_filer_my_settings()
+function s:ddu_filer_my_settings() abort
+  nnoremap <buffer> o
+  \ <Cmd>call ddu#ui#do_action('expandItem', {'mode': 'toggle'})<CR>
+  nnoremap <buffer> N
+  \ <Cmd>call ddu#ui#do_action('itemAction', {'name': 'newFile'})<CR>
+  nnoremap <buffer> <C-l>
+  \ <Cmd>call ddu#ui#do_action('redraw')<CR>
+endfunction
+
+call ddu#start(#{
+      \   ui: 'filer',
+      \   resume: v:true,
+      \   sync: v:true,
+      \   sources: [
+      \     #{name: 'file'},
+      \   ],
+      \   sourceOptions: #{
+      \     file: #{
+      \       columns: ['filename'],
+      \       path: getcwd()
+      \     }
+      \   }
+      \ })
+
