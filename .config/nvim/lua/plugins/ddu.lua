@@ -21,20 +21,8 @@ vim.fn['ddu#custom#patch_local']('files', {
   ui = 'ff',
   kindOptions = {file = {defaultAction = {'open'}}},
   sources = {
-    {name = {'file_external'}}
+    {name = {'file_rec'}}
   },
-  sourceParams = {
-    file_external = {
-      cmd = {
-        'fd',
-        '--type',
-        'file',
-        '--hidden',
-        '--exclude',
-        '.git',
-      }
-    }
-  }
 })
 
 vim.fn['ddu#custom#patch_local']('git_status', {
