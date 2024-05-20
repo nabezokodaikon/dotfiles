@@ -39,20 +39,13 @@ vim.fn['ddu#custom#patch_local']('files', {
 
 vim.fn['ddu#custom#patch_local']('git_status', {
   ui = 'ff',
+  kindOptions = {file = {defaultAction = {'open'}}},
   sources = {
-    {
-      name = {'git_status'}, 
-    },
-  },
-  sourceOptions = {
-    git_status = {
-      matchers = { 'matcher_matchfuzzy' },
-      defaultAction = { 'open' },
-    },
+    {name = {'git_status'}}
   },
 })
 
-vim.fn['ddu#custom#patch_local']('history-files', {
+vim.fn['ddu#custom#patch_local']('file_old', {
   ui = 'ff',
   kindOptions = {file = {defaultAction = {'open'}}},
   sources = {
@@ -61,7 +54,6 @@ vim.fn['ddu#custom#patch_local']('history-files', {
     }
   },
 })
-
 
 vim.fn['ddu#custom#patch_local']('buffers', {
   ui = 'ff',
