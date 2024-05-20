@@ -32,16 +32,6 @@ vim.keymap.set('n', '<C-w>N', '<cmd>new<CR>', opt)
 vim.keymap.set('n', 'gn', ':tabnew<CR>', opt)
 vim.keymap.set('n', 'gc', ':tabclose<CR>', opt)
 
--- Comment
--- When normal mode: 'gcc'
--- When visual mode: 'gc'
-vim.api.nvim_create_autocmd({ 'FileType' }, {
-  callback = function(event)
-    local cs = vim.bo[event.buf].commentstring
-    vim.bo[event.buf].commentstring = cs:gsub('(%S)%%s', '%1 %%s'):gsub('%%s(%S)', '%%s %1')
-  end,
-})
-
 -- LSP
 vim.api.nvim_set_keymap('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
 vim.api.nvim_set_keymap('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
