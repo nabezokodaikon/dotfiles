@@ -46,7 +46,7 @@ repo = 'Shougo/ddu-source-file'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = 'Shougo/ddu-source-file_rec'
+repo = 'matsui54/ddu-source-file_external'
 on_source = 'ddu.vim'
 
 [[plugins]]
