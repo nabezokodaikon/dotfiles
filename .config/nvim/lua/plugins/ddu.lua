@@ -17,7 +17,7 @@ vim.fn['ddu#custom#patch_global'] {
   }
 }
 
-vim.fn['ddu#custom#patch_local']('file_rec', {
+vim.fn['ddu#custom#patch_local']('files', {
   ui = 'ff',
   kindOptions = {file = {defaultAction = {'open'}}},
   sources = {
