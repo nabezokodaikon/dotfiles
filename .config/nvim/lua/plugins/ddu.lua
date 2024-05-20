@@ -1,6 +1,9 @@
 vim.fn['ddu#custom#patch_global'] {
   sourceOptions = {
     _ = {
+      converters = {
+        'converter_hl_dir',
+      },
       matchers = {
         'matcher_relative',
         'matcher_matchfuzzy',
@@ -32,6 +35,21 @@ vim.fn['ddu#custom#patch_local']('files', {
       }
     }
   }
+})
+
+vim.fn['ddu#custom#patch_local']('git_status', {
+  ui = 'ff',
+  sources = {
+    {
+      name = {'git_status'}, 
+    },
+  },
+  sourceOptions = {
+    git_status = {
+      matchers = { 'matcher_matchfuzzy' },
+      defaultAction = { 'open' },
+    },
+  },
 })
 
 vim.fn['ddu#custom#patch_local']('history-files', {
