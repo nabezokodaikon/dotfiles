@@ -34,7 +34,7 @@ repo = 'Shougo/ddu-filter-sorter_alpha'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = '~/ws/ddu-filter-converter_git_status'
+repo = 'nabezokodaikon/ddu-filter-converter_git_status'
 on_source = 'ddu.vim'
 
 [[plugins]]
@@ -62,14 +62,10 @@ repo = 'Shougo/ddu-source-file_old'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = '~/ws/ddu-source-git_status'
+repo = 'nabezokodaikon/ddu-source-git_status'
 on_source = 'ddu.vim'
 
 [[plugins]]
 repo = 'Shougo/ddu-column-filename'
-on_source = 'ddu.vim'
-
-[[plugins]]
-repo = 'nabezokodaikon/ddu-column-git_status'
 on_source = 'ddu.vim'
 
