@@ -58,7 +58,7 @@ repo = 'Shougo/ddu-source-file_old'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = 'kuuote/ddu-source-git_status'
+repo = '~/ws/ddu-source-git_status'
 on_source = 'ddu.vim'
 
 [[plugins]]
