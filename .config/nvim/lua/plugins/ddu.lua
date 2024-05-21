@@ -8,6 +8,9 @@ vim.fn['ddu#custom#patch_global'] {
         'matcher_relative',
         'matcher_fzf',
       },
+      sorters = {
+        'sorter_fzf',
+      },
     },
   },
   filterParams = {
