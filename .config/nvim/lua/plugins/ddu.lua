@@ -1,4 +1,108 @@
-vim.fn['ddu#custom#patch_global'] {
+vim.fn['ddu#custom#patch_global']({
+  ui = 'ff',
+  kindOptions = {
+    action = {
+      defaultAction = {
+        'do'
+      }
+    },
+    file = {
+      defaultAction = {
+        'open'
+      }
+    }
+  },
+  sources = {
+    {
+      name = {
+        'file_external'
+      }
+    }
+  },
+  sourceParams = {
+    file_external = {
+      cmd = {
+        'fd',
+        '--type',
+        'file',
+        '--hidden',
+        '--exclude',
+        '.git',
+      }
+    }
+  },
+  sourceOptions = {
+    _ = {
+      converters = {
+        'converter_hl_dir',
+      },
+      matchers = {
+        'matcher_fzf',
+      },
+      sorters = {
+        'sorter_fzf',
+      },
+    },
+  },
+  filterParams = {
+    matcher_fzf = {
+      highlightMatched = 'Search',
+    }
+  }
+})
+
+vim.fn['ddu#custom#patch_local']('git_status', {
+  ui = 'ff',
+  kindOptions = {
+    file = {
+      defaultAction = {
+        'open'
+      }
+    }
+  },
+  sources = {
+    {
+      name = {
+        'git_status'
+      }
+    }
+  },
+  sourceOptions = {
+    _ = {
+      converters = {
+        'converter_hl_dir',
+      },
+      matchers = {
+        'matcher_fzf',
+      },
+      sorters = {
+        'sorter_fzf',
+      },
+    },
+  },
+  filterParams = {
+    matcher_fzf = {
+      highlightMatched = 'Search',
+    }
+  }
+})
+
+vim.fn['ddu#custom#patch_local']('file_old', {
+  ui = 'ff',
+  kindOptions = {
+    file = {
+      defaultAction = {
+        'open'
+      }
+    }
+  },
+  sources = {
+    {
+      name = {
+        'file_old'
+      }
+    }
+  },
   sourceOptions = {
     _ = {
       converters = {
@@ -18,94 +122,152 @@ vim.fn['ddu#custom#patch_global'] {
       highlightMatched = 'Search',
     }
   }
-}
-
-vim.fn['ddu#custom#patch_local']('files', {
-  ui = 'ff',
-  kindOptions = {file = {defaultAction = {'open'}}},
-  sources = {
-    {name = {'file_external'}}
-  },
-  sourceParams = {
-    file_external = {
-      cmd = {
-        'fd',
-        '--type',
-        'file',
-        '--hidden',
-        '--exclude',
-        '.git',
-      }
-    }
-  }
-})
-
-vim.fn['ddu#custom#patch_local']('git_status', {
-  ui = 'ff',
-  kindOptions = {file = {defaultAction = {'open'}}},
-  sources = {
-    {name = {'git_status'}}
-  },
-})
-
-vim.fn['ddu#custom#patch_local']('file_old', {
-  ui = 'ff',
-  kindOptions = {file = {defaultAction = {'open'}}},
-  sources = {
-    {
-      name = {'file_old'}
-    }
-  },
 })
 
 vim.fn['ddu#custom#patch_local']('buffers', {
   ui = 'ff',
-  kindOptions = {file = {defaultAction = {'open'}}},
+  kindOptions = {
+    file = {
+      defaultAction = {
+        'open'
+      }
+    }
+  },
   sources = {
     {
-      name = {'buffer'},
-      params = {current = true}
+      name = {
+        'buffer'
+      },
+      params = {
+        current = true
+      }
     },
   },
+  sourceOptions = {
+    _ = {
+      converters = {
+        'converter_hl_dir',
+      },
+      matchers = {
+        'matcher_fzf',
+      },
+      sorters = {
+        'sorter_fzf',
+      },
+    },
+  },
+  filterParams = {
+    matcher_fzf = {
+      highlightMatched = 'Search',
+    }
+  }
 })
 
 vim.api.nvim_create_user_command('DduRgInput', function()
   vim.fn['ddu#start'] {
     ui = 'ff',
-    kindOptions = {file = {defaultAction = {'open'}}},
-    sources = {{name = 'rg', params = {input = vim.fn.input('search word: ')}}},
-    sourceParams = {rg = {
-      args = {
-        '--column',
-        '--hidden',
-        '--no-heading',
-        '--color',
-        'never',
-        '--sort',
-        'path',
-        '--glob',
-        "!.git/*",
-      }}}
+    kindOptions = {
+      file = {
+        defaultAction = {
+          'open'
+        }
+      }
+    },
+    sources = {
+      {
+        name = 'rg',
+        params = {
+          input = vim.fn.input('search word: ')
+        }
+      }
+    },
+    sourceParams = {
+      rg = {
+        args = {
+          '--column',
+          '--hidden',
+          '--no-heading',
+          '--color',
+          'never',
+          '--sort',
+          'path',
+          '--glob',
+          "!.git/*",
+        }
+      }
+    },
+    sourceOptions = {
+      _ = {
+        converters = {
+          'converter_hl_dir',
+        },
+        matchers = {
+          'matcher_fzf',
+        },
+        sorters = {
+          'sorter_fzf',
+        },
+      },
+    },
+    filterParams = {
+      matcher_fzf = {
+        highlightMatched = 'Search',
+      }
+    }
   }
 end, {nargs = 0})
 
 vim.api.nvim_create_user_command('DduRgWord', function()
   vim.fn['ddu#start'] {
     ui = 'ff',
-    kindOptions = {file = {defaultAction = {'open'}}},
-    sources = {{name = 'rg', params = {input = vim.fn.expand('<cword>')}}},
-    sourceParams = {rg = {
-      args = {
-        '--column',
-        '--hidden',
-        '--no-heading',
-        '--color',
-        'never',
-        '--sort',
-        'path',
-        '--glob',
-        "!.git/*",
-      }}}
+    kindOptions = {
+      file = {
+        defaultAction = {
+          'open'
+        }
+      }
+    },
+    sources = {
+      {
+        name = 'rg',
+        params = {
+          input = vim.fn.expand('<cword>')
+        }
+      }
+    },
+    sourceParams = {
+      rg = {
+        args = {
+          '--column',
+          '--hidden',
+          '--no-heading',
+          '--color',
+          'never',
+          '--sort',
+          'path',
+          '--glob',
+          "!.git/*",
+        }
+      }
+    },
+    sourceOptions = {
+      _ = {
+        converters = {
+          'converter_hl_dir',
+        },
+        matchers = {
+          'matcher_fzf',
+        },
+        sorters = {
+          'sorter_fzf',
+        },
+      },
+    },
+    filterParams = {
+      matcher_fzf = {
+        highlightMatched = 'Search',
+      }
+    }
   }
 end, {nargs = 0})
 
@@ -114,13 +276,23 @@ vim.api.nvim_create_user_command('DduFiler', function()
     ui = 'filer',
     resume = true,
     sync = true,
-    sources = {{name = 'file'}},
+    sources = {
+      {
+        name = 'file'
+      }
+    },
     sourceOptions = {
       file = {
-        columns = { 'filename' },
+        columns = {
+          'filename'
+        },
         path = vim.fn.getcwd(),
-        sorters = { 'sorter_alpha' },
-        converters = { 'converter_git_status' },
+        sorters = {
+          'sorter_alpha'
+        },
+        converters = {
+          'converter_git_status'
+        },
       },
     },
   }
@@ -182,19 +354,20 @@ function ddu_filer_my_settings()
     end
   end
   local openOpt = { noremap = true, buffer = true, expr = true }
-  vim.keymap.set('n', '<CR>', openFunc, openOpt)
   vim.keymap.set('n', 'o', openFunc, openOpt)
 
   local opt = { noremap = true, buffer = true }
   vim.keymap.set('n', 'q',     [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
-  vim.keymap.set('n', '<C-l>', [[<Cmd>call ddu#ui#do_action('redraw')<CR>]], opt)
-  vim.keymap.set('n', 'c',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'copy'})<CR>]], opt)
-  vim.keymap.set('n', 'm',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'move'})<CR>]], opt)
-  vim.keymap.set('n', 'p',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'paste'})<CR>]], opt)
-  vim.keymap.set('n', 'r',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'rename'})<CR>]], opt)
-  vim.keymap.set('n', 'N',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'newFile'})<CR>]], opt)
-  vim.keymap.set('n', 'D',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'delete'})<CR>]], opt)
-  vim.keymap.set('n', 'y',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'yank'})<CR>]], opt)
+  vim.keymap.set('n', '<C-r>', [[<Cmd>call ddu#ui#do_action('redraw')<CR>]], opt)
+  -- vim.keymap.set('n', 'c',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'copy'})<CR>]], opt)
+  -- vim.keymap.set('n', 'm',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'move'})<CR>]], opt)
+  -- vim.keymap.set('n', 'p',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'paste'})<CR>]], opt)
+  -- vim.keymap.set('n', 'r',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'rename'})<CR>]], opt)
+  -- vim.keymap.set('n', 'N',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'newFile'})<CR>]], opt)
+  -- vim.keymap.set('n', 'D',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'delete'})<CR>]], opt)
+  -- vim.keymap.set('n', 'y',     [[<Cmd>call ddu#ui#do_action('itemAction', {'name': 'yank'})<CR>]], opt)
+  vim.keymap.set('n', 'a',     [[<Cmd>call ddu#ui#do_action('chooseAction')<CR>]], opt)
+  vim.keymap.set('n', '<CR>',  [[<Cmd>call ddu#ui#do_action('itemAction')<CR>]], opt)
 end
 
 local ddu_ff_groupname = 'ddu-ff-group'
@@ -220,3 +393,4 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = 'ddu-filer',
   callback = ddu_filer_my_settings
 })
+
