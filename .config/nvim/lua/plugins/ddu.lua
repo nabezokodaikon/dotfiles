@@ -323,6 +323,11 @@ vim.fn['ddu#custom#patch_global'] {
       winHeight = filer_win_height,
     }
   },
+  kindOptions = {
+    action = {
+      defaultAction = 'do'
+    }
+  },
 }
 
 function ddu_my_settings()
