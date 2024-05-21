@@ -6,12 +6,12 @@ vim.fn['ddu#custom#patch_global'] {
       },
       matchers = {
         'matcher_relative',
-        'matcher_matchfuzzy',
+        'matcher_fzf',
       },
     },
   },
   filterParams = {
-    matcher_matchfuzzy = {
+    matcher_fzf = {
       highlightMatched = 'Search',
     }
   }
