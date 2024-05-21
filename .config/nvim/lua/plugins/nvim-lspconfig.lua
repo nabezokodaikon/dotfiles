@@ -19,9 +19,37 @@ lsp.cssls.setup {
 -- lsp.sumneko_lua.setup {
 -- }
 
-lsp.denols.setup{
-  on_attach = on_attach,
-  root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc"),
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
+
+lsp.denols.setup {
+  cmd = {
+    "deno",
+    "lsp",
+  },
+	filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+	},
+  settings = {
+    deno = {
+      enable = true,
+      suggest = {
+        imports = {
+          hosts = {
+            ["https://deno.land"] = true,
+            ["https://cdn.nest.land"] = true,
+            ["https://crux.land"] = true,
+          }
+        }
+      }
+    }
+  }
 }
 
 lsp.dockerls.setup{
@@ -44,10 +72,10 @@ lsp.rust_analyzer.setup {
   },
 }
 
-lsp.tsserver.setup {
-  root_dir = lsp.util.root_pattern("package.json"),
-}
+-- lsp.tsserver.setup {
+--   root_dir = lsp.util.root_pattern("package.json"),
+-- }
 
-lsp.svelte.setup {
-
-}
+-- lsp.svelte.setup {
+--
+-- }
