@@ -34,9 +34,6 @@ vim.fn['ddu#custom#patch_global']({
       matchers = {
         'matcher_fzf',
       },
-      sorters = {
-        'sorter_fzf',
-      },
     },
   },
   filterParams = {
@@ -69,9 +66,6 @@ vim.fn['ddu#custom#patch_local']('git_status', {
       },
       matchers = {
         'matcher_fzf',
-      },
-      sorters = {
-        'sorter_fzf',
       },
     },
   },
@@ -106,9 +100,6 @@ vim.fn['ddu#custom#patch_local']('file_old', {
       matchers = {
         'matcher_relative',
         'matcher_fzf',
-      },
-      sorters = {
-        'sorter_fzf',
       },
     },
   },
@@ -145,9 +136,6 @@ vim.fn['ddu#custom#patch_local']('buffers', {
       },
       matchers = {
         'matcher_fzf',
-      },
-      sorters = {
-        'sorter_fzf',
       },
     },
   },
@@ -198,9 +186,6 @@ vim.api.nvim_create_user_command('DduRgInput', function()
         },
         matchers = {
           'matcher_fzf',
-        },
-        sorters = {
-          'sorter_fzf',
         },
       },
     },
@@ -253,9 +238,6 @@ vim.api.nvim_create_user_command('DduRgWord', function()
         matchers = {
           'matcher_fzf',
         },
-        sorters = {
-          'sorter_fzf',
-        },
       },
     },
     filterParams = {
@@ -282,9 +264,6 @@ vim.api.nvim_create_user_command('DduFiler', function()
           'filename'
         },
         path = vim.fn.getcwd(),
-        sorters = {
-          'sorter_alpha'
-        },
         converters = {
           'converter_git_status'
         },

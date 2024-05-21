@@ -17,8 +17,12 @@ on_source = 'ddu.vim'
 repo = 'Shougo/ddu-ui-filer'
 on_source = 'ddu.vim'
 
+# [[plugins]]
+# repo = 'yuki-yano/ddu-filter-fzf'
+# on_source = 'ddu.vim'
+
 [[plugins]]
-repo = 'yuki-yano/ddu-filter-fzf'
+repo = '~/ws/ddu-filter-matcher_fzf'
 on_source = 'ddu.vim'
 
 [[plugins]]
