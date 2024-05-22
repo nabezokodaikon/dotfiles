@@ -17,12 +17,8 @@ on_source = 'ddu.vim'
 repo = 'Shougo/ddu-ui-filer'
 on_source = 'ddu.vim'
 
-# [[plugins]]
-# repo = 'yuki-yano/ddu-filter-fzf'
-# on_source = 'ddu.vim'
-
 [[plugins]]
-repo = '~/ws/ddu-filter-matcher_fzf'
+repo = 'nabezokodaikon/ddu-filter-fzf'
 on_source = 'ddu.vim'
 
 [[plugins]]
@@ -50,7 +46,7 @@ repo = 'Shougo/ddu-source-file'
 on_source = 'ddu.vim'
 
 [[plugins]]
-repo = 'matsui54/ddu-source-file_external'
+repo = 'nabezokodaikon/ddu-source-file_external'
 on_source = 'ddu.vim'
 
 [[plugins]]
