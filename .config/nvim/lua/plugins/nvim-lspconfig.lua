@@ -45,6 +45,7 @@ lsp.denols.setup {
             ["https://deno.land"] = true,
             ["https://cdn.nest.land"] = true,
             ["https://crux.land"] = true,
+            ["https://esm.sh"] = true,
           }
         }
       }
