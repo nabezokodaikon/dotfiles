@@ -18,7 +18,7 @@ telescope.setup{
   pickers = {
     find_files = {
       previewer = false,
-      find_command = { 'rg', '--files', '--hidden', '--glob', '!.git/*' },
+      find_command = { 'git', 'ls-files' },
     },
     live_grep = {
       previewer = false,
