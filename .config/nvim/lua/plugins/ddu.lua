@@ -1,4 +1,4 @@
-vim.fn['ddu#custom#patch_global']({
+vim.fn['ddu#custom#patch_local']('file_rec', {
   ui = 'ff',
   kindOptions = {
     file = {
@@ -17,13 +17,8 @@ vim.fn['ddu#custom#patch_global']({
   sourceParams = {
     file_external = {
       cmd = {
-        'fd',
-        '--type',
-        'file',
-        '--hidden',
-        '--exclude',
-        '.git',
-      }
+        'git', 'ls-files',
+      },
     }
   },
   sourceOptions = {
@@ -110,7 +105,7 @@ vim.fn['ddu#custom#patch_local']('file_old', {
   }
 })
 
-vim.fn['ddu#custom#patch_local']('buffers', {
+vim.fn['ddu#custom#patch_local']('buffer', {
   ui = 'ff',
   kindOptions = {
     file = {
@@ -284,7 +279,7 @@ vim.fn['ddu#custom#patch_global'] {
       floatingBorder = "rounded",
       winCol = ff_win_col,
       winRow = 3,
-      winWidth = ff_win_width
+      winWidth = ff_win_width,
     }
   }
 }
