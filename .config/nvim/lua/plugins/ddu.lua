@@ -267,19 +267,14 @@ vim.api.nvim_create_user_command('DduFiler', function()
   }
 end, {nargs = 0})
 
-local ff_win_width = math.floor(vim.o.columns * 0.8)
-local ff_win_col = math.floor((vim.o.columns - ff_win_width) / 2)
 vim.fn['ddu#custom#patch_global'] {
   uiParams = {
     ff = {
       startFilter = false,
-      filterFloatingPosition = 'top',
-      prompt = '>',
+      prompt = '>  ',
       split ='floating',
       floatingBorder = "rounded",
-      winCol = ff_win_col,
-      winRow = 3,
-      winWidth = ff_win_width,
+      winCol = 0,
     }
   }
 }
@@ -310,7 +305,6 @@ function ddu_filter_my_settings()
   local opt = { noremap = true, buffer = true, silent = true }
   vim.keymap.set('i', '<CR>',  [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
   vim.keymap.set('i', '<ESC>', [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
-  vim.keymap.set('i', 'jj',    [[<ESC><Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
   vim.keymap.set('n', '<CR>',  [[<Cmd>call ddu#ui#do_action('closeFilterWindow')<CR>]], opt)
 end
 
