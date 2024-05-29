@@ -56,3 +56,6 @@ vim.o.ttimeoutlen = 0
 vim.o.whichwrap= 'b,s,h,l,<,>,[,]'
 -- 補完候補が無い場合のメッセージを抑制する。
 vim.opt.shortmess = vim.opt.shortmess + 'c'
+-- ステータスラインを非表示にする。
+vim.o.cmdheight = 0
+
