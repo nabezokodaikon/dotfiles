@@ -1,5 +1,3 @@
-# echo "Call local zprofile."
-
 case "$OSTYPE" in
     darwin*)
         source $HOME/dotfiles/zsh/mac.zprofile.sh
@@ -10,3 +8,4 @@ case "$OSTYPE" in
         source $HOME/dotfiles/zsh/common.zprofile.sh
         ;;
 esac
+

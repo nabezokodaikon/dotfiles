@@ -1,8 +1,3 @@
-# echo "Call local zshenv."
-
-# zmodload zsh/zprof
-
-
 case "$OSTYPE" in
     darwin*)
         source $HOME/dotfiles/zsh/mac.zshenv.sh

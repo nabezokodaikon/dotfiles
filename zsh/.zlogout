@@ -1,1 +1,0 @@
-# echo "Call local zlogout."

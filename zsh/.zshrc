@@ -1,5 +1,3 @@
-# echo "Call local zshrc."
-
 case "$OSTYPE" in
     darwin*)
         source $HOME/dotfiles/zsh/mac.zshrc.sh
@@ -10,3 +8,4 @@ case "$OSTYPE" in
         source $HOME/dotfiles/zsh/common.zshrc.sh
         ;;
 esac
+
