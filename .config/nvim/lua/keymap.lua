@@ -16,6 +16,7 @@ vim.keymap.set('i', '<C-p>', '<Nop>', opt)
 
 -- Switch to the normal mode.
 vim.keymap.set('i', 'jj', '<ESC>', opt)
+vim.keymap.set('c', 'jj', '<ESC>', opt)
 
 -- Paste configuration.
 vim.keymap.set('v', '<Leader>p', '<Plug>(operator-replace)', opt)
