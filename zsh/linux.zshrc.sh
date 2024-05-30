@@ -2,13 +2,6 @@
 # Zsh .zshrc for Linux
 #--------------------------------
 
-# PATH
-#--------------------------------
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.deno/bin:$PATH
-
-
 # Alias
 #--------------------------------
 source $HOME/dotfiles/zsh/alias/linux.alias.sh

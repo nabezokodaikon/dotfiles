@@ -2,14 +2,16 @@
 # Zsh .zshenv for Linux
 #--------------------------------
 
+# PATH
+#--------------------------------
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.deno/bin:$PATH
+
+
 # SHELL
 #--------------------------------
 export SHELL=/usr/bin/zsh
-
-
-# Java
-#--------------------------------
-export JAVA_HOME=$(readlink -f `which javac 2>/dev/null` | sed "s:/bin/javac::")
 
 
 # OpenSSL
@@ -31,3 +33,4 @@ export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
 # Terminal
 #--------------------------------
 export TERMINAL=gnome-terminal
+
