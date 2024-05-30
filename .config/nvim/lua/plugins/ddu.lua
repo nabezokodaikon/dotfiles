@@ -308,9 +308,11 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = 'ddu-ff',
   callback = function()
     local opt = { noremap = true, buffer = true, silent = true }
-    vim.keymap.set('n', '<CR>', [[<Cmd>call ddu#ui#do_action('itemAction')<CR>]], opt)
-    vim.keymap.set('n', 'i',    [[<Cmd>call ddu#ui#do_action('openFilterWindow')<CR>]], opt)
-    vim.keymap.set('n', 'q',    [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
+    vim.keymap.set('n', '<CR>',  [[<Cmd>call ddu#ui#do_action('itemAction')<CR>]], opt)
+    vim.keymap.set('n', 'i',     [[<Cmd>call ddu#ui#do_action('openFilterWindow')<CR>]], opt)
+    vim.keymap.set('n', 'q',     [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
+    vim.keymap.set('n', '<C-c>', [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
+    vim.keymap.set('n', '<ESC>', [[<Cmd>call ddu#ui#do_action('quit')<CR>]], opt)
   end
 })
 
