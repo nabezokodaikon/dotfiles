@@ -281,6 +281,7 @@ vim.fn['ddu#custom#patch_global'] {
       winCol = ff_win_col,
       winRow = 3,
       winWidth = ff_win_width,
+      winHeight = 16,
     }
   }
 }
