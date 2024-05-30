@@ -262,6 +262,9 @@ vim.api.nvim_create_user_command('DduFiler', function()
         converters = {
           'converter_git_status'
         },
+        sorters = {
+          'sorter_alpha',
+        },
       },
     },
   }
