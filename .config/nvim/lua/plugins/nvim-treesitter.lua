@@ -8,6 +8,7 @@ treesitter.setup {
     "bash",
     "css",
     "dockerfile",
+    "go",
     "graphql",
     "html",
     "javascript",

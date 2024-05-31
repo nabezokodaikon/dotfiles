@@ -56,6 +56,8 @@ lsp.denols.setup {
 lsp.dockerls.setup{
 }
 
+lsp.gopls.setup {}
+
 lsp.rust_analyzer.setup {
   settings = {
     ["rust-analyzer"] = {

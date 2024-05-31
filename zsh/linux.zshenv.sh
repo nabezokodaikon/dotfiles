@@ -7,6 +7,7 @@
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.deno/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 
 # SHELL
@@ -33,4 +34,9 @@ export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
 # Terminal
 #--------------------------------
 export TERMINAL=gnome-terminal
+
+
+# GO
+#--------------------------------
+export GOPATH=$HOME/go
 
