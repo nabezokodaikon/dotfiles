@@ -7,7 +7,7 @@ vim.fn['ddc#custom#patch_global'] {
     'TextChangedT',
   },
   sources = {
-    'around', 'file', 'lsp', 'skkeleton',
+    'file', 'lsp', 'skkeleton', 'around', 
   },
   backspaceCompletion = true,
   sourceOptions = {
