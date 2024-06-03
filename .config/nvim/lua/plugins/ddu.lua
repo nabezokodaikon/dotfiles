@@ -17,7 +17,7 @@ vim.fn['ddu#custom#patch_local']('file_rec', {
   sourceParams = {
     file_external = {
       cmd = {
-        'git', 'ls-files',
+        'rg', '--files', '--hidden', '--glob', '!.git/*'
       },
     }
   },
