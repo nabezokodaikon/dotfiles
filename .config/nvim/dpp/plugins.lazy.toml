@@ -37,6 +37,12 @@ on_event = 'BufRead'
 hook_post_update = 'TSUpdate'
 hook_source = "lua require('plugins.nvim-treesitter')"
 
+# Intent
+[[plugins]]
+repo = 'lukas-reineke/indent-blankline.nvim'
+on_event = 'BufRead'
+hook_source = "lua require('plugins.indent-blankline.nvim')"
+
 # Translate
 [[plugins]]
 repo = 'nabezokodaikon/translate.nvim'
