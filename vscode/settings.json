@@ -1,5 +1,34 @@
 {
-    "editor.fontFamily": "Hackgen Console NF",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+          "before": ["<C-i>"],
+          "after": ["<Tab>"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+          "before": ["<C-h>"],
+          "after": ["0"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["$"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["<C-h>"],
+          "after": ["0"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["$"]
+        }
+    ],
     "editor.detectIndentation": false,
     "editor.wrappingIndent": "same",
     "editor.minimap.enabled": false,
@@ -10,17 +39,7 @@
     "vim.useSystemClipboard": true,
     "vim.statusBarColors.visualblock": "",
     "vim.whichwrap": "h,l,<,>,[,]",
-    "vim.vimrc.enable": true,
-    "vim.vimrc.path": "~/dotfiles/vscode/.vimrc",
-    "omnisharp.enableRoslynAnalyzers": true,
-    "editor.codeLens": false,
-    "editor.autoClosingQuotes": "never",
-    "editor.autoClosingBrackets": "never",
-    "workbench.editor.empty.hint": "hidden",
-    "svelte.enable-ts-plugin": true,
-    "editor.tabSize": 2,
-    "security.allowedUNCHosts": [
-      "wsl.localhost"
-    ],
+    "editor.editContext": false,
+    "git-graph.contextMenuActionsVisibility": {},
     "editor.fontSize": 16,
 }

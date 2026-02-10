@@ -26,5 +26,9 @@
     {
         "command": "workbench.action.splitEditorDown",
         "key": "ctrl+w shift+v"
+    },
+    {
+      "key": "ctrl-H",
+      "command": "-deleteLeft"
     }
 ]
